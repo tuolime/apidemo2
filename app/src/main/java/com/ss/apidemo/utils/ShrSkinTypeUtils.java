@@ -37,7 +37,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -96,7 +96,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -154,7 +154,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -212,7 +212,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -274,7 +274,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -333,7 +333,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -391,7 +391,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -449,7 +449,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -511,7 +511,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -570,7 +570,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -628,7 +628,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -686,7 +686,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -748,7 +748,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -806,7 +806,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -864,7 +864,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -922,7 +922,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -984,7 +984,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1043,7 +1043,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1100,7 +1100,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1158,7 +1158,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1220,7 +1220,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1278,7 +1278,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1336,7 +1336,7 @@ public final class ShrSkinTypeUtils {
                          * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1392,10 +1392,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 4:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1472,10 +1472,10 @@ public final class ShrSkinTypeUtils {
                 switch (size) {
                     case 1:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1531,10 +1531,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 2:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1589,10 +1589,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 3:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1647,10 +1647,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 4:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1709,10 +1709,10 @@ public final class ShrSkinTypeUtils {
                 switch (size) {
                     case 1:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1767,10 +1767,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 2:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1824,10 +1824,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 3:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1881,10 +1881,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 4:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -1943,10 +1943,10 @@ public final class ShrSkinTypeUtils {
                 switch (size) {
                     case 1:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2001,10 +2001,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 2:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2058,10 +2058,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 3:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2115,10 +2115,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 4:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2177,10 +2177,10 @@ public final class ShrSkinTypeUtils {
                 switch (size) {
                     case 1:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2235,10 +2235,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 2:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2293,10 +2293,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 3:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2351,10 +2351,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 4:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2413,10 +2413,10 @@ public final class ShrSkinTypeUtils {
                 switch (size) {
                     case 1:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2471,10 +2471,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 2:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2528,10 +2528,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 3:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2585,10 +2585,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 4:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2647,10 +2647,10 @@ public final class ShrSkinTypeUtils {
                 switch (size) {
                     case 1:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2705,10 +2705,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 2:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2762,10 +2762,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 3:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24
@@ -2819,10 +2819,10 @@ public final class ShrSkinTypeUtils {
                         break;
                     case 4:
                         /*
-                         * 1 QB-6-10
+                        * 1 QB-6-10
                          * 2 QB-6-16
                          * 3 QB-6-20
-                         * 4 QB-6-10
+                         * 4 QB-2-10
                          * 5 QB-2-16
                          * 6 QB-2-24
                          * 7 QB-4-24

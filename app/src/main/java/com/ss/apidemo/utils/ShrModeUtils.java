@@ -17,8 +17,8 @@ public final class ShrModeUtils {
             /*
              * 1 QB-6-10
              * 2 QB-6-16
-             * 3 QB-6-24
-             * 4 QB-6-10
+             * 3 QB-6-20
+             * 4 QB-2-10
              * 5 QB-2-16
              * 6 QB-2-24
              * 7 QB-4-24
@@ -73,8 +73,8 @@ public final class ShrModeUtils {
             /*
              * 1 QB-6-10
              * 2 QB-6-16
-             * 3 QB-6-24
-             * 4 QB-6-10
+             * 3 QB-6-20
+             * 4 QB-2-10
              * 5 QB-2-16
              * 6 QB-2-24
              * 7 QB-4-24
