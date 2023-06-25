@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ly_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/woman_head" />
+
+            <ImageView
+                android:id="@+id/iv_woman_head_forehead"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="77dp"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/woman_head_1" />
+            <ImageView
+                android:id="@+id/iv_woman_head_cheek"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="140dp"
+                android:layout_width="35dp"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/woman_head_2" />
+            <ImageView
+                android:id="@+id/iv_woman_head_lip"
+                android:layout_marginTop="128dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="40dp"
+                android:layout_height="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/woman_head_3" />
+            <ImageView
+                android:id="@+id/iv_woman_head_neck"
+                android:layout_marginTop="160dp"
+                android:layout_marginLeft="55dp"
+                android:layout_width="138dp"
+                android:layout_height="89dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/woman_head_4" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

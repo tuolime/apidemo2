@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">medical care</string>
+
+    <string name="next">WEITER</string>
+    <string name="ps_title">SELF-HELP MODELL</string>
+    <string name="ps_content">PASSWORT</string>
+    <string name="engineer_mode">MOTORMODUS</string>
+    <string name="count_cleaning">REINIGUNG DER ZAHL</string>
+    <string name="cleaning">REINIGUNG</string>
+    <string name="remote_control">FERNSTEUERUNG</string>
+    <string name="on">ON</string>
+    <string name="off">AUS</string>
+    <string name="quantity">QUANTITÄT</string>
+    <string name="of_hand_tools">DER HANDWERKSTELLE</string>
+    <string name="one">EIN</string>
+    <string name="two">ZWEI</string>
+    <string name="left_hand_tool">LINKS-WERKZEUG</string>
+    <string name="qb_6_10">QB-6-10</string>
+    <string name="qb_6_16">QB-6-16</string>
+    <string name="qb_6_20">QB-6-20</string>
+    <string name="qb_2_10">QB-2-10</string>
+    <string name="qb_2_16">QB-2-16</string>
+    <string name="qb_2_24">QB-2-24</string>
+    <string name="qb_4_24">QB-4-12</string>
+
+    <string name="right_hand_tool">RECHTSGRÜCK</string>
+    <string name="power_supply_type">Stromversorgungstyp</string>
+    <string name="minute">MINUTE</string>
+    <string name="ok">OK</string>
+    <string name="new_user">NEUER BENUTZER</string>
+    <string name="id">ID</string>
+    <string name="name">NAME</string>
+    <string name="gender">Geschlecht</string>
+    <string name="man">MANN</string>
+    <string name="woman">FRAU</string>
+    <string name="age">ALTER</string>
+    <string name="tel">TEL</string>
+    <string name="stcrage">LAGERUNG</string>
+    <string name="user_lookup">NUTZERSUCHUNG</string>
+    <string name="please_enter">Bitte geben Sie Ihre Handynummer ein</string>
+    <string name="search_hint">TARGET NICHT GEfunden, bitte wieder hereinkommen!</string>
+    <string name="lookup">SUCHEN</string>
+    <string name="free_users">FREIE NUTZER</string>
+    <string name="no_fatent">KEINE PATIENTBEHANDLUNGSINFORMATION KÖNNEN IM KOSTENLOSEN MODE SPEICHERT WERDEN!</string>
+    <string name="get_info">INFORMATIONEN</string>
+    <string name="user_list">BENUTZERLISTE</string>
+    <string name="usage_record">VERWENDUNGSBEREICH</string>
+    <string name="delete">LÖSCHEN</string>
+    <string name="temperature_alarm">TEMPERATURALARM</string>
+    <string name="handle">Handle</string>
+    <string name="count_clearing">ZUSAMMENFASSUNG</string>
+    <string name="upper">OBER</string>
+    <string name="temperature">TEMPERATUR</string>
+    <string name="limit">GRENZ</string>
+    <string name="lower_limit">Geringere Begrenzung</string>
+    <string name="of">DER</string>
+    <string name="water_flow">WASSERSCHLUSS</string>
+    <string name="tips">Tipps</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="sure">sicher</string>
+    <string name="tv_next">NÄCHSTE</string>
+    <string name="trio">EXACT</string>
+    <string name="fluence">FLÜGE</string>
+    <string name="frequency">FREQUENZ</string>
+    <string name="time">ZEIT</string>
+    <string name="sec">Sec</string>
+    <string name="grid_size">GRID GRÖSSE</string>
+    <string name="energy">ENERGIE</string>
+    <string name="ps_error">Passwort-Fehler</string>
+    <string name="user_information">Erfolgreich erfasste Benutzerinformationen!</string>
+    <string name="user_created">Benutzer erfolgreich erstellt!</string>
+    <string name="user_delete_record">Sind Sie sicher, diesen Datensatz zu löschen?</string>
+    <string name="port_error">Port öffnen fehlgeschlagen</string>
+    <string name="short_board">Kurzschluss der Leiterplatte</string>
+    <string name="hand_error">Verbindung zum Handwerkzeug fehlgeschlagen</string>
+    <string name="temperature_high">Wassertemperatur ist hoch</string>
+    <string name="temperature_low">Die Wassertemperatur ist niedrig</string>
+    <string name="water_low">Geringer Wasserfluss</string>
+    <string name="water_no">Kein Wasserfluss</string>
+    <string name="netwrok_no">Derzeit gibt es kein Netz!</string>
+    <string name="setting_succeeded">Einstellung erfolgreich!</string>
+    <string name="setting_failed">Einstellung fehlgeschlagen!</string>
+    <string name="switching_languages">Sprachwechsel erfordert Neustart</string>
+    <string name="user_delete">Sind Sie sicher, dass Sie diesen Benutzer löschen möchten?</string>
+    <string name="tel_no_hint">Mobilfunknummer ist leer?</string>
+    <string name="select_body">Bitte wählen Sie ein Körperteil aus!</string>
+    <string name="work_no">Arbeit nicht begonnen!</string>
+    <string name="event">Ereignis</string>
+    <string name="mode">Modus</string>
+    <string name="send_fail">Senden fehlschlägt</string>
+    <string name="ends_time">Selbsthaarentfernungszeit endet</string>
+    <string name="skin">HAUT</string>
+    <string name="body">KÖRPER</string>
+    <string name="work_count">ARBEITSZAHL</string>
+    <string name="name_cannot"> Benutzername kann nicht leer sein! </string>
+    <string name="phone_cannot"> Mobiltelefonnummer kann nicht leer sein !</string>
+    <string name="phone_already"> Mobilfunknummer existiert bereits!</string>
+    <string name="trio_3d">QUATTRO 3D</string>
+    <string name="select">SELECT</string>
+    <string name="burst">BURST</string>
+    <string name="total">INSGESAMT</string>
+    <string name="current">Aktuell</string>
+    <string name="stby">STBY</string>
+    <string name="ready">BEREIT</string>
+    <string name="working">ARBEIT</string>
+    <string name="auto_shed_time">Restzeit：</string>
+    <string name="disconnect_tips"> Die Kommunikation mit dem Kontrollsystem ist anormal. Wenden Sie sich an den Hersteller. </string>
+    <string name="phone_count"> Mobiltelefonnummer sollte kleiner als 11-stellig sein !</string>
+
+
+    <string name="lock_tips"> Dieses Gerät wurde gesperrt ！</string>
+    <string name="days_remaining"> verbleibende Tage </string>
+    <string name="hours_remaining"> verbleibende Stunden </string>
+    <string name="count_remaining">Restzeiten</string>
+    <string name="no_network"> Kein Netzwerk, bitte verbinden Sie sich wieder mit dem verfügbaren Netzwerk !</string>
+    <string name="network_connection_exception"> Ausnahme für Netzwerkverbindungen ！</string>
+
+    <string name="system_setting">Systemeinrichtung abgeschlossen !</string>
+    <string name="name_count"> Namenslänge sollte kleiner als zehn Zeichen sein !</string>
+
+
+    <string name="frequency_hz">FREQUENZ</string>
+
+</resources>

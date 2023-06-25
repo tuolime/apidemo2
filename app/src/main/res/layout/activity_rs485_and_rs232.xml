@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:imeOptions="flagNoExtractUi|actionDone"
+        android:id="@+id/et_enter"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+    <Button
+        android:id="@+id/send_rs485_rs232"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送rs485/rs232信号" />
+
+
+    <TextView
+        android:id="@+id/tv_response"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:includeFontPadding="false"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+</LinearLayout>

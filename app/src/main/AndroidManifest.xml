@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ss.apidemo"
+    android:sharedUserId="android.uid.system"
+    >
+<!--    android:sharedUserId="android.uid.system"-->
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/SplashTheme">
+        <activity
+            android:screenOrientation="sensorLandscape"
+            android:name=".TestDialogActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:screenOrientation="sensorLandscape"
+            android:name=".ui.TestTimeActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:screenOrientation="sensorLandscape"
+            android:name=".GpioActivity"
+            android:exported="false" />
+        <activity
+            android:screenOrientation="sensorLandscape"
+            android:name=".Rs485AndRs232Activity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+
+        </activity>
+        <activity
+            android:screenOrientation="sensorLandscape"
+            android:name=".SerialPortActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+
+        </activity>
+        <activity
+            android:screenOrientation="sensorLandscape"
+            android:name=".BrightnessActivity"
+            android:exported="false"
+            android:label="BrightnessActivity"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:screenOrientation="sensorLandscape"
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ui.WarmSettingActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".ui.OtherActivity"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".ui.UserSettingActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".ui.ParameterActivity"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".ui.HandgearActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".ui.UserMessageActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".ui.UserListActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".ui.UserCreateActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".ui.ShedSettingActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".ui.EngineerSettingActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.AutoShedActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".ui.PassWordActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/SplashTheme" />
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="1200" />
+
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="2000" />
+        <receiver
+            android:name=".receiver.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

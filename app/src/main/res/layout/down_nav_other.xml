@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:onClick="modeClick"
+                android:id="@+id/tv_mode1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="SHR STACK"
+                android:textColor="@color/bt_gray"
+                android:textSize="25sp" />
+
+            <TextView
+                android:onClick="modeClick"
+                android:id="@+id/tv_mode2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="SHR"
+                android:textColor="@color/bt_gray"
+                android:textSize="25sp" />
+
+            <TextView
+                android:onClick="modeClick"
+                android:id="@+id/tv_mode3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="HR"
+                android:textColor="@color/bt_gray"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="TOTAL"
+                    android:textColor="@color/bt_gray" />
+                <TextView
+                    android:id="@+id/tv_current"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="CURRENT"
+                    android:textColor="@color/bt_gray" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_marginRight="10dp"
+                android:id="@+id/tv_next"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/engineer_bt_rounded_corners"
+                android:gravity="center"
+                android:text="@string/tv_next"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hapticFeedbackEnabled="true"
+        android:longClickable="true"
+        android:clickable="true"
+        android:id="@+id/ll_down_nav_visibility"
+        android:layout_marginRight="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+    </LinearLayout>
+
+
+</RelativeLayout>

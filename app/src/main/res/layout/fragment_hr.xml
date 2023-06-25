@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/fluence"
+                android:textColor="@color/bt_gray" />
+
+            <TextView
+                android:id="@+id/tv_fluecne"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:text="01"
+                android:textColor="@color/energy"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="J"
+                android:textColor="@color/bt_gray" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_fluence_up"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/up_circle_bg" />
+
+            <ImageView
+                android:id="@+id/iv_fluence_down"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/down_circle_bg" />
+
+            <!--                <acffo.xqx.blejsq.widget.VerticalSeekBar-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:layout_weight="2"-->
+            <!--                    android:layout_width="20dp"-->
+            <!--                    android:layout_height="0dp"-->
+            <!--                    android:max="10"-->
+            <!--                    android:id="@+id/sb_fluence"-->
+            <!--                    android:thumbOffset="0dp"-->
+            <!--                    android:splitTrack="false"-->
+            <!--                    android:progressDrawable="@drawable/seekbar_fluence"-->
+            <!--                    android:thumb="@drawable/seekbar_thumb_energy"-->
+            <!--                    android:progress="0">-->
+            <!--                </acffo.xqx.blejsq.widget.VerticalSeekBar>-->
+
+            <SeekBar
+                android:id="@+id/sb_fluence"
+                android:layout_width="220dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:max="10"
+                android:progress="0"
+                android:progressDrawable="@drawable/seekbar_fluence"
+                android:rotation="-90"
+                android:splitTrack="false"
+                android:thumb="@drawable/seekbar_thumb_energy"
+                android:thumbOffset="3dp"></SeekBar>
+
+        </RelativeLayout>
+
+        <!--            <LinearLayout-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_weight="0.5"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="0dp">-->
+        <!--            </LinearLayout>-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_trio"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/trio"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/frequency"
+                android:textColor="@color/bt_gray" />
+
+            <TextView
+                android:id="@+id/tv_frequency"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:text="01"
+                android:textColor="@color/fluence"
+                android:textSize="50sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Hz"
+                android:textColor="@color/bt_gray" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_frequency_up"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/up_circle_bg" />
+
+            <ImageView
+                android:id="@+id/iv_frequency_down"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/down_circle_bg" />
+            <!--                <acffo.xqx.blejsq.widget.VerticalSeekBar-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:layout_weight="2"-->
+            <!--                    android:layout_width="20dp"-->
+            <!--                    android:layout_height="0dp"-->
+            <!--                    android:id="@+id/sb_frequency"-->
+            <!--                    android:max="10"-->
+            <!--                    android:thumbOffset="0dp"-->
+            <!--                    android:splitTrack="false"-->
+            <!--                    android:progressDrawable="@drawable/seekbar_fluence"-->
+            <!--                    android:thumb="@drawable/seekbar_thumb_fluence"-->
+            <!--                    android:progress="0">-->
+            <!--                </acffo.xqx.blejsq.widget.VerticalSeekBar>-->
+
+            <SeekBar
+                android:id="@+id/sb_frequency"
+                android:layout_width="220dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:max="10"
+                android:progress="0"
+                android:progressDrawable="@drawable/seekbar_fluence"
+                android:rotation="-90"
+                android:splitTrack="false"
+                android:thumb="@drawable/seekbar_thumb_fluence"
+                android:thumbOffset="3dp"></SeekBar>
+
+        </RelativeLayout>
+        <!--            <LinearLayout-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_weight="0.5"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="0dp">-->
+        <!--            </LinearLayout>-->
+
+
+    </LinearLayout>
+
+</LinearLayout>

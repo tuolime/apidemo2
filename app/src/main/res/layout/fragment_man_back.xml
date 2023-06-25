@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ly_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="300dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/man_back" />
+
+            <ImageView
+                android:id="@+id/iv_man_shoulder"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="58dp"
+                android:layout_width="38dp"
+                android:layout_height="28dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/man_back_4" />
+
+            <ImageView
+                android:id="@+id/iv_man_nape"
+                android:layout_marginTop="28dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/man_back_1" />
+            <ImageView
+                android:id="@+id/iv_man_back"
+                android:layout_marginTop="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="65dp"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/man_back_2" />
+            <ImageView
+                android:id="@+id/iv_man_Buttocks"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="130dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/man_back_3" />
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
