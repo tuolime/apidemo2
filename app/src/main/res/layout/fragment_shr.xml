@@ -133,7 +133,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="HZ"/>
+                        android:text="Hz"/>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout

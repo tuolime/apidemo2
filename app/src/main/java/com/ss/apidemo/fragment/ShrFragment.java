@@ -377,7 +377,11 @@ public class ShrFragment extends Fragment implements View.OnClickListener {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             sb_fluence.setMin(shrModeHzOrFluenceBean.getFluenceMin());
             sb_fluence.setMax(shrModeHzOrFluenceBean.getFluenceMax());
-            sb_fluence.setProgress(shrModeHzOrFluenceBean.getFluenceMax());
+//            if (shrSkinBean.getFluenceProposal()>=shrModeHzOrFluenceBean.getFluenceMax()){
+//                sb_fluence.setProgress(shrSkinBean.getFluenceProposal());
+//            }else {
+//                sb_fluence.setProgress(shrModeHzOrFluenceBean.getFluenceMax());
+//            }
         }
         setCount();
     }
