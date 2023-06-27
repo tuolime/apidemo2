@@ -7,7 +7,7 @@ public class Frame implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 0 终端登录主站，1主站应答（下发使用限制参数）， 2 主站下发锁定命令， 3 终端上传发数
+     * 0 终端登录主站，1主站应答（下发使用限制参数）， 2 主站下发锁定命令， 3 终端上传发数 4 上传告警信息
      * 心跳 app发送 type 0 和 设备定位地址terminalAddress  设备id
      * 心跳 服务器应答 type 1 和 锁定状态lockStatus 、 使用限制标识useLimitedFlag
      * 服务器下发  tyoe 2的时候我直接给你一个type和useLimitedFlag
@@ -64,6 +64,10 @@ public class Frame implements Serializable {
      * 上报次数
      */
     private Integer reportUseNum = 0;
+    /**
+     * 告警类型 //warmType 1.短板短路  2.手具连接失败  3.水温高  4.水温低  5.水温低  6.无水流
+     */
+    private Integer warmType = 0;
 
 
 
@@ -153,5 +157,13 @@ public class Frame implements Serializable {
 
     public void setTotalUseDays(Integer totalUseDays) {
         this.totalUseDays = totalUseDays;
+    }
+
+    public void setWarmType(Integer warmType) {
+        this.warmType = warmType;
+    }
+
+    public Integer getWarmType() {
+        return warmType;
     }
 }

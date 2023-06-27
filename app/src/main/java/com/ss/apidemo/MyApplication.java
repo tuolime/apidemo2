@@ -199,6 +199,30 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
     }
 
     /*
+     * 发送告警信息Socket
+     * */
+    public void sendWarmMessage(int warmType) {
+        boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
+        if (!iswifi) return;
+        boolean wifi = NetworkUtil.isWifi();
+        if (wifi) {
+            if (mConnection != null) {
+                Frame frame = new Frame();
+                frame.setType(4);//告警上报
+                String deviceId = DeviceInfoUtil.getMac();
+                frame.setTerminalCode(deviceId);
+                frame.setWarmType(warmType);
+                JSONObject jsonObject = (JSONObject) JSONObject.toJSON(frame);
+                String jsonString = jsonObject.toJSONString();
+                mConnection.sendMessage(jsonString);
+            }
+        } else {
+            showTips(getResources().getString(R.string.no_network));
+            startSplashActivity();
+        }
+    }
+
+    /*
      * 下位机不响应的话 上位机做一个连接断开的提示
      * */
     private void SetDisconnectTips() {

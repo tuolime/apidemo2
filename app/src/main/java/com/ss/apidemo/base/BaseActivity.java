@@ -346,31 +346,41 @@ public abstract class BaseActivity extends AppCompatActivity {
             current_dialog = getResources().getString(R.string.short_board) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
+            MyApplication.instance().sendWarmMessage(1);
         }
         if (uploadWorkingInfo.getQbConnFail() == 1) {//手具连接失败
             current_dialog = current_dialog + getResources().getString(R.string.hand_error) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
+            MyApplication.instance().sendWarmMessage(2);
         }
         if (uploadWorkingInfo.getTemperatureHi() == 1) {//水温高
             current_dialog = current_dialog + getResources().getString(R.string.temperature_high) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
+            MyApplication.instance().sendWarmMessage(3);
+
         }
         if (uploadWorkingInfo.getTemperatureLow() == 1) {//水温低
             current_dialog = current_dialog + getResources().getString(R.string.temperature_low) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
+            MyApplication.instance().sendWarmMessage(4);
+
         }
         if (uploadWorkingInfo.getFlowVelocityLow() == 1) {//水流低
             current_dialog = current_dialog + getResources().getString(R.string.water_low) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
+            MyApplication.instance().sendWarmMessage(5);
+
         }
         if (uploadWorkingInfo.getNoFlowVelocity() == 1) {//无水流
             current_dialog = current_dialog + getResources().getString(R.string.water_no) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
+            MyApplication.instance().sendWarmMessage(6);
+
         }
         if (current_dialog_flag) {
             current_dialog_count++;
