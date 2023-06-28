@@ -126,5 +126,8 @@ public class AppConfig {
     public static int INFINITE = 10000;
     public static int isDisconnect = 0;
 
-
+    /*
+     * 背景色
+     * */
+    public static final String BACKGROUND_COLOR = "1";
 }

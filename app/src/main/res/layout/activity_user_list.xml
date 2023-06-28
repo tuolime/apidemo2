@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@mipmap/ic_background"
+    android:background="?attr/myBgColor"
     tools:context=".ui.UserListActivity">
     <com.ss.apidemo.view.MergerStatus
         android:layout_width="match_parent"

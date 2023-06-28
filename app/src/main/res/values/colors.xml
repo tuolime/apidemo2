@@ -31,4 +31,9 @@
     <color name="working">#FF5959</color>
     <color name="hz">#3AC4FF</color>
 
+
+    <color name="bg_one">#99FF99</color>
+    <color name="bg_two">#FB5A59</color>
+    <color name="bg_three">#3AC4FF</color>
+
 </resources>

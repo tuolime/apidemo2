@@ -113,6 +113,14 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         setStatusBarLight(true);
         LocaleHelper.setLocale(this, LocaleHelper.getLanguage(this));
+        int intValue = SharedPrefsUtil.getIntValue(AppConfig.BACKGROUND_COLOR, 1);//第一次默认设置为亮色主题
+        if (intValue == 1) {
+            setTheme(R.style.OneTheme);//主题1
+        } if (intValue == 2) {
+            setTheme(R.style.TwoTheme);//主题2
+        }if (intValue == 3){
+            setTheme(R.style.ThreeTheme);//主题3
+        }
         super.onCreate(arg0);
         XactivityCollector.addActivity(this);
 
