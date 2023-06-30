@@ -568,8 +568,8 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
         } else if (currentItem == 2) {//Hr
         }
 
-        if (AppConfig.current_count >= 0) {
-            if (uploadWorkingInfo.getToalCount() >= AppConfig.current_count){
+        if (AppConfig.current_count >= 0) {//首次获取到的总次数
+            if (uploadWorkingInfo.getToalCount() >= AppConfig.current_count){//现在收到的总次数大于等于首次获得的总次数
                 if (!clear_count){
                     current_luminescence_count = uploadWorkingInfo.getToalCount() - AppConfig.current_count;
                     if (current_luminescence_count >= 0) {
