@@ -8,32 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!--背景色 1-->
-    <style name="OneTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!--解决冷启动白屏问题-->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowDisablePreview">true</item>
-        <item name="myBgColor">@color/bg_one</item>
-    </style>
-    <!--背景色 2-->
-    <style name="TwoTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowIsTranslucent">false</item>
-        <item name="android:windowDisablePreview">true</item>
-        <item name="myBgColor">@color/bg_two</item>
-    </style>
-    <!--背景色 3-->
-    <style name="ThreeTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowIsTranslucent">false</item>
-        <item name="android:windowDisablePreview">true</item>
-        <item name="myBgColor">@color/bg_three</item>
     </style>
     <style name="DialogTheme" parent="@android:style/Theme.Dialog">
         <!-- 边框 -->

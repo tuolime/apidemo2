@@ -28,7 +28,7 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/OneTheme">
+        android:theme="@style/SplashTheme">
         <activity
             android:screenOrientation="sensorLandscape"
             android:name=".TestDialogActivity"
@@ -51,14 +51,14 @@
             android:screenOrientation="sensorLandscape"
             android:name=".Rs485AndRs232Activity"
             android:exported="true"
-            android:theme="@style/OneTheme">
+            android:theme="@style/SplashTheme">
 
         </activity>
         <activity
             android:screenOrientation="sensorLandscape"
             android:name=".SerialPortActivity"
             android:exported="true"
-            android:theme="@style/OneTheme">
+            android:theme="@style/SplashTheme">
 
         </activity>
         <activity
@@ -66,7 +66,7 @@
             android:name=".BrightnessActivity"
             android:exported="false"
             android:label="BrightnessActivity"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
         <activity
             android:screenOrientation="sensorLandscape"
             android:name=".MainActivity"
@@ -76,58 +76,58 @@
             android:name=".ui.WarmSettingActivity"
             android:exported="true"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".ui.OtherActivity"
             android:exported="false"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".ui.UserSettingActivity"
             android:exported="true"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".ui.ParameterActivity"
             android:exported="false"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".ui.HandgearActivity"
             android:exported="true"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".ui.UserMessageActivity"
             android:exported="true"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".ui.UserListActivity"
             android:exported="true"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".ui.UserCreateActivity"
             android:exported="true"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".ui.ShedSettingActivity"
             android:exported="true"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".ui.EngineerSettingActivity"
             android:exported="true"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".ui.SplashActivity"
             android:exported="true"
             android:launchMode="singleTask"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme">
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -138,12 +138,12 @@
             android:name=".ui.AutoShedActivity"
             android:exported="true"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".ui.PassWordActivity"
             android:exported="true"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/OneTheme" />
+            android:theme="@style/SplashTheme" />
 
         <meta-data
             android:name="design_width_in_dp"

@@ -366,7 +366,7 @@ public class UserSettingActivity extends BaseActivity implements NumberKeyboardV
     * 预留调用方法 设置背景主题色
     * */
     private void SetBackgroundColor(int type){
-        recreate();//重启资源
         SharedPrefsUtil.putIntValue(AppConfig.BACKGROUND_COLOR, type);//设置主题
+        startA();
     }
 }

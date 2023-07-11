@@ -129,5 +129,5 @@ public class AppConfig {
     /*
      * 背景色
      * */
-    public static final String BACKGROUND_COLOR = "1";
+    public static final String BACKGROUND_COLOR = "0";
 }
