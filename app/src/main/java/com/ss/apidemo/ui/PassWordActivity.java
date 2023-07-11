@@ -3,6 +3,7 @@ package com.ss.apidemo.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,6 +13,7 @@ import java.util.List;
 import com.ss.apidemo.AppConfig;
 import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
+import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.widget.NumberKeyboardView;
 
 /*
@@ -30,7 +32,8 @@ public class PassWordActivity extends BaseActivity implements NumberKeyboardView
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pass_word);
-
+        LinearLayout ll_main = findViewById(R.id.ll_main);
+        BackgroundChangeUtils.backgroundChange(this,ll_main);
         initView();
     }
 

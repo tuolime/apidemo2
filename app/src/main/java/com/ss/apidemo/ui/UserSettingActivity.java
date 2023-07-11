@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +28,7 @@ import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.db.dao.UserValueDao;
 import com.ss.apidemo.dialog.CallDialog;
+import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.DeviceInfoUtil;
 import com.ss.apidemo.utils.LocaleHelper;
 import com.ss.apidemo.utils.LogUtils;
@@ -60,6 +62,8 @@ public class UserSettingActivity extends BaseActivity implements NumberKeyboardV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_setting);
+        LinearLayout ll_main = findViewById(R.id.ll_main);
+        BackgroundChangeUtils.backgroundChange(this,ll_main);
         initView();
     }
 

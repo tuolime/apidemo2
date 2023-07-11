@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/myBgColor"
+    android:id="@+id/ll_main"
+    android:background="@mipmap/ic_background"
     android:orientation="vertical">
     <com.ss.apidemo.view.MergerStatus
         android:layout_width="match_parent"

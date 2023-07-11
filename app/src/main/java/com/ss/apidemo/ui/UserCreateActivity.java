@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.db.bean.User;
 import com.ss.apidemo.db.dao.UserDao;
 import com.ss.apidemo.dialog.HintDialog;
+import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
 import com.ss.apidemo.utils.ToastUtil;
@@ -42,6 +44,8 @@ public class UserCreateActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_create);
+        LinearLayout ll_main = findViewById(R.id.ll_main);
+        BackgroundChangeUtils.backgroundChange(this,ll_main);
         initView();
     }
 

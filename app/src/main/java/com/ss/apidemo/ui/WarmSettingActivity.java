@@ -3,6 +3,7 @@ package com.ss.apidemo.ui;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -15,6 +16,7 @@ import com.ss.apidemo.AppConfig;
 import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
+import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.LogUtils;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
@@ -41,7 +43,8 @@ public class WarmSettingActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_warm_setting);
-
+        LinearLayout ll_main = findViewById(R.id.ll_main);
+        BackgroundChangeUtils.backgroundChange(this,ll_main);
         initView();
     }
 

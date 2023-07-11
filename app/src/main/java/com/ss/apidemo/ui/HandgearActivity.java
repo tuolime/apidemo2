@@ -11,6 +11,7 @@ import com.ss.apidemo.AppConfig;
 import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
+import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 
 /*
@@ -34,8 +35,8 @@ public class HandgearActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_handgear);
-
-
+        LinearLayout ll_main = findViewById(R.id.ll_main);
+        BackgroundChangeUtils.backgroundChange(this,ll_main);
         Intent intent = getIntent();
         if (intent != null){
             gender = intent.getStringExtra("gender");

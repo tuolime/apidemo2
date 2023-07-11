@@ -40,6 +40,7 @@ import com.ss.apidemo.fragment.StackFragment;
 import com.ss.apidemo.fragment.WoManBackFragment;
 import com.ss.apidemo.fragment.WoManFragment;
 import com.ss.apidemo.fragment.WoManHeadFragment;
+import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.DateUtil;
 import com.ss.apidemo.utils.LogUtils;
 import com.ss.apidemo.utils.PlayVoiceUtils;
@@ -100,6 +101,8 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other);
+        LinearLayout ll_main = findViewById(R.id.ll_main);
+        BackgroundChangeUtils.backgroundChange(this,ll_main);
         Intent intent = getIntent();
         if (intent != null) {
             commonBean = (CommonBean) intent.getSerializableExtra("CommonBean");

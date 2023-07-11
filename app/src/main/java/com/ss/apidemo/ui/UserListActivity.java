@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -14,6 +15,7 @@ import com.ss.apidemo.adapter.UserListAdapter;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.db.bean.User;
 import com.ss.apidemo.db.dao.UserDao;
+import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.ToastUtil;
 
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -31,6 +33,8 @@ public class UserListActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_list);
+        LinearLayout ll_main = findViewById(R.id.ll_main);
+        BackgroundChangeUtils.backgroundChange(this,ll_main);
         Intent intent = getIntent();
         if (intent != null) {
             tel = intent.getStringExtra("tel");

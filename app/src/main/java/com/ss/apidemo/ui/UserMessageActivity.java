@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ import com.ss.apidemo.db.bean.UserValue;
 import com.ss.apidemo.db.dao.UserDao;
 import com.ss.apidemo.db.dao.UserValueDao;
 import com.ss.apidemo.dialog.CallDialog;
+import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.DateUtil;
 import com.ss.apidemo.utils.LogUtils;
 import com.ss.apidemo.utils.PlayVoiceUtils;
@@ -51,6 +53,8 @@ public class UserMessageActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_message);
+        LinearLayout ll_main = findViewById(R.id.ll_main);
+        BackgroundChangeUtils.backgroundChange(this,ll_main);
         Intent intent = getIntent();
         if (intent != null){
             tel = intent.getStringExtra("tel");

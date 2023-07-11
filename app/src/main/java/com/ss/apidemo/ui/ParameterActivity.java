@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.LinkedList;
@@ -32,6 +33,7 @@ import com.ss.apidemo.fragment.ManHeadFragment;
 import com.ss.apidemo.fragment.WoManBackFragment;
 import com.ss.apidemo.fragment.WoManFragment;
 import com.ss.apidemo.fragment.WoManHeadFragment;
+import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.DateUtil;
 import com.ss.apidemo.utils.LogUtils;
 import com.ss.apidemo.utils.PlayVoiceUtils;
@@ -80,6 +82,8 @@ public class ParameterActivity extends BaseActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parameter);
+        LinearLayout ll_main = findViewById(R.id.ll_main);
+        BackgroundChangeUtils.backgroundChange(this,ll_main);
         Intent intent = getIntent();
         if (intent != null) {
             gender = intent.getStringExtra("gender");
