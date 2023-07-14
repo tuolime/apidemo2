@@ -126,6 +126,51 @@ public final class HrModeUtils {
                     type.setFluence10HzMax(23);
                     type.setFluence20HzMax(12);
                     break;
+                case 8:
+                    type.setHandgearType(8);
+                    type.setFluenceMin(4);
+                    type.setFluence1HzMax(120);
+                    type.setFluence2HzMax(100);
+                    type.setFluence3HzMax(90);
+                    type.setFluence4HzMax(75);
+                    type.setFluence5HzMax(60);
+                    type.setFluence6HzMax(50);
+                    type.setFluence7HzMax(45);
+                    type.setFluence8HzMax(37);
+                    type.setFluence9HzMax(33);
+                    type.setFluence10HzMax(30);
+                    type.setFluence20HzMax(15);
+                    break;
+                case 9:
+                    type.setHandgearType(9);
+                    type.setFluenceMin(4);
+                    type.setFluence1HzMax(120);
+                    type.setFluence2HzMax(80);
+                    type.setFluence3HzMax(72);
+                    type.setFluence4HzMax(56);
+                    type.setFluence5HzMax(50);
+                    type.setFluence6HzMax(40);
+                    type.setFluence7HzMax(35);
+                    type.setFluence8HzMax(28);
+                    type.setFluence9HzMax(25);
+                    type.setFluence10HzMax(25);
+                    type.setFluence20HzMax(12);
+                    break;
+                case 10:
+                    type.setHandgearType(10);
+                    type.setFluenceMin(4);
+                    type.setFluence1HzMax(120);
+                    type.setFluence2HzMax(70);
+                    type.setFluence3HzMax(54);
+                    type.setFluence4HzMax(40);
+                    type.setFluence5HzMax(32);
+                    type.setFluence6HzMax(28);
+                    type.setFluence7HzMax(24);
+                    type.setFluence8HzMax(22);
+                    type.setFluence9HzMax(20);
+                    type.setFluence10HzMax(18);
+                    break;
+
             }
 
         } else if (gender == 2) {
@@ -240,6 +285,50 @@ public final class HrModeUtils {
                     type.setFluence9HzMax(25);
                     type.setFluence10HzMax(23);
                     type.setFluence20HzMax(12);
+                    break;
+                case 8:
+                    type.setHandgearType(8);
+                    type.setFluenceMin(4);
+                    type.setFluence1HzMax(120);
+                    type.setFluence2HzMax(100);
+                    type.setFluence3HzMax(90);
+                    type.setFluence4HzMax(75);
+                    type.setFluence5HzMax(60);
+                    type.setFluence6HzMax(50);
+                    type.setFluence7HzMax(45);
+                    type.setFluence8HzMax(37);
+                    type.setFluence9HzMax(33);
+                    type.setFluence10HzMax(30);
+                    type.setFluence20HzMax(15);
+                    break;
+                case 9:
+                    type.setHandgearType(9);
+                    type.setFluenceMin(4);
+                    type.setFluence1HzMax(120);
+                    type.setFluence2HzMax(80);
+                    type.setFluence3HzMax(72);
+                    type.setFluence4HzMax(56);
+                    type.setFluence5HzMax(50);
+                    type.setFluence6HzMax(40);
+                    type.setFluence7HzMax(35);
+                    type.setFluence8HzMax(28);
+                    type.setFluence9HzMax(25);
+                    type.setFluence10HzMax(25);
+                    type.setFluence20HzMax(12);
+                    break;
+                case 10:
+                    type.setHandgearType(10);
+                    type.setFluenceMin(4);
+                    type.setFluence1HzMax(120);
+                    type.setFluence2HzMax(70);
+                    type.setFluence3HzMax(54);
+                    type.setFluence4HzMax(40);
+                    type.setFluence5HzMax(32);
+                    type.setFluence6HzMax(28);
+                    type.setFluence7HzMax(24);
+                    type.setFluence8HzMax(22);
+                    type.setFluence9HzMax(20);
+                    type.setFluence10HzMax(18);
                     break;
             }
         }

@@ -51,7 +51,7 @@ public class HrFragment extends Fragment implements View.OnClickListener {
     private int current_frequency_min = 1;
     private int current_frequency_common_max = 0;
     private int current_frequency_max = 10;
-    private int current_frequency_max_3_7 = 11;
+    private int current_frequency_max_3_7_8_9 = 11;
     private int current_frequency_progress = 1;
 
 
@@ -147,9 +147,9 @@ public class HrFragment extends Fragment implements View.OnClickListener {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             sb_frequency.setMin(current_frequency_min);
         }
-        if (current_handgear == 3 || current_handgear == 7) {
-            sb_frequency.setMax(current_frequency_max_3_7);
-            current_frequency_common_max = current_frequency_max_3_7;
+        if (current_handgear == 3 || current_handgear == 7 || current_handgear == 8 || current_handgear == 9) {
+            sb_frequency.setMax(current_frequency_max_3_7_8_9);
+            current_frequency_common_max = current_frequency_max_3_7_8_9;
         } else {
             sb_frequency.setMax(current_frequency_max);
             current_frequency_common_max = current_frequency_max;
