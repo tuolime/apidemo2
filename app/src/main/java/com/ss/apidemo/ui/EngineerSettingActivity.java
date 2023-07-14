@@ -35,7 +35,7 @@ public class EngineerSettingActivity extends BaseActivity {
     private boolean isCount = true; //false 计数   true 不计数
     private Button bt_count;
     private RadioGroup rg_right;
-    private RadioButton rb_right1, rb_right2, rb_right3, rb_right4, rb_right5, rb_right6, rb_right7;
+    private RadioButton rb_right1, rb_right2, rb_right3, rb_right4, rb_right5, rb_right6, rb_right7, rb_right8, rb_right9, rb_right10;
     private AudioManager mAudioManager;
     int mediaVolume;
     @Override
@@ -82,6 +82,7 @@ public class EngineerSettingActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+        modeTwoBg();
         leftHandgear();
         rightHandgear();
         isCount();
@@ -114,6 +115,59 @@ public class EngineerSettingActivity extends BaseActivity {
     }
 
     /*
+     * 工作模式2 背景选择
+     * */
+    private void modeTwoBg() {
+        RadioGroup rg_modeTwo_bg = findViewById(R.id.rg_modeTwo_bg);
+        RadioButton rg_modeTwo_bg1 = findViewById(R.id.rg_modeTwo_bg1);
+        RadioButton rg_modeTwo_bg2 = findViewById(R.id.rg_modeTwo_bg2);
+        RadioButton rg_modeTwo_bg3 = findViewById(R.id.rg_modeTwo_bg3);
+        RadioButton rg_modeTwo_bg4 = findViewById(R.id.rg_modeTwo_bg4);
+        RadioButton rg_modeTwo_bg5 = findViewById(R.id.rg_modeTwo_bg5);
+        RadioButton rg_modeTwo_bg6 = findViewById(R.id.rg_modeTwo_bg6);
+        rg_modeTwo_bg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+                switch (i) {
+                    case R.id.rg_modeTwo_bg1:
+                        SharedPrefsUtil.putIntValue(AppConfig.MODE_TWO_GB, 1);
+                        break;
+                    case R.id.rg_modeTwo_bg2:
+                        SharedPrefsUtil.putIntValue(AppConfig.MODE_TWO_GB, 2);
+                        break;
+                    case R.id.rg_modeTwo_bg3:
+                        SharedPrefsUtil.putIntValue(AppConfig.MODE_TWO_GB, 3);
+                        break;
+                    case R.id.rg_modeTwo_bg4:
+                        SharedPrefsUtil.putIntValue(AppConfig.MODE_TWO_GB, 4);
+                        break;
+                    case R.id.rg_modeTwo_bg5:
+                        SharedPrefsUtil.putIntValue(AppConfig.MODE_TWO_GB, 5);
+                        break;
+                    case R.id.rb_power6:
+                        SharedPrefsUtil.putIntValue(AppConfig.MODE_TWO_GB, 6);
+                        break;
+                }
+            }
+        });
+        int intValue = SharedPrefsUtil.getIntValue(AppConfig.MODE_TWO_GB, 1);
+        if (intValue == 1) {
+            rg_modeTwo_bg1.setChecked(true);
+        } else if (intValue == 2) {
+            rg_modeTwo_bg2.setChecked(true);
+        } else if (intValue == 3) {
+            rg_modeTwo_bg3.setChecked(true);
+        } else if (intValue == 4) {
+            rg_modeTwo_bg4.setChecked(true);
+        } else if (intValue == 5) {
+            rg_modeTwo_bg5.setChecked(true);
+        } else if (intValue == 6) {
+            rg_modeTwo_bg6.setChecked(true);
+        }
+    }
+
+    /*
      * 左手具
      * */
     private void leftHandgear() {
@@ -125,6 +179,9 @@ public class EngineerSettingActivity extends BaseActivity {
         RadioButton rb_left5 = findViewById(R.id.rb_left5);
         RadioButton rb_left6 = findViewById(R.id.rb_left6);
         RadioButton rb_left7 = findViewById(R.id.rb_left7);
+        RadioButton rb_left8 = findViewById(R.id.rb_left8);
+        RadioButton rb_left9 = findViewById(R.id.rb_left9);
+        RadioButton rb_left10 = findViewById(R.id.rb_left10);
         rg_left.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -151,6 +208,15 @@ public class EngineerSettingActivity extends BaseActivity {
                     case R.id.rb_left7:
                         SharedPrefsUtil.putIntValue(AppConfig.HAND_LEFT, 7);
                         break;
+                    case R.id.rb_left8:
+                        SharedPrefsUtil.putIntValue(AppConfig.HAND_LEFT, 8);
+                        break;
+                    case R.id.rb_left9:
+                        SharedPrefsUtil.putIntValue(AppConfig.HAND_LEFT, 9);
+                        break;
+                    case R.id.rb_left10:
+                        SharedPrefsUtil.putIntValue(AppConfig.HAND_LEFT, 10);
+                        break;
 
                 }
             }
@@ -170,6 +236,12 @@ public class EngineerSettingActivity extends BaseActivity {
             rb_left6.setChecked(true);
         } else if (intValue == 7) {
             rb_left7.setChecked(true);
+        } else if (intValue == 8) {
+            rb_left8.setChecked(true);
+        } else if (intValue == 9) {
+            rb_left9.setChecked(true);
+        } else if (intValue == 10) {
+            rb_left10.setChecked(true);
         }
     }
 
@@ -185,6 +257,9 @@ public class EngineerSettingActivity extends BaseActivity {
         rb_right5 = findViewById(R.id.rb_right5);
         rb_right6 = findViewById(R.id.rb_right6);
         rb_right7 = findViewById(R.id.rb_right7);
+        rb_right8 = findViewById(R.id.rb_right8);
+        rb_right9 = findViewById(R.id.rb_right9);
+        rb_right10 = findViewById(R.id.rb_right10);
         rg_right.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -211,6 +286,15 @@ public class EngineerSettingActivity extends BaseActivity {
                         break;
                     case R.id.rb_right7:
                         SharedPrefsUtil.putIntValue(AppConfig.HAND_RIGHT, 7);
+                        break;
+                    case R.id.rb_right8:
+                        SharedPrefsUtil.putIntValue(AppConfig.HAND_RIGHT, 8);
+                        break;
+                    case R.id.rb_right9:
+                        SharedPrefsUtil.putIntValue(AppConfig.HAND_RIGHT, 9);
+                        break;
+                    case R.id.rb_right10:
+                        SharedPrefsUtil.putIntValue(AppConfig.HAND_RIGHT, 10);
                         break;
 
                 }
@@ -249,6 +333,12 @@ public class EngineerSettingActivity extends BaseActivity {
             rb_right6.setChecked(true);
         } else if (intValue == 7) {
             rb_right7.setChecked(true);
+        } else if (intValue == 8) {
+            rb_right8.setChecked(true);
+        } else if (intValue == 9) {
+            rb_right9.setChecked(true);
+        } else if (intValue == 10) {
+            rb_right10.setChecked(true);
         }
     }
 
@@ -390,6 +480,9 @@ public class EngineerSettingActivity extends BaseActivity {
         RadioButton rb_power4 = findViewById(R.id.rb_power4);
         RadioButton rb_power5 = findViewById(R.id.rb_power5);
         RadioButton rb_power6 = findViewById(R.id.rb_power6);
+        RadioButton rb_power7 = findViewById(R.id.rb_power7);
+        RadioButton rb_power8 = findViewById(R.id.rb_power8);
+        RadioButton rb_power9 = findViewById(R.id.rb_power9);
         rg_power.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -413,6 +506,15 @@ public class EngineerSettingActivity extends BaseActivity {
                     case R.id.rb_power6:
                         SharedPrefsUtil.putIntValue(AppConfig.POWER_TYPE, 6);
                         break;
+                    case R.id.rb_power7:
+                        SharedPrefsUtil.putIntValue(AppConfig.POWER_TYPE, 7);
+                        break;
+                    case R.id.rb_power8:
+                        SharedPrefsUtil.putIntValue(AppConfig.POWER_TYPE, 8);
+                        break;
+                    case R.id.rb_power9:
+                        SharedPrefsUtil.putIntValue(AppConfig.POWER_TYPE, 9);
+                        break;
 
                 }
             }
@@ -430,6 +532,12 @@ public class EngineerSettingActivity extends BaseActivity {
             rb_power5.setChecked(true);
         } else if (intValue == 6) {
             rb_power6.setChecked(true);
+        } else if (intValue == 7) {
+            rb_power7.setChecked(true);
+        } else if (intValue == 8) {
+            rb_power8.setChecked(true);
+        } else if (intValue == 9) {
+            rb_power9.setChecked(true);
         }
     }
 }

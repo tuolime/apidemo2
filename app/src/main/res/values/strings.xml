@@ -23,6 +23,9 @@
     <string name="qb_2_16">QB-2-16</string>
     <string name="qb_2_24">QB-2-24</string>
     <string name="qb_4_24">QB-4-24</string>
+    <string name="qb_star_30">QB-*-30</string>
+    <string name="qb_6_200">QB-6-200</string>
+    <string name="qb_6_40">QB-6-40</string>
 
     <string name="right_hand_tool">RIGHT HAND TOOL</string>
     <string name="power_supply_type">POWER SUPPLY TYPE</string>
@@ -121,5 +124,14 @@
 
 
     <string name="frequency_hz">FREQUENCY</string>
+
+
+    <string name="mode_two_bg_1">I</string>
+    <string name="mode_two_bg_2">II</string>
+    <string name="mode_two_bg_3">III</string>
+    <string name="mode_two_bg_4">IV</string>
+    <string name="mode_two_bg_5">V</string>
+    <string name="mode_two_bg_6">VI</string>
+
 
 </resources>

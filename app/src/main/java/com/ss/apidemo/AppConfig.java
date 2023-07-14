@@ -53,6 +53,16 @@ public class AppConfig {
 //    public static final String COUNT = "COUNT";//计数
     public static final String SHED = "SHED";//脱毛
     /*
+     * 1 I
+     * 2 II
+     * 3 III
+     * 4 IV
+     * 5 V
+     * 6 VI
+     *
+     * */
+    public static final String MODE_TWO_GB = "MODE_TWO_BG";//工作模式2 背景选择
+    /*
      * 1 QB-6-10
      * 2 QB-6-16
      * 3 QB-6-20
@@ -60,6 +70,9 @@ public class AppConfig {
      * 5 QB-2-16
      * 6 QB-2-24
      * 7 QB-4-24
+     * 8 QB-*-30
+     * 9 QB-6-200
+     * 10 QB-6-40
      *
      * */
     public static final String HAND_LEFT = "HAND_LEFT";//左手手具
@@ -71,16 +84,22 @@ public class AppConfig {
      * 5 QB-2-16
      * 6 QB-2-24
      * 7 QB-4-24
+     * 8 QB-*-30
+     * 9 QB-6-200
+     * 10 QB-6-40
      *
      * */
     public static final String HAND_RIGHT = "HAND_RIGHT";//右手手具
     /*
-    * 1 1200W-A
-    * 2 1200W-B
-    * 3 24V-50A-A
-    * 4 32V-50A-A
-    * 5 24V-50A-B
-    * 6 32V-50A-B
+    * 1 DY1200J
+    * 2 DY1200F
+    * 3 DY2450F
+    * 4 DY3250F
+    * 5 DY2450J
+    * 6 DY3250J
+    * 7 DY1800J
+    * 8 DY2000J
+    * 9 DY2000x
     *
     * */
     public static final String POWER_TYPE = "POWER_TYPE";//电源类型

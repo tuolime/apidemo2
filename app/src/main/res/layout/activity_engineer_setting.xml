@@ -280,6 +280,196 @@
                 android:paddingBottom="10dp">
 
                 <RadioGroup
+                    android:id="@+id/rg_modeTwo_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rg_modeTwo_bg1"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="50dp"
+                        android:text="@string/mode_two_bg_1"
+                        android:textColor="@color/white"></RadioButton>
+
+
+                    <RadioButton
+                        android:id="@+id/rg_modeTwo_bg2"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="50dp"
+                        android:text="@string/mode_two_bg_2"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rg_modeTwo_bg3"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="50dp"
+                        android:text="@string/mode_two_bg_3"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rg_modeTwo_bg4"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="50dp"
+                        android:text="@string/mode_two_bg_4"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rg_modeTwo_bg5"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="50dp"
+                        android:text="@string/mode_two_bg_5"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rg_modeTwo_bg6"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="50dp"
+                        android:text="@string/mode_two_bg_6"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:visibility="invisible"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="42dp"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:visibility="invisible"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="42dp"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:visibility="invisible"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="42dp"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:visibility="invisible"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="42dp"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:visibility="invisible"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="42dp"
+                        android:textColor="@color/white"></RadioButton>
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/left_hand_tool"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ps_bg_rounded_corners"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <RadioGroup
                     android:id="@+id/rg_left"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -385,7 +575,7 @@
                         android:textColor="@color/white"></RadioButton>
 
                     <RadioButton
-                        android:visibility="invisible"
+                        android:id="@+id/rb_left8"
                         android:paddingTop="10dp"
                         android:paddingLeft="30dp"
                         android:paddingRight="30dp"
@@ -394,7 +584,36 @@
                         android:layout_alignParentRight="true"
                         android:button="@null"
                         android:drawableRight="@drawable/radio_button_selector"
-                        android:drawablePadding="42dp"
+                        android:drawablePadding="50dp"
+                        android:text="@string/qb_star_30"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rb_left9"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="50dp"
+                        android:text="@string/qb_6_200"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rb_left10"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="50dp"
+                        android:text="@string/qb_6_40"
                         android:textColor="@color/white"></RadioButton>
 
 
@@ -538,6 +757,48 @@
                         android:textColor="@color/white"></RadioButton>
 
                     <RadioButton
+                        android:id="@+id/rb_right8"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="50dp"
+                        android:text="@string/qb_star_30"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rb_right9"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="50dp"
+                        android:text="@string/qb_6_200"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rb_right10"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="50dp"
+                        android:text="@string/qb_6_40"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
                         android:visibility="invisible"
                         android:paddingTop="10dp"
                         android:paddingLeft="30dp"
@@ -549,7 +810,6 @@
                         android:drawableRight="@drawable/radio_button_selector"
                         android:drawablePadding="42dp"
                         android:textColor="@color/white"></RadioButton>
-
 
                 </RadioGroup>
             </LinearLayout>
@@ -674,6 +934,48 @@
                         android:drawableRight="@drawable/radio_button_selector"
                         android:drawablePadding="60dp"
                         android:text="DY3250J"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rb_power7"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="60dp"
+                        android:text="DY1800J"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rb_power8"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="60dp"
+                        android:text="DY2000J"
+                        android:textColor="@color/white"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rb_power9"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radio_button_selector"
+                        android:drawablePadding="60dp"
+                        android:text="DY2000x"
                         android:textColor="@color/white"></RadioButton>
 
 
