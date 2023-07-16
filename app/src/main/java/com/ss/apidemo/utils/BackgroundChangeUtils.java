@@ -14,15 +14,29 @@ import com.ss.apidemo.R;
 public class BackgroundChangeUtils {
 
     public static void backgroundChange(Context context,LinearLayout linearLayout){
-        int intValue = SharedPrefsUtil.getIntValue(AppConfig.BACKGROUND_COLOR, 0);//第一次默认设置为亮色主题
-        if (intValue == 0) {
-            linearLayout.setBackgroundDrawable(context.getResources().getDrawable(R.mipmap.ic_background));
-        }else if (intValue == 1) {
-            linearLayout.setBackgroundDrawable(context.getResources().getDrawable(R.mipmap.ic_background));
+        int intValue = SharedPrefsUtil.getIntValue(AppConfig.BACKGROUND_COLOR, 1);//第一次默认设置为亮色主题
+        if (intValue == 1) {
+            linearLayout.setBackgroundDrawable(context.getResources().getDrawable(R.mipmap.ic_background1));
         }else if (intValue == 2) {
-            linearLayout.setBackgroundDrawable(context.getResources().getDrawable(R.mipmap.ic_background));
+            linearLayout.setBackgroundDrawable(context.getResources().getDrawable(R.mipmap.ic_background2));
         }else if (intValue == 3) {
-            linearLayout.setBackgroundDrawable(context.getResources().getDrawable(R.mipmap.ic_background));
+            linearLayout.setBackgroundDrawable(context.getResources().getDrawable(R.mipmap.ic_background3));
+        }else if (intValue == 4) {
+            linearLayout.setBackgroundDrawable(context.getResources().getDrawable(R.mipmap.ic_background4));
+        }
+
+    }
+
+    public static void backgroundLoginChange(Context context,LinearLayout linearLayout){
+        int intValue = SharedPrefsUtil.getIntValue(AppConfig.BACKGROUND_COLOR, 1);//第一次默认设置为亮色主题
+        if (intValue == 1) {
+            linearLayout.setBackgroundDrawable(context.getResources().getDrawable(R.mipmap.ic_background1));
+        }else if (intValue == 2) {
+            linearLayout.setBackgroundDrawable(context.getResources().getDrawable(R.mipmap.ic_background2));
+        }else if (intValue == 3) {
+            linearLayout.setBackgroundDrawable(context.getResources().getDrawable(R.mipmap.ic_background3));
+        }else if (intValue == 4) {
+            linearLayout.setBackgroundDrawable(context.getResources().getDrawable(R.mipmap.ic_background4));
         }
 
     }

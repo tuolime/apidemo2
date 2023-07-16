@@ -9,8 +9,8 @@
     <string name="count_cleaning">Cuenta dividida</string>
     <string name="cleaning">Agrietamiento</string>
     <string name="remote_control">Control remoto</string>
-    <string name="on">Arriba</string>
-    <string name="off">Cierre</string>
+    <string name="on_str">Arriba</string>
+    <string name="off_str">Cierre</string>
     <string name="quantity">Cantidad</string>
     <string name="of_hand_tools">Herramientas manuales</string>
     <string name="one">Uno</string>

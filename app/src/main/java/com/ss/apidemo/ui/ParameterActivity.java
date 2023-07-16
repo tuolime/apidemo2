@@ -151,6 +151,7 @@ public class ParameterActivity extends BaseActivity implements View.OnClickListe
             @Override
             public void onClick(View view) {
                 int gender_int = Integer.parseInt(gender);
+                SharedPrefsUtil.putIntValue(AppConfig.GENDER, gender_int);
                 int currentItem = viewPager.getCurrentItem();
                 boolean bodyFlag = false;
                 //性别 1 男  2 女

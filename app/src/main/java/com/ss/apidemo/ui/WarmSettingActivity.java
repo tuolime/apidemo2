@@ -1,5 +1,6 @@
 package com.ss.apidemo.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -16,7 +17,9 @@ import com.ss.apidemo.AppConfig;
 import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
+import com.ss.apidemo.bean.HrModeBean;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.HrModeUtils;
 import com.ss.apidemo.utils.LogUtils;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
@@ -31,6 +34,8 @@ public class WarmSettingActivity extends BaseActivity {
 
     private TextView tv_temperature;
     private TextView tv_water;
+    private TextView tv_up_enegry;
+    private TextView tv_lower_energy;
     private int temperature_count = 30;
     private int water_count = 20;
     private double[] water_count_array = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0,1.1,1.2,1.3,1.4,1.5,1.6,1.7,
@@ -38,6 +43,12 @@ public class WarmSettingActivity extends BaseActivity {
     private boolean water;
     private boolean temperature;
     private boolean count_clear =false;
+    private HrModeBean hrModeBean;
+    int handgearType = 0;
+    private int current_energy_max;
+    private int current_energy_min;
+    private int current_energyUpper;
+    private int current_energyLower;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -193,6 +204,167 @@ public class WarmSettingActivity extends BaseActivity {
                 }
             }
         });
+
+        RadioGroup rg_user_down = findViewById(R.id.rg_user_down);
+        RadioButton rb_user_down_on = findViewById(R.id.rb_user_down_on);
+        RadioButton rb_user_down_off = findViewById(R.id.rb_user_down_off);
+        boolean userDataDownLoad = SharedPrefsUtil.getBooleanValue(AppConfig.USERDATADOWMLOAD, false);
+        if (userDataDownLoad){
+            rb_user_down_on.setChecked(true);
+        }else {
+            rb_user_down_off.setChecked(true);
+        }
+        //用户数据下载
+        rg_user_down.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+                switch (i) {
+                    case R.id.rb_user_down_on:
+                        SharedPrefsUtil.putBooleanValue(AppConfig.USERDATADOWMLOAD,true);
+                        break;
+                    case R.id.rb_user_down_off:
+                        SharedPrefsUtil.putBooleanValue(AppConfig.USERDATADOWMLOAD,false);
+                        break;
+                }
+            }
+        });
+
+        RadioGroup rg_mode_select = findViewById(R.id.rg_mode_select);
+        RadioButton rb_mode_select_1 = findViewById(R.id.rb_mode_select_1);
+        RadioButton rb_mode_select_2 = findViewById(R.id.rb_mode_select_2);
+        int modeType = SharedPrefsUtil.getIntValue(AppConfig.MODETYPE, 1);
+        if (modeType == 1){
+            rb_mode_select_1.setChecked(true);
+        }else if (modeType == 2){
+            rb_mode_select_2.setChecked(true);
+        }
+        //模式选择
+        rg_mode_select.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+                switch (i) {
+                    case R.id.rb_mode_select_1:
+                        SharedPrefsUtil.putIntValue(AppConfig.MODETYPE,1);
+                        startA();
+                        break;
+                    case R.id.rb_mode_select_2:
+                        SharedPrefsUtil.putIntValue(AppConfig.MODETYPE,2);
+                        startA();
+                        break;
+                }
+            }
+        });
+
+        RadioGroup rg_wlan = findViewById(R.id.rg_wlan);
+        RadioButton rb_wlan_on = findViewById(R.id.rb_wlan_on);
+        RadioButton rb_wlan_off = findViewById(R.id.rb_wlan_off);
+        boolean wlan = SharedPrefsUtil.getBooleanValue(AppConfig.WLAN, false);
+        if (wlan){
+            rb_wlan_on.setChecked(true);
+        }else {
+            rb_wlan_off.setChecked(true);
+        }
+        //开启网络
+        rg_wlan.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+                switch (i) {
+                    case R.id.rb_wlan_on:
+                        SharedPrefsUtil.putBooleanValue(AppConfig.WLAN,true);
+                        startA();
+                        break;
+                    case R.id.rb_wlan_off:
+                        SharedPrefsUtil.putBooleanValue(AppConfig.WLAN,false);
+                        startA();
+                        break;
+                }
+            }
+        });
+
+        RadioGroup rg_background_select = findViewById(R.id.rg_background_select);
+        RadioButton rb_background_select_1 = findViewById(R.id.rb_background_select_1);
+        RadioButton rb_background_select_2 = findViewById(R.id.rb_background_select_2);
+        RadioButton rb_background_select_3 = findViewById(R.id.rb_background_select_3);
+        RadioButton rb_background_select_4 = findViewById(R.id.rb_background_select_4);
+        int backgroundSelect = SharedPrefsUtil.getIntValue(AppConfig.BACKGROUNDSELECT, 1);
+        if (backgroundSelect == 1){
+            rb_background_select_1.setChecked(true);
+        }else if (backgroundSelect == 2){
+            rb_background_select_2.setChecked(true);
+        }else if (backgroundSelect == 2){
+            rb_background_select_3.setChecked(true);
+        }else if (backgroundSelect == 2){
+            rb_background_select_4.setChecked(true);
+        }
+        //背景主题选择
+        rg_background_select.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+                switch (i) {
+                    case R.id.rb_background_select_1:
+                        SharedPrefsUtil.putIntValue(AppConfig.BACKGROUNDSELECT,1);
+                        SetBackgroundColor(1);
+                        startA();
+                        break;
+                    case R.id.rb_background_select_2:
+                        SharedPrefsUtil.putIntValue(AppConfig.BACKGROUNDSELECT,2);
+                        SetBackgroundColor(2);
+                        startA();
+                        break;
+                    case R.id.rb_background_select_3:
+                        SharedPrefsUtil.putIntValue(AppConfig.BACKGROUNDSELECT,3);
+                        SetBackgroundColor(3);
+                        startA();
+                        break;
+                    case R.id.rb_background_select_4:
+                        SharedPrefsUtil.putIntValue(AppConfig.BACKGROUNDSELECT,4);
+                        SetBackgroundColor(4);
+                        startA();
+                        break;
+                }
+            }
+        });
+
+        RadioGroup rg_bluetooth_select = findViewById(R.id.rg_bluetooth_select);
+        RadioButton rb_bluetooth_select_on = findViewById(R.id.rb_bluetooth_select_on);
+        RadioButton rb_bluetooth_select_off = findViewById(R.id.rb_bluetooth_select_off);
+        boolean bluetooth = SharedPrefsUtil.getBooleanValue(AppConfig.BLUETOOTH, false);
+        if (bluetooth){
+            rb_bluetooth_select_on.setChecked(true);
+        }else {
+            rb_bluetooth_select_off.setChecked(true);
+        }
+        //蓝牙选择
+        rg_bluetooth_select.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+                switch (i) {
+                    case R.id.rb_bluetooth_select_on:
+                        SharedPrefsUtil.putBooleanValue(AppConfig.BLUETOOTH,true);
+                        startA();
+                        break;
+                    case R.id.rb_bluetooth_select_off:
+                        SharedPrefsUtil.putBooleanValue(AppConfig.BLUETOOTH,false);
+                        startA();
+                        break;
+                }
+            }
+        });
+
+        //能量上限
+        loadEnergy();
+        tv_up_enegry = findViewById(R.id.tv_up_enegry);
+        current_energyUpper = SharedPrefsUtil.getIntValue(AppConfig.ENERGYUPPER, 0);
+        tv_up_enegry.setText(""+ current_energyUpper);
+        //能量下限
+        tv_lower_energy = findViewById(R.id.tv_lower_energy);
+        current_energyLower = SharedPrefsUtil.getIntValue(AppConfig.ENERGYLOWER, 0);
+        tv_lower_energy.setText(""+ current_energyLower);
     }
     public void selectClick(View view){
         PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
@@ -233,6 +405,69 @@ public class WarmSettingActivity extends BaseActivity {
                 int waterInts = (int) (water_count_array[water_count] *10);
                 SharedPrefsUtil.putIntValue(AppConfig.WATER_COUNT, waterInts);
                 break;
+            case R.id.iv_energy_up_up:
+                if (current_energyUpper == current_energy_max){
+                    return;
+                }
+                current_energyUpper++;
+                tv_up_enegry.setText(""+current_energyUpper);
+                SharedPrefsUtil.putIntValue(AppConfig.ENERGYUPPER, current_energyUpper);
+                break;
+            case R.id.iv_energy_up_down:
+                if (current_energyUpper == 0){
+                    return;
+                }
+                current_energyUpper--;
+                tv_up_enegry.setText(""+current_energyUpper);
+                SharedPrefsUtil.putIntValue(AppConfig.ENERGYUPPER, current_energyUpper);
+                break;
+            case R.id.iv_energy_lower_up:
+                if (current_energyLower == current_energy_max){
+                    return;
+                }
+                current_energyLower++;
+                tv_lower_energy.setText(""+current_energyLower);
+                SharedPrefsUtil.putIntValue(AppConfig.ENERGYLOWER, current_energyLower);
+                break;
+            case R.id.iv_energy_lower_down:
+                if (current_energyLower == 0){
+                    return;
+                }
+                current_energyLower--;
+                tv_lower_energy.setText(""+current_energyLower);
+                SharedPrefsUtil.putIntValue(AppConfig.ENERGYLOWER, current_energyLower);
+                break;
         }
+    }
+
+    public void loadEnergy(){
+        HrModeUtils hrModeUtils = new HrModeUtils();
+
+        if (AppConfig.handgearSelect == 1) {//单手==左手
+            handgearType = SharedPrefsUtil.getIntValue(AppConfig.HAND_LEFT, 1);
+        } else if (AppConfig.handgearSelect == 0) {//双手 =  左右手
+            handgearType = SharedPrefsUtil.getIntValue(AppConfig.HAND_RIGHT, 1);
+        }
+        int gender = SharedPrefsUtil.getIntValue(AppConfig.GENDER, 1);
+        hrModeBean = hrModeUtils.modeType(gender, handgearType);
+        if (handgearType == 3 || handgearType == 7 || handgearType == 8 || handgearType == 9) {
+            current_energy_max = hrModeBean.getFluence20HzMax();
+            current_energy_min = hrModeBean.getFluenceMin();
+        } else {
+            current_energy_max = hrModeBean.getFluence10HzMax();
+            current_energy_min = hrModeBean.getFluenceMin();
+
+        }
+    }
+    public void startA() {
+        startActivity(new Intent(WarmSettingActivity.this, SplashActivity.class));
+    }
+
+    /*
+     * 预留调用方法 设置背景主题色
+     * */
+    private void SetBackgroundColor(int type){
+        SharedPrefsUtil.putIntValue(AppConfig.BACKGROUND_COLOR, type);//设置主题
+        startA();
     }
 }

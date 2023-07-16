@@ -9,8 +9,8 @@
     <string name="count_cleaning">REINIGUNG DER ZAHL</string>
     <string name="cleaning">REINIGUNG</string>
     <string name="remote_control">FERNSTEUERUNG</string>
-    <string name="on">ON</string>
-    <string name="off">AUS</string>
+    <string name="on_str">ON</string>
+    <string name="off_str">AUS</string>
     <string name="quantity">QUANTITÄT</string>
     <string name="of_hand_tools">DER HANDWERKSTELLE</string>
     <string name="one">EIN</string>

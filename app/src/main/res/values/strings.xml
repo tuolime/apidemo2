@@ -9,8 +9,8 @@
     <string name="count_cleaning">COUNT CLEANING</string>
     <string name="cleaning">CLEANING</string>
     <string name="remote_control">REMOTE CONTROL</string>
-    <string name="on">ON</string>
-    <string name="off">OFF</string>
+    <string name="on_str">ON</string>
+    <string name="off_str">OFF</string>
     <string name="quantity">QUANTITY</string>
     <string name="of_hand_tools">OF HAND TOOLS</string>
     <string name="one">ONE</string>
@@ -125,13 +125,28 @@
 
     <string name="frequency_hz">FREQUENCY</string>
 
-
-    <string name="mode_two_bg_1">I</string>
-    <string name="mode_two_bg_2">II</string>
-    <string name="mode_two_bg_3">III</string>
-    <string name="mode_two_bg_4">IV</string>
-    <string name="mode_two_bg_5">V</string>
-    <string name="mode_two_bg_6">VI</string>
+    <string name="thematic_style">THEMATIC STYLE</string>
+    <string name="mode_two_bg_1">STYLE   I</string>
+    <string name="mode_two_bg_2">STYLE   II</string>
+    <string name="mode_two_bg_3">STYLE   III</string>
+    <string name="mode_two_bg_4">STYLE   IV</string>
+    <string name="mode_two_bg_5">STYLE   V</string>
+    <string name="mode_two_bg_6">STYLE   VI</string>
+    <string name="user_down">USER BOOK DATA DOWNLOAD</string>
+    <string name="mode_select">OPERATION MODE SELECTION</string>
+    <string name="mode_select_1">I</string>
+    <string name="mode_select_2">II</string>
+    <string name="wlan_select">WLAN</string>
+    <string name="background_select">OPERATION BACKGROUND SELECTION</string>
+    <string name="background_select_1">I</string>
+    <string name="background_select_2">II</string>
+    <string name="background_select_3">III</string>
+    <string name="background_select_4">IV</string>
+    <string name="bluetooth_select">BLUETOOTH</string>
+    <string name="upper_str">UPPER</string>
+    <string name="lower_str">LOWER</string>
+    <string name="enger_str">ENERGY</string>
+    <string name="limit_str">LIMIT</string>
 
 
 </resources>

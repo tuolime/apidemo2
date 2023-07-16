@@ -9,8 +9,8 @@
     <string name="count_cleaning">Количество делений</string>
     <string name="cleaning">Трещина</string>
     <string name="remote_control">Дистанционное управление</string>
-    <string name="on">Вперед!</string>
-    <string name="off">Закрыть</string>
+    <string name="on_str">Вперед!</string>
+    <string name="off_str">Закрыть</string>
     <string name="quantity">Количество</string>
     <string name="of_hand_tools">Ручной инструмент</string>
     <string name="one">Один.</string>

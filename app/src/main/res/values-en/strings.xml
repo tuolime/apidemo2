@@ -9,8 +9,8 @@
     <string name="count_cleaning">COUNT CLEANING</string>
     <string name="cleaning">CLEANING</string>
     <string name="remote_control">REMOTE CONTROL</string>
-    <string name="on">ON</string>
-    <string name="off">OFF</string>
+    <string name="on_str">ON</string>
+    <string name="off_str">OFF</string>
     <string name="quantity">QUANTITY</string>
     <string name="of_hand_tools">OF HAND TOOLS</string>
     <string name="one">ONE</string>
