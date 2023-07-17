@@ -11,8 +11,15 @@ import com.ss.apidemo.AppConfig;
 import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
+import com.ss.apidemo.ui.mode.ModeSelectFiveActivity;
+import com.ss.apidemo.ui.mode.ModeSelectFourActivity;
+import com.ss.apidemo.ui.mode.ModeSelectOneActivity;
+import com.ss.apidemo.ui.mode.ModeSelectSixActivity;
+import com.ss.apidemo.ui.mode.ModeSelectThreeActivity;
+import com.ss.apidemo.ui.mode.ModeSelectTwoActivity;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.PlayVoiceUtils;
+import com.ss.apidemo.utils.SharedPrefsUtil;
 
 /*
 * 手具选择页面
@@ -105,9 +112,48 @@ public class HandgearActivity extends BaseActivity {
 
     }
     public void startA(){
-        Intent intent = new Intent(HandgearActivity.this, ParameterActivity.class);
-        intent.putExtra("gender", gender);//自由人默认为男性
-        intent.putExtra("tel", tel);
-        startActivity(intent);
+        int modeType = SharedPrefsUtil.getIntValue(AppConfig.MODETYPE, 1);
+        if (modeType == 1){
+            Intent intent = new Intent(HandgearActivity.this, ParameterActivity.class);
+            intent.putExtra("gender", gender);//自由人默认为男性
+            intent.putExtra("tel", tel);
+            startActivity(intent);
+        }else if (modeType == 2){
+            int intValue = SharedPrefsUtil.getIntValue(AppConfig.MODE_TWO_GB, 1);
+            if (intValue == 1) {
+                Intent intent = new Intent(HandgearActivity.this, ModeSelectOneActivity.class);
+                intent.putExtra("gender", gender);//自由人默认为男性
+                intent.putExtra("tel", tel);
+                startActivity(intent);
+            } else if (intValue == 2) {
+                Intent intent = new Intent(HandgearActivity.this, ModeSelectTwoActivity.class);
+                intent.putExtra("gender", gender);//自由人默认为男性
+                intent.putExtra("tel", tel);
+                startActivity(intent);
+            } else if (intValue == 3) {
+                Intent intent = new Intent(HandgearActivity.this, ModeSelectThreeActivity.class);
+                intent.putExtra("gender", gender);//自由人默认为男性
+                intent.putExtra("tel", tel);
+                startActivity(intent);
+            } else if (intValue == 4) {
+                Intent intent = new Intent(HandgearActivity.this, ModeSelectFourActivity.class);
+                intent.putExtra("gender", gender);//自由人默认为男性
+                intent.putExtra("tel", tel);
+                startActivity(intent);
+            } else if (intValue == 5) {
+                Intent intent = new Intent(HandgearActivity.this, ModeSelectFiveActivity.class);
+                intent.putExtra("gender", gender);//自由人默认为男性
+                intent.putExtra("tel", tel);
+                startActivity(intent);
+            } else if (intValue == 6) {
+                Intent intent = new Intent(HandgearActivity.this, ModeSelectSixActivity.class);
+                intent.putExtra("gender", gender);//自由人默认为男性
+                intent.putExtra("tel", tel);
+                startActivity(intent);
+            }
+        }
+
+
+
     }
 }

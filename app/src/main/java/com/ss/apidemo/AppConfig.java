@@ -139,7 +139,7 @@ public class AppConfig {
     public static final String TEMPERATURE = "TEMPERATURE";
     public static final String WATER = "WATER";
     public static final String USERDATADOWMLOAD = "USERDATADOWMLOAD";
-    public static final String MODETYPE = "MODETYPE";
+    public static final String MODETYPE = "MODETYPE";// 1 模式1  2 模式2 包含六种风格
     public static final String WLAN = "WLAN";
     public static final String BACKGROUNDSELECT = "BACKGROUNDSELECT";
     public static final String BLUETOOTH = "BLUETOOTH";
