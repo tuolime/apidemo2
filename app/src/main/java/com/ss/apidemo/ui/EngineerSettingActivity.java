@@ -145,7 +145,7 @@ public class EngineerSettingActivity extends BaseActivity {
                     case R.id.rg_modeTwo_bg5:
                         SharedPrefsUtil.putIntValue(AppConfig.MODE_TWO_GB, 5);
                         break;
-                    case R.id.rb_power6:
+                    case R.id.rg_modeTwo_bg6:
                         SharedPrefsUtil.putIntValue(AppConfig.MODE_TWO_GB, 6);
                         break;
                 }
