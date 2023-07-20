@@ -10,12 +10,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import com.ss.apidemo.AppConfig;
 import com.ss.apidemo.R;
 import com.ss.apidemo.adapter.UserListAdapter;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.db.bean.User;
 import com.ss.apidemo.db.dao.UserDao;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.SharedPrefsUtil;
 import com.ss.apidemo.utils.ToastUtil;
 
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -50,6 +52,20 @@ public class UserListActivity extends BaseActivity {
                 //退出时 下发报文选择好的温度和水流。。。。
                 //退出该页面
                 finish();
+            }
+        });
+        //用户数据导出
+        ImageView iv_load = findViewById(R.id.iv_load);
+        boolean userDataDownLoad = SharedPrefsUtil.getBooleanValue(AppConfig.USERDATADOWMLOAD, false);
+        if (userDataDownLoad){
+            iv_load.setVisibility(View.VISIBLE);
+        }else {
+            iv_load.setVisibility(View.INVISIBLE);
+        }
+        iv_load.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //导出数据
             }
         });
         recyclerView = findViewById(R.id.recyclerview);

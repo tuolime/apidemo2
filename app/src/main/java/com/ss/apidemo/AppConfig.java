@@ -138,13 +138,13 @@ public class AppConfig {
     public static final String WATER_COUNT = "WATER_COUNT";
     public static final String TEMPERATURE = "TEMPERATURE";
     public static final String WATER = "WATER";
-    public static final String USERDATADOWMLOAD = "USERDATADOWMLOAD";
+    public static final String USERDATADOWMLOAD = "USERDATADOWMLOAD";//用户数据导出
     public static final String MODETYPE = "MODETYPE";// 1 模式1  2 模式2 包含六种风格
-    public static final String WLAN = "WLAN";
-    public static final String BACKGROUNDSELECT = "BACKGROUNDSELECT";
-    public static final String BLUETOOTH = "BLUETOOTH";
-    public static final String ENERGYUPPER = "ENERGYUPPER";
-    public static final String ENERGYLOWER = "ENERGYLOWER";
+    public static final String WLAN = "WLAN";//网络是否开启
+    public static final String BACKGROUNDSELECT = "BACKGROUNDSELECT";//背景样式选择
+    public static final String BLUETOOTH = "BLUETOOTH";//蓝牙是否开启
+    public static final String ENERGYUPPER = "ENERGYUPPER";//能量上限
+    public static final String ENERGYLOWER = "ENERGYLOWER";//能量下限
     public static final String GENDER = "GENDER";//性别 1 男  2 女
 //    public static final String COUNT_CLEAR = "COUNT_CLEAR";
 
