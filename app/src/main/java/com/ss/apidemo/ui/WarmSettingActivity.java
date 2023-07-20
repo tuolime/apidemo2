@@ -1,7 +1,10 @@
 package com.ss.apidemo.ui;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -21,6 +24,7 @@ import com.ss.apidemo.bean.HrModeBean;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.HrModeUtils;
 import com.ss.apidemo.utils.LogUtils;
+import com.ss.apidemo.utils.NetworkUtil;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
 
@@ -49,13 +53,15 @@ public class WarmSettingActivity extends BaseActivity {
     private int current_energy_min;
     private int current_energyUpper;
     private int current_energyLower;
-
+    private WifiManager  wifiManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_warm_setting);
         LinearLayout ll_main = findViewById(R.id.ll_main);
         BackgroundChangeUtils.backgroundChange(this,ll_main);
+        wifiManager = (WifiManager) WarmSettingActivity.this.getSystemService(Context.WIFI_SERVICE);
+
         initView();
     }
 
@@ -260,7 +266,8 @@ public class WarmSettingActivity extends BaseActivity {
         RadioGroup rg_wlan = findViewById(R.id.rg_wlan);
         RadioButton rb_wlan_on = findViewById(R.id.rb_wlan_on);
         RadioButton rb_wlan_off = findViewById(R.id.rb_wlan_off);
-        boolean wlan = SharedPrefsUtil.getBooleanValue(AppConfig.WLAN, false);
+//        boolean wlan = SharedPrefsUtil.getBooleanValue(AppConfig.WLAN, false);
+        boolean wlan = NetworkUtil.isWifi();
         if (wlan){
             rb_wlan_on.setChecked(true);
         }else {
@@ -273,12 +280,19 @@ public class WarmSettingActivity extends BaseActivity {
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
                 switch (i) {
                     case R.id.rb_wlan_on:
-                        SharedPrefsUtil.putBooleanValue(AppConfig.WLAN,true);
-                        startA();
+//                        SharedPrefsUtil.putBooleanValue(AppConfig.WLAN,true);
+                        if (wifiManager != null){
+                            wifiManager.setWifiEnabled(true);
+                        }
                         break;
                     case R.id.rb_wlan_off:
-                        SharedPrefsUtil.putBooleanValue(AppConfig.WLAN,false);
-                        startA();
+//                        SharedPrefsUtil.putBooleanValue(AppConfig.WLAN,false);
+                        //useLimitedFlag 用限制标识，0否1是
+                        if (AppConfig.useLimitedFlag == 0){
+                            if (wifiManager != null){
+                                wifiManager.setWifiEnabled(false);
+                            }
+                        }
                         break;
                 }
             }
