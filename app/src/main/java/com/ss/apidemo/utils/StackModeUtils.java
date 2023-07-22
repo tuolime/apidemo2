@@ -60,6 +60,21 @@ public final class StackModeUtils {
                     type.setFluenceMin(4);
                     type.setFluenceMax(45);
                     break;
+                case 8:
+                    type.setHandgearType(8);
+                    type.setFluenceMin(4);
+                    type.setFluenceMax(60);
+                    break;
+                case 9:
+                    type.setHandgearType(9);
+                    type.setFluenceMin(4);
+                    type.setFluenceMax(50);
+                    break;
+                case 10:
+                    type.setHandgearType(10);
+                    type.setFluenceMin(4);
+                    type.setFluenceMax(60);
+                    break;
             }
 
         } else if (gender == 2) {
@@ -108,6 +123,21 @@ public final class StackModeUtils {
                     type.setHandgearType(7);
                     type.setFluenceMin(4);
                     type.setFluenceMax(45);
+                    break;
+                case 8:
+                    type.setHandgearType(8);
+                    type.setFluenceMin(4);
+                    type.setFluenceMax(60);
+                    break;
+                case 9:
+                    type.setHandgearType(9);
+                    type.setFluenceMin(4);
+                    type.setFluenceMax(50);
+                    break;
+                case 10:
+                    type.setHandgearType(10);
+                    type.setFluenceMin(4);
+                    type.setFluenceMax(60);
                     break;
             }
         }

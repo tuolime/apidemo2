@@ -67,6 +67,24 @@ public final class ShrModeUtils {
                     type.setFluence5HzMax(45);
                     type.setFluence10HzMax(23);
                     break;
+                case 8://8 9 10 的手具值  和  3 7 的一样
+                    type.setHandgearType(8);
+                    type.setFluenceMin(4);
+                    type.setFluence5HzMax(45);
+                    type.setFluence10HzMax(23);
+                    break;
+                case 9:
+                    type.setHandgearType(9);
+                    type.setFluenceMin(4);
+                    type.setFluence5HzMax(45);
+                    type.setFluence10HzMax(23);
+                    break;
+                case 10:
+                    type.setHandgearType(10);
+                    type.setFluenceMin(4);
+                    type.setFluence5HzMax(45);
+                    type.setFluence10HzMax(23);
+                    break;
             }
 
         } else if (gender == 2) {
@@ -119,6 +137,24 @@ public final class ShrModeUtils {
                     break;
                 case 7:
                     type.setHandgearType(7);
+                    type.setFluenceMin(4);
+                    type.setFluence5HzMax(45);
+                    type.setFluence10HzMax(23);
+                    break;
+                case 8://8 9 10 的手具值  和  3 7 的一样
+                    type.setHandgearType(8);
+                    type.setFluenceMin(4);
+                    type.setFluence5HzMax(45);
+                    type.setFluence10HzMax(23);
+                    break;
+                case 9:
+                    type.setHandgearType(9);
+                    type.setFluenceMin(4);
+                    type.setFluence5HzMax(45);
+                    type.setFluence10HzMax(23);
+                    break;
+                case 10:
+                    type.setHandgearType(10);
                     type.setFluenceMin(4);
                     type.setFluence5HzMax(45);
                     type.setFluence10HzMax(23);

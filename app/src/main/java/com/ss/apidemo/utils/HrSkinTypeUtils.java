@@ -50,7 +50,8 @@ public final class HrSkinTypeUtils {
                     }
 
                 }
-                if (handgear == 3|| handgear == 7) {
+                if (handgear == 3 || handgear == 7 || handgear == 8 || handgear == 9 || handgear == 10) {
+
                     // 男部位id
                     //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
                     // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -99,7 +100,7 @@ public final class HrSkinTypeUtils {
                         type.setFreQuencyProposal(5);
                     }
                 }
-                if (handgear == 3|| handgear == 7) {
+                if (handgear == 3 || handgear == 7 || handgear == 8 || handgear == 9 || handgear == 10) {
                     // 男部位id
                     //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
                     // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -148,7 +149,7 @@ public final class HrSkinTypeUtils {
                         type.setFreQuencyProposal(5);
                     }
                 }
-                if (handgear == 3|| handgear == 7) {
+                if (handgear == 3 || handgear == 7 || handgear == 8 || handgear == 9 || handgear == 10) {
                     // 男部位id
                     //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
                     // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -197,7 +198,7 @@ public final class HrSkinTypeUtils {
                         type.setFreQuencyProposal(5);
                     }
                 }
-                if (handgear == 3|| handgear == 7) {
+                if (handgear == 3 || handgear == 7 || handgear == 8 || handgear == 9 || handgear == 10) {
                     // 男部位id
                     //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
                     // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -246,7 +247,7 @@ public final class HrSkinTypeUtils {
                         type.setFreQuencyProposal(5);
                     }
                 }
-                if (handgear == 3|| handgear == 7) {
+                if (handgear == 3 || handgear == 7 || handgear == 8 || handgear == 9 || handgear == 10) {
                     // 男部位id
                     //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
                     // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -295,7 +296,7 @@ public final class HrSkinTypeUtils {
                         type.setFreQuencyProposal(5);
                     }
                 }
-                if (handgear == 3|| handgear == 7) {
+                if (handgear == 3 || handgear == 7 || handgear == 8 || handgear == 9 || handgear == 10) {
                     // 男部位id
                     //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
                     // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -354,7 +355,7 @@ public final class HrSkinTypeUtils {
                         type.setFreQuencyProposal(5);
                     }
                 }
-                if (handgear == 3|| handgear == 7) {
+                if (handgear == 3 || handgear == 7 || handgear == 8 || handgear == 9 || handgear == 10) {
                     // 男部位id
                     //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
                     // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -403,7 +404,7 @@ public final class HrSkinTypeUtils {
                         type.setFreQuencyProposal(5);
                     }
                 }
-                if (handgear == 3|| handgear == 7) {
+                if (handgear == 3 || handgear == 7 || handgear == 8 || handgear == 9 || handgear == 10) {
                     // 男部位id
                     //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
                     // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -452,7 +453,7 @@ public final class HrSkinTypeUtils {
                         type.setFreQuencyProposal(5);
                     }
                 }
-                if (handgear == 3|| handgear == 7) {
+                if (handgear == 3 || handgear == 7 || handgear == 8 || handgear == 9 || handgear == 10) {
                     // 男部位id
                     //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
                     // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -501,7 +502,7 @@ public final class HrSkinTypeUtils {
                         type.setFreQuencyProposal(5);
                     }
                 }
-                if (handgear == 3|| handgear == 7) {
+                if (handgear == 3 || handgear == 7 || handgear == 8 || handgear == 9 || handgear == 10) {
                     // 男部位id
                     //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
                     // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -550,7 +551,7 @@ public final class HrSkinTypeUtils {
                         type.setFreQuencyProposal(5);
                     }
                 }
-                if (handgear == 3|| handgear == 7) {
+                if (handgear == 3 || handgear == 7 || handgear == 8 || handgear == 9 || handgear == 10) {
                     // 男部位id
                     //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
                     // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -599,7 +600,7 @@ public final class HrSkinTypeUtils {
                         type.setFreQuencyProposal(5);
                     }
                 }
-                if (handgear == 3|| handgear == 7) {
+                if (handgear == 3 || handgear == 7 || handgear == 8 || handgear == 9 || handgear == 10) {
                     // 男部位id
                     //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
                     // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
