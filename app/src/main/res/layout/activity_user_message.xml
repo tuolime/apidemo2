@@ -216,14 +216,14 @@
 
         <TextView
             android:textColor="@color/white"
-            android:layout_width="500dp"
+            android:layout_width="900dp"
             android:layout_height="wrap_content"
             android:text="@string/usage_record"
             android:textSize="20sp" />
 
         <LinearLayout
             android:layout_marginTop="5dp"
-            android:layout_width="800dp"
+            android:layout_width="900dp"
             android:layout_height="280dp"
             android:background="@drawable/engineer_bt_rounded_corners"
             android:orientation="vertical"
@@ -240,7 +240,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="500dp"
+            android:layout_width="900dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
