@@ -28,6 +28,7 @@ import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.db.dao.UserValueDao;
 import com.ss.apidemo.dialog.CallDialog;
+import com.ss.apidemo.utils.AppUtil;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.DeviceInfoUtil;
 import com.ss.apidemo.utils.LocaleHelper;
@@ -84,6 +85,8 @@ public class UserSettingActivity extends BaseActivity implements NumberKeyboardV
 //        String deviceId = DeviceInfoUtil.getMac(UserSettingActivity.this);
         String deviceId = DeviceInfoUtil.getMac();
         tv_deviceId.setText(getResources().getString(R.string.id) + ":" + deviceId);
+        TextView tv_version = findViewById(R.id.tv_version);
+        tv_version.setText(getResources().getString(R.string.version_code) + ":" + AppUtil.getVersionName(UserSettingActivity.this));
         tv_limit = findViewById(R.id.tv_limit);
         ImageView iv_back = findViewById(R.id.iv_back);
         iv_back.setOnClickListener(new View.OnClickListener() {
