@@ -267,7 +267,8 @@ public class WarmSettingActivity extends BaseActivity {
         RadioButton rb_wlan_on = findViewById(R.id.rb_wlan_on);
         RadioButton rb_wlan_off = findViewById(R.id.rb_wlan_off);
 //        boolean wlan = SharedPrefsUtil.getBooleanValue(AppConfig.WLAN, false);
-        boolean wlan = NetworkUtil.isWifi();
+//        boolean wlan = NetworkUtil.isWifi();
+        boolean wlan = wifiManager.isWifiEnabled();
         if (wlan){
             rb_wlan_on.setChecked(true);
         }else {
@@ -464,14 +465,14 @@ public class WarmSettingActivity extends BaseActivity {
         }
         int gender = SharedPrefsUtil.getIntValue(AppConfig.GENDER, 1);
         hrModeBean = hrModeUtils.modeType(gender, handgearType);
-        if (handgearType == 3 || handgearType == 7 || handgearType == 8 || handgearType == 9) {
-            current_energy_max = hrModeBean.getFluence20HzMax();
-            current_energy_min = hrModeBean.getFluenceMin();
-        } else {
-            current_energy_max = hrModeBean.getFluence10HzMax();
+//        if (handgearType == 3 || handgearType == 7 || handgearType == 8 || handgearType == 9) {
+//            current_energy_max = hrModeBean.getFluence1HzMax();
+//            current_energy_min = hrModeBean.getFluenceMin();
+//        } else {
+            current_energy_max = hrModeBean.getFluence1HzMax();
             current_energy_min = hrModeBean.getFluenceMin();
 
-        }
+//        }
     }
     public void startA() {
         startActivity(new Intent(WarmSettingActivity.this, SplashActivity.class));
