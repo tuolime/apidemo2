@@ -200,35 +200,22 @@ public class UserMessageActivity extends BaseActivity {
             }
         }else if (modeType == 2){
             int intValue = SharedPrefsUtil.getIntValue(AppConfig.MODE_TWO_GB, 1);
+            Intent intent = null;
             if (intValue == 1) {
-                Intent intent = new Intent(UserMessageActivity.this, ModeSelectOneActivity.class);
-//                intent.putExtra("gender", gender);//自由人默认为男性
-//                intent.putExtra("tel", tel);
-                startActivity(intent);
+                intent = new Intent(UserMessageActivity.this, ModeSelectOneActivity.class);
             } else if (intValue == 2) {
-                Intent intent = new Intent(UserMessageActivity.this, ModeSelectTwoActivity.class);
-//                intent.putExtra("gender", gender);//自由人默认为男性
-//                intent.putExtra("tel", tel);
-                startActivity(intent);
+                intent = new Intent(UserMessageActivity.this, ModeSelectTwoActivity.class);
             } else if (intValue == 3) {
-                Intent intent = new Intent(UserMessageActivity.this, ModeSelectThreeActivity.class);
-//                intent.putExtra("gender", gender);//自由人默认为男性
-//                intent.putExtra("tel", tel);
-                startActivity(intent);
+                intent = new Intent(UserMessageActivity.this, ModeSelectThreeActivity.class);
             } else if (intValue == 4) {
-                Intent intent = new Intent(UserMessageActivity.this, ModeSelectFourActivity.class);
-//                intent.putExtra("gender", gender);//自由人默认为男性
-//                intent.putExtra("tel", tel);
-                startActivity(intent);
+                intent = new Intent(UserMessageActivity.this, ModeSelectFourActivity.class);
             } else if (intValue == 5) {
-                Intent intent = new Intent(UserMessageActivity.this, ModeSelectFiveActivity.class);
-//                intent.putExtra("gender", gender);//自由人默认为男性
-//                intent.putExtra("tel", tel);
-                startActivity(intent);
+                intent = new Intent(UserMessageActivity.this, ModeSelectFiveActivity.class);
             } else if (intValue == 6) {
-                Intent intent = new Intent(UserMessageActivity.this, ModeSelectSixActivity.class);
-//                intent.putExtra("gender", gender);//自由人默认为男性
-//                intent.putExtra("tel", tel);
+                intent = new Intent(UserMessageActivity.this, ModeSelectSixActivity.class);
+            }
+
+            if (intent != null){
                 startActivity(intent);
             }
         }

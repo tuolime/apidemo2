@@ -187,35 +187,22 @@ public class UserCreateActivity extends BaseActivity {
             }
         }else if (modeType == 2) {
             int intValue = SharedPrefsUtil.getIntValue(AppConfig.MODE_TWO_GB, 1);
-            if (intValue == 1) {
-                Intent intent = new Intent(UserCreateActivity.this, ModeSelectOneActivity.class);
-//                intent.putExtra("gender", gender);//自由人默认为男性
-//                intent.putExtra("tel", tel);
-                startActivity(intent);
-            } else if (intValue == 2) {
-                Intent intent = new Intent(UserCreateActivity.this, ModeSelectTwoActivity.class);
-//                intent.putExtra("gender", gender);//自由人默认为男性
-//                intent.putExtra("tel", tel);
-                startActivity(intent);
-            } else if (intValue == 3) {
-                Intent intent = new Intent(UserCreateActivity.this, ModeSelectThreeActivity.class);
-//                intent.putExtra("gender", gender);//自由人默认为男性
-//                intent.putExtra("tel", tel);
-                startActivity(intent);
-            } else if (intValue == 4) {
-                Intent intent = new Intent(UserCreateActivity.this, ModeSelectFourActivity.class);
-//                intent.putExtra("gender", gender);//自由人默认为男性
-//                intent.putExtra("tel", tel);
-                startActivity(intent);
-            } else if (intValue == 5) {
-                Intent intent = new Intent(UserCreateActivity.this, ModeSelectFiveActivity.class);
-//                intent.putExtra("gender", gender);//自由人默认为男性
-//                intent.putExtra("tel", tel);
-                startActivity(intent);
-            } else if (intValue == 6) {
-                Intent intent = new Intent(UserCreateActivity.this, ModeSelectSixActivity.class);
-//                intent.putExtra("gender", gender);//自由人默认为男性
-//                intent.putExtra("tel", tel);
+            Intent intent = null;
+//            if (intValue == 1) {
+//                intent = new Intent(UserCreateActivity.this, ModeSelectOneActivity.class);
+//            } else if (intValue == 2) {
+                intent = new Intent(UserCreateActivity.this, ModeSelectTwoActivity.class);
+//            } else if (intValue == 3) {
+//                intent = new Intent(UserCreateActivity.this, ModeSelectThreeActivity.class);
+//            } else if (intValue == 4) {
+//                intent = new Intent(UserCreateActivity.this, ModeSelectFourActivity.class);
+//            } else if (intValue == 5) {
+//                intent = new Intent(UserCreateActivity.this, ModeSelectFiveActivity.class);
+//            } else if (intValue == 6) {
+//                intent = new Intent(UserCreateActivity.this, ModeSelectSixActivity.class);
+//            }
+
+            if (intent != null){
                 startActivity(intent);
             }
         }
