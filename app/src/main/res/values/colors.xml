@@ -49,5 +49,12 @@
     <color name="mode_one_skin_6_unselect">#3E241B</color>
     <color name="mode_one_skin1_bt_bg">#E5EFFD</color>
     <color name="mode_one_skin1_bt">#5E708A</color>
+    <color name="mode_two_skin_all_unselect">#5E708A</color>
+    <color name="mode_two_skin_all_select">#00A0E9</color>
+    <color name="mode_two_number">#B7BEC7</color>
+
+    <color name="mode_two_body_frame">#2E384A</color>
+    <color name="mode_two_body_entity">#5E708A</color>
+    <color name="mode_two_body_select_entity">#00A0E9</color>
 
 </resources>
