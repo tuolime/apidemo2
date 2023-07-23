@@ -378,8 +378,10 @@ public class WarmSettingActivity extends BaseActivity {
         tv_up_enegry.setText(""+ current_energyUpper);
         //能量下限
         tv_lower_energy = findViewById(R.id.tv_lower_energy);
-        current_energyLower = SharedPrefsUtil.getIntValue(AppConfig.ENERGYLOWER, 0);
-        tv_lower_energy.setText(""+ current_energyLower);
+        if (hrModeBean != null){
+            current_energyLower = SharedPrefsUtil.getIntValue(AppConfig.ENERGYLOWER, current_energy_min);
+            tv_lower_energy.setText(""+ current_energyLower);
+        }
     }
     public void selectClick(View view){
         PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
@@ -445,7 +447,7 @@ public class WarmSettingActivity extends BaseActivity {
                 SharedPrefsUtil.putIntValue(AppConfig.ENERGYLOWER, current_energyLower);
                 break;
             case R.id.iv_energy_lower_down:
-                if (current_energyLower == 0){
+                if (current_energyLower == current_energy_min){
                     return;
                 }
                 current_energyLower--;
