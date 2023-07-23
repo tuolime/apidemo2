@@ -60,12 +60,12 @@ public class ModeSelectTwoActivity extends BaseActivity {
             case R.id.tv_select1:
                 tv_select1.setBackground(getResources().getDrawable(R.drawable.mode_two_bt_select_corners));
                 tv_select1.setTextColor(getResources().getColor(R.color.white));
-                startA();
+                startA(1);
                 break;
             case R.id.tv_select2:
                 tv_select2.setBackground(getResources().getDrawable(R.drawable.mode_two_bt_select_corners));
                 tv_select2.setTextColor(getResources().getColor(R.color.white));
-                startA();
+                startA(2);
                 break;
         }
     }
@@ -80,11 +80,15 @@ public class ModeSelectTwoActivity extends BaseActivity {
 
     }
 
-    public void startA() {
-        Intent intent = new Intent(ModeSelectTwoActivity.this, ModeSelectTwoActivity.class);
-//        intent.putExtra("gender", gender);//自由人默认为男性
-//        intent.putExtra("tel", tel);
-//        startActivity(intent);
-
+    public void startA(int flag) {
+        Intent intent = null;
+        if (flag == 1){//expert
+            intent = new Intent(ModeSelectTwoActivity.this, ModeSelectTwoActivity.class);
+        }else if (flag == 2){//smart
+            intent = new Intent(ModeSelectTwoActivity.this, ModeSelectTwoActivity.class);
+        }
+        if (intent != null){
+            startActivity(intent);
+        }
     }
 }

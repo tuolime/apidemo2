@@ -75,14 +75,14 @@ public class ModeSelectOneActivity extends BaseActivity {
                 tv_select1.setTextColor(getResources().getColor(R.color.mode_one_bt_select));
                 iv_expert_select.setVisibility(View.VISIBLE);
                 iv_smart_select.setVisibility(View.INVISIBLE);
-                startA();
+                startA(1);
                 break;
             case R.id.tv_select2:
                 tv_select2.setBackground(getResources().getDrawable(R.drawable.mode_one_bt_select_corners));
                 tv_select2.setTextColor(getResources().getColor(R.color.mode_one_bt_select));
                 iv_expert_select.setVisibility(View.INVISIBLE);
                 iv_smart_select.setVisibility(View.VISIBLE);
-                startA();
+                startA(2);
                 break;
         }
     }
@@ -97,11 +97,15 @@ public class ModeSelectOneActivity extends BaseActivity {
 
     }
 
-    public void startA() {
-        Intent intent = new Intent(ModeSelectOneActivity.this, ModeSelectOneActivity.class);
-//        intent.putExtra("gender", gender);//自由人默认为男性
-//        intent.putExtra("tel", tel);
-//        startActivity(intent);
-
+    public void startA(int flag) {
+        Intent intent = null;
+        if (flag == 1){//expert
+            intent = new Intent(ModeSelectOneActivity.this, WorkSelectOneActivity.class);
+        }else if (flag == 2){//smart
+            intent = new Intent(ModeSelectOneActivity.this, SkinSelectOneActivity.class);
+        }
+        if (intent != null){
+            startActivity(intent);
+        }
     }
 }

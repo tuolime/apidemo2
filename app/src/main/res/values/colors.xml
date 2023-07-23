@@ -34,4 +34,9 @@
     <color name="mode_one_bt_select">#EE7900</color>
     <color name="mode_one_bt_unselect">#FFFFFF</color>
     <color name="mode_two_bt_unselect">#A8D1FF</color>
+    <color name="mode_three_bg">#B0B2BC</color>
+    <color name="mode_three_bt_unselect">#A8D1FF</color>
+    <color name="mode_five_bt_select">#067C88</color>
+    <color name="mode_six_bt_select">#F1D9E6</color>
+
 </resources>
