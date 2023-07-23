@@ -148,6 +148,8 @@
     <string name="enger_str">ENERGY</string>
     <string name="limit_str">LIMIT</string>
     <string name="version_code">VERSION</string>
+    <string name="expert_str">EXPERT</string>
+    <string name="smart_str">SMART</string>
 
 
 </resources>

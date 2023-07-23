@@ -31,5 +31,6 @@
     <color name="working">#FF5959</color>
     <color name="hz">#3AC4FF</color>
 
-
+    <color name="mode_one_bt_select">#EE7900</color>
+    <color name="mode_one_bt_unselect">#FFFFFF</color>
 </resources>
