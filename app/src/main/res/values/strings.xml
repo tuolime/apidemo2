@@ -151,5 +151,16 @@
     <string name="expert_str">EXPERT</string>
     <string name="smart_str">SMART</string>
 
+    <string name="skin_tyoe">Skin Type</string>
+    <string name="skin_1">I</string>
+    <string name="skin_2">II</string>
+    <string name="skin_3">III</string>
+    <string name="skin_4">IV</string>
+    <string name="skin_5">V</string>
+    <string name="skin_6">VI</string>
+    <string name="skin_location">Location</string>
+
+    <string name="tv_mode_one_ok">Ok</string>
+    <string name="tv_mode_one_cancel">Cancel</string>
 
 </resources>
