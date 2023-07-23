@@ -22,6 +22,12 @@ import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.db.bean.User;
 import com.ss.apidemo.db.dao.UserDao;
 import com.ss.apidemo.dialog.HintDialog;
+import com.ss.apidemo.ui.mode.ModeSelectFiveActivity;
+import com.ss.apidemo.ui.mode.ModeSelectFourActivity;
+import com.ss.apidemo.ui.mode.ModeSelectOneActivity;
+import com.ss.apidemo.ui.mode.ModeSelectSixActivity;
+import com.ss.apidemo.ui.mode.ModeSelectThreeActivity;
+import com.ss.apidemo.ui.mode.ModeSelectTwoActivity;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
@@ -163,20 +169,57 @@ public class UserCreateActivity extends BaseActivity {
     }
 
     public void isHandger() {
-        int isHandgear = SharedPrefsUtil.getIntValue(AppConfig.HANDGEAR, 0);
-        if (isHandgear == 0) {//单手具
-            Intent intent = new Intent(UserCreateActivity.this, ParameterActivity.class);
-            intent.putExtra("gender", "1");//自由人默认为男性
-            intent.putExtra("tel", "0");//自由人手机号默认为0
-            startActivity(intent);
+        int modeType = SharedPrefsUtil.getIntValue(AppConfig.MODETYPE, 1);
+        if (modeType == 1){
+            int isHandgear = SharedPrefsUtil.getIntValue(AppConfig.HANDGEAR, 0);
+            if (isHandgear == 0) {//单手具
+                Intent intent = new Intent(UserCreateActivity.this, ParameterActivity.class);
+                intent.putExtra("gender", "1");//自由人默认为男性
+                intent.putExtra("tel", "0");//自由人手机号默认为0
+                startActivity(intent);
 
-        } else if (isHandgear == 1) {//双手具
-            Intent intent = new Intent(UserCreateActivity.this, HandgearActivity.class);
-            intent.putExtra("gender", "1");//自由人默认为男性
-            intent.putExtra("tel", "0");//自由人手机号默认为0
-            startActivity(intent);
+            } else if (isHandgear == 1) {//双手具
+                Intent intent = new Intent(UserCreateActivity.this, HandgearActivity.class);
+                intent.putExtra("gender", "1");//自由人默认为男性
+                intent.putExtra("tel", "0");//自由人手机号默认为0
+                startActivity(intent);
 
+            }
+        }else if (modeType == 2) {
+            int intValue = SharedPrefsUtil.getIntValue(AppConfig.MODE_TWO_GB, 1);
+            if (intValue == 1) {
+                Intent intent = new Intent(UserCreateActivity.this, ModeSelectOneActivity.class);
+//                intent.putExtra("gender", gender);//自由人默认为男性
+//                intent.putExtra("tel", tel);
+                startActivity(intent);
+            } else if (intValue == 2) {
+                Intent intent = new Intent(UserCreateActivity.this, ModeSelectTwoActivity.class);
+//                intent.putExtra("gender", gender);//自由人默认为男性
+//                intent.putExtra("tel", tel);
+                startActivity(intent);
+            } else if (intValue == 3) {
+                Intent intent = new Intent(UserCreateActivity.this, ModeSelectThreeActivity.class);
+//                intent.putExtra("gender", gender);//自由人默认为男性
+//                intent.putExtra("tel", tel);
+                startActivity(intent);
+            } else if (intValue == 4) {
+                Intent intent = new Intent(UserCreateActivity.this, ModeSelectFourActivity.class);
+//                intent.putExtra("gender", gender);//自由人默认为男性
+//                intent.putExtra("tel", tel);
+                startActivity(intent);
+            } else if (intValue == 5) {
+                Intent intent = new Intent(UserCreateActivity.this, ModeSelectFiveActivity.class);
+//                intent.putExtra("gender", gender);//自由人默认为男性
+//                intent.putExtra("tel", tel);
+                startActivity(intent);
+            } else if (intValue == 6) {
+                Intent intent = new Intent(UserCreateActivity.this, ModeSelectSixActivity.class);
+//                intent.putExtra("gender", gender);//自由人默认为男性
+//                intent.putExtra("tel", tel);
+                startActivity(intent);
+            }
         }
+
     }
 
     /**
