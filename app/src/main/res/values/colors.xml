@@ -33,4 +33,5 @@
 
     <color name="mode_one_bt_select">#EE7900</color>
     <color name="mode_one_bt_unselect">#FFFFFF</color>
+    <color name="mode_two_bt_unselect">#A8D1FF</color>
 </resources>

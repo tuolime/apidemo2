@@ -16,21 +16,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:id="@+id/iv_main"
+            android:id="@+id/iv_back"
             android:layout_marginLeft="30dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@mipmap/ic_main_one" />
+            android:src="@mipmap/ic_mode_back_one" />
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
         <ImageView
             android:layout_marginRight="30dp"
-            android:id="@+id/iv_back"
+            android:id="@+id/iv_main"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@mipmap/ic_mode_back_one" />
+            android:src="@mipmap/ic_main_one" />
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
