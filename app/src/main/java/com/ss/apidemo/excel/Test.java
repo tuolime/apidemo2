@@ -2,6 +2,8 @@ package com.ss.apidemo.excel;
 
 import android.os.Environment;
 
+import com.ss.apidemo.db.bean.User;
+import com.ss.apidemo.db.dao.UserDao;
 import com.ss.apidemo.excel.bean.UserExcelBean;
 
 import java.io.File;
@@ -24,11 +26,11 @@ public class Test {
         for (int i = 1; i <= 150; i++) {
             UserExcelBean u = new UserExcelBean();
             u.setName("大到飞起来" + i);
-            u.setMobile("手机号" + i);
-            u.setSex("男");
-            u.setAddress("地点" + i);
-            u.setMemo("备注" + i);
-            u.setOther("其他信息" + i);
+//            u.setMobile("手机号" + i);
+//            u.setSex("男");
+//            u.setAddress("地点" + i);
+//            u.setMemo("备注" + i);
+//            u.setOther("其他信息" + i);
             users.add(u);
         }
         ExcelManager excelManager = new ExcelManager();
@@ -48,31 +50,34 @@ public class Test {
 
     public static void exportUser2(OutputStream excelOutputStream) throws Exception {
         long t1 = System.currentTimeMillis();
+        List<User> allUser = UserDao.getInstance().getAllUser();
         List<UserExcelBean> users = new ArrayList<>();
-        for (int i = 1; i <= 150; i++) {
-            UserExcelBean u = new UserExcelBean();
-            u.setName("大到飞起来" + i);
-            u.setMobile("手机号" + i);
-            u.setSex("男");
-            u.setAddress("地点" + i);
-            u.setMemo("备注" + i);
-            u.setOther("其他信息" + i);
-            users.add(u);
-        }
-        ExcelManager excelManager = new ExcelManager();
+        if (allUser != null && allUser.size()>0){
+            for (int i = 0; i < allUser.size(); i++) {
+                UserExcelBean u = new UserExcelBean();
+                u.setName(allUser.get(i).getName());
+                u.setGender(allUser.get(i).getGender());
+                u.setAge(allUser.get(i).getAge());
+                u.setTel(allUser.get(i).getTel());
+
+                users.add(u);
+            }
+            ExcelManager excelManager = new ExcelManager();
 //        File file = new File(getFileDir2(url), "usersExport.xls");
 //        File file = new File(getFileDir2(url), url);
-        OutputStream excelStream = excelOutputStream;
+            OutputStream excelStream = excelOutputStream;
 
-        boolean success = excelManager.toExcel(excelStream, users);
-        long t2 = System.currentTimeMillis();
+            boolean success = excelManager.toExcel(excelStream, users);
+            long t2 = System.currentTimeMillis();
 
-        double time = (t2 - t1) / 1000.0D;
-        if (success) {
-            System.out.print("导出成功：\n用时:" + time + "秒");
-        } else {
-            System.err.print("导出失败");
+            double time = (t2 - t1) / 1000.0D;
+            if (success) {
+                System.out.print("导出成功：\n用时:" + time + "秒");
+            } else {
+                System.err.print("导出失败");
+            }
         }
+
     }
 
     static void importUser() throws Exception {

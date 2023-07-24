@@ -13,28 +13,28 @@ import jxl.write.WriteException;
 /**
  * 用户表，作为用户的导出Excel的中间格式化实体，所有字段都为 String
  */
-@ExcelSheet(sheetName = "用户表")
+@ExcelSheet(sheetName = "User")
 public class UserExcelBean {
 
-    @ExcelContent(titleName = "姓名")
+    @ExcelContent(titleName = "Name")
     private String Name;
 
-    @ExcelContent(titleName = "性别")
-    private String Sex;
+    @ExcelContent(titleName = "Gender")
+    private String Gender;
 
-    @ExcelContent(titleName = "地址")
-    private String Address;
+    @ExcelContent(titleName = "Age")
+    private String Age;
 
-    @ExcelContent(titleName = "电话")
-    private String Mobile;
+    @ExcelContent(titleName = "Tel")
+    private String Tel;
 
-    @ExcelContent(titleName = "其他")
-    private String Other;
+//    @ExcelContent(titleName = "其他")
+//    private String Other;
+//
+//    @ExcelContent(titleName = "备注")
+//    private String Memo;
 
-    @ExcelContent(titleName = "备注")
-    private String Memo;
-
-    @ExcelTitleCellFormat(titleName = "姓名")
+    @ExcelTitleCellFormat(titleName = "Name")
     private static WritableCellFormat getTitleFormat() {
         WritableCellFormat format = new WritableCellFormat();
         try {
@@ -74,7 +74,7 @@ public class UserExcelBean {
     private static int f5flag = 0;
     private static int f6flag = 0;
 
-    @ExcelContentCellFormat(titleName = "姓名")
+    @ExcelContentCellFormat(titleName = "Name")
     private WritableCellFormat f1() {
         WritableCellFormat format = null;
         try {
@@ -94,7 +94,7 @@ public class UserExcelBean {
         return format;
     }
 
-    @ExcelContentCellFormat(titleName = "性别")
+    @ExcelContentCellFormat(titleName = "Gender")
     private WritableCellFormat f2() {
         WritableCellFormat format = null;
         try {
@@ -109,7 +109,7 @@ public class UserExcelBean {
         return format;
     }
 
-    @ExcelContentCellFormat(titleName = "地址")
+    @ExcelContentCellFormat(titleName = "Age")
     private WritableCellFormat f3() {
         WritableCellFormat format = null;
         try {
@@ -124,7 +124,7 @@ public class UserExcelBean {
         return format;
     }
 
-    @ExcelContentCellFormat(titleName = "电话")
+    @ExcelContentCellFormat(titleName = "Tel")
     private WritableCellFormat f4() {
         WritableCellFormat format = null;
         try {
@@ -139,35 +139,35 @@ public class UserExcelBean {
         return format;
     }
 
-    @ExcelContentCellFormat(titleName = "其他")
-    private WritableCellFormat f5() {
-        WritableCellFormat format = null;
-        try {
-            format = new WritableCellFormat();
-            if ((f5flag & 1) != 0) {
-                format.setBackground(Colour.GRAY_25);
-            }
-            f5flag++;
-        } catch (WriteException e) {
-            e.printStackTrace();
-        }
-        return format;
-    }
-
-    @ExcelContentCellFormat(titleName = "备注")
-    private WritableCellFormat f6() {
-        WritableCellFormat format = null;
-        try {
-            format = new WritableCellFormat();
-            if ((f6flag & 1) != 0) {
-                format.setBackground(Colour.GRAY_25);
-            }
-            f6flag++;
-        } catch (WriteException e) {
-            e.printStackTrace();
-        }
-        return format;
-    }
+//    @ExcelContentCellFormat(titleName = "其他")
+//    private WritableCellFormat f5() {
+//        WritableCellFormat format = null;
+//        try {
+//            format = new WritableCellFormat();
+//            if ((f5flag & 1) != 0) {
+//                format.setBackground(Colour.GRAY_25);
+//            }
+//            f5flag++;
+//        } catch (WriteException e) {
+//            e.printStackTrace();
+//        }
+//        return format;
+//    }
+//
+//    @ExcelContentCellFormat(titleName = "备注")
+//    private WritableCellFormat f6() {
+//        WritableCellFormat format = null;
+//        try {
+//            format = new WritableCellFormat();
+//            if ((f6flag & 1) != 0) {
+//                format.setBackground(Colour.GRAY_25);
+//            }
+//            f6flag++;
+//        } catch (WriteException e) {
+//            e.printStackTrace();
+//        }
+//        return format;
+//    }
 
     public UserExcelBean() {
 
@@ -181,43 +181,43 @@ public class UserExcelBean {
         Name = name;
     }
 
-    public String getSex() {
-        return Sex;
+    public String getGender() {
+        return Gender;
     }
 
-    public void setSex(String sex) {
-        Sex = sex;
+    public void setGender(String gender) {
+        Gender = gender;
     }
 
-    public String getAddress() {
-        return Address;
+    public String getAge() {
+        return Age;
     }
 
-    public void setAddress(String address) {
-        Address = address;
+    public void setAge(String age) {
+        Age = age;
     }
 
-    public String getMobile() {
-        return Mobile;
+    public String getTel() {
+        return Tel;
     }
 
-    public void setMobile(String mobile) {
-        Mobile = mobile;
+    public void setTel(String tel) {
+        Tel = tel;
     }
 
-    public String getOther() {
-        return Other;
-    }
-
-    public void setOther(String other) {
-        Other = other;
-    }
-
-    public String getMemo() {
-        return Memo;
-    }
-
-    public void setMemo(String memo) {
-        Memo = memo;
-    }
+//    public String getOther() {
+//        return Other;
+//    }
+//
+//    public void setOther(String other) {
+//        Other = other;
+//    }
+//
+//    public String getMemo() {
+//        return Memo;
+//    }
+//
+//    public void setMemo(String memo) {
+//        Memo = memo;
+//    }
 }
