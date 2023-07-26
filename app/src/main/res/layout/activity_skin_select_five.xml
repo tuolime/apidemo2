@@ -1,9 +1,500 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mode.SkinSelectFiveActivity">
+    android:orientation="vertical"
+    android:background="@mipmap/ic_mode_bg_five"
+    tools:context=".ui.mode.ModeSelectOneActivity">
+    <!--    <com.ss.apidemo.view.MergerStatus-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"/>-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:background="@mipmap/ic_mode_top_five"
+            android:layout_width="200dp"
+            android:layout_height="10dp"/>
+
+        <View
+            android:layout_marginLeft="170dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/ic_mode_select_five"
+            android:layout_width="350dp"
+            android:layout_height="350dp"/>
+
+        <View
+            android:layout_marginRight="170dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/ic_mode_select_five"
+            android:layout_width="350dp"
+            android:layout_height="350dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_marginTop="70dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/ic_mode_back_one" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_marginRight="60dp"
+                    android:id="@+id/iv_main"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/ic_main_one" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/skin_tyoe"
+                        android:textColor="@color/white"
+                        android:textSize="40sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"/>
+
+                <LinearLayout
+                    android:onClick="tabClick"
+                    android:background="@drawable/mode_three_all_unselect_corners"
+                    android:id="@+id/ll_skin_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_skin_1"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/mode_three_skin1_unselect_corners"
+                        android:onClick="tabClick"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:onClick="tabClick"
+                        android:textSize="20sp"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/mode_three_bg"
+                        android:text="@string/skin_1"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:onClick="tabClick"
+                    android:background="@drawable/mode_three_all_unselect_corners"
+                    android:id="@+id/ll_skin_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_skin_2"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/mode_three_skin2_unselect_corners"
+                        android:onClick="tabClick"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:onClick="tabClick"
+                        android:textSize="20sp"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/tv_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/mode_three_bg"
+                        android:text="@string/skin_2"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:onClick="tabClick"
+                    android:background="@drawable/mode_three_all_unselect_corners"
+                    android:id="@+id/ll_skin_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_skin_3"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/mode_three_skin3_unselect_corners"
+                        android:onClick="tabClick"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:onClick="tabClick"
+                        android:textSize="20sp"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/tv_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/mode_three_bg"
+                        android:text="@string/skin_3"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:onClick="tabClick"
+                    android:background="@drawable/mode_three_all_unselect_corners"
+                    android:id="@+id/ll_skin_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_skin_4"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/mode_three_skin4_unselect_corners"
+                        android:onClick="tabClick"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:onClick="tabClick"
+                        android:textSize="20sp"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/tv_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/mode_three_bg"
+                        android:text="@string/skin_4"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:onClick="tabClick"
+                    android:background="@drawable/mode_three_all_unselect_corners"
+                    android:id="@+id/ll_skin_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_skin_5"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/mode_three_skin5_unselect_corners"
+                        android:onClick="tabClick"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:onClick="tabClick"
+                        android:textSize="20sp"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/tv_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/mode_three_bg"
+                        android:text="@string/skin_5"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:onClick="tabClick"
+                    android:background="@drawable/mode_three_all_unselect_corners"
+                    android:id="@+id/ll_skin_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_skin_6"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/mode_three_skin6_unselect_corners"
+                        android:onClick="tabClick"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:onClick="tabClick"
+                        android:textSize="20sp"
+                        android:layout_marginTop="8dp"
+                        android:id="@+id/tv_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/mode_three_bg"
+                        android:text="@string/skin_6"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/skin_location"
+                        android:textColor="@color/white"
+                        android:textSize="40sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_body_head"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="30dp"
+                        android:background="@drawable/mode_three_body_unselect_corners"
+                        android:onClick="bodyClick"
+                        android:src="@mipmap/ic_mode_one_body_head"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_body_leg"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="30dp"
+                        android:background="@drawable/mode_three_body_unselect_corners"
+                        android:onClick="bodyClick"
+                        android:src="@mipmap/ic_mode_one_body_leg"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_body_armpit"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="30dp"
+                        android:background="@drawable/mode_three_body_unselect_corners"
+                        android:onClick="bodyClick"
+                        android:src="@mipmap/ic_mode_one_body_armpit"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_body_waist"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="30dp"
+                        android:background="@drawable/mode_three_body_unselect_corners"
+                        android:onClick="bodyClick"
+                        android:src="@mipmap/ic_mode_one_body_waist"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_body_back"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="30dp"
+                        android:background="@drawable/mode_three_body_unselect_corners"
+                        android:onClick="bodyClick"
+                        android:src="@mipmap/ic_mode_one_body_back"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_body_bikini"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="30dp"
+                        android:background="@drawable/mode_three_body_unselect_corners"
+                        android:onClick="bodyClick"
+                        android:src="@mipmap/ic_mode_one_body_bikini"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"/>
+                <TextView
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:id="@+id/tv_skin_ok"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/mode_two_skin1_style_corners"
+                    android:onClick="tabClick"
+                    android:text="@string/tv_mode_one_ok"
+                    android:textColor="@color/white" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:id="@+id/tv_skin_cancel"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/mode_two_skin1_style_corners"
+                    android:onClick="tabClick"
+                    android:text="@string/tv_mode_one_cancel"
+                    android:textColor="@color/white" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

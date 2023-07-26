@@ -456,8 +456,8 @@
                     android:layout_height="40dp"
                     android:background="@drawable/mode_two_skin1_style_corners"
                     android:onClick="tabClick"
-                    android:text="@string/white"
-                    android:textColor="@color/mode_one_skin1_bt" />
+                    android:text="@string/tv_mode_one_ok"
+                    android:textColor="@color/white" />
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
