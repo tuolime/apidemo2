@@ -102,7 +102,7 @@ public class UserCreateActivity extends BaseActivity {
                     ToastUtil.showLongToast(UserCreateActivity.this, getResources().getString(R.string.name_cannot));
                     return;
                 }
-                if (name.length() > 10) {
+                if (name.length() > 20) {
                     ToastUtil.showLongToast(UserCreateActivity.this, getResources().getString(R.string.name_count));
                     return;
                 }
@@ -110,7 +110,7 @@ public class UserCreateActivity extends BaseActivity {
                     ToastUtil.showLongToast(UserCreateActivity.this, getResources().getString(R.string.phone_cannot));
                     return;
                 }
-                if (tel.length() > 11) {
+                if (tel.length() > 13) {
                     ToastUtil.showLongToast(UserCreateActivity.this, getResources().getString(R.string.phone_count));
                     return;
                 }

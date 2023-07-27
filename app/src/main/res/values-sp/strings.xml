@@ -106,7 +106,7 @@
     <string name="working">Trabajo</string>
     <string name="auto_shed_time"> Tiempo restante：</string>
     <string name="disconnect_tips"> Comunicación anormal con el sistema de control. Póngase en contacto con el fabricante. </string>
-    <string name="phone_count"> El número de teléfono móvil debe ser inferior a 11 dígitos !</string>
+    <string name="phone_count"> El número de teléfono móvil debe ser inferior a 13 dígitos !</string>
 
 
     <string name="lock_tips"> Este dispositivo ha sido desactivado ！</string>
@@ -117,7 +117,7 @@
     <string name="network_connection_exception"> Conexión de red anormal！</string>
 
     <string name="system_setting">Se completa la configuración del sistema!</string>
-    <string name="name_count"> La longitud del nombre debe ser inferior a 10 caracteres !</string>
+    <string name="name_count"> La longitud del nombre debe ser inferior a 20 caracteres !</string>
 
 
     <string name="frequency_hz">Frecuencia</string>

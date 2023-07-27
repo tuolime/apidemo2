@@ -106,7 +106,7 @@
     <string name="working">Работа</string>
     <string name="auto_shed_time"> Остаток времени：</string>
     <string name="disconnect_tips"> Аномальная связь с системой управления. Пожалуйста, свяжитесь с производителем. </string>
-    <string name="phone_count">Номер телефона должен быть меньше 11. !</string>
+    <string name="phone_count">Номер телефона должен быть меньше 13. !</string>
 
 
     <string name="lock_tips"> Это устройство было запрещено. ！</string>
@@ -117,7 +117,7 @@
     <string name="network_connection_exception"> Необычное подключение к сети ！</string>
 
     <string name="system_setting">Настройка системы завершена !</string>
-    <string name="name_count"> Длина названия должна быть меньше 10 символов. !</string>
+    <string name="name_count"> Длина названия должна быть меньше 20 символов. !</string>
 
 
     <string name="frequency_hz">Частота</string>

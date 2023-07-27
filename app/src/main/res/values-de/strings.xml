@@ -106,7 +106,7 @@
     <string name="working">ARBEIT</string>
     <string name="auto_shed_time">Restzeit：</string>
     <string name="disconnect_tips"> Die Kommunikation mit dem Kontrollsystem ist anormal. Wenden Sie sich an den Hersteller. </string>
-    <string name="phone_count"> Mobiltelefonnummer sollte kleiner als 11-stellig sein !</string>
+    <string name="phone_count"> Mobiltelefonnummer sollte kleiner als 13-stellig sein !</string>
 
 
     <string name="lock_tips"> Dieses Gerät wurde gesperrt ！</string>
@@ -117,7 +117,7 @@
     <string name="network_connection_exception"> Ausnahme für Netzwerkverbindungen ！</string>
 
     <string name="system_setting">Systemeinrichtung abgeschlossen !</string>
-    <string name="name_count"> Namenslänge sollte kleiner als zehn Zeichen sein !</string>
+    <string name="name_count"> Namenslänge sollte kleiner als 20 Zeichen sein !</string>
 
 
     <string name="frequency_hz">FREQUENZ</string>

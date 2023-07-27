@@ -106,7 +106,7 @@
     <string name="working">WORKING</string>
     <string name="auto_shed_time">Time Remaining：</string>
     <string name="disconnect_tips">Communication with the control system is abnormal. Contact the manufacturer!</string>
-    <string name="phone_count"> Mobile phone number should be less than 11 digits !</string>
+    <string name="phone_count"> Mobile phone number should be less than 13 digits !</string>
 
 
     <string name="lock_tips">This device has been banned！</string>
@@ -117,7 +117,7 @@
     <string name="network_connection_exception">Network Connection Exception！</string>
 
     <string name="system_setting"> System setup is complete!</string>
-    <string name="name_count">Name length should be less than 10 characters !</string>
+    <string name="name_count">Name length should be less than 20 characters !</string>
 
 
     <string name="frequency_hz">FREQUENCY</string>
