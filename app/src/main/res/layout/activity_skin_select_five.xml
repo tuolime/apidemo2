@@ -23,21 +23,6 @@
             android:layout_width="200dp"
             android:layout_height="10dp"/>
 
-        <View
-            android:layout_marginLeft="170dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:background="@mipmap/ic_mode_select_five"
-            android:layout_width="350dp"
-            android:layout_height="350dp"/>
-
-        <View
-            android:layout_marginRight="170dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
-            android:background="@mipmap/ic_mode_select_five"
-            android:layout_width="350dp"
-            android:layout_height="350dp"/>
 
         <LinearLayout
             android:orientation="vertical"
@@ -381,10 +366,24 @@
                         android:src="@mipmap/ic_mode_one_body_armpit"
                         android:textColor="@color/white" />
                 </LinearLayout>
+
+
                 <View
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"/>
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
