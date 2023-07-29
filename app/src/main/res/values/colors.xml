@@ -57,4 +57,7 @@
     <color name="mode_two_body_entity">#5E708A</color>
     <color name="mode_two_body_select_entity">#00A0E9</color>
 
+    <color name="mode_four_bt_unselect">#818181</color>
+    <color name="mode_four_bt_select">#2D9BCA</color>
+
 </resources>
