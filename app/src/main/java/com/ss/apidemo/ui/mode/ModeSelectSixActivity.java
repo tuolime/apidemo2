@@ -77,9 +77,9 @@ public class ModeSelectSixActivity extends BaseActivity {
     public void startA(int flag) {
         Intent intent = null;
         if (flag == 1){//expert
-            intent = new Intent(ModeSelectSixActivity.this, ModeSelectSixActivity.class);
+            intent = new Intent(ModeSelectSixActivity.this, WorkSelectSixActivity.class);
         }else if (flag == 2){//smart
-            intent = new Intent(ModeSelectSixActivity.this, ModeSelectSixActivity.class);
+            intent = new Intent(ModeSelectSixActivity.this, SkinSelectSixActivity.class);
         }
         if (intent != null){
             startActivity(intent);

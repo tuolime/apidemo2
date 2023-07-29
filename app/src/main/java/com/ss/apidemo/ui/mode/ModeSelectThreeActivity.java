@@ -83,9 +83,9 @@ public class ModeSelectThreeActivity extends BaseActivity {
     public void startA(int flag) {
         Intent intent = null;
         if (flag == 1){//expert
-            intent = new Intent(ModeSelectThreeActivity.this, ModeSelectThreeActivity.class);
+            intent = new Intent(ModeSelectThreeActivity.this, WorkSelectThreeActivity.class);
         }else if (flag == 2){//smart
-            intent = new Intent(ModeSelectThreeActivity.this, ModeSelectThreeActivity.class);
+            intent = new Intent(ModeSelectThreeActivity.this, SkinSelectThreeActivity.class);
         }
         if (intent != null){
             startActivity(intent);

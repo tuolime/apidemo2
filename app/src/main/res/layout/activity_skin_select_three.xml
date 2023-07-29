@@ -23,7 +23,7 @@
             android:layout_alignParentBottom="true"
             android:background="@color/mode_three_bg"
             android:layout_width="match_parent"
-            android:layout_height="60dp"/>
+            android:layout_height="80dp"/>
 
         <LinearLayout
             android:orientation="vertical"
@@ -70,7 +70,7 @@
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:text="@string/skin_tyoe"
-                        android:textColor="@color/white"
+                        android:textColor="@color/mode_two_body_entity"
                         android:textSize="40sp" />
                 </LinearLayout>
 
@@ -88,11 +88,12 @@
                     android:layout_weight="4"/>
 
                 <LinearLayout
+                    android:padding="3dp"
                     android:onClick="tabClick"
                     android:background="@drawable/mode_three_all_unselect_corners"
                     android:id="@+id/ll_skin_1"
                     android:layout_width="wrap_content"
-                    android:layout_height="160dp"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -101,10 +102,8 @@
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:background="@drawable/mode_three_skin1_unselect_corners"
-                        android:onClick="tabClick"
                         android:textColor="@color/white" />
                     <TextView
-                        android:onClick="tabClick"
                         android:textSize="20sp"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_1"
@@ -119,6 +118,7 @@
                     android:layout_weight="1"/>
 
                 <LinearLayout
+                    android:padding="3dp"
                     android:onClick="tabClick"
                     android:background="@drawable/mode_three_all_unselect_corners"
                     android:id="@+id/ll_skin_2"
@@ -132,10 +132,8 @@
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:background="@drawable/mode_three_skin2_unselect_corners"
-                        android:onClick="tabClick"
                         android:textColor="@color/white" />
                     <TextView
-                        android:onClick="tabClick"
                         android:textSize="20sp"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_2"
@@ -150,6 +148,7 @@
                     android:layout_weight="1"/>
 
                 <LinearLayout
+                    android:padding="3dp"
                     android:onClick="tabClick"
                     android:background="@drawable/mode_three_all_unselect_corners"
                     android:id="@+id/ll_skin_3"
@@ -163,10 +162,8 @@
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:background="@drawable/mode_three_skin3_unselect_corners"
-                        android:onClick="tabClick"
                         android:textColor="@color/white" />
                     <TextView
-                        android:onClick="tabClick"
                         android:textSize="20sp"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_3"
@@ -181,6 +178,7 @@
                     android:layout_weight="1"/>
 
                 <LinearLayout
+                    android:padding="3dp"
                     android:onClick="tabClick"
                     android:background="@drawable/mode_three_all_unselect_corners"
                     android:id="@+id/ll_skin_4"
@@ -194,10 +192,8 @@
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:background="@drawable/mode_three_skin4_unselect_corners"
-                        android:onClick="tabClick"
                         android:textColor="@color/white" />
                     <TextView
-                        android:onClick="tabClick"
                         android:textSize="20sp"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_4"
@@ -212,6 +208,7 @@
                     android:layout_weight="1"/>
 
                 <LinearLayout
+                    android:padding="3dp"
                     android:onClick="tabClick"
                     android:background="@drawable/mode_three_all_unselect_corners"
                     android:id="@+id/ll_skin_5"
@@ -225,10 +222,8 @@
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:background="@drawable/mode_three_skin5_unselect_corners"
-                        android:onClick="tabClick"
                         android:textColor="@color/white" />
                     <TextView
-                        android:onClick="tabClick"
                         android:textSize="20sp"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_5"
@@ -243,6 +238,7 @@
                     android:layout_weight="1"/>
 
                 <LinearLayout
+                    android:padding="3dp"
                     android:onClick="tabClick"
                     android:background="@drawable/mode_three_all_unselect_corners"
                     android:id="@+id/ll_skin_6"
@@ -256,10 +252,8 @@
                         android:layout_width="100dp"
                         android:layout_height="50dp"
                         android:background="@drawable/mode_three_skin6_unselect_corners"
-                        android:onClick="tabClick"
                         android:textColor="@color/white" />
                     <TextView
-                        android:onClick="tabClick"
                         android:textSize="20sp"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_6"
@@ -293,7 +287,7 @@
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:text="@string/skin_location"
-                        android:textColor="@color/white"
+                        android:textColor="@color/mode_two_body_entity"
                         android:textSize="40sp" />
                 </LinearLayout>
 

@@ -15,6 +15,6 @@
 <!--        android:width="10px"-->
 <!--        android:color="@color/mode_two_body_frame" />-->
     <!-- 背景色 -->
-    <solid android:color="@color/mode_two_body_select_entity">
+    <solid android:color="@color/mode_three_body_select_entity">
     </solid>
 </shape>

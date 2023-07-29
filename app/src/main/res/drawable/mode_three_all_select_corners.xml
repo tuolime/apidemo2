@@ -12,7 +12,7 @@
 <!--        />-->
     <!-- 边框的宽度和颜色颜色 -->
     <stroke
-        android:width="3px"
+        android:width="5px"
         android:color="@color/mode_two_body_select_entity" />
     <!-- 背景色 -->
 <!--    <solid android:color="@color/mode_one_skin_1_unselect">-->
