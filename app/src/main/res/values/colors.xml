@@ -59,5 +59,7 @@
 
     <color name="mode_four_bt_unselect">#818181</color>
     <color name="mode_four_bt_select">#2D9BCA</color>
+    <color name="mode_four_tv">#7B7B7B</color>
+    <color name="mode_four_body_bg">#F2F2F2</color>
 
 </resources>

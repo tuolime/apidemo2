@@ -1,9 +1,460 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mode.SkinSelectFourActivity">
+    android:orientation="vertical"
+    tools:context=".ui.mode.ModeSelectOneActivity">
+    <!--    <com.ss.apidemo.view.MergerStatus-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"/>-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_marginLeft="45dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:background="@mipmap/ic_mode_four_top_bg"
+                android:src="@mipmap/ic_mode_four_top_back" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <ImageView
+                android:layout_marginRight="45dp"
+                android:id="@+id/iv_main"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:background="@mipmap/ic_mode_four_top_bg"
+                android:src="@mipmap/ic_mode_four_top_main" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:background="@drawable/mode_four_body_bg_corners"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/skin_location"
+                            android:textColor="@color/mode_four_tv"
+                            android:textSize="40sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:background="@mipmap/ic_mode_four_top_bg"
+                        android:orientation="vertical">
+                        <View
+                            android:id="@+id/vv_bg1"
+                            android:layout_margin="18dp"
+                            android:background="@drawable/mode_four_skin_bt_unselect_corners"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:id="@+id/iv_body_head"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerVertical="true"
+                            android:onClick="bodyClick"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="0dp"
+                            android:paddingTop="35dp"
+                            android:paddingBottom="20dp"
+                            android:src="@mipmap/ic_mode_four_body_head"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:background="@mipmap/ic_mode_four_top_bg"
+                        android:orientation="vertical">
+                        <View
+                            android:id="@+id/vv_bg2"
+                            android:layout_margin="18dp"
+                            android:background="@drawable/mode_four_skin_bt_unselect_corners"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:id="@+id/iv_body_leg"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="bodyClick"
+                            android:padding="25dp"
+                            android:src="@mipmap/ic_mode_four_body_leg"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:background="@mipmap/ic_mode_four_top_bg"
+                        android:orientation="vertical">
+                        <View
+                            android:id="@+id/vv_bg3"
+                            android:layout_margin="18dp"
+                            android:background="@drawable/mode_four_skin_bt_unselect_corners"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:id="@+id/iv_body_armpit"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="bodyClick"
+                            android:padding="25dp"
+                            android:src="@mipmap/ic_mode_four_body_armpit"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:background="@mipmap/ic_mode_four_top_bg"
+                        android:orientation="vertical">
+                        <View
+                            android:id="@+id/vv_bg4"
+                            android:layout_margin="18dp"
+                            android:background="@drawable/mode_four_skin_bt_unselect_corners"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:id="@+id/iv_body_waist"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="bodyClick"
+                            android:padding="25dp"
+                            android:src="@mipmap/ic_mode_four_body_waist"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:background="@mipmap/ic_mode_four_top_bg"
+                        android:orientation="vertical">
+                        <View
+                            android:id="@+id/vv_bg5"
+                            android:layout_margin="18dp"
+                            android:background="@drawable/mode_four_skin_bt_unselect_corners"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:id="@+id/iv_body_back"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="bodyClick"
+                            android:padding="25dp"
+                            android:src="@mipmap/ic_mode_four_body_back"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        android:background="@mipmap/ic_mode_four_top_bg"
+                        android:orientation="vertical">
+                        <View
+                            android:id="@+id/vv_bg6"
+                            android:layout_margin="18dp"
+                            android:background="@drawable/mode_four_skin_bt_unselect_corners"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <ImageView
+                            android:id="@+id/iv_body_bikini"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerInParent="true"
+                            android:onClick="bodyClick"
+                            android:padding="25dp"
+                            android:src="@mipmap/ic_mode_four_body_bikini"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:paddingTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp"
+                            android:text="@string/skin_tyoe"
+                            android:textColor="@color/mode_four_tv"
+                            android:textSize="40sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/tv_skin_1"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/mode_four_skin1_unselect_corners"
+                            android:onClick="tabClick"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/tv_skin_2"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/mode_four_skin2_unselect_corners"
+                            android:onClick="tabClick"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/tv_skin_3"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/mode_four_skin3_unselect_corners"
+                            android:onClick="tabClick"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/tv_skin_4"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/mode_four_skin4_unselect_corners"
+                            android:onClick="tabClick"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/tv_skin_5"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/mode_four_skin5_unselect_corners"
+                            android:onClick="tabClick"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/tv_skin_6"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:background="@drawable/mode_four_skin6_unselect_corners"
+                            android:onClick="tabClick"
+                            android:textColor="@color/white" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"/>
+        <TextView
+            android:gravity="center"
+            android:textSize="20sp"
+            android:id="@+id/tv_skin_ok"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mode_four_skin1_style_corners"
+            android:onClick="tabClick"
+            android:text="@string/tv_mode_one_ok"
+            android:textColor="@color/mode_four_tv" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <TextView
+            android:textSize="20sp"
+            android:gravity="center"
+            android:id="@+id/tv_skin_cancel"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mode_four_skin1_style_corners"
+            android:onClick="tabClick"
+            android:text="@string/tv_mode_one_cancel"
+            android:textColor="@color/mode_four_tv" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>
