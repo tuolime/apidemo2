@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@mipmap/ic_mode_bg_five"
+    android:background="@mipmap/ic_mode_skin_bg_five"
     tools:context=".ui.mode.ModeSelectOneActivity">
     <!--    <com.ss.apidemo.view.MergerStatus-->
     <!--        android:layout_width="match_parent"-->
@@ -15,19 +15,47 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <View
+        <LinearLayout
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
-            android:layout_marginTop="30dp"
-            android:background="@mipmap/ic_mode_top_five"
-            android:layout_width="200dp"
-            android:layout_height="10dp"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/skin_tyoe"
+                android:textColor="@color/mode_five_tv"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/skin_location"
+                android:textColor="@color/mode_five_tv"
+                android:textSize="40sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <LinearLayout
                 android:layout_marginTop="70dp"
                 android:orientation="horizontal"
@@ -52,32 +80,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:text="@string/skin_tyoe"
-                        android:textColor="@color/white"
-                        android:textSize="40sp" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="30dp"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="130dp">
@@ -87,29 +90,24 @@
                     android:layout_weight="4"/>
 
                 <LinearLayout
-                    android:onClick="tabClick"
-                    android:background="@drawable/mode_three_all_unselect_corners"
-                    android:id="@+id/ll_skin_1"
                     android:layout_width="wrap_content"
-                    android:layout_height="160dp"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical">
-
                     <TextView
                         android:id="@+id/tv_skin_1"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/mode_three_skin1_unselect_corners"
+                        android:background="@mipmap/ic_mode_five_skin1_unselect"
                         android:onClick="tabClick"
                         android:textColor="@color/white" />
                     <TextView
-                        android:onClick="tabClick"
                         android:textSize="20sp"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/mode_three_bg"
+                        android:textColor="@color/white"
                         android:text="@string/skin_1"/>
                 </LinearLayout>
                 <View
@@ -118,8 +116,6 @@
                     android:layout_weight="1"/>
 
                 <LinearLayout
-                    android:onClick="tabClick"
-                    android:background="@drawable/mode_three_all_unselect_corners"
                     android:id="@+id/ll_skin_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -130,17 +126,16 @@
                         android:id="@+id/tv_skin_2"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/mode_three_skin2_unselect_corners"
+                        android:background="@mipmap/ic_mode_five_skin2_unselect"
                         android:onClick="tabClick"
                         android:textColor="@color/white" />
                     <TextView
-                        android:onClick="tabClick"
                         android:textSize="20sp"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/mode_three_bg"
+                        android:textColor="@color/white"
                         android:text="@string/skin_2"/>
                 </LinearLayout>
                 <View
@@ -149,8 +144,6 @@
                     android:layout_weight="1"/>
 
                 <LinearLayout
-                    android:onClick="tabClick"
-                    android:background="@drawable/mode_three_all_unselect_corners"
                     android:id="@+id/ll_skin_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -161,17 +154,16 @@
                         android:id="@+id/tv_skin_3"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/mode_three_skin3_unselect_corners"
+                        android:background="@mipmap/ic_mode_five_skin3_unselect"
                         android:onClick="tabClick"
                         android:textColor="@color/white" />
                     <TextView
-                        android:onClick="tabClick"
                         android:textSize="20sp"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/mode_three_bg"
+                        android:textColor="@color/white"
                         android:text="@string/skin_3"/>
                 </LinearLayout>
                 <View
@@ -180,8 +172,6 @@
                     android:layout_weight="1"/>
 
                 <LinearLayout
-                    android:onClick="tabClick"
-                    android:background="@drawable/mode_three_all_unselect_corners"
                     android:id="@+id/ll_skin_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -192,17 +182,16 @@
                         android:id="@+id/tv_skin_4"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/mode_three_skin4_unselect_corners"
+                        android:background="@mipmap/ic_mode_five_skin4_unselect"
                         android:onClick="tabClick"
                         android:textColor="@color/white" />
                     <TextView
-                        android:onClick="tabClick"
                         android:textSize="20sp"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/mode_three_bg"
+                        android:textColor="@color/white"
                         android:text="@string/skin_4"/>
                 </LinearLayout>
                 <View
@@ -211,8 +200,6 @@
                     android:layout_weight="1"/>
 
                 <LinearLayout
-                    android:onClick="tabClick"
-                    android:background="@drawable/mode_three_all_unselect_corners"
                     android:id="@+id/ll_skin_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -223,17 +210,16 @@
                         android:id="@+id/tv_skin_5"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/mode_three_skin5_unselect_corners"
+                        android:background="@mipmap/ic_mode_five_skin5_unselect"
                         android:onClick="tabClick"
                         android:textColor="@color/white" />
                     <TextView
-                        android:onClick="tabClick"
                         android:textSize="20sp"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/mode_three_bg"
+                        android:textColor="@color/white"
                         android:text="@string/skin_5"/>
                 </LinearLayout>
                 <View
@@ -242,8 +228,6 @@
                     android:layout_weight="1"/>
 
                 <LinearLayout
-                    android:onClick="tabClick"
-                    android:background="@drawable/mode_three_all_unselect_corners"
                     android:id="@+id/ll_skin_6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -254,17 +238,16 @@
                         android:id="@+id/tv_skin_6"
                         android:layout_width="100dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/mode_three_skin6_unselect_corners"
+                        android:background="@mipmap/ic_mode_five_skin6_unselect"
                         android:onClick="tabClick"
                         android:textColor="@color/white" />
                     <TextView
-                        android:onClick="tabClick"
                         android:textSize="20sp"
                         android:layout_marginTop="8dp"
                         android:id="@+id/tv_6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/mode_three_bg"
+                        android:textColor="@color/white"
                         android:text="@string/skin_6"/>
                 </LinearLayout>
 
@@ -275,39 +258,14 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="60dp"
                 android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:text="@string/skin_location"
-                        android:textColor="@color/white"
-                        android:textSize="40sp" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="150dp">
+                android:layout_height="120dp">
                 <View
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"/>
+                    android:layout_weight="1"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -317,10 +275,10 @@
 
                     <ImageView
                         android:id="@+id/iv_body_head"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:padding="30dp"
-                        android:background="@drawable/mode_three_body_unselect_corners"
+                        android:layout_width="170dp"
+                        android:layout_height="100dp"
+                        android:padding="20dp"
+                        android:background="@mipmap/ic_mode_body_bg_five"
                         android:onClick="bodyClick"
                         android:src="@mipmap/ic_mode_one_body_head"
                         android:textColor="@color/white" />
@@ -337,10 +295,10 @@
 
                     <ImageView
                         android:id="@+id/iv_body_leg"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:padding="30dp"
-                        android:background="@drawable/mode_three_body_unselect_corners"
+                        android:layout_width="170dp"
+                        android:layout_height="100dp"
+                        android:padding="20dp"
+                        android:background="@mipmap/ic_mode_body_bg_five"
                         android:onClick="bodyClick"
                         android:src="@mipmap/ic_mode_one_body_leg"
                         android:textColor="@color/white" />
@@ -358,10 +316,10 @@
 
                     <ImageView
                         android:id="@+id/iv_body_armpit"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:padding="30dp"
-                        android:background="@drawable/mode_three_body_unselect_corners"
+                        android:layout_width="170dp"
+                        android:layout_height="100dp"
+                        android:padding="20dp"
+                        android:background="@mipmap/ic_mode_body_bg_five"
                         android:onClick="bodyClick"
                         android:src="@mipmap/ic_mode_one_body_armpit"
                         android:textColor="@color/white" />
@@ -371,14 +329,13 @@
                 <View
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"/>
+                    android:layout_weight="1"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="150dp">
+                android:layout_height="130dp">
                 <View
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -392,10 +349,10 @@
 
                     <ImageView
                         android:id="@+id/iv_body_waist"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:padding="30dp"
-                        android:background="@drawable/mode_three_body_unselect_corners"
+                        android:layout_width="170dp"
+                        android:layout_height="100dp"
+                        android:padding="20dp"
+                        android:background="@mipmap/ic_mode_body_bg_five"
                         android:onClick="bodyClick"
                         android:src="@mipmap/ic_mode_one_body_waist"
                         android:textColor="@color/white" />
@@ -413,10 +370,10 @@
 
                     <ImageView
                         android:id="@+id/iv_body_back"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:padding="30dp"
-                        android:background="@drawable/mode_three_body_unselect_corners"
+                        android:layout_width="170dp"
+                        android:layout_height="100dp"
+                        android:padding="20dp"
+                        android:background="@mipmap/ic_mode_body_bg_five"
                         android:onClick="bodyClick"
                         android:src="@mipmap/ic_mode_one_body_back"
                         android:textColor="@color/white" />
@@ -433,10 +390,10 @@
 
                     <ImageView
                         android:id="@+id/iv_body_bikini"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:padding="30dp"
-                        android:background="@drawable/mode_three_body_unselect_corners"
+                        android:layout_width="170dp"
+                        android:layout_height="100dp"
+                        android:padding="20dp"
+                        android:background="@mipmap/ic_mode_body_bg_five"
                         android:onClick="bodyClick"
                         android:src="@mipmap/ic_mode_one_body_bikini"
                         android:textColor="@color/white" />
@@ -453,21 +410,19 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
             <LinearLayout
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="70dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.5"/>
+
                 <TextView
+                    android:rotation="50"
+                    android:layout_marginLeft="60dp"
                     android:gravity="center"
                     android:textSize="20sp"
                     android:id="@+id/tv_skin_ok"
-                    android:layout_width="120dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/mode_two_skin1_style_corners"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:onClick="tabClick"
                     android:text="@string/tv_mode_one_ok"
                     android:textColor="@color/white" />
@@ -476,19 +431,16 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <TextView
+                    android:rotation="-50"
+                    android:layout_marginRight="60dp"
                     android:textSize="20sp"
                     android:gravity="center"
                     android:id="@+id/tv_skin_cancel"
-                    android:layout_width="120dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/mode_two_skin1_style_corners"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:onClick="tabClick"
                     android:text="@string/tv_mode_one_cancel"
                     android:textColor="@color/white" />
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.5"/>
             </LinearLayout>
         </LinearLayout>
 

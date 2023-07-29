@@ -17,7 +17,6 @@ import com.ss.apidemo.ui.SplashActivity;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 
 public class SkinSelectFiveActivity extends BaseActivity {
-    private LinearLayout ll_skin_1,ll_skin_2,ll_skin_3,ll_skin_4,ll_skin_5,ll_skin_6;
     private TextView tv_skin_1,tv_skin_2,tv_skin_3,tv_skin_4,tv_skin_5,tv_skin_6;
     private TextView tv_1,tv_2,tv_3,tv_4,tv_5,tv_6;
     private ImageView iv_body_head,iv_body_leg,iv_body_armpit,iv_body_waist,iv_body_back,iv_body_bikini;
@@ -46,12 +45,6 @@ public class SkinSelectFiveActivity extends BaseActivity {
                 startActivity(new Intent(SkinSelectFiveActivity.this, SplashActivity.class));
             }
         });
-        ll_skin_1 = findViewById(R.id.ll_skin_1);
-        ll_skin_2 = findViewById(R.id.ll_skin_2);
-        ll_skin_3 = findViewById(R.id.ll_skin_3);
-        ll_skin_4 = findViewById(R.id.ll_skin_4);
-        ll_skin_5 = findViewById(R.id.ll_skin_5);
-        ll_skin_6 = findViewById(R.id.ll_skin_6);
 
         tv_skin_1 = findViewById(R.id.tv_skin_1);
         tv_skin_2 = findViewById(R.id.tv_skin_2);
@@ -84,29 +77,29 @@ public class SkinSelectFiveActivity extends BaseActivity {
         PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
         resetMenuState();
         switch (view.getId()) {
-            case R.id.ll_skin_1:
-                ll_skin_1.setBackground(getResources().getDrawable(R.drawable.mode_three_all_select_corners));
-                tv_1.setTextColor(getResources().getColor(R.color.mode_two_body_select_entity));
+            case R.id.tv_skin_1:
+                tv_skin_1.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin1_select));
+                tv_1.setTextColor(getResources().getColor(R.color.mode_five_tv));
                 break;
-            case R.id.ll_skin_2:
-                ll_skin_2.setBackground(getResources().getDrawable(R.drawable.mode_three_all_select_corners));
-                tv_2.setTextColor(getResources().getColor(R.color.mode_two_body_select_entity));
+            case R.id.tv_skin_2:
+                tv_skin_2.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin2_select));
+                tv_2.setTextColor(getResources().getColor(R.color.mode_five_tv));
                 break;
-            case R.id.ll_skin_3:
-                ll_skin_3.setBackground(getResources().getDrawable(R.drawable.mode_three_all_select_corners));
-                tv_3.setTextColor(getResources().getColor(R.color.mode_two_body_select_entity));
+            case R.id.tv_skin_3:
+                tv_skin_3.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin3_select));
+                tv_3.setTextColor(getResources().getColor(R.color.mode_five_tv));
                 break;
-            case R.id.ll_skin_4:
-                ll_skin_4.setBackground(getResources().getDrawable(R.drawable.mode_three_all_select_corners));
-                tv_4.setTextColor(getResources().getColor(R.color.mode_two_body_select_entity));
+            case R.id.tv_skin_4:
+                tv_skin_4.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin4_select));
+                tv_4.setTextColor(getResources().getColor(R.color.mode_five_tv));
                 break;
-            case R.id.ll_skin_5:
-                ll_skin_5.setBackground(getResources().getDrawable(R.drawable.mode_three_all_select_corners));
-                tv_5.setTextColor(getResources().getColor(R.color.mode_two_body_select_entity));
+            case R.id.tv_skin_5:
+                tv_skin_5.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin5_select));
+                tv_5.setTextColor(getResources().getColor(R.color.mode_five_tv));
                 break;
-            case R.id.ll_skin_6:
-                ll_skin_6.setBackground(getResources().getDrawable(R.drawable.mode_three_all_select_corners));
-                tv_6.setTextColor(getResources().getColor(R.color.mode_two_body_select_entity));
+            case R.id.tv_skin_6:
+                tv_skin_6.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin6_select));
+                tv_6.setTextColor(getResources().getColor(R.color.mode_five_tv));
                 break;
             case R.id.tv_skin_ok:
                 startA();
@@ -122,40 +115,40 @@ public class SkinSelectFiveActivity extends BaseActivity {
         resetMenuBoydState();
         switch (view.getId()) {
             case R.id.iv_body_head:
-                iv_body_head.setBackground(getResources().getDrawable(R.drawable.mode_three_body_select_corners));
+                iv_body_head.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five_select));
                 break;
             case R.id.iv_body_leg:
-                iv_body_leg.setBackground(getResources().getDrawable(R.drawable.mode_three_body_select_corners));
+                iv_body_leg.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five_select));
                 break;
             case R.id.iv_body_armpit:
-                iv_body_armpit.setBackground(getResources().getDrawable(R.drawable.mode_three_body_select_corners));
+                iv_body_armpit.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five_select));
                 break;
             case R.id.iv_body_waist:
-                iv_body_waist.setBackground(getResources().getDrawable(R.drawable.mode_three_body_select_corners));
+                iv_body_waist.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five_select));
                 break;
             case R.id.iv_body_back:
-                iv_body_back.setBackground(getResources().getDrawable(R.drawable.mode_three_body_select_corners));
+                iv_body_back.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five_select));
                 break;
             case R.id.iv_body_bikini:
-                iv_body_bikini.setBackground(getResources().getDrawable(R.drawable.mode_three_body_select_corners));
+                iv_body_bikini.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five_select));
                 break;
         }
     }
 
     private void resetMenuState() {
-        ll_skin_1.setBackground(getResources().getDrawable(R.drawable.mode_three_all_unselect_corners));
-        ll_skin_2.setBackground(getResources().getDrawable(R.drawable.mode_three_all_unselect_corners));
-        ll_skin_3.setBackground(getResources().getDrawable(R.drawable.mode_three_all_unselect_corners));
-        ll_skin_4.setBackground(getResources().getDrawable(R.drawable.mode_three_all_unselect_corners));
-        ll_skin_5.setBackground(getResources().getDrawable(R.drawable.mode_three_all_unselect_corners));
-        ll_skin_6.setBackground(getResources().getDrawable(R.drawable.mode_three_all_unselect_corners));
+        tv_skin_1.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin1_unselect));
+        tv_skin_2.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin2_unselect));
+        tv_skin_3.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin3_unselect));
+        tv_skin_4.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin4_unselect));
+        tv_skin_5.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin5_unselect));
+        tv_skin_6.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin6_unselect));
 
-        tv_1.setTextColor(getResources().getColor(R.color.mode_three_bg));
-        tv_2.setTextColor(getResources().getColor(R.color.mode_three_bg));
-        tv_3.setTextColor(getResources().getColor(R.color.mode_three_bg));
-        tv_4.setTextColor(getResources().getColor(R.color.mode_three_bg));
-        tv_5.setTextColor(getResources().getColor(R.color.mode_three_bg));
-        tv_6.setTextColor(getResources().getColor(R.color.mode_three_bg));
+        tv_1.setTextColor(getResources().getColor(R.color.white));
+        tv_2.setTextColor(getResources().getColor(R.color.white));
+        tv_3.setTextColor(getResources().getColor(R.color.white));
+        tv_4.setTextColor(getResources().getColor(R.color.white));
+        tv_5.setTextColor(getResources().getColor(R.color.white));
+        tv_6.setTextColor(getResources().getColor(R.color.white));
 
 
 //        tv_skin_1.setBackground(getResources().getDrawable(R.drawable.mode_two_skin1_unselect_corners));
@@ -167,12 +160,12 @@ public class SkinSelectFiveActivity extends BaseActivity {
     }
 
     private void resetMenuBoydState() {
-        iv_body_head.setBackground(getResources().getDrawable(R.drawable.mode_three_body_unselect_corners));
-        iv_body_leg.setBackground(getResources().getDrawable(R.drawable.mode_three_body_unselect_corners));
-        iv_body_armpit.setBackground(getResources().getDrawable(R.drawable.mode_three_body_unselect_corners));
-        iv_body_waist.setBackground(getResources().getDrawable(R.drawable.mode_three_body_unselect_corners));
-        iv_body_back.setBackground(getResources().getDrawable(R.drawable.mode_three_body_unselect_corners));
-        iv_body_bikini.setBackground(getResources().getDrawable(R.drawable.mode_three_body_unselect_corners));
+        iv_body_head.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five));
+        iv_body_leg.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five));
+        iv_body_armpit.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five));
+        iv_body_waist.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five));
+        iv_body_back.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five));
+        iv_body_bikini.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five));
 
     }
 
