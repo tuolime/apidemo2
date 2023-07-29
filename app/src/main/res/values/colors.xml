@@ -63,5 +63,6 @@
     <color name="mode_four_tv">#7B7B7B</color>
     <color name="mode_four_body_bg">#F2F2F2</color>
     <color name="mode_five_tv">#067C88</color>
+    <color name="mode_six_body_frame">#D7CCD0</color>
 
 </resources>

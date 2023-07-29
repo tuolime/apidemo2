@@ -93,12 +93,16 @@
                         android:gravity="center"
                         android:background="@mipmap/ic_mode_four_top_bg"
                         android:orientation="vertical">
+
                         <View
                             android:id="@+id/vv_bg1"
-                            android:layout_margin="18dp"
-                            android:background="@drawable/mode_four_skin_bt_unselect_corners"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"/>
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginEnd="18dp"
+                            android:layout_marginBottom="18dp"
+                            android:background="@drawable/mode_four_skin_bt_unselect_corners" />
 
                         <ImageView
                             android:id="@+id/iv_body_head"

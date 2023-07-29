@@ -186,6 +186,10 @@ public class UserCreateActivity extends BaseActivity {
 
             }
         }else if (modeType == 2) {
+//            Intent intent = new Intent(UserCreateActivity.this, ParameterActivity.class);
+//            intent.putExtra("gender", "1");//自由人默认为男性
+//            intent.putExtra("tel", "0");//自由人手机号默认为0
+//            startActivity(intent);
             int intValue = SharedPrefsUtil.getIntValue(AppConfig.MODE_TWO_GB, 1);
             Intent intent = null;
 //            if (intValue == 1) {
@@ -197,9 +201,9 @@ public class UserCreateActivity extends BaseActivity {
 //            } else if (intValue == 4) {
 //                intent = new Intent(UserCreateActivity.this, ModeSelectFourActivity.class);
 //            } else if (intValue == 5) {
-                intent = new Intent(UserCreateActivity.this, ModeSelectFiveActivity.class);
+//                intent = new Intent(UserCreateActivity.this, ModeSelectFiveActivity.class);
 //            } else if (intValue == 6) {
-//                intent = new Intent(UserCreateActivity.this, ModeSelectSixActivity.class);
+                intent = new Intent(UserCreateActivity.this, ModeSelectSixActivity.class);
 //            }
 
             if (intent != null){
