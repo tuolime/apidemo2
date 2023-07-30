@@ -193,7 +193,7 @@ public class UserCreateActivity extends BaseActivity {
             int intValue = SharedPrefsUtil.getIntValue(AppConfig.MODE_TWO_GB, 1);
             Intent intent = null;
 //            if (intValue == 1) {
-//                intent = new Intent(UserCreateActivity.this, ModeSelectOneActivity.class);
+                intent = new Intent(UserCreateActivity.this, ModeSelectOneActivity.class);
 //            } else if (intValue == 2) {
 //                intent = new Intent(UserCreateActivity.this, ModeSelectTwoActivity.class);
 //            } else if (intValue == 3) {
@@ -203,7 +203,7 @@ public class UserCreateActivity extends BaseActivity {
 //            } else if (intValue == 5) {
 //                intent = new Intent(UserCreateActivity.this, ModeSelectFiveActivity.class);
 //            } else if (intValue == 6) {
-                intent = new Intent(UserCreateActivity.this, ModeSelectSixActivity.class);
+//                intent = new Intent(UserCreateActivity.this, ModeSelectSixActivity.class);
 //            }
 
             if (intent != null){

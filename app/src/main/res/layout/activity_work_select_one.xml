@@ -1,9 +1,531 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mode.WorkSelectOneActivity">
+    android:orientation="vertical"
+    android:background="@mipmap/iic_work_one_bg"
+    tools:context=".ui.mode.ModeSelectOneActivity">
+    <!--    <com.ss.apidemo.view.MergerStatus-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"/>-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_save"
+                    android:layout_marginLeft="45dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/iic_work_one_save" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/iv_setting"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/iic_work_one_setting" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/iv_fan"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/iic_work_one_fan" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/iic_work_one_back" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:layout_marginRight="45dp"
+                    android:id="@+id/iv_main"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/iic_work_one_main" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:background="@drawable/work_one_fan_1_unselect_corners"
+                        android:layout_width="30dp"
+                        android:layout_height="5dp"/>
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/work_one_fan_2_unselect_corners"
+                        android:layout_width="30dp"
+                        android:layout_height="5dp"/>
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/work_one_fan_2_unselect_corners"
+                        android:layout_width="30dp"
+                        android:layout_height="5dp"/>
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/work_one_fan_2_unselect_corners"
+                        android:layout_width="30dp"
+                        android:layout_height="5dp"/>
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/work_one_fan_3_unselect_corners"
+                        android:layout_width="30dp"
+                        android:layout_height="5dp"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <com.ss.apidemo.widget.ArcSeekBar
+                        android:layout_width="360dp"
+                        android:layout_height="350dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="73dp"
+                        android:layout_marginTop="90dp">
+
+                    </com.ss.apidemo.widget.ArcSeekBar>
+
+                    <LinearLayout
+                        android:minHeight="100dp"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv_work_one_fluence"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="80"
+                            android:textColor="@color/white"
+                            android:textSize="80sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv_work_one_j"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:background="@mipmap/ic_work_one_bg_up"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="30sp"
+                            android:text="@string/tv_work_one_auto"
+                            android:textColor="@color/white" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/ic_one_select"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="@mipmap/ic_work_one_bg_centre"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="30sp"
+                            android:text="@string/tv_work_one_30"
+                            android:textColor="@color/white" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/ic_one_select"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="@mipmap/ic_work_one_bg_centre"                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="30sp"
+                            android:text="@string/tv_work_one_100"
+                            android:textColor="@color/white" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/ic_one_select"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:background="@mipmap/ic_work_one_bg_down"                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="100dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="30sp"
+                            android:text="@string/tv_work_one_400"
+                            android:textColor="@color/white" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/ic_one_select"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="105dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv_work_one_l"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"/>
+                        <ImageView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/ic_work_one_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:minHeight="100dp"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginTop="75dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv_work_one_rate"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="08"
+                            android:textColor="@color/white"
+                            android:textSize="50sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv_work_one_hz"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"/>
+                        <ImageView
+                            android:layout_marginTop="10dp"
+                            android:background="@mipmap/ic_work_one_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv_work_one_m"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginLeft="297dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+                        <ImageView
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/ic_work_one_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv_work_one_f"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginLeft="45dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textSize="20sp"
+                        android:id="@+id/tv_temprature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="tabClick"
+                        android:text="@string/tv_work_one_temprature"
+                        android:textColor="@color/mode_work_one_tv" />
+                    <TextView
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="tabClick"
+                        android:text="@string/tv_mode_one_ok"
+                        android:textColor="@color/mode_work_one_tv" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginLeft="45dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textSize="20sp"
+                        android:id="@+id/tv_flow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="tabClick"
+                        android:text="@string/tv_work_one_flow"
+                        android:textColor="@color/mode_work_one_tv" />
+                    <TextView
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="tabClick"
+                        android:text="@string/tv_mode_one_ok"
+                        android:textColor="@color/mode_work_one_tv" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginLeft="45dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textSize="20sp"
+                        android:id="@+id/tv_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="tabClick"
+                        android:text="@string/tv_work_one_totla"
+                        android:textColor="@color/mode_work_one_tv" />
+                    <TextView
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="tabClick"
+                        android:text="@string/tv_mode_one_ok"
+                        android:textColor="@color/mode_work_one_tv" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginLeft="45dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textSize="20sp"
+                        android:id="@+id/tv_current"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="tabClick"
+                        android:text="@string/tv_work_one_current"
+                        android:textColor="@color/mode_work_one_tv" />
+                    <TextView
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="tabClick"
+                        android:text="@string/tv_mode_one_ok"
+                        android:textColor="@color/mode_work_one_tv" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginLeft="45dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textSize="20sp"
+                        android:id="@+id/tv_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="tabClick"
+                        android:text="@string/tv_work_one_id"
+                        android:textColor="@color/mode_work_one_tv" />
+                    <TextView
+                        android:textSize="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="tabClick"
+                        android:text="@string/tv_mode_one_ok"
+                        android:textColor="@color/mode_work_one_tv" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginLeft="45dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textSize="20sp"
+                        android:id="@+id/tv_exact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="tabClick"
+                        android:text="@string/tv_work_one_exact"
+                        android:textColor="@color/mode_work_one_tv" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginLeft="45dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textSize="20sp"
+                        android:id="@+id/tv_raedy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="tabClick"
+                        android:text="@string/tv_work_one_raedy"
+                        android:textColor="@color/mode_work_one_tv" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

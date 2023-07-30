@@ -162,5 +162,23 @@
 
     <string name="tv_mode_one_ok">Ok</string>
     <string name="tv_mode_one_cancel">Cancel</string>
+    <string name="tv_work_one_temprature">Temprature</string>
+    <string name="tv_work_one_flow">Flow</string>
+    <string name="tv_work_one_totla">Totla</string>
+    <string name="tv_work_one_current">Current</string>
+    <string name="tv_work_one_id">ID</string>
+    <string name="tv_work_one_exact">EXACT</string>
+    <string name="tv_work_one_raedy">Raedy</string>
+    <string name="tv_work_one_auto">AUTO</string>
+    <string name="tv_work_one_30">30</string>
+    <string name="tv_work_one_100">100</string>
+    <string name="tv_work_one_400">400</string>
+    <string name="tv_work_one_l">L</string>
+    <string name="tv_work_one_f">F</string>
+    <string name="tv_work_one_m">M</string>
+    <string name="tv_work_one_rate">Rate</string>
+    <string name="tv_work_one_hz">Hz</string>
+    <string name="tv_work_one_fluence">Fluence</string>
+    <string name="tv_work_one_j">J</string>
 
 </resources>

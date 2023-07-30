@@ -5,8 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.ss.apidemo.R;
+import com.ss.apidemo.base.BaseActivity;
 
-public class WorkSelectOneActivity extends AppCompatActivity {
+public class WorkSelectOneActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
