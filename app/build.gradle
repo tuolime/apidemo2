@@ -116,4 +116,7 @@ dependencies {
     implementation 'net.sourceforge.jexcelapi:jxl:2.6.12'
     //文件导出
     implementation "androidx.documentfile:documentfile:1.0.1"
+    //弧形进度条
+    implementation 'com.king.view:arcseekbar:1.0.2'
+
 }

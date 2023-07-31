@@ -125,14 +125,22 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent">
 
-                    <com.ss.apidemo.widget.ArcSeekBar
+                    <com.king.view.arcseekbar.ArcSeekBar
+                        android:id="@+id/arcSeekBar"
                         android:layout_width="360dp"
                         android:layout_height="350dp"
-                        android:layout_centerInParent="true"
-                        android:layout_marginLeft="73dp"
-                        android:layout_marginTop="90dp">
+                        app:arcStartAngle="155"
+                        app:arcSweepAngle="230"
+                        app:arcLabelPaddingBottom="10dp"
+                        app:arcStrokeWidth="10dp"
+                        app:arcThumbStrokeWidth="5dp"
+                        app:arcThumbRadius="5dp"
+                        app:arcShowLabel="false"
+                        app:arcThumbColor="@color/mode_one_skin_all_select"
+                        app:arcNormalColor="@color/mode_work_one_tv"
+                        app:arcProgressColor="@color/mode_one_skin_all_select"
+                        />
 
-                    </com.ss.apidemo.widget.ArcSeekBar>
 
                     <LinearLayout
                         android:minHeight="100dp"
