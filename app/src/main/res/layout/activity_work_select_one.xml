@@ -26,6 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
+                    android:onClick="tabClick"
                     android:id="@+id/iv_save"
                     android:layout_marginLeft="45dp"
                     android:layout_width="30dp"
@@ -36,6 +37,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <ImageView
+                    android:onClick="tabClick"
                     android:id="@+id/iv_setting"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -45,6 +47,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <ImageView
+                    android:onClick="selectClick"
                     android:id="@+id/iv_fan"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -54,6 +57,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <ImageView
+                    android:onClick="tabClick"
                     android:id="@+id/iv_back"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -63,6 +67,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
                 <ImageView
+                    android:onClick="tabClick"
                     android:layout_marginRight="45dp"
                     android:id="@+id/iv_main"
                     android:layout_width="30dp"
@@ -84,25 +89,30 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:id="@+id/fan_1"
                         android:background="@drawable/work_one_fan_1_unselect_corners"
                         android:layout_width="30dp"
                         android:layout_height="5dp"/>
                     <TextView
+                        android:id="@+id/fan_2"
                         android:layout_marginLeft="5dp"
                         android:background="@drawable/work_one_fan_2_unselect_corners"
                         android:layout_width="30dp"
                         android:layout_height="5dp"/>
                     <TextView
+                        android:id="@+id/fan_3"
                         android:layout_marginLeft="5dp"
                         android:background="@drawable/work_one_fan_2_unselect_corners"
                         android:layout_width="30dp"
                         android:layout_height="5dp"/>
                     <TextView
+                        android:id="@+id/fan_4"
                         android:layout_marginLeft="5dp"
                         android:background="@drawable/work_one_fan_2_unselect_corners"
                         android:layout_width="30dp"
                         android:layout_height="5dp"/>
                     <TextView
+                        android:id="@+id/fan_5"
                         android:layout_marginLeft="5dp"
                         android:background="@drawable/work_one_fan_3_unselect_corners"
                         android:layout_width="30dp"
@@ -157,6 +167,7 @@
                             android:textColor="@color/white"
                             android:textSize="25sp"/>
                         <TextView
+                            android:id="@+id/tv_fluence"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="80"
@@ -179,6 +190,8 @@
                     android:layout_height="match_parent">
 
                     <LinearLayout
+                        android:onClick="modeClick"
+                        android:id="@+id/ll_auto"
                         android:background="@mipmap/ic_work_one_bg_up"
                         android:layout_weight="1"
                         android:layout_width="match_parent"
@@ -197,6 +210,8 @@
                             android:background="@mipmap/ic_one_select"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:onClick="modeClick"
+                        android:id="@+id/ll_30"
                         android:background="@mipmap/ic_work_one_bg_centre"
                         android:layout_marginTop="10dp"
                         android:layout_weight="1"
@@ -216,6 +231,8 @@
                             android:background="@mipmap/ic_one_select"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:onClick="modeClick"
+                        android:id="@+id/ll_100"
                         android:background="@mipmap/ic_work_one_bg_centre"                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:layout_width="match_parent"
@@ -234,6 +251,8 @@
                             android:background="@mipmap/ic_one_select"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:onClick="modeClick"
+                        android:id="@+id/ll_400"
                         android:background="@mipmap/ic_work_one_bg_down"                        android:layout_marginTop="10dp"
                         android:layout_marginBottom="100dp"
                         android:layout_weight="1"
