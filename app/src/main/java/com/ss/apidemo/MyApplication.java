@@ -48,12 +48,14 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
     private ChjTimer chjTimer;
     private HintDialog dialog;
     private Queue<QueueMessage> loopDatas = new ConcurrentLinkedQueue<>();//队列;
+    private Queue<SendMessage> sendloopDatas = new ConcurrentLinkedQueue<>();//队列;
     public SerialPort serialPort;
 
     private String address_message;
     private int disconnection_count = 0;//断连计数
     private int lock_count = 0;//锁定计数
     private boolean isScheduledTasks = false;//是否开启定时心跳任务
+    private int response_count = 0;//应答次数
 
     private Myhandler myhandler = new Myhandler();
 
@@ -80,13 +82,34 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
         }
     };
 
+    private Runnable mDisconnectSocketTips = new Runnable() {
+        public void run() {
+            boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
+            if (!iswifi) return;
+            boolean wifi = NetworkUtil.isWifi();
+            if (wifi) {
+                if (response_count == 0){
+                    disconnectionCount();
+                }else {
+                    response_count = 0;
+                }
+                handler.postDelayed(this, 6 * 10000);//设置延迟时间，此处是60s
+                //需要执行的代码
+            } else {//无网络
+                showTips(getResources().getString(R.string.no_network));
+            }
+
+        }
+    };
+
     private Runnable sendSocket = new Runnable() {
         public void run() {
             boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
             if (!iswifi) return;
             boolean wifi = NetworkUtil.isWifi();
             if (wifi) {
-                mConnection.sendMessage(sendHeartMessage());
+                startSendQueue(sendHeartMessage());
+//                mConnection.sendMessage(sendHeartMessage());
                 Log.d("xuan", "handleMessage: 执行");
                 handler.postDelayed(this, 5 * 1000);//设置延迟时间，此处是10s
                 isScheduledTasks = true;
@@ -106,6 +129,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
         initTimer();
         openSerialPort();
         startLoopListener();
+        startSendLoopListener();
         getAppBackground();
         SetDisconnectTips();
         //待测试 excel导出
@@ -124,6 +148,8 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
         mConnection.setMainHandler(myhandler);
         if (!isScheduledTasks) {
             handler.postDelayed(sendSocket, 3000);//延迟调用 3秒后开始执行
+            handler.postDelayed(mDisconnectSocketTips, 6 * 10000);//延迟60秒调用
+
         }
 
     }
@@ -189,7 +215,8 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 frame.setReportUseNum(count);
                 JSONObject jsonObject = (JSONObject) JSONObject.toJSON(frame);
                 String jsonString = jsonObject.toJSONString();
-                mConnection.sendMessage(jsonString);
+                startSendQueue(jsonString);
+//                mConnection.sendMessage(jsonString);
             }
         } else {
             showTips(getResources().getString(R.string.no_network));
@@ -248,6 +275,21 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
             }
         }).start();
     }
+    public void startSendQueue(String message) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    SendMessage sendMessage = new SendMessage();
+                    sendMessage.setMessage(message);
+                    sendloopDatas.offer(sendMessage);
+//                    LogUtils.e("入队列"+ctrlCode);
+                } catch (Exception e) {
+                    Log.e("下发异常", "e" + e.toString());
+                }
+            }
+        }).start();
+    }
 
     public void startLoopListener() {
         ThreadUtils.getIoPool().execute(new Runnable() {
@@ -261,6 +303,35 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                                 Thread.sleep(300);//队列执行间隔
                                 LogUtils.e("出队列" + value.getCtrlCode());
                                 EventBus.getDefault().post(value);
+                            }
+                        }
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+    public void startSendLoopListener() {
+        ThreadUtils.getIoPool().execute(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    while (true) {
+                        if (sendloopDatas.size() > 0) {
+                            SendMessage value = sendloopDatas.poll();
+                            if (value != null) {
+                                Thread.sleep(500);//队列执行间隔
+                                LogUtils.e("出队列" + value.getMessage());
+                                //需要执行的代码
+                                MyActivityManager.getInstance().getCurrentActivity().runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        if (mConnection != null) {
+                                            mConnection.sendMessage(value.getMessage());
+                                        }
+                                    }
+                                });
                             }
                         }
                     }
@@ -389,6 +460,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
 //                    handler.postDelayed(sendSocket, 3000);//延迟调用 3秒后开始执行
                     break;
                 case 2:
+                    response_count ++;
                     //数据处理 自己业务逻辑
                     bytes = (byte[]) msg.obj;
                     String str = new String(bytes);
@@ -520,5 +592,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
     private void destroyTask() {
         handler.removeCallbacks(sendSocket);
         isScheduledTasks = false;
+        handler.removeCallbacks(mDisconnectSocketTips);
+        response_count = 0;
     }
 }
