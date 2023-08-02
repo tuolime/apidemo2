@@ -13,6 +13,7 @@ public final class AutoSkinTypeUtils {
     //用户性别 //1 男 2 女
     public AutoSkinBean modeType(int gender, int skinType, int handgear, int body) {
         AutoSkinBean type = new AutoSkinBean();
+        type.setModeType(6);
         //用户性别 //1 男 2 女
         if (gender == 1) {
             /*

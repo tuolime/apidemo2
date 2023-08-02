@@ -19,13 +19,23 @@ public class SkinSelectSixActivity extends BaseActivity {
     private TextView tv_skin_1,tv_skin_2,tv_skin_3,tv_skin_4,tv_skin_5,tv_skin_6;
     private ImageView iv_body_head,iv_body_leg,iv_body_armpit,iv_body_waist,iv_body_back,iv_body_bikini;
     private TextView tv_1,tv_2,tv_3,tv_4,tv_5,tv_6;
-
+    private int skin_type = 0;
+    private int body_type = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skin_select_six);
         initView();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        skin_type = 0;
+        body_type = 0;
+        resetMenuState();
+        resetMenuBoydState();
     }
 
     private void initView() {
@@ -79,31 +89,32 @@ public class SkinSelectSixActivity extends BaseActivity {
             case R.id.tv_skin_1:
                 tv_skin_1.setBackground(getResources().getDrawable(R.drawable.mode_six_skin1_select_corners));
                 tv_1.setTextColor(getResources().getColor(R.color.mode_four_bt_select));
+                skin_type = 1;
                 break;
             case R.id.tv_skin_2:
                 tv_skin_2.setBackground(getResources().getDrawable(R.drawable.mode_six_skin2_select_corners));
                 tv_2.setTextColor(getResources().getColor(R.color.mode_four_bt_select));
-
+                skin_type = 2;
                 break;
             case R.id.tv_skin_3:
                 tv_skin_3.setBackground(getResources().getDrawable(R.drawable.mode_six_skin3_select_corners));
                 tv_3.setTextColor(getResources().getColor(R.color.mode_four_bt_select));
-
+                skin_type = 3;
                 break;
             case R.id.tv_skin_4:
                 tv_skin_4.setBackground(getResources().getDrawable(R.drawable.mode_six_skin4_select_corners));
                 tv_4.setTextColor(getResources().getColor(R.color.mode_four_bt_select));
-
+                skin_type = 4;
                 break;
             case R.id.tv_skin_5:
                 tv_skin_5.setBackground(getResources().getDrawable(R.drawable.mode_six_skin5_select_corners));
                 tv_5.setTextColor(getResources().getColor(R.color.mode_four_bt_select));
-
+                skin_type = 5;
                 break;
             case R.id.tv_skin_6:
                 tv_skin_6.setBackground(getResources().getDrawable(R.drawable.mode_six_skin6_select_corners));
                 tv_6.setTextColor(getResources().getColor(R.color.mode_four_bt_select));
-
+                skin_type = 6;
                 break;
             case R.id.tv_skin_ok:
                 startA();
@@ -120,22 +131,27 @@ public class SkinSelectSixActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.iv_body_head:
                 iv_body_head.setImageDrawable(getResources().getDrawable(R.mipmap.ic_mode_six_body_head_select));
+                body_type = 1;
                 break;
             case R.id.iv_body_leg:
                 iv_body_leg.setImageDrawable(getResources().getDrawable(R.mipmap.ic_mode_six_body_leg_select));
-
+                body_type = 2;
                 break;
             case R.id.iv_body_armpit:
                 iv_body_armpit.setImageDrawable(getResources().getDrawable(R.mipmap.ic_mode_six_body_armpit_select));
+                body_type = 3;
                 break;
             case R.id.iv_body_waist:
                 iv_body_waist.setImageDrawable(getResources().getDrawable(R.mipmap.ic_mode_six_body_waist_select));
+                body_type = 4;
                 break;
             case R.id.iv_body_back:
                 iv_body_back.setImageDrawable(getResources().getDrawable(R.mipmap.ic_mode_six_body_back_select));
+                body_type = 5;
                 break;
             case R.id.iv_body_bikini:
                 iv_body_bikini.setImageDrawable(getResources().getDrawable(R.mipmap.ic_mode_six_body_bikini_select));
+                body_type = 6;
                 break;
         }
     }
@@ -167,8 +183,9 @@ public class SkinSelectSixActivity extends BaseActivity {
 
     public void startA() {
         Intent intent = new Intent(SkinSelectSixActivity.this, WorkSelectSixActivity.class);
-//        intent.putExtra("gender", "1");//自由人默认为男性
-//        intent.putExtra("tel", "0");//自由人手机号默认为0
+        intent.putExtra("mode_type", 2);//1 专家  2 智能
+        intent.putExtra("skin_type", skin_type);
+        intent.putExtra("body_type", body_type);
         startActivity(intent);
     }
 }

@@ -26,12 +26,23 @@ public class SkinSelectOneActivity extends BaseActivity {
     private ImageView iv_body_head,iv_body_leg,iv_body_armpit,iv_body_waist,iv_body_back,iv_body_bikini;
     private ImageView iv_body_head_select,iv_body_leg_select,iv_body_armpit_select,iv_body_waist_select,iv_body_back_select,iv_body_bikini_select;
 
+    private int skin_type = 0;
+    private int body_type = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skin_select_one);
         initView();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        skin_type = 0;
+        body_type = 0;
+        resetMenuState();
+        resetMenuBoydState();
     }
 
     private void initView() {
@@ -89,26 +100,32 @@ public class SkinSelectOneActivity extends BaseActivity {
             case R.id.tv_skin_1:
                 tv_skin_1.setBackground(getResources().getDrawable(R.drawable.mode_one_skin1_select_corners));
                 tv_1.setTextColor(getResources().getColor(R.color.mode_one_skin_all_select));
+                skin_type = 1;
                 break;
             case R.id.tv_skin_2:
                 tv_skin_2.setBackground(getResources().getDrawable(R.drawable.mode_one_skin2_select_corners));
                 tv_2.setTextColor(getResources().getColor(R.color.mode_one_skin_all_select));
+                skin_type = 2;
                 break;
             case R.id.tv_skin_3:
                 tv_skin_3.setBackground(getResources().getDrawable(R.drawable.mode_one_skin3_select_corners));
                 tv_3.setTextColor(getResources().getColor(R.color.mode_one_skin_all_select));
+                skin_type = 3;
                 break;
             case R.id.tv_skin_4:
                 tv_skin_4.setBackground(getResources().getDrawable(R.drawable.mode_one_skin4_select_corners));
                 tv_4.setTextColor(getResources().getColor(R.color.mode_one_skin_all_select));
+                skin_type = 4;
                 break;
             case R.id.tv_skin_5:
                 tv_skin_5.setBackground(getResources().getDrawable(R.drawable.mode_one_skin5_select_corners));
                 tv_5.setTextColor(getResources().getColor(R.color.mode_one_skin_all_select));
+                skin_type = 5;
                 break;
             case R.id.tv_skin_6:
                 tv_skin_6.setBackground(getResources().getDrawable(R.drawable.mode_one_skin6_select_corners));
                 tv_6.setTextColor(getResources().getColor(R.color.mode_one_skin_all_select));
+                skin_type = 6;
                 break;
             case R.id.tv_skin_ok:
                 startA();
@@ -126,26 +143,32 @@ public class SkinSelectOneActivity extends BaseActivity {
             case R.id.iv_body_head:
                 iv_body_head.setBackground(getResources().getDrawable(R.drawable.mode_one_body_select_corners));
                 iv_body_head_select.setVisibility(View.VISIBLE);
+                body_type = 1;
                 break;
             case R.id.iv_body_leg:
                 iv_body_leg.setBackground(getResources().getDrawable(R.drawable.mode_one_body_select_corners));
                 iv_body_leg_select.setVisibility(View.VISIBLE);
+                body_type = 2;
                 break;
             case R.id.iv_body_armpit:
                 iv_body_armpit.setBackground(getResources().getDrawable(R.drawable.mode_one_body_select_corners));
                 iv_body_armpit_select.setVisibility(View.VISIBLE);
+                body_type = 3;
                 break;
             case R.id.iv_body_waist:
                 iv_body_waist.setBackground(getResources().getDrawable(R.drawable.mode_one_body_select_corners));
                 iv_body_waist_select.setVisibility(View.VISIBLE);
+                body_type = 4;
                 break;
             case R.id.iv_body_back:
                 iv_body_back.setBackground(getResources().getDrawable(R.drawable.mode_one_body_select_corners));
                 iv_body_back_select.setVisibility(View.VISIBLE);
+                body_type = 5;
                 break;
             case R.id.iv_body_bikini:
                 iv_body_bikini.setBackground(getResources().getDrawable(R.drawable.mode_one_body_select_corners));
                 iv_body_bikini_select.setVisibility(View.VISIBLE);
+                body_type = 6;
                 break;
         }
     }
@@ -182,8 +205,9 @@ public class SkinSelectOneActivity extends BaseActivity {
 
     public void startA() {
         Intent intent = new Intent(SkinSelectOneActivity.this, WorkSelectOneActivity.class);
-//        intent.putExtra("gender", "1");//自由人默认为男性
-//        intent.putExtra("tel", "0");//自由人手机号默认为0
+        intent.putExtra("mode_type", 2);//1 专家  2 智能
+        intent.putExtra("skin_type", skin_type);
+        intent.putExtra("body_type", body_type);
         startActivity(intent);
     }
 }

@@ -12,7 +12,7 @@ public class AutoSkinBean implements Serializable {
 
     public int bodyType;//身体部位
 
-    public int stack;//
+    public int modeType;//模式类型 6
 
     public int hzProposal;//身体部位对应的 HZ
 
@@ -51,12 +51,11 @@ public class AutoSkinBean implements Serializable {
         this.fluenceProposal = fluenceProposal;
     }
 
-    public int getStack() {
-        return stack;
+    public int getModeType() {
+        return modeType;
     }
 
-    public void setStack(int stack) {
-        this.stack = stack;
+    public void setModeType(int modeType) {
+        this.modeType = modeType;
     }
-
 }

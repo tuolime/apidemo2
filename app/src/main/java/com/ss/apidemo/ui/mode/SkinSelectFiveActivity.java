@@ -20,13 +20,23 @@ public class SkinSelectFiveActivity extends BaseActivity {
     private TextView tv_skin_1,tv_skin_2,tv_skin_3,tv_skin_4,tv_skin_5,tv_skin_6;
     private TextView tv_1,tv_2,tv_3,tv_4,tv_5,tv_6;
     private ImageView iv_body_head,iv_body_leg,iv_body_armpit,iv_body_waist,iv_body_back,iv_body_bikini;
-
+    private int skin_type = 0;
+    private int body_type = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skin_select_five);
         initView();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        skin_type = 0;
+        body_type = 0;
+        resetMenuState();
+        resetMenuBoydState();
     }
 
     private void initView() {
@@ -80,26 +90,32 @@ public class SkinSelectFiveActivity extends BaseActivity {
             case R.id.tv_skin_1:
                 tv_skin_1.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin1_select));
                 tv_1.setTextColor(getResources().getColor(R.color.mode_five_tv));
+                skin_type = 1;
                 break;
             case R.id.tv_skin_2:
                 tv_skin_2.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin2_select));
                 tv_2.setTextColor(getResources().getColor(R.color.mode_five_tv));
+                skin_type = 2;
                 break;
             case R.id.tv_skin_3:
                 tv_skin_3.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin3_select));
                 tv_3.setTextColor(getResources().getColor(R.color.mode_five_tv));
+                skin_type = 3;
                 break;
             case R.id.tv_skin_4:
                 tv_skin_4.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin4_select));
                 tv_4.setTextColor(getResources().getColor(R.color.mode_five_tv));
+                skin_type = 4;
                 break;
             case R.id.tv_skin_5:
                 tv_skin_5.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin5_select));
                 tv_5.setTextColor(getResources().getColor(R.color.mode_five_tv));
+                skin_type = 5;
                 break;
             case R.id.tv_skin_6:
                 tv_skin_6.setBackground(getResources().getDrawable(R.mipmap.ic_mode_five_skin6_select));
                 tv_6.setTextColor(getResources().getColor(R.color.mode_five_tv));
+                skin_type = 6;
                 break;
             case R.id.tv_skin_ok:
                 startA();
@@ -116,21 +132,27 @@ public class SkinSelectFiveActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.iv_body_head:
                 iv_body_head.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five_select));
+                body_type = 1;
                 break;
             case R.id.iv_body_leg:
                 iv_body_leg.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five_select));
+                body_type = 2;
                 break;
             case R.id.iv_body_armpit:
                 iv_body_armpit.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five_select));
+                body_type = 3;
                 break;
             case R.id.iv_body_waist:
                 iv_body_waist.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five_select));
+                body_type = 4;
                 break;
             case R.id.iv_body_back:
                 iv_body_back.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five_select));
+                body_type = 5;
                 break;
             case R.id.iv_body_bikini:
                 iv_body_bikini.setBackground(getResources().getDrawable(R.mipmap.ic_mode_body_bg_five_select));
+                body_type = 6;
                 break;
         }
     }
@@ -171,8 +193,9 @@ public class SkinSelectFiveActivity extends BaseActivity {
 
     public void startA() {
         Intent intent = new Intent(SkinSelectFiveActivity.this, WorkSelectFiveActivity.class);
-//        intent.putExtra("gender", "1");//自由人默认为男性
-//        intent.putExtra("tel", "0");//自由人手机号默认为0
+        intent.putExtra("mode_type", 2);//1 专家  2 智能
+        intent.putExtra("skin_type", skin_type);
+        intent.putExtra("body_type", body_type);
         startActivity(intent);
     }
 }

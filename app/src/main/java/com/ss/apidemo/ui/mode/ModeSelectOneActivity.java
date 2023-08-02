@@ -101,6 +101,7 @@ public class ModeSelectOneActivity extends BaseActivity {
         Intent intent = null;
         if (flag == 1){//expert
             intent = new Intent(ModeSelectOneActivity.this, WorkSelectOneActivity.class);
+            intent.putExtra("mode_type", 1);//1 专家  2 智能
         }else if (flag == 2){//smart
             intent = new Intent(ModeSelectOneActivity.this, SkinSelectOneActivity.class);
         }

@@ -78,6 +78,8 @@ public class ModeSelectFiveActivity extends BaseActivity {
         Intent intent = null;
         if (flag == 1){//expert
             intent = new Intent(ModeSelectFiveActivity.this, WorkSelectFiveActivity.class);
+            intent.putExtra("mode_type", 1);//1 专家  2 智能
+
         }else if (flag == 2){//smart
             intent = new Intent(ModeSelectFiveActivity.this, SkinSelectFiveActivity.class);
         }
