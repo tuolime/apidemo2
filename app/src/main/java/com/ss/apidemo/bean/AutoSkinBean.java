@@ -14,9 +14,7 @@ public class AutoSkinBean implements Serializable {
 
     public int stack;//
 
-    public int energy;//能量
-
-    public int bodyType_HZ;//身体部位对应的 HZ
+    public int hzProposal;//身体部位对应的 HZ
 
     public int fluenceProposal;//单脉冲能量建议值
 
@@ -37,12 +35,12 @@ public class AutoSkinBean implements Serializable {
         this.bodyType = bodyType;
     }
 
-    public int getBodyType_HZ() {
-        return bodyType_HZ;
+    public int getHzProposal() {
+        return hzProposal;
     }
 
-    public void setBodyType_HZ(int bodyType_HZ) {
-        this.bodyType_HZ = bodyType_HZ;
+    public void setHzProposal(int hzProposal) {
+        this.hzProposal = hzProposal;
     }
 
     public int getFluenceProposal() {
@@ -61,11 +59,4 @@ public class AutoSkinBean implements Serializable {
         this.stack = stack;
     }
 
-    public int getEnergy() {
-        return energy;
-    }
-
-    public void setEnergy(int energy) {
-        this.energy = energy;
-    }
 }
