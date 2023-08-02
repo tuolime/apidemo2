@@ -205,6 +205,8 @@
                             android:text="@string/tv_work_one_auto"
                             android:textColor="@color/white" />
                         <ImageView
+                            android:id="@+id/iv_auto"
+                            android:visibility="invisible"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@mipmap/ic_one_select"/>
@@ -226,6 +228,8 @@
                             android:text="@string/tv_work_one_30"
                             android:textColor="@color/white" />
                         <ImageView
+                            android:id="@+id/iv_30"
+                            android:visibility="invisible"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@mipmap/ic_one_select"/>
@@ -246,6 +250,8 @@
                             android:text="@string/tv_work_one_100"
                             android:textColor="@color/white" />
                         <ImageView
+                            android:id="@+id/iv_100"
+                            android:visibility="invisible"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@mipmap/ic_one_select"/>
@@ -267,6 +273,8 @@
                             android:text="@string/tv_work_one_400"
                             android:textColor="@color/white" />
                         <ImageView
+                            android:id="@+id/iv_400"
+                            android:visibility="invisible"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@mipmap/ic_one_select"/>
@@ -279,6 +287,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent">
                     <LinearLayout
+                        android:onClick="rangeClick"
+                        android:id="@+id/ll_l"
                         android:orientation="horizontal"
                         android:gravity="center"
                         android:layout_marginTop="160dp"
@@ -292,6 +302,8 @@
                             android:textColor="@color/white"
                             android:textSize="25sp"/>
                         <ImageView
+                            android:id="@+id/iv_l"
+                            android:visibility="invisible"
                             android:layout_marginTop="10dp"
                             android:layout_marginLeft="10dp"
                             android:background="@mipmap/ic_work_one_light"
@@ -325,20 +337,33 @@
                             android:text="@string/tv_work_one_hz"
                             android:textColor="@color/white"
                             android:textSize="25sp"/>
-                        <ImageView
-                            android:layout_marginTop="10dp"
-                            android:background="@mipmap/ic_work_one_light"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                        <TextView
+                        <LinearLayout
+                            android:onClick="rangeClick"
+                            android:id="@+id/ll_m"
+                            android:orientation="horizontal"
                             android:gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/tv_work_one_m"
-                            android:textColor="@color/white"
-                            android:textSize="25sp"/>
+                            android:layout_width="100dp"
+                            android:layout_height="100dp">
+                            <ImageView
+                                android:id="@+id/iv_m"
+                                android:visibility="invisible"
+                                android:layout_marginTop="10dp"
+                                android:background="@mipmap/ic_work_one_light"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tv_work_one_m"
+                                android:textColor="@color/white"
+                                android:textSize="25sp"/>
+                        </LinearLayout>
+
                     </LinearLayout>
                     <LinearLayout
+                        android:onClick="rangeClick"
+                        android:id="@+id/ll_f"
                         android:orientation="horizontal"
                         android:gravity="center"
                         android:layout_marginTop="160dp"
@@ -346,6 +371,8 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp">
                         <ImageView
+                            android:id="@+id/iv_f"
+                            android:visibility="invisible"
                             android:layout_marginTop="10dp"
                             android:layout_marginLeft="10dp"
                             android:background="@mipmap/ic_work_one_light"
@@ -379,17 +406,15 @@
                     android:layout_height="match_parent">
                     <TextView
                         android:textSize="20sp"
-                        android:id="@+id/tv_temprature"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="tabClick"
                         android:text="@string/tv_work_one_temprature"
                         android:textColor="@color/mode_work_one_tv" />
                     <TextView
+                        android:id="@+id/tv_temprature"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="tabClick"
                         android:text="@string/tv_mode_one_ok"
                         android:textColor="@color/mode_work_one_tv" />
                 </LinearLayout>
@@ -407,17 +432,15 @@
                     android:layout_height="match_parent">
                     <TextView
                         android:textSize="20sp"
-                        android:id="@+id/tv_flow"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="tabClick"
                         android:text="@string/tv_work_one_flow"
                         android:textColor="@color/mode_work_one_tv" />
                     <TextView
+                        android:id="@+id/tv_flow"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="tabClick"
                         android:text="@string/tv_mode_one_ok"
                         android:textColor="@color/mode_work_one_tv" />
                 </LinearLayout>
@@ -435,17 +458,15 @@
                     android:layout_height="match_parent">
                     <TextView
                         android:textSize="20sp"
-                        android:id="@+id/tv_total"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="tabClick"
                         android:text="@string/tv_work_one_totla"
                         android:textColor="@color/mode_work_one_tv" />
                     <TextView
+                        android:id="@+id/tv_total"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="tabClick"
                         android:text="@string/tv_mode_one_ok"
                         android:textColor="@color/mode_work_one_tv" />
                 </LinearLayout>
@@ -463,17 +484,15 @@
                     android:layout_height="match_parent">
                     <TextView
                         android:textSize="20sp"
-                        android:id="@+id/tv_current"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="tabClick"
                         android:text="@string/tv_work_one_current"
                         android:textColor="@color/mode_work_one_tv" />
                     <TextView
+                        android:id="@+id/tv_current"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="tabClick"
                         android:text="@string/tv_mode_one_ok"
                         android:textColor="@color/mode_work_one_tv" />
                 </LinearLayout>
@@ -491,17 +510,15 @@
                     android:layout_height="match_parent">
                     <TextView
                         android:textSize="20sp"
-                        android:id="@+id/tv_id"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="tabClick"
                         android:text="@string/tv_work_one_id"
                         android:textColor="@color/mode_work_one_tv" />
                     <TextView
+                        android:id="@+id/tv_id"
                         android:textSize="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="tabClick"
                         android:text="@string/tv_mode_one_ok"
                         android:textColor="@color/mode_work_one_tv" />
                 </LinearLayout>
@@ -523,7 +540,6 @@
                         android:id="@+id/tv_exact"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="tabClick"
                         android:text="@string/tv_work_one_exact"
                         android:textColor="@color/mode_work_one_tv" />
                 </LinearLayout>
@@ -544,7 +560,6 @@
                         android:id="@+id/tv_raedy"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="tabClick"
                         android:text="@string/tv_work_one_raedy"
                         android:textColor="@color/mode_work_one_tv" />
                 </LinearLayout>
