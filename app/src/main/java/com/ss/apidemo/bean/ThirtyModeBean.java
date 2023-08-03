@@ -12,9 +12,9 @@ public class ThirtyModeBean implements Serializable {
 
     public int modeType;//模式类型 7
 
-    public int handgearHzMin;//手具对应的频率最小
+    public int hzMin;//手具对应的频率最小
 
-    public int handgearHzMax;//手具对应的频率最大
+    public int hzMax;//手具对应的频率最大
 
     public int fluenceMax;//5Hz单脉冲能量最大值
 
@@ -36,20 +36,20 @@ public class ThirtyModeBean implements Serializable {
         this.modeType = modeType;
     }
 
-    public int getHandgearHzMin() {
-        return handgearHzMin;
+    public int getHzMin() {
+        return hzMin;
     }
 
-    public void setHandgearHzMin(int handgearHzMin) {
-        this.handgearHzMin = handgearHzMin;
+    public void setHzMin(int hzMin) {
+        this.hzMin = hzMin;
     }
 
-    public int getHandgearHzMax() {
-        return handgearHzMax;
+    public int getHzMax() {
+        return hzMax;
     }
 
-    public void setHandgearHzMax(int handgearHzMax) {
-        this.handgearHzMax = handgearHzMax;
+    public void setHzMax(int hzMax) {
+        this.hzMax = hzMax;
     }
 
     public int getFluenceMax() {
