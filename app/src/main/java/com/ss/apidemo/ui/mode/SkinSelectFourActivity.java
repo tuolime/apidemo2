@@ -22,11 +22,16 @@ public class SkinSelectFourActivity extends BaseActivity {
     private View vv_bg1,vv_bg2,vv_bg3,vv_bg4,vv_bg5,vv_bg6;
     private int skin_type = 0;
     private int body_type = 0;
+    public String tel;//传递过来的用户手机号
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skin_select_four);
+        Intent intent = getIntent();
+        if (intent != null) {
+            tel = intent.getStringExtra("tel");
+        }
         initView();
     }
 
@@ -187,6 +192,7 @@ public class SkinSelectFourActivity extends BaseActivity {
         intent.putExtra("mode_type", 2);//1 专家  2 智能
         intent.putExtra("skin_type", skin_type);
         intent.putExtra("body_type", body_type);
+        intent.putExtra("tel", tel);
         startActivity(intent);
     }
 }

@@ -28,4 +28,12 @@ public class SmartModeBean implements Serializable {
     public void setFluenceProposal(int fluenceProposal) {
         this.fluenceProposal = fluenceProposal;
     }
+
+    @Override
+    public String toString() {
+        return "SmartMdeBean{" +
+                "hzProposal=" + hzProposal +
+                ", fluenceProposal=" + fluenceProposal +
+                '}';
+    }
 }

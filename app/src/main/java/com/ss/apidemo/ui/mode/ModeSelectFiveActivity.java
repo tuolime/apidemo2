@@ -18,13 +18,17 @@ import com.ss.apidemo.utils.PlayVoiceUtils;
 public class ModeSelectFiveActivity extends BaseActivity {
     private TextView tv_select1;
     private TextView tv_select2;
+    public String tel;//传递过来的用户手机号
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mode_select_five);
-
+        Intent intent = getIntent();
+        if (intent != null) {
+            tel = intent.getStringExtra("tel");
+        }
         initView();
 
     }
@@ -82,6 +86,7 @@ public class ModeSelectFiveActivity extends BaseActivity {
 
         }else if (flag == 2){//smart
             intent = new Intent(ModeSelectFiveActivity.this, SkinSelectFiveActivity.class);
+            intent.putExtra("tel", tel);
         }
         if (intent != null){
             startActivity(intent);

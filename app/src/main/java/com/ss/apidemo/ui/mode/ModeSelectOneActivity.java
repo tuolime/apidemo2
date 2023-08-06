@@ -31,11 +31,17 @@ public class ModeSelectOneActivity extends BaseActivity {
     private ImageView iv_expert_select;
     private ImageView iv_smart_select;
 
+    public String tel;//传递过来的用户手机号
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mode_select_one);
-
+        Intent intent = getIntent();
+        if (intent != null) {
+            tel = intent.getStringExtra("tel");
+        }
         initView();
 
     }
@@ -104,6 +110,7 @@ public class ModeSelectOneActivity extends BaseActivity {
             intent.putExtra("mode_type", 1);//1 专家  2 智能
         }else if (flag == 2){//smart
             intent = new Intent(ModeSelectOneActivity.this, SkinSelectOneActivity.class);
+            intent.putExtra("tel", tel);
         }
         if (intent != null){
             startActivity(intent);

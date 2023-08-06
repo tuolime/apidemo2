@@ -17,12 +17,15 @@ public final class SmartModeUtils {
             case 6://auto
                 type.setFluenceProposal(20);
                 type.setHzProposal(4);
+                break;
             case 7://30
                 type.setFluenceProposal(20);
                 type.setHzProposal(4);
+                break;
             case 8://100
                 type.setFluenceProposal(20);
                 type.setHzProposal(1);
+                break;
             case 9://400
                 type.setFluenceProposal(20);
                 type.setHzProposal(1);

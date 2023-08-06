@@ -41,8 +41,8 @@ import de.greenrobot.event.Subscribe;
 import de.greenrobot.event.ThreadMode;
 
 /*
-* 用户详情 信息
-* */
+ * 用户详情 信息
+ * */
 public class UserMessageActivity extends BaseActivity {
     private RecyclerView recyclerView;
     private UserMessageAdapter adapter;
@@ -60,9 +60,9 @@ public class UserMessageActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_message);
         LinearLayout ll_main = findViewById(R.id.ll_main);
-        BackgroundChangeUtils.backgroundChange(this,ll_main);
+        BackgroundChangeUtils.backgroundChange(this, ll_main);
         Intent intent = getIntent();
-        if (intent != null){
+        if (intent != null) {
             tel = intent.getStringExtra("tel");
         }
 
@@ -72,12 +72,12 @@ public class UserMessageActivity extends BaseActivity {
 
     private void initData() {
         userList = getData();
-        if (userList != null && userList.size()>0){
+        if (userList != null && userList.size() > 0) {
             tv_name.setText(userList.get(0).getName());
             String gender = userList.get(0).getGender();
-            if (gender.equals("1")){
+            if (gender.equals("1")) {
                 rb_man.setChecked(true);
-            }else {
+            } else {
                 rb_woman.setChecked(true);
             }
             //赋值完成后禁止选择
@@ -102,8 +102,8 @@ public class UserMessageActivity extends BaseActivity {
         boolean booleanValue = SharedPrefsUtil.getBooleanValue(AppConfig.SHED, false);
         if (booleanValue) {
             tv_time.setVisibility(View.VISIBLE);
-            if (AppConfig.AUTOSHEDTIME == AppConfig.INFINITE){
-                tv_time.setText(getResources().getString(R.string.auto_shed_time)+"∞");
+            if (AppConfig.AUTOSHEDTIME == AppConfig.INFINITE) {
+                tv_time.setText(getResources().getString(R.string.auto_shed_time) + "∞");
             }
         } else {
             tv_time.setVisibility(View.INVISIBLE);
@@ -121,15 +121,15 @@ public class UserMessageActivity extends BaseActivity {
         //设置分割线
 //        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         //创建适配器
-        adapter = new UserMessageAdapter(getArrayList(),this);
+        adapter = new UserMessageAdapter(getArrayList(), this);
         adapter.setClickItem(new UserMessageAdapter.ClickItem() {
             @Override
-            public void onClickItem(int id,String tel) {
+            public void onClickItem(int id, String tel) {
                 CallDialog dialog = new CallDialog(UserMessageActivity.this);
                 dialog.loadDialog(UserMessageActivity.this, new CallDialog.OnClickIsConfirm() {
                     @Override
                     public void OnClickIsConfirmListener() {//确定
-                        UserValueDao.getInstance().deleteUserValue(id,tel);
+                        UserValueDao.getInstance().deleteUserValue(id, tel);
                         adapter.setDatas(getArrayList());
                     }
 
@@ -156,13 +156,13 @@ public class UserMessageActivity extends BaseActivity {
                     public void OnClickIsConfirmListener() {//确定
                         if (tel != null && !tel.equals("")) {
                             boolean b = UserValueDao.getInstance().deleteAllUserValue(tel);//删除所有记录
-                            if (b){
+                            if (b) {
                                 UserDao.getInstance().deleteUser(tel);//删除该用户
                                 finish();
                             }
 
-                        }else {
-                            ToastUtil.showToast(UserMessageActivity.this,getResources().getString(R.string.tel_no_hint));
+                        } else {
+                            ToastUtil.showToast(UserMessageActivity.this, getResources().getString(R.string.tel_no_hint));
                         }
                     }
 
@@ -180,6 +180,7 @@ public class UserMessageActivity extends BaseActivity {
         }
         return allUser;
     }
+
     private List<UserValue> getArrayList() {
         List<UserValue> allUserValue = null;
         if (tel != null && !tel.equals("")) {
@@ -187,43 +188,46 @@ public class UserMessageActivity extends BaseActivity {
         }
         return allUserValue;
     }
-    public void isHandger(){
-        int modeType = SharedPrefsUtil.getIntValue(AppConfig.MODETYPE, 1);
-        if (modeType == 1){
-            int isHandgear = SharedPrefsUtil.getIntValue(AppConfig.HANDGEAR, 0);
-            if (isHandgear == 0){//单手具
+
+    public void isHandger() {
+
+        int isHandgear = SharedPrefsUtil.getIntValue(AppConfig.HANDGEAR, 0);
+        if (isHandgear == 0) {//单手具
+            int modeType = SharedPrefsUtil.getIntValue(AppConfig.MODETYPE, 1);
+            if (modeType == 1) {
                 Intent intent = new Intent(UserMessageActivity.this, ParameterActivity.class);
                 startA(intent);
-            }else if (isHandgear == 1){//双手具
-                Intent intent = new Intent(UserMessageActivity.this, HandgearActivity.class);
-                startA(intent);
-            }
-        }else if (modeType == 2){
-            int intValue = SharedPrefsUtil.getIntValue(AppConfig.MODE_TWO_GB, 1);
-            Intent intent = null;
-            if (intValue == 1) {
-                intent = new Intent(UserMessageActivity.this, ModeSelectOneActivity.class);
-            } else if (intValue == 2) {
-                intent = new Intent(UserMessageActivity.this, ModeSelectTwoActivity.class);
-            } else if (intValue == 3) {
-                intent = new Intent(UserMessageActivity.this, ModeSelectThreeActivity.class);
-            } else if (intValue == 4) {
-                intent = new Intent(UserMessageActivity.this, ModeSelectFourActivity.class);
-            } else if (intValue == 5) {
-                intent = new Intent(UserMessageActivity.this, ModeSelectFiveActivity.class);
-            } else if (intValue == 6) {
-                intent = new Intent(UserMessageActivity.this, ModeSelectSixActivity.class);
-            }
+            } else if (modeType == 2) {
+                int intValue = SharedPrefsUtil.getIntValue(AppConfig.MODE_TWO_GB, 1);
+                Intent intent = null;
+                if (intValue == 1) {
+                    intent = new Intent(UserMessageActivity.this, ModeSelectOneActivity.class);
+                } else if (intValue == 2) {
+                    intent = new Intent(UserMessageActivity.this, ModeSelectTwoActivity.class);
+                } else if (intValue == 3) {
+                    intent = new Intent(UserMessageActivity.this, ModeSelectThreeActivity.class);
+                } else if (intValue == 4) {
+                    intent = new Intent(UserMessageActivity.this, ModeSelectFourActivity.class);
+                } else if (intValue == 5) {
+                    intent = new Intent(UserMessageActivity.this, ModeSelectFiveActivity.class);
+                } else if (intValue == 6) {
+                    intent = new Intent(UserMessageActivity.this, ModeSelectSixActivity.class);
+                }
 
-            if (intent != null){
-                startActivity(intent);
+                if (intent != null) {
+                    startA(intent);
+                }
             }
+        } else if (isHandgear == 1) {//双手具
+            Intent intent = new Intent(UserMessageActivity.this, HandgearActivity.class);
+            startA(intent);
         }
 
 
     }
-    public void startA(Intent intent){
-        if (userList != null && userList.size()>0){
+
+    public void startA(Intent intent) {
+        if (userList != null && userList.size() > 0) {
             String gender = userList.get(0).getGender();
             String tel = userList.get(0).getTel();
             intent.putExtra("gender", gender);//自由人默认为男性
@@ -238,7 +242,7 @@ public class UserMessageActivity extends BaseActivity {
             int autoShedTime = sendTimeBean.getTime();
 //            LogUtils.e("倒计时" + DateUtil.getTimeFromInt(autoShedTime * 1000));
             String timeFromInt = DateUtil.getTimeFromInt(autoShedTime * 1000);
-            tv_time.setText(getResources().getString(R.string.auto_shed_time)+timeFromInt);
+            tv_time.setText(getResources().getString(R.string.auto_shed_time) + timeFromInt);
         }
 
     }

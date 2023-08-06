@@ -23,11 +23,16 @@ public class SkinSelectThreeActivity extends BaseActivity {
     private ImageView iv_body_head,iv_body_leg,iv_body_armpit,iv_body_waist,iv_body_back,iv_body_bikini;
     private int skin_type = 0;
     private int body_type = 0;
+    public String tel;//传递过来的用户手机号
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skin_select_three);
+        Intent intent = getIntent();
+        if (intent != null) {
+            tel = intent.getStringExtra("tel");
+        }
         initView();
     }
 
@@ -203,6 +208,7 @@ public class SkinSelectThreeActivity extends BaseActivity {
         intent.putExtra("mode_type", 2);//1 专家  2 智能
         intent.putExtra("skin_type", skin_type);
         intent.putExtra("body_type", body_type);
+        intent.putExtra("tel", tel);
         startActivity(intent);
     }
 }

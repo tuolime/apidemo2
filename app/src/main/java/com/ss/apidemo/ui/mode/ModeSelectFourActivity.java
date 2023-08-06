@@ -20,12 +20,16 @@ public class ModeSelectFourActivity extends BaseActivity {
     private TextView tv_select2;
     private View vv_bg1;
     private View vv_bg2;
+    public String tel;//传递过来的用户手机号
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mode_select_four);
-
+        Intent intent = getIntent();
+        if (intent != null) {
+            tel = intent.getStringExtra("tel");
+        }
         initView();
 
     }
@@ -88,6 +92,7 @@ public class ModeSelectFourActivity extends BaseActivity {
             intent.putExtra("mode_type", 1);//1 专家  2 智能
         }else if (flag == 2){//smart
             intent = new Intent(ModeSelectFourActivity.this, SkinSelectFourActivity.class);
+            intent.putExtra("tel", tel);
         }
         if (intent != null){
             startActivity(intent);
