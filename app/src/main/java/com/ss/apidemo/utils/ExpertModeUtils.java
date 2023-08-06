@@ -38,7 +38,7 @@ public final class ExpertModeUtils {
             case 7:
             case 8:
             case 9:
-            case 19:
+            case 10:
                 type.setHandgearType(1);
                 type.setFluenceProposal(20);
                 type.setHzProposal(4);

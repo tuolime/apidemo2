@@ -12,7 +12,9 @@ public class FourHundredModeBean implements Serializable {
 
     public int modeType;//模式类型 9
 
-    public int hz;
+    public int hzMin;//手具对应的频率最小
+
+    public int hzMax;//手具对应的频率最大
 
     public int fluenceMax;//5Hz单脉冲能量最大值
 
@@ -34,12 +36,20 @@ public class FourHundredModeBean implements Serializable {
         this.modeType = modeType;
     }
 
-    public int getHz() {
-        return hz;
+    public int getHzMin() {
+        return hzMin;
     }
 
-    public void setHz(int hz) {
-        this.hz = hz;
+    public void setHzMin(int hzMin) {
+        this.hzMin = hzMin;
+    }
+
+    public int getHzMax() {
+        return hzMax;
+    }
+
+    public void setHzMax(int hzMax) {
+        this.hzMax = hzMax;
     }
 
     public int getFluenceMax() {

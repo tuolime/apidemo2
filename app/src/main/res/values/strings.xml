@@ -162,7 +162,7 @@
 
     <string name="tv_mode_one_ok">Ok</string>
     <string name="tv_mode_one_cancel">Cancel</string>
-    <string name="tv_work_one_temprature">Temprature</string>
+    <string name="tv_work_one_temperature">Temperature</string>
     <string name="tv_work_one_flow">Flow</string>
     <string name="tv_work_one_totla">Totla</string>
     <string name="tv_work_one_current">Current</string>
@@ -180,5 +180,6 @@
     <string name="tv_work_one_hz">Hz</string>
     <string name="tv_work_one_fluence">Fluence</string>
     <string name="tv_work_one_j">J</string>
+    <string name="select_skin">Please select a skin part!</string>
 
 </resources>

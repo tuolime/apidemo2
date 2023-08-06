@@ -29,70 +29,80 @@ public final class FourHundredModeUtils {
             case 1:
                 type.setHandgearType(1);
                 type.setModeType(9);
-                type.setHz(1);
+                type.setHzMin(1);
+                type.setHzMax(1);
                 type.setFluenceMin(4);
                 type.setFluenceMax(120);
                 break;
             case 2:
                 type.setHandgearType(2);
                 type.setModeType(9);
-                type.setHz(1);
+                type.setHzMin(1);
+                type.setHzMax(1);
                 type.setFluenceMin(4);
                 type.setFluenceMax(180);
                 break;
             case 3:
                 type.setHandgearType(3);
                 type.setModeType(9);
-                type.setHz(1);
+                type.setHzMin(1);
+                type.setHzMax(1);
                 type.setFluenceMin(4);
                 type.setFluenceMax(100);
                 break;
             case 4:
                 type.setHandgearType(4);
                 type.setModeType(9);
-                type.setHz(1);
+                type.setHzMin(1);
+                type.setHzMax(1);
                 type.setFluenceMin(4);
                 type.setFluenceMax(120);
                 break;
             case 5:
                 type.setHandgearType(5);
                 type.setModeType(9);
-                type.setHz(1);
+                type.setHzMin(1);
+                type.setHzMax(1);
                 type.setFluenceMin(4);
                 type.setFluenceMax(180);
                 break;
             case 6:
                 type.setHandgearType(6);
                 type.setModeType(9);
-                type.setHz(1);
+                type.setHzMin(1);
+                type.setHzMax(1);
                 type.setFluenceMin(4);
                 type.setFluenceMax(80);
                 break;
             case 7:
                 type.setHandgearType(7);
                 type.setModeType(9);
-                type.setHz(1);
+                type.setHzMin(1);
+                type.setHzMax(1);
                 type.setFluenceMin(4);
                 type.setFluenceMax(100);
                 break;
             case 8:
                 type.setHandgearType(8);
                 type.setModeType(9);
-                type.setHz(1);
+                type.setHzMin(1);
+                type.setHzMax(1);
                 type.setFluenceMin(4);
                 type.setFluenceMax(120);
                 break;
             case 9:
                 type.setHandgearType(9);
                 type.setModeType(9);
-                type.setHz(1);
+                type.setHzMin(1);
+                type.setHzMax(1);
                 type.setFluenceMin(4);
                 type.setFluenceMax(100);
                 break;
             case 10:
                 type.setHandgearType(10);
                 type.setModeType(9);
-                type.setHz(1);
+                type.setHzMin(1);
+                type.setHzMax(1);
                 type.setFluenceMin(4);
                 type.setFluenceMax(100);
                 break;

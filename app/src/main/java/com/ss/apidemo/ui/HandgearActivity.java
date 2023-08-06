@@ -136,6 +136,7 @@ public class HandgearActivity extends BaseActivity {
             }
 
             if (intent != null){
+                intent.putExtra("tel", tel);
                 startActivity(intent);
             }
         }
