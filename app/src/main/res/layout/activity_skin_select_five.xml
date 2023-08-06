@@ -423,7 +423,7 @@
                     android:id="@+id/tv_skin_ok"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="tabClick"
+                    android:onClick="selectClick"
                     android:text="@string/tv_mode_one_ok"
                     android:textColor="@color/white" />
                 <View
@@ -438,7 +438,7 @@
                     android:id="@+id/tv_skin_cancel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="tabClick"
+                    android:onClick="selectClick"
                     android:text="@string/tv_mode_one_cancel"
                     android:textColor="@color/white" />
             </LinearLayout>

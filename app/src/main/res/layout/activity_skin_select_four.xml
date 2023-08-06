@@ -438,7 +438,7 @@
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:background="@drawable/mode_four_skin1_style_corners"
-            android:onClick="tabClick"
+            android:onClick="selectClick"
             android:text="@string/tv_mode_one_ok"
             android:textColor="@color/mode_four_tv" />
         <View
@@ -452,7 +452,7 @@
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:background="@drawable/mode_four_skin1_style_corners"
-            android:onClick="tabClick"
+            android:onClick="selectClick"
             android:text="@string/tv_mode_one_cancel"
             android:textColor="@color/mode_four_tv" />
         <View

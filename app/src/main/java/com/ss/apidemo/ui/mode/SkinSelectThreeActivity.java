@@ -15,6 +15,7 @@ import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.ui.SplashActivity;
 import com.ss.apidemo.utils.PlayVoiceUtils;
+import com.ss.apidemo.utils.ToastUtil;
 
 public class SkinSelectThreeActivity extends BaseActivity {
     private LinearLayout ll_skin_1,ll_skin_2,ll_skin_3,ll_skin_4,ll_skin_5,ll_skin_6;
@@ -129,7 +130,20 @@ public class SkinSelectThreeActivity extends BaseActivity {
                 tv_6.setTextColor(getResources().getColor(R.color.mode_two_body_select_entity));
                 skin_type = 6;
                 break;
+        }
+    }
+    public void selectClick(View view) {
+        PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+        switch (view.getId()) {
             case R.id.tv_skin_ok:
+                if (skin_type == 0){
+                    ToastUtil.showToast(SkinSelectThreeActivity.this, getResources().getString(R.string.select_skin));
+                    return;
+                }
+                if (body_type == 0){
+                    ToastUtil.showToast(SkinSelectThreeActivity.this, getResources().getString(R.string.select_body));
+                    return;
+                }
                 startA();
                 break;
             case R.id.tv_skin_cancel:

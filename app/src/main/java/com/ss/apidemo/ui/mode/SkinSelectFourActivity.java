@@ -14,6 +14,7 @@ import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.ui.SplashActivity;
 import com.ss.apidemo.utils.PlayVoiceUtils;
+import com.ss.apidemo.utils.ToastUtil;
 
 public class SkinSelectFourActivity extends BaseActivity {
 
@@ -115,7 +116,20 @@ public class SkinSelectFourActivity extends BaseActivity {
                 tv_skin_6.setBackground(getResources().getDrawable(R.drawable.mode_four_skin6_select_corners));
                 skin_type = 6;
                 break;
+        }
+    }
+    public void selectClick(View view) {
+        PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+        switch (view.getId()) {
             case R.id.tv_skin_ok:
+                if (skin_type == 0){
+                    ToastUtil.showToast(SkinSelectFourActivity.this, getResources().getString(R.string.select_skin));
+                    return;
+                }
+                if (body_type == 0){
+                    ToastUtil.showToast(SkinSelectFourActivity.this, getResources().getString(R.string.select_body));
+                    return;
+                }
                 startA();
                 break;
             case R.id.tv_skin_cancel:

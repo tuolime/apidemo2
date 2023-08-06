@@ -428,7 +428,7 @@
                     android:id="@+id/tv_skin_ok"
                     android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:onClick="tabClick"
+                    android:onClick="selectClick"
                     android:text="@string/tv_mode_one_ok"
                     android:textColor="@color/mode_four_tv" />
                 <View
@@ -442,7 +442,7 @@
                     android:id="@+id/tv_skin_cancel"
                     android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:onClick="tabClick"
+                    android:onClick="selectClick"
                     android:text="@string/tv_mode_one_cancel"
                     android:textColor="@color/mode_four_tv" />
 
