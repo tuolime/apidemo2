@@ -66,6 +66,7 @@ public class WorkSelectOneActivity extends BaseActivity {
     private TextView fan_1, fan_2, fan_3, fan_4, fan_5;
     private ImageView iv_auto, iv_30, iv_100, iv_400, iv_l, iv_m, iv_f;
     private TextView tv_fluence, tv_hz, tv_temperature, tv_flow, tv_total, tv_current, tv_id, tv_exact,tv_raedy;
+    private TextView tv_min, tv_max;
     private LinearLayout ll_raedy;
     private ArcSeekBar arcSeekBar;
     private int fan_flag = 0;
@@ -143,6 +144,8 @@ public class WorkSelectOneActivity extends BaseActivity {
         arcSeekBar = findViewById(R.id.arcSeekBar);
         tv_fluence = findViewById(R.id.tv_fluence);
         tv_hz = findViewById(R.id.tv_hz);
+        tv_min = findViewById(R.id.tv_min);
+        tv_max = findViewById(R.id.tv_max);
         iv_auto = findViewById(R.id.iv_auto);
         iv_30 = findViewById(R.id.iv_30);
         iv_100 = findViewById(R.id.iv_100);
@@ -436,6 +439,8 @@ public class WorkSelectOneActivity extends BaseActivity {
             current_hz_progress = shrModeHzOrFluenceBean.getHz();
             current_hz_min = shrModeHzOrFluenceBean.getHandgearHzMin();
             current_hz_max = shrModeHzOrFluenceBean.getHandgearHzMax();
+            tv_min.setText(shrModeHzOrFluenceBean.getFluenceMin()+"");
+            tv_max.setText(shrModeHzOrFluenceBean.getFluenceMax()+"");
             setBright(current_hz_progress);
         } else if (type == THIRTYMODE) {
             l_range_30 = 0;
@@ -451,7 +456,8 @@ public class WorkSelectOneActivity extends BaseActivity {
             current_hz_progress = smartModeBean.getHzProposal();
             current_hz_min = thirtyModeBean.getHzMin();
             current_hz_max = thirtyModeBean.getHzMax();
-
+            tv_min.setText(thirtyModeBean.getFluenceMin()+"");
+            tv_max.setText(thirtyModeBean.getFluenceMax()+"");
             setBright(current_hz_progress);
         } else if (type == HUNDREDMODE) {
             l_range_100 = 0;
@@ -467,6 +473,8 @@ public class WorkSelectOneActivity extends BaseActivity {
             current_hz_progress = smartModeBean.getHzProposal();
             current_hz_min = hundredModeBean.getHzMin();
             current_hz_max = hundredModeBean.getHzMax();
+            tv_min.setText(hundredModeBean.getFluenceMin()+"");
+            tv_max.setText(hundredModeBean.getFluenceMax()+"");
             setBright(current_hz_progress);
         } else if (type == THIRTYMODE) {
             l_range_400 = 0;
@@ -482,6 +490,8 @@ public class WorkSelectOneActivity extends BaseActivity {
             current_hz_progress = smartModeBean.getHzProposal();
             current_hz_min = fourHundredModeBean.getHzMin();
             current_hz_max = fourHundredModeBean.getHzMax();
+            tv_min.setText(fourHundredModeBean.getFluenceMin()+"");
+            tv_max.setText(fourHundredModeBean.getFluenceMax()+"");
             setBright(current_hz_progress);
         }
         arcSeekBar.setMax(current_fluence_max);
@@ -801,6 +811,8 @@ public class WorkSelectOneActivity extends BaseActivity {
         shrModeHzOrFluenceBean = shrModeHzOrFluenceUtils.modeType(handgearType, hz);
         current_fluence_min = shrModeHzOrFluenceBean.getFluenceMin();
         current_fluence_max = shrModeHzOrFluenceBean.getFluenceMax();
+        tv_min.setText(shrModeHzOrFluenceBean.getFluenceMin()+"");
+        tv_max.setText(shrModeHzOrFluenceBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()>=current_fluence_max){
             arcSeekBar.setMax(current_fluence_max);
             arcSeekBar.setProgress(current_fluence_max);
@@ -817,6 +829,8 @@ public class WorkSelectOneActivity extends BaseActivity {
     public void setThirty(int hz){
         current_fluence_min = thirtyModeBean.getFluenceMin();
         current_fluence_max = thirtyModeBean.getFluenceMax();
+        tv_min.setText(thirtyModeBean.getFluenceMin()+"");
+        tv_max.setText(thirtyModeBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()>=current_fluence_max){
             arcSeekBar.setMax(current_fluence_max);
             arcSeekBar.setProgress(current_fluence_max);
@@ -832,6 +846,8 @@ public class WorkSelectOneActivity extends BaseActivity {
     public void setHundred(int hz){
         current_fluence_min = hundredModeBean.getFluenceMin();
         current_fluence_max = hundredModeBean.getFluenceMax();
+        tv_min.setText(hundredModeBean.getFluenceMin()+"");
+        tv_max.setText(hundredModeBean.getFluenceMax()+"");
         if (arcSeekBar.getMax() >= current_fluence_max){
             arcSeekBar.setMax(current_fluence_max);
             arcSeekBar.setProgress(current_fluence_max);
@@ -848,6 +864,8 @@ public class WorkSelectOneActivity extends BaseActivity {
     public void setFourHundred(int hz){
         current_fluence_min = fourHundredModeBean.getFluenceMin();
         current_fluence_max = fourHundredModeBean.getFluenceMax();
+        tv_min.setText(fourHundredModeBean.getFluenceMin()+"");
+        tv_max.setText(fourHundredModeBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()>=current_fluence_max){
             arcSeekBar.setMax(current_fluence_max);
             arcSeekBar.setProgress(current_fluence_max);
