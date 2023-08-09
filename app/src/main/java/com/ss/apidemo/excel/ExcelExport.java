@@ -3,7 +3,9 @@ package com.ss.apidemo.excel;
 import android.os.Environment;
 
 import com.ss.apidemo.db.bean.User;
+import com.ss.apidemo.db.bean.UserValue;
 import com.ss.apidemo.db.dao.UserDao;
+import com.ss.apidemo.db.dao.UserValueDao;
 import com.ss.apidemo.excel.bean.UserExcelBean;
 
 import java.io.File;
@@ -13,8 +15,10 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
-
-public class Test {
+/*
+* 导出excel
+* */
+public class ExcelExport {
     public static void main(String[] args) throws Exception {
         exportUser();
 //        importUser();
@@ -51,14 +55,30 @@ public class Test {
     public static void exportUser2(OutputStream excelOutputStream) throws Exception {
         long t1 = System.currentTimeMillis();
         List<User> allUser = UserDao.getInstance().getAllUser();
+        List<UserValue> allUserValue = UserValueDao.getInstance().getAllUserValue();
         List<UserExcelBean> users = new ArrayList<>();
-        if (allUser != null && allUser.size()>0){
-            for (int i = 0; i < allUser.size(); i++) {
+        if (allUserValue != null && allUserValue.size()>0){
+            for (int i = 0; i < allUserValue.size(); i++) {
                 UserExcelBean u = new UserExcelBean();
-                u.setName(allUser.get(i).getName());
-                u.setGender(allUser.get(i).getGender());
-                u.setAge(allUser.get(i).getAge());
-                u.setTel(allUser.get(i).getTel());
+                u.setGender(allUserValue.get(i).getGender());
+                u.setTel(allUserValue.get(i).getTel());
+                u.setMode(allUserValue.get(i).getMode());
+                u.setSkinType(allUserValue.get(i).getSkinType());
+                u.setBodyType(allUserValue.get(i).getBodyType());
+                u.setEnergy(allUserValue.get(i).getEnergy());
+                u.setFrequency(allUserValue.get(i).getFrequency());
+                u.setWorkCount(allUserValue.get(i).getWorkCount());
+                u.setFluence(allUserValue.get(i).getFluence());
+                u.setDate(allUserValue.get(i).getDate());
+                if (allUser != null && allUser.size()>0){
+                    for (int j = 0; j < allUser.size(); j++) {
+                        if (allUserValue.get(i).getTel().equals(allUser.get(j).getTel())){
+                            u.setName(allUser.get(j).getName());
+                            u.setAge(allUser.get(j).getAge());
+                        }
+                    }
+                }
+
 
                 users.add(u);
             }

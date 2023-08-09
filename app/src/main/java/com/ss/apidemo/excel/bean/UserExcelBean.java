@@ -1,5 +1,7 @@
 package com.ss.apidemo.excel.bean;
 
+import com.j256.ormlite.field.DatabaseField;
+
 import jxl.format.Alignment;
 import jxl.format.Border;
 import jxl.format.BorderLineStyle;
@@ -27,6 +29,23 @@ public class UserExcelBean {
 
     @ExcelContent(titleName = "Tel")
     private String Tel;
+
+    @ExcelContent(titleName = "mode")
+    private String mode;//工作模式
+    @ExcelContent(titleName = "skinType")
+    private String skinType;//皮肤类型
+    @ExcelContent(titleName = "bodyType")
+    private String bodyType;//身体部位
+    @ExcelContent(titleName = "energy")
+    private String energy;//能量
+    @ExcelContent(titleName = "frequency")
+    private String frequency;//频率 就是 Hz
+    @ExcelContent(titleName = "workCount")
+    private String workCount;//工作次数
+    @ExcelContent(titleName = "fluence")
+    private String fluence;//单脉冲
+    @ExcelContent(titleName = "date")
+    private String date;//时间
 
 //    @ExcelContent(titleName = "其他")
 //    private String Other;
@@ -73,6 +92,12 @@ public class UserExcelBean {
     private static int f4flag = 0;
     private static int f5flag = 0;
     private static int f6flag = 0;
+    private static int f7flag = 0;
+    private static int f8flag = 0;
+    private static int f9flag = 0;
+    private static int f10flag = 0;
+    private static int f11flag = 0;
+    private static int f12flag = 0;
 
     @ExcelContentCellFormat(titleName = "Name")
     private WritableCellFormat f1() {
@@ -139,35 +164,125 @@ public class UserExcelBean {
         return format;
     }
 
-//    @ExcelContentCellFormat(titleName = "其他")
-//    private WritableCellFormat f5() {
-//        WritableCellFormat format = null;
-//        try {
-//            format = new WritableCellFormat();
-//            if ((f5flag & 1) != 0) {
-//                format.setBackground(Colour.GRAY_25);
-//            }
-//            f5flag++;
-//        } catch (WriteException e) {
-//            e.printStackTrace();
-//        }
-//        return format;
-//    }
-//
-//    @ExcelContentCellFormat(titleName = "备注")
-//    private WritableCellFormat f6() {
-//        WritableCellFormat format = null;
-//        try {
-//            format = new WritableCellFormat();
-//            if ((f6flag & 1) != 0) {
-//                format.setBackground(Colour.GRAY_25);
-//            }
-//            f6flag++;
-//        } catch (WriteException e) {
-//            e.printStackTrace();
-//        }
-//        return format;
-//    }
+    @ExcelContentCellFormat(titleName = "mode")
+    private WritableCellFormat f5() {
+        WritableCellFormat format = null;
+        try {
+            format = new WritableCellFormat();
+            if ((f5flag & 1) != 0) {
+                format.setBackground(Colour.GRAY_25);
+            }
+            f5flag++;
+        } catch (WriteException e) {
+            e.printStackTrace();
+        }
+        return format;
+    }
+
+    @ExcelContentCellFormat(titleName = "skinType")
+    private WritableCellFormat f6() {
+        WritableCellFormat format = null;
+        try {
+            format = new WritableCellFormat();
+            if ((f6flag & 1) != 0) {
+                format.setBackground(Colour.GRAY_25);
+            }
+            f6flag++;
+        } catch (WriteException e) {
+            e.printStackTrace();
+        }
+        return format;
+    }
+
+    @ExcelContentCellFormat(titleName = "bodyType")
+    private WritableCellFormat f7() {
+        WritableCellFormat format = null;
+        try {
+            format = new WritableCellFormat();
+            if ((f7flag & 1) != 0) {
+                format.setBackground(Colour.GRAY_25);
+            }
+            f7flag++;
+        } catch (WriteException e) {
+            e.printStackTrace();
+        }
+        return format;
+    }
+
+    @ExcelContentCellFormat(titleName = "energy")
+    private WritableCellFormat f8() {
+        WritableCellFormat format = null;
+        try {
+            format = new WritableCellFormat();
+            if ((f8flag & 1) != 0) {
+                format.setBackground(Colour.GRAY_25);
+            }
+            f8flag++;
+        } catch (WriteException e) {
+            e.printStackTrace();
+        }
+        return format;
+    }
+
+    @ExcelContentCellFormat(titleName = "frequency")
+    private WritableCellFormat f9() {
+        WritableCellFormat format = null;
+        try {
+            format = new WritableCellFormat();
+            if ((f9flag & 1) != 0) {
+                format.setBackground(Colour.GRAY_25);
+            }
+            f9flag++;
+        } catch (WriteException e) {
+            e.printStackTrace();
+        }
+        return format;
+    }
+
+    @ExcelContentCellFormat(titleName = "workCount")
+    private WritableCellFormat f10() {
+        WritableCellFormat format = null;
+        try {
+            format = new WritableCellFormat();
+            if ((f10flag & 1) != 0) {
+                format.setBackground(Colour.GRAY_25);
+            }
+            f10flag++;
+        } catch (WriteException e) {
+            e.printStackTrace();
+        }
+        return format;
+    }
+
+    @ExcelContentCellFormat(titleName = "fluence")
+    private WritableCellFormat f11() {
+        WritableCellFormat format = null;
+        try {
+            format = new WritableCellFormat();
+            if ((f11flag & 1) != 0) {
+                format.setBackground(Colour.GRAY_25);
+            }
+            f11flag++;
+        } catch (WriteException e) {
+            e.printStackTrace();
+        }
+        return format;
+    }
+
+    @ExcelContentCellFormat(titleName = "date")
+    private WritableCellFormat f12() {
+        WritableCellFormat format = null;
+        try {
+            format = new WritableCellFormat();
+            if ((f12flag & 1) != 0) {
+                format.setBackground(Colour.GRAY_25);
+            }
+            f12flag++;
+        } catch (WriteException e) {
+            e.printStackTrace();
+        }
+        return format;
+    }
 
     public UserExcelBean() {
 
@@ -205,19 +320,67 @@ public class UserExcelBean {
         Tel = tel;
     }
 
-//    public String getOther() {
-//        return Other;
-//    }
-//
-//    public void setOther(String other) {
-//        Other = other;
-//    }
-//
-//    public String getMemo() {
-//        return Memo;
-//    }
-//
-//    public void setMemo(String memo) {
-//        Memo = memo;
-//    }
+    public String getMode() {
+        return mode;
+    }
+
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    public String getSkinType() {
+        return skinType;
+    }
+
+    public void setSkinType(String skinType) {
+        this.skinType = skinType;
+    }
+
+    public String getBodyType() {
+        return bodyType;
+    }
+
+    public void setBodyType(String bodyType) {
+        this.bodyType = bodyType;
+    }
+
+    public String getEnergy() {
+        return energy;
+    }
+
+    public void setEnergy(String energy) {
+        this.energy = energy;
+    }
+
+    public String getFrequency() {
+        return frequency;
+    }
+
+    public void setFrequency(String frequency) {
+        this.frequency = frequency;
+    }
+
+    public String getWorkCount() {
+        return workCount;
+    }
+
+    public void setWorkCount(String workCount) {
+        this.workCount = workCount;
+    }
+
+    public String getFluence() {
+        return fluence;
+    }
+
+    public void setFluence(String fluence) {
+        this.fluence = fluence;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 }

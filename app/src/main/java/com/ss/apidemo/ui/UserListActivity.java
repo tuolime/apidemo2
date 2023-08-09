@@ -12,7 +12,6 @@ import android.widget.LinearLayout;
 import java.io.OutputStream;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 
 import com.ss.apidemo.AppConfig;
@@ -21,10 +20,9 @@ import com.ss.apidemo.adapter.UserListAdapter;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.db.bean.User;
 import com.ss.apidemo.db.dao.UserDao;
-import com.ss.apidemo.excel.Test;
+import com.ss.apidemo.excel.ExcelExport;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
-import com.ss.apidemo.utils.ToastUtil;
 
 import androidx.annotation.Nullable;
 import androidx.documentfile.provider.DocumentFile;
@@ -135,7 +133,7 @@ public class UserListActivity extends BaseActivity {
                     // 获得输出流
                     OutputStream excelOutputStream = UserListActivity.this.getContentResolver().openOutputStream(newFile.getUri());
                     // 进行输出操作（写文件）
-                    Test.exportUser2(excelOutputStream);
+                    ExcelExport.exportUser2(excelOutputStream);
                 } catch (Exception e) {
                     // 进行异常处理
                     // showShortToast(e.getMessage());
