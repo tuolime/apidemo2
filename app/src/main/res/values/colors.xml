@@ -69,4 +69,9 @@
     <color name="work_two_fan_unselect">#A8D1FF</color>
     <color name="work_two_fan_select">#00A0E9</color>
 
+    <color name="work_three_mian_bg">#B0B2BC</color>
+
+    <color name="work_three_fan_unselect">#E5EFFD</color>
+    <color name="work_three_fan_select">#A5DEFC</color>
+    <color name="work_three_tv_bg">#D5D5D5</color>
 </resources>

@@ -1,9 +1,661 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mode.WorkSelectThreeActivity">
+    android:orientation="vertical"
+    tools:context=".ui.mode.ModeSelectOneActivity">
+    <!--    <com.ss.apidemo.view.MergerStatus-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"/>-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:paddingTop="30dp"
+                        android:paddingBottom="30dp"
+                        android:gravity="center"
+                        android:background="@color/work_three_mian_bg"
+                        android:orientation="vertical"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:onClick="tabClick"
+                            android:id="@+id/iv_save"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/ic_work_one_save" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <ImageView
+                            android:onClick="tabClick"
+                            android:id="@+id/iv_setting"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/ic_work_one_setting" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:onClick="tabClick"
+                            android:id="@+id/iv_back"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/ic_work_one_back" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+                        <ImageView
+                            android:onClick="tabClick"
+                            android:id="@+id/iv_main"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@mipmap/ic_work_one_main" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mode_four_tv"
+                            android:text="@string/tv_work_three_pulse"
+                            android:textSize="25sp"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:onClick="modeClick"
+                            android:id="@+id/ll_auto"
+                            android:background="@drawable/work_three_mode_1_unselect_corners"
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tv_auto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="25sp"
+                                android:text="@string/tv_work_one_auto"
+                                android:textColor="@color/mode_four_tv" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:onClick="modeClick"
+                            android:id="@+id/ll_30"
+                            android:background="@drawable/work_three_mode_2_unselect_corners"
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tv_30"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="25sp"
+                                android:text="@string/tv_work_one_30"
+                                android:textColor="@color/mode_four_tv" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:onClick="modeClick"
+                            android:id="@+id/ll_100"
+                            android:background="@drawable/work_three_mode_2_unselect_corners"
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tv_100"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="25sp"
+                                android:text="@string/tv_work_one_100"
+                                android:textColor="@color/mode_four_tv" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:onClick="modeClick"
+                            android:id="@+id/ll_400"
+                            android:background="@drawable/work_three_mode_3_unselect_corners"
+                            android:layout_width="80dp"
+                            android:layout_height="90dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tv_400"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="25sp"
+                                android:text="@string/tv_work_one_400"
+                                android:textColor="@color/mode_four_tv" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="80dp"
+                        android:layout_weight="4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_marginTop="60dp"
+                            android:layout_centerInParent="true"
+                            android:background="@mipmap/ic_work_three_main_round"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"/>
+
+                        <TextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv_work_three_fluence"
+                            android:textColor="@color/mode_four_tv"
+                            android:textSize="25sp"/>
+
+                        <com.king.view.arcseekbar.ArcSeekBar
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/arcSeekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:arcStartAngle="155"
+                            app:arcSweepAngle="230"
+                            app:arcLabelPaddingBottom="10dp"
+                            app:arcStrokeWidth="15dp"
+                            app:arcThumbStrokeWidth="7dp"
+                            app:arcThumbRadius="7dp"
+                            app:arcShowLabel="false"
+                            app:arcThumbColor="@color/work_three_fan_select"
+                            app:arcNormalColor="@color/work_three_fan_unselect"
+                            app:arcProgressColor="@color/work_three_fan_select"
+                            />
+
+                        <LinearLayout
+                            android:minHeight="100dp"
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_fluence"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="80"
+                                android:textColor="@color/mode_four_tv"
+                                android:textSize="100sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tv_work_one_j"
+                                android:textColor="@color/mode_four_tv"
+                                android:textSize="25sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="350dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp">
+
+                            <TextView
+                                android:id="@+id/tv_min"
+                                android:layout_marginLeft="45dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/mode_four_tv"
+                                android:text="01"
+                                />
+
+                            <View
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/tv_max"
+                                android:layout_marginRight="43dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/mode_four_tv"
+                                android:text="100"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginBottom="80dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp">
+                            <RelativeLayout
+                                android:layout_marginLeft="60dp"
+                                android:onClick="rangeFLuenceClick"
+                                android:id="@+id/rl_reduce"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="5dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@mipmap/ic_work_one_reduce" />
+                            </RelativeLayout>
+
+
+                            <View
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"/>
+                            <RelativeLayout
+                                android:layout_marginRight="60dp"
+                                android:onClick="rangeFLuenceClick"
+                                android:id="@+id/rl_add"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@mipmap/ic_work_one_add" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginBottom="20dp"
+                            android:gravity="center"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:onClick="selectClick"
+                                android:id="@+id/iv_fan"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@mipmap/ic_work_three_fan" />
+
+                            <LinearLayout
+                                android:layout_marginLeft="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/fan_1"
+                                        android:background="@drawable/work_three_fan_1_unselect_corners"
+                                        android:layout_width="30dp"
+                                        android:layout_height="5dp"/>
+                                    <TextView
+                                        android:id="@+id/fan_2"
+                                        android:layout_marginLeft="5dp"
+                                        android:background="@drawable/work_three_fan_2_unselect_corners"
+                                        android:layout_width="30dp"
+                                        android:layout_height="5dp"/>
+                                    <TextView
+                                        android:id="@+id/fan_3"
+                                        android:layout_marginLeft="5dp"
+                                        android:background="@drawable/work_three_fan_2_unselect_corners"
+                                        android:layout_width="30dp"
+                                        android:layout_height="5dp"/>
+                                    <TextView
+                                        android:id="@+id/fan_4"
+                                        android:layout_marginLeft="5dp"
+                                        android:background="@drawable/work_three_fan_2_unselect_corners"
+                                        android:layout_width="30dp"
+                                        android:layout_height="5dp"/>
+                                    <TextView
+                                        android:id="@+id/fan_5"
+                                        android:layout_marginLeft="5dp"
+                                        android:background="@drawable/work_three_fan_3_unselect_corners"
+                                        android:layout_width="30dp"
+                                        android:layout_height="5dp"/>
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv_work_three_rate"
+                            android:textColor="@color/mode_four_tv"
+                            android:textSize="25sp"/>
+                        <LinearLayout
+                            android:minHeight="100dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:background="@mipmap/ic_work_three_round"
+                                android:id="@+id/tv_hz"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:text="08"
+                                android:textColor="@color/white"
+                                android:textSize="40sp"/>
+
+                            <LinearLayout
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/work_three_mode_1_unselect_corners"
+                                android:onClick="rangeClick"
+                                android:id="@+id/ll_f"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:layout_width="80dp"
+                                android:layout_height="90dp">
+                                <TextView
+                                    android:id="@+id/tv_f"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/tv_work_one_f"
+                                    android:textColor="@color/mode_four_tv"
+                                    android:textSize="25sp"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/work_three_mode_2_unselect_corners"
+                                android:onClick="rangeClick"
+                                android:id="@+id/ll_m"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_width="80dp"
+                                android:layout_height="90dp">
+                                  <TextView
+                                        android:id="@+id/tv_m"
+                                        android:gravity="center"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/tv_work_one_m"
+                                        android:textColor="@color/mode_four_tv"
+                                        android:textSize="25sp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/work_three_mode_3_unselect_corners"
+                                android:onClick="rangeClick"
+                                android:id="@+id/ll_l"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:layout_width="80dp"
+                                android:layout_height="90dp">
+                                <TextView
+                                    android:id="@+id/tv_l"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/tv_work_one_l"
+                                    android:textColor="@color/mode_four_tv"
+                                    android:textSize="25sp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hapticFeedbackEnabled="true"
+                    android:longClickable="true"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_all"
+                    android:visibility="gone"
+                    android:background="@color/translucent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@color/work_three_mian_bg"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="25sp"
+                android:id="@+id/tv_exact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_work_one_exact"
+                android:textColor="@color/mode_four_tv" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:layout_marginLeft="45dp"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_work_one_temperature"
+                android:textColor="@color/mode_four_tv" />
+            <TextView
+                android:gravity="center"
+                android:minWidth="150dp"
+                android:minHeight="20dp"
+                android:background="@drawable/work_three_tv_bg_corners"
+                android:id="@+id/tv_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_mode_one_ok"
+                android:textColor="@color/mode_four_tv" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:layout_marginLeft="45dp"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_work_one_flow"
+                android:textColor="@color/mode_four_tv" />
+            <TextView
+                android:gravity="center"
+                android:minWidth="150dp"
+                android:minHeight="20dp"
+                android:background="@drawable/work_three_tv_bg_corners"
+                android:id="@+id/tv_flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_mode_one_ok"
+                android:textColor="@color/mode_four_tv" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:layout_marginLeft="45dp"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_work_one_totla"
+                android:textColor="@color/mode_four_tv" />
+            <TextView
+                android:gravity="center"
+                android:minWidth="150dp"
+                android:minHeight="20dp"
+                android:background="@drawable/work_three_tv_bg_corners"
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_mode_one_ok"
+                android:textColor="@color/mode_four_tv" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:layout_marginLeft="45dp"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_work_one_current"
+                android:textColor="@color/mode_four_tv" />
+            <TextView
+                android:gravity="center"
+                android:minWidth="150dp"
+                android:minHeight="20dp"
+                android:background="@drawable/work_three_tv_bg_corners"
+                android:id="@+id/tv_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_mode_one_ok"
+                android:textColor="@color/mode_four_tv" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:layout_marginLeft="45dp"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_work_one_id"
+                android:textColor="@color/mode_four_tv" />
+            <TextView
+                android:gravity="center"
+                android:minWidth="150dp"
+                android:minHeight="20dp"
+                android:background="@drawable/work_three_tv_bg_corners"
+                android:id="@+id/tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_mode_one_ok"
+                android:lines="1"
+                android:textColor="@color/mode_four_tv" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:id="@+id/ll_raedy"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/work_three_stby_rounded_corners"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/tv_raedy"
+                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_work_one_raedy"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

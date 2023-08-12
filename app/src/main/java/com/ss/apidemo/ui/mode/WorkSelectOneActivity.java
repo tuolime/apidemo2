@@ -477,7 +477,7 @@ public class WorkSelectOneActivity extends BaseActivity {
             tv_min.setText(hundredModeBean.getFluenceMin()+"");
             tv_max.setText(hundredModeBean.getFluenceMax()+"");
             setBright(current_hz_progress);
-        } else if (type == THIRTYMODE) {
+        } else if (type == FOURHUNDREDMODE) {
             l_range_400 = 0;
             m_range_400 = 2;//方便第一次默认为4
             f_range_400 = 5;
