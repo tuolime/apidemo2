@@ -665,17 +665,18 @@
                 <LinearLayout
                     android:id="@+id/ll_raedy"
                     android:gravity="center"
+                    android:background="@drawable/work_one_stby_rounded_corners"
                     android:layout_weight="4"
                     android:orientation="vertical"
                     android:layout_width="0dp"
                     android:layout_height="match_parent">
                     <TextView
                         android:id="@+id/tv_raedy"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/tv_work_one_raedy"
-                        android:textColor="@color/mode_work_one_tv" />
+                        android:textColor="@color/white" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

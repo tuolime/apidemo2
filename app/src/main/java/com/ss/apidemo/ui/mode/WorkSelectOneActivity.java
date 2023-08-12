@@ -257,7 +257,7 @@ public class WorkSelectOneActivity extends BaseActivity {
 
             }
         });
-        ll_raedy.setBackground(getResources().getDrawable(R.drawable.other_bt_stby_rounded_corners));
+        ll_raedy.setBackground(getResources().getDrawable(R.drawable.work_one_stby_rounded_corners));
         tv_raedy.setText(getResources().getString(R.string.stby));
         ll_raedy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -967,13 +967,13 @@ public class WorkSelectOneActivity extends BaseActivity {
             current_status = 0;
             ll_all.setVisibility(View.GONE);
             LogUtils.e("stby");
-            ll_raedy.setBackground(getResources().getDrawable(R.drawable.other_bt_stby_rounded_corners));
+            ll_raedy.setBackground(getResources().getDrawable(R.drawable.work_one_stby_rounded_corners));
             tv_raedy.setText(getResources().getString(R.string.stby));
         } else if (uploadWorkingInfo.getWorkingStatus() == 1) {//reading
             current_status = 1;
             ll_all.setVisibility(View.VISIBLE);
             LogUtils.e("reading");
-            ll_raedy.setBackground(getResources().getDrawable(R.drawable.other_bt_read_rounded_corners));
+            ll_raedy.setBackground(getResources().getDrawable(R.drawable.work_one_read_rounded_corners));
             tv_raedy.setText(getResources().getString(R.string.ready));
             current_count = 1;
         } else if (uploadWorkingInfo.getWorkingStatus() == 2) {//working
@@ -986,7 +986,7 @@ public class WorkSelectOneActivity extends BaseActivity {
             current_status = 2;
             ll_all.setVisibility(View.VISIBLE);
             LogUtils.e("working");
-            ll_raedy.setBackground(getResources().getDrawable(R.drawable.other_bt_working_rounded_corners));
+            ll_raedy.setBackground(getResources().getDrawable(R.drawable.work_one_working_rounded_corners));
             tv_raedy.setText(getResources().getString(R.string.working));
             LogUtils.e("firstSendMsg","11="+current_luminescence_count+"22 ="+current_luminescence_upload_stop_count);
             int work_upload_count= current_luminescence_count - current_luminescence_upload_stop_count;

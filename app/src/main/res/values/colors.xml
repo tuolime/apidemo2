@@ -66,5 +66,7 @@
     <color name="mode_six_body_frame">#D7CCD0</color>
     <color name="mode_work_one_tv">#C8C9C9</color>
     <color name="mode_work_one_auto_bg">#020717</color>
+    <color name="work_two_fan_unselect">#A8D1FF</color>
+    <color name="work_two_fan_select">#00A0E9</color>
 
 </resources>

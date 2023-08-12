@@ -181,5 +181,7 @@
     <string name="tv_work_one_fluence">Fluence</string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">Please select a skin part!</string>
-
+    <string name="tv_work_two_l">Slow</string>
+    <string name="tv_work_two_f">Fast</string>
+    <string name="tv_work_two_m">Med</string>
 </resources>

@@ -192,19 +192,19 @@ public class UserCreateActivity extends BaseActivity {
 //            startActivity(intent);
             int intValue = SharedPrefsUtil.getIntValue(AppConfig.MODE_TWO_GB, 1);
             Intent intent = null;
-//            if (intValue == 1) {
+            if (intValue == 1) {
                 intent = new Intent(UserCreateActivity.this, ModeSelectOneActivity.class);
-//            } else if (intValue == 2) {
-//                intent = new Intent(UserCreateActivity.this, ModeSelectTwoActivity.class);
-//            } else if (intValue == 3) {
-//                intent = new Intent(UserCreateActivity.this, ModeSelectThreeActivity.class);
-//            } else if (intValue == 4) {
-//                intent = new Intent(UserCreateActivity.this, ModeSelectFourActivity.class);
-//            } else if (intValue == 5) {
-//                intent = new Intent(UserCreateActivity.this, ModeSelectFiveActivity.class);
-//            } else if (intValue == 6) {
-//                intent = new Intent(UserCreateActivity.this, ModeSelectSixActivity.class);
-//            }
+            } else if (intValue == 2) {
+                intent = new Intent(UserCreateActivity.this, ModeSelectTwoActivity.class);
+            } else if (intValue == 3) {
+                intent = new Intent(UserCreateActivity.this, ModeSelectThreeActivity.class);
+            } else if (intValue == 4) {
+                intent = new Intent(UserCreateActivity.this, ModeSelectFourActivity.class);
+            } else if (intValue == 5) {
+                intent = new Intent(UserCreateActivity.this, ModeSelectFiveActivity.class);
+            } else if (intValue == 6) {
+                intent = new Intent(UserCreateActivity.this, ModeSelectSixActivity.class);
+            }
 
             if (intent != null){
                 startActivity(intent);
