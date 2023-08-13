@@ -921,41 +921,41 @@ public class WorkSelectFiveActivity extends BaseActivity {
             case R.id.iv_fan_2:
                 fan_flag++;
                 if (fan_flag == 1) {
-                    fan_1.setBackground(getResources().getDrawable(R.drawable.work_one_fan_1_select_corners));
+                    fan_1.setBackground(getResources().getDrawable(R.drawable.work_five_fan_1_select_corners));
                 }
                 if (fan_flag == 2) {
-                    fan_1.setBackground(getResources().getDrawable(R.drawable.work_one_fan_1_select_corners));
-                    fan_2.setBackground(getResources().getDrawable(R.drawable.work_one_fan_2_select_corners));
+                    fan_1.setBackground(getResources().getDrawable(R.drawable.work_five_fan_1_select_corners));
+                    fan_2.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
                 }
                 if (fan_flag == 3) {
-                    fan_1.setBackground(getResources().getDrawable(R.drawable.work_one_fan_1_select_corners));
-                    fan_2.setBackground(getResources().getDrawable(R.drawable.work_one_fan_2_select_corners));
-                    fan_3.setBackground(getResources().getDrawable(R.drawable.work_one_fan_2_select_corners));
+                    fan_1.setBackground(getResources().getDrawable(R.drawable.work_five_fan_1_select_corners));
+                    fan_2.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
+                    fan_3.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
                 }
                 if (fan_flag == 4) {
-                    fan_1.setBackground(getResources().getDrawable(R.drawable.work_one_fan_1_select_corners));
-                    fan_2.setBackground(getResources().getDrawable(R.drawable.work_one_fan_2_select_corners));
-                    fan_3.setBackground(getResources().getDrawable(R.drawable.work_one_fan_2_select_corners));
-                    fan_4.setBackground(getResources().getDrawable(R.drawable.work_one_fan_2_select_corners));
+                    fan_1.setBackground(getResources().getDrawable(R.drawable.work_five_fan_1_select_corners));
+                    fan_2.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
+                    fan_3.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
+                    fan_4.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
                 }
                 if (fan_flag == 5) {
                     fan_flag = 0;
-                    fan_1.setBackground(getResources().getDrawable(R.drawable.work_one_fan_1_select_corners));
-                    fan_2.setBackground(getResources().getDrawable(R.drawable.work_one_fan_2_select_corners));
-                    fan_3.setBackground(getResources().getDrawable(R.drawable.work_one_fan_2_select_corners));
-                    fan_4.setBackground(getResources().getDrawable(R.drawable.work_one_fan_2_select_corners));
-                    fan_5.setBackground(getResources().getDrawable(R.drawable.work_one_fan_3_select_corners));
+                    fan_1.setBackground(getResources().getDrawable(R.drawable.work_five_fan_1_select_corners));
+                    fan_2.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
+                    fan_3.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
+                    fan_4.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
+                    fan_5.setBackground(getResources().getDrawable(R.drawable.work_five_fan_3_select_corners));
                 }
                 break;
         }
     }
 
     private void resetMenuState() {
-        fan_1.setBackground(getResources().getDrawable(R.drawable.work_one_fan_1_unselect_corners));
-        fan_2.setBackground(getResources().getDrawable(R.drawable.work_one_fan_2_unselect_corners));
-        fan_3.setBackground(getResources().getDrawable(R.drawable.work_one_fan_2_unselect_corners));
-        fan_4.setBackground(getResources().getDrawable(R.drawable.work_one_fan_2_unselect_corners));
-        fan_5.setBackground(getResources().getDrawable(R.drawable.work_one_fan_3_unselect_corners));
+        fan_1.setBackground(getResources().getDrawable(R.drawable.work_five_fan_1_unselect_corners));
+        fan_2.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_unselect_corners));
+        fan_3.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_unselect_corners));
+        fan_4.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_unselect_corners));
+        fan_5.setBackground(getResources().getDrawable(R.drawable.work_five_fan_3_unselect_corners));
 
     }
 

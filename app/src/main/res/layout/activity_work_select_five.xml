@@ -47,9 +47,9 @@
             android:layout_alignParentBottom="true"
             android:onClick="tabClick"
             android:id="@+id/iv_save"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@mipmap/ic_work_four_save" />
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@mipmap/ic_work_five_save" />
 
         <ImageView
             android:layout_marginTop="75dp"
@@ -169,31 +169,31 @@
                 android:layout_height="wrap_content">
                 <TextView
                     android:id="@+id/fan_1"
-                    android:background="@drawable/work_one_fan_1_unselect_corners"
+                    android:background="@drawable/work_five_fan_1_unselect_corners"
                     android:layout_width="30dp"
                     android:layout_height="5dp"/>
                 <TextView
                     android:id="@+id/fan_2"
                     android:layout_marginLeft="5dp"
-                    android:background="@drawable/work_one_fan_2_unselect_corners"
+                    android:background="@drawable/work_five_fan_2_unselect_corners"
                     android:layout_width="30dp"
                     android:layout_height="5dp"/>
                 <TextView
                     android:id="@+id/fan_3"
                     android:layout_marginLeft="5dp"
-                    android:background="@drawable/work_one_fan_2_unselect_corners"
+                    android:background="@drawable/work_five_fan_2_unselect_corners"
                     android:layout_width="30dp"
                     android:layout_height="5dp"/>
                 <TextView
                     android:id="@+id/fan_4"
                     android:layout_marginLeft="5dp"
-                    android:background="@drawable/work_one_fan_2_unselect_corners"
+                    android:background="@drawable/work_five_fan_2_unselect_corners"
                     android:layout_width="30dp"
                     android:layout_height="5dp"/>
                 <TextView
                     android:id="@+id/fan_5"
                     android:layout_marginLeft="5dp"
-                    android:background="@drawable/work_one_fan_3_unselect_corners"
+                    android:background="@drawable/work_five_fan_3_unselect_corners"
                     android:layout_width="30dp"
                     android:layout_height="5dp"/>
 
@@ -268,14 +268,14 @@
             android:onClick="modeClick"
             android:id="@+id/ll_100"
             android:layout_marginTop="280dp"
-            android:layout_marginLeft="277dp"
+            android:layout_marginLeft="280dp"
             android:layout_width="70dp"
             android:layout_height="100dp">
             <TextView
                 android:id="@+id/tv_100"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
+                android:textSize="27sp"
                 android:text="@string/tv_work_one_100"
                 android:textColor="@color/white" />
         </LinearLayout>
