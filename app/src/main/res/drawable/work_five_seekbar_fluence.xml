@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="@color/white" />
+<!--            <corners android:radius="10dp" />-->
+            <!--  描边颜色  -->
+            <stroke
+                android:width="1dp"
+                android:color="@color/white" />
+
+        </shape>
+    </item>
+    <!--缓冲进度色-->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <solid android:color="@color/mode_one_bt_select" />
+            </shape>
+        </clip>
+    </item>
+    <!-- 球的宽高 -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+<!--                <corners android:radius="10dp" />-->
+                <!-- 进度条滑动时填充颜色 -->
+                <solid android:color="@color/mode_one_bt_select" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

@@ -75,4 +75,5 @@
     <color name="work_three_fan_select">#A5DEFC</color>
     <color name="work_three_tv_bg">#D5D5D5</color>
     <color name="work_four_seekbar_bg">#9E9F9F</color>
+    <color name="work_five_tv">#068E98</color>
 </resources>
