@@ -20,7 +20,7 @@
             android:layout_marginLeft="45dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:padding="12dp"
+            android:padding="15dp"
             android:background="@mipmap/ic_mode_four_top_bg"
             android:src="@mipmap/ic_mode_four_top_back" />
         <View
@@ -32,7 +32,7 @@
             android:id="@+id/iv_main"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:padding="12dp"
+            android:padding="15dp"
             android:background="@mipmap/ic_mode_four_top_bg"
             android:src="@mipmap/ic_mode_four_top_main" />
     </LinearLayout>
