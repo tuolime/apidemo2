@@ -21,6 +21,7 @@ import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.bean.HrModeBean;
+import com.ss.apidemo.dialog.HintDialog;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.HrModeUtils;
 import com.ss.apidemo.utils.LogUtils;
@@ -284,6 +285,7 @@ public class WarmSettingActivity extends BaseActivity {
 //                        SharedPrefsUtil.putBooleanValue(AppConfig.WLAN,true);
                         if (wifiManager != null){
                             wifiManager.setWifiEnabled(true);
+                            ShowDialog(R.string.wifi_open);
                         }
                         break;
                     case R.id.rb_wlan_off:
@@ -292,7 +294,10 @@ public class WarmSettingActivity extends BaseActivity {
                         if (AppConfig.useLimitedFlag == 0){
                             if (wifiManager != null){
                                 wifiManager.setWifiEnabled(false);
+                                ShowDialog(R.string.wifi_close);
                             }
+                        }else {
+                            ShowDialog(R.string.wifi_no_close);
                         }
                         break;
                 }
@@ -492,5 +497,15 @@ public class WarmSettingActivity extends BaseActivity {
     private void SetBackgroundColor(int type){
         SharedPrefsUtil.putIntValue(AppConfig.BACKGROUNDSELECT, type);//设置主题
         startA();
+    }
+
+    private  void ShowDialog(int text){
+        HintDialog dialog = new HintDialog(WarmSettingActivity.this);
+        dialog.loadDialog(WarmSettingActivity.this, new HintDialog.OnClickIsConfirm() {
+            @Override
+            public void OnClickIsConfirmListener() {//确定
+            }
+
+        }, getResources().getString(text));
     }
 }

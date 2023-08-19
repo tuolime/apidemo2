@@ -195,4 +195,8 @@
     <string name="excel_fail"> Export failed </string>
     <string name="excel_no_data"> There is currently no data available </string>
 
+    <string name="wifi_open"> WiFi on </string>
+    <string name="wifi_close"> WiFi Off </string>
+    <string name="wifi_no_close"> WiFi cannot be turned off </string>
+
 </resources>
