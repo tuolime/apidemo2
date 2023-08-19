@@ -156,8 +156,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:onClick="selectClick"
-                android:id="@+id/iv_fan"
+                android:id="@+id/iv_fan_reduce"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@mipmap/ic_work_five_fan" />
@@ -201,8 +200,7 @@
 
             <ImageView
                 android:layout_marginLeft="10dp"
-                android:onClick="selectClick"
-                android:id="@+id/iv_fan_2"
+                android:id="@+id/iv_fan_add"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@mipmap/ic_work_five_fan" />
