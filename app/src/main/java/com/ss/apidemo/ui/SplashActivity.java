@@ -77,10 +77,12 @@ public class SplashActivity extends BaseActivity {
                         startActivity(i);
                     }else {
                         if (AppConfig.lockStatus == 0){//未锁定
-//                            MyApplication.instance().connetSocket();
                             isAutoShed();
-                        }else {
+                        } else if(AppConfig.lockStatus == 1) {//锁定
                             ShowDialog();
+                        } else if(AppConfig.lockStatus == 2) {//默认（没有获取到实际状态信息）
+                            MyApplication.instance().destroyTask();
+                            MyApplication.instance().connetSocket();
                         }
 
                     }
@@ -124,9 +126,11 @@ public class SplashActivity extends BaseActivity {
             boolean wifi = NetworkUtil.isWifi();
             if (!wifi){
             }else {
-                if (AppConfig.lockStatus == 0){//未锁定
+//                if (AppConfig.lockStatus == 0){//未锁定
+                    AppConfig.lockStatus = 2;// 2 默认（没有获取到实际状态信息）
+                    MyApplication.instance().destroyTask();
                     MyApplication.instance().connetSocket();
-                }
+//                }
 //                else {
 //                    ShowDialog();
 //                }
