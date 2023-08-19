@@ -16,6 +16,7 @@ import com.example.protocol.frame.data.UploadWorkingInfo;
 import com.ss.apidemo.AppConfig;
 import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
+import com.ss.apidemo.base.BaseFragment;
 import com.ss.apidemo.bean.CommonBean;
 import com.ss.apidemo.bean.MessageBean;
 import com.ss.apidemo.bean.SetFluenceBean;
@@ -38,7 +39,7 @@ import de.greenrobot.event.ThreadMode;
 /*
  * SHR STACK 模式
  * */
-public class StackFragment extends Fragment implements View.OnClickListener {
+public class StackFragment extends BaseFragment implements View.OnClickListener {
 
     private static final String PARAM1 = "param1";
     View rootView;
@@ -136,13 +137,28 @@ public class StackFragment extends Fragment implements View.OnClickListener {
             sb_fluence.setMin(current_fluence_min);
         }
         current_fluence_max =stackModeBean.getFluenceMax();
-        sb_fluence.setMax(current_fluence_max);
+        boolean b1 = setFluenceSettingMax(stackModeBean.getFluenceMax());
+        if (!b1){
+            sb_fluence.setMax(stackModeBean.getFluenceMax());
+        }
         sb_fluence.setProgress(current_fluence_progress);
         selectStack(current_stack);
         setCount();
         if (isHidden){
             sendFluence();
         }
+    }
+
+    public boolean setFluenceSettingMax(int currentMax){
+        int energyUpper = getEnergyUpper();
+        if (energyUpper != 0){
+            if (currentMax > energyUpper){//当前选择手具的最大值大于设置的最大值
+                current_fluence_max = energyUpper;
+                sb_fluence.setMax(current_fluence_max);
+                return true;
+            }
+        }
+        return false;
     }
 
     //获取布局文件中的文本内容使用传入的参数进行初始化

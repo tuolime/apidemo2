@@ -431,5 +431,18 @@ public abstract class BaseActivity extends AppCompatActivity {
     public void helloEventBus(StopWorkBean stopWorkBean) {//脱毛倒计时结束
         stopWork();
     }
+
+    /*
+    * 获取是否设置过最大值
+    * */
+    public int getEnergyUpper(){
+        int current_energyUpper = SharedPrefsUtil.getIntValue(AppConfig.ENERGYUPPER, 0);
+        if (current_energyUpper == 0){
+            return 0;
+        }else {
+            return current_energyUpper;
+        }
+
+    }
 }
 

@@ -18,6 +18,7 @@ import com.example.protocol.frame.data.UploadWorkingInfo;
 import com.ss.apidemo.AppConfig;
 import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
+import com.ss.apidemo.base.BaseFragment;
 import com.ss.apidemo.bean.CommonBean;
 import com.ss.apidemo.bean.MessageBean;
 import com.ss.apidemo.bean.SetFluenceBean;
@@ -46,7 +47,7 @@ import de.greenrobot.event.ThreadMode;
 /*
  * SHR  模式
  * */
-public class ShrFragment extends Fragment implements View.OnClickListener {
+public class ShrFragment extends BaseFragment implements View.OnClickListener {
 
     private static final String PARAM1 = "param1";
     View rootView;
@@ -172,11 +173,17 @@ public class ShrFragment extends Fragment implements View.OnClickListener {
         }
         if (shrSkinBean.getBodyType_HZ() == 5) {
             current_fluence_max = shrModeBean.getFluence5HzMax();
-            sb_fluence.setMax(shrModeBean.getFluence5HzMax());
+            boolean b1 = setFluenceSettingMax(shrModeBean.getFluence5HzMax());
+            if (!b1){
+                sb_fluence.setMax(shrModeBean.getFluence5HzMax());
+            }
         }
         if (shrSkinBean.getBodyType_HZ() == 10) {
             current_fluence_max = shrModeBean.getFluence10HzMax();
-            sb_fluence.setMax(shrModeBean.getFluence10HzMax());
+            boolean b1 = setFluenceSettingMax(shrModeBean.getFluence10HzMax());
+            if (!b1){
+                sb_fluence.setMax(shrModeBean.getFluence10HzMax());
+            }
         }
         sb_fluence.setProgress(shrSkinBean.getFluenceProposal());
 //        ToastUtil.showToast(ShrFragment.this.getActivity(),"默认单脉冲"+shrSkinBean.getFluenceProposal());
@@ -376,7 +383,10 @@ public class ShrFragment extends Fragment implements View.OnClickListener {
         shrModeHzOrFluenceBean = shrModeHzOrFluenceUtils.modeType(commonBean.getHandgearType(), hz);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             sb_fluence.setMin(shrModeHzOrFluenceBean.getFluenceMin());
-            sb_fluence.setMax(shrModeHzOrFluenceBean.getFluenceMax());
+            boolean b1 = setFluenceSettingMax(shrModeHzOrFluenceBean.getFluenceMax());
+            if (!b1){
+                sb_fluence.setMax(shrModeHzOrFluenceBean.getFluenceMax());
+            }
 //            if (shrSkinBean.getFluenceProposal()>=shrModeHzOrFluenceBean.getFluenceMax()){
 //                sb_fluence.setProgress(shrSkinBean.getFluenceProposal());
 //            }else {
@@ -384,6 +394,18 @@ public class ShrFragment extends Fragment implements View.OnClickListener {
 //            }
         }
         setCount();
+    }
+
+    public boolean setFluenceSettingMax(int currentMax){
+        int energyUpper = getEnergyUpper();
+        if (energyUpper != 0){
+            if (currentMax > energyUpper){//当前选择手具的最大值大于设置的最大值
+                current_fluence_max = energyUpper;
+                sb_fluence.setMax(current_fluence_max);
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

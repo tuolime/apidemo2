@@ -18,6 +18,7 @@ import com.example.protocol.utils.ParserUtil;
 import com.ss.apidemo.AppConfig;
 import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
+import com.ss.apidemo.base.BaseFragment;
 import com.ss.apidemo.bean.CommonBean;
 import com.ss.apidemo.bean.HrModeBean;
 import com.ss.apidemo.bean.HrSkinBean;
@@ -39,7 +40,7 @@ import de.greenrobot.event.ThreadMode;
 /*
  * HR  模式
  * */
-public class HrFragment extends Fragment implements View.OnClickListener {
+public class HrFragment extends BaseFragment implements View.OnClickListener {
 
     private static final String PARAM1 = "param1";
     View rootView;
@@ -294,50 +295,97 @@ public class HrFragment extends Fragment implements View.OnClickListener {
         switch (current_frequency_progress) {
             case 1:
                 current_fluence_max = hrModeBean.getFluence1HzMax();
-                sb_fluence.setMax(hrModeBean.getFluence1HzMax());
+                boolean b1 = setFluenceSettingMax(current_fluence_max);
+                if (!b1){
+                    sb_fluence.setMax(hrModeBean.getFluence1HzMax());
+                }
                 break;
             case 2:
                 current_fluence_max = hrModeBean.getFluence2HzMax();
-                sb_fluence.setMax(hrModeBean.getFluence2HzMax());
+                boolean b2 = setFluenceSettingMax(current_fluence_max);
+                if (!b2){
+                    sb_fluence.setMax(hrModeBean.getFluence2HzMax());
+                }
                 break;
             case 3:
                 current_fluence_max = hrModeBean.getFluence3HzMax();
-                sb_fluence.setMax(hrModeBean.getFluence3HzMax());
+                boolean b3 = setFluenceSettingMax(current_fluence_max);
+                if (!b3){
+                    sb_fluence.setMax(hrModeBean.getFluence3HzMax());
+                }
                 break;
             case 4:
                 current_fluence_max = hrModeBean.getFluence4HzMax();
-                sb_fluence.setMax(hrModeBean.getFluence4HzMax());
+                boolean b4 = setFluenceSettingMax(current_fluence_max);
+                if (!b4){
+                    sb_fluence.setMax(hrModeBean.getFluence4HzMax());
+                }
                 break;
             case 5:
                 current_fluence_max = hrModeBean.getFluence5HzMax();
-                sb_fluence.setMax(hrModeBean.getFluence5HzMax());
+                boolean b5 = setFluenceSettingMax(current_fluence_max);
+                if (!b5){
+                    sb_fluence.setMax(hrModeBean.getFluence5HzMax());
+                }
                 break;
             case 6:
                 current_fluence_max = hrModeBean.getFluence6HzMax();
-                sb_fluence.setMax(hrModeBean.getFluence6HzMax());
+                boolean b6 = setFluenceSettingMax(current_fluence_max);
+                if (!b6){
+                    sb_fluence.setMax(hrModeBean.getFluence6HzMax());
+                }
                 break;
             case 7:
                 current_fluence_max = hrModeBean.getFluence7HzMax();
-                sb_fluence.setMax(hrModeBean.getFluence7HzMax());
+                boolean b7 = setFluenceSettingMax(current_fluence_max);
+                if (!b7){
+                    sb_fluence.setMax(hrModeBean.getFluence7HzMax());
+                }
                 break;
             case 8:
                 current_fluence_max = hrModeBean.getFluence8HzMax();
-                sb_fluence.setMax(hrModeBean.getFluence8HzMax());
+                boolean b8 = setFluenceSettingMax(current_fluence_max);
+                if (!b8){
+                    sb_fluence.setMax(hrModeBean.getFluence8HzMax());
+                }
                 break;
             case 9:
                 current_fluence_max = hrModeBean.getFluence9HzMax();
-                sb_fluence.setMax(hrModeBean.getFluence9HzMax());
+                boolean b9 = setFluenceSettingMax(current_fluence_max);
+                if (!b9){
+                    sb_fluence.setMax(hrModeBean.getFluence9HzMax());
+                }
                 break;
             case 10:
                 current_fluence_max = hrModeBean.getFluence10HzMax();
-                sb_fluence.setMax(hrModeBean.getFluence10HzMax());
+                boolean b10 = setFluenceSettingMax(current_fluence_max);
+                if (!b10){
+                    sb_fluence.setMax(hrModeBean.getFluence10HzMax());
+                }
                 break;
             case 11:
                 current_fluence_max = hrModeBean.getFluence20HzMax();
-                sb_fluence.setMax(hrModeBean.getFluence20HzMax());
+                boolean b11 = setFluenceSettingMax(current_fluence_max);
+                if (!b11){
+                    sb_fluence.setMax(hrModeBean.getFluence20HzMax());
+                }
                 break;
         }
     }
+
+    public boolean setFluenceSettingMax(int currentMax){
+        int energyUpper = getEnergyUpper();
+        if (energyUpper != 0){
+            if (currentMax > energyUpper){//当前选择手具的最大值大于设置的最大值
+                current_fluence_max = energyUpper;
+                sb_fluence.setMax(current_fluence_max);
+                return true;
+            }
+        }
+        return false;
+    }
+
+
     @Subscribe(threadMode = ThreadMode.MainThread)
     public void helloEventBus(CommonBean message) {
         loadData(message);
