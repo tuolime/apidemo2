@@ -796,6 +796,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="invisible"
                 android:background="@drawable/ps_bg_rounded_corners"
                 android:layout_width="match_parent"
                 android:layout_height="110dp"

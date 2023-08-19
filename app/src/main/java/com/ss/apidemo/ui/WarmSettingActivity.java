@@ -375,7 +375,13 @@ public class WarmSettingActivity extends BaseActivity {
         loadEnergy();
         tv_up_enegry = findViewById(R.id.tv_up_enegry);
         current_energyUpper = SharedPrefsUtil.getIntValue(AppConfig.ENERGYUPPER, 0);
-        tv_up_enegry.setText(""+ current_energyUpper);
+        if (current_energyUpper == 0){
+            current_energyUpper = current_energy_max;
+            tv_up_enegry.setText(""+ current_energyUpper);
+        }else {
+            tv_up_enegry.setText(""+ current_energyUpper);
+        }
+
         //能量下限
         tv_lower_energy = findViewById(R.id.tv_lower_energy);
         if (hrModeBean != null){
@@ -431,29 +437,29 @@ public class WarmSettingActivity extends BaseActivity {
                 SharedPrefsUtil.putIntValue(AppConfig.ENERGYUPPER, current_energyUpper);
                 break;
             case R.id.iv_energy_up_down:
-                if (current_energyUpper == 0){
+                if (current_energyUpper == current_energy_min){
                     return;
                 }
                 current_energyUpper--;
                 tv_up_enegry.setText(""+current_energyUpper);
                 SharedPrefsUtil.putIntValue(AppConfig.ENERGYUPPER, current_energyUpper);
                 break;
-            case R.id.iv_energy_lower_up:
-                if (current_energyLower == current_energy_max){
-                    return;
-                }
-                current_energyLower++;
-                tv_lower_energy.setText(""+current_energyLower);
-                SharedPrefsUtil.putIntValue(AppConfig.ENERGYLOWER, current_energyLower);
-                break;
-            case R.id.iv_energy_lower_down:
-                if (current_energyLower == current_energy_min){
-                    return;
-                }
-                current_energyLower--;
-                tv_lower_energy.setText(""+current_energyLower);
-                SharedPrefsUtil.putIntValue(AppConfig.ENERGYLOWER, current_energyLower);
-                break;
+//            case R.id.iv_energy_lower_up:
+//                if (current_energyLower == current_energy_max){
+//                    return;
+//                }
+//                current_energyLower++;
+//                tv_lower_energy.setText(""+current_energyLower);
+//                SharedPrefsUtil.putIntValue(AppConfig.ENERGYLOWER, current_energyLower);
+//                break;
+//            case R.id.iv_energy_lower_down:
+//                if (current_energyLower == current_energy_min){
+//                    return;
+//                }
+//                current_energyLower--;
+//                tv_lower_energy.setText(""+current_energyLower);
+//                SharedPrefsUtil.putIntValue(AppConfig.ENERGYLOWER, current_energyLower);
+//                break;
         }
     }
 
