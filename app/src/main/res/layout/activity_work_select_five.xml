@@ -568,7 +568,7 @@
             android:orientation="vertical">
 
             <SeekBar
-                android:id="@+id/sb_frequency_2"
+                android:id="@+id/sb_fluence_2"
                 android:layout_width="220dp"
                 android:layout_height="20dp"
                 android:layout_centerInParent="true"

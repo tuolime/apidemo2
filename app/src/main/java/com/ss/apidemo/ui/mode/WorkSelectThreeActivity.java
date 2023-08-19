@@ -500,7 +500,10 @@ public class WorkSelectThreeActivity extends BaseActivity {
             tv_max.setText(fourHundredModeBean.getFluenceMax()+"");
             setBright(current_hz_progress);
         }
-        arcSeekBar.setMax(current_fluence_max);
+        boolean b1 = setFluenceSettingMax(current_fluence_max);
+        if (!b1){
+            arcSeekBar.setMax(current_fluence_max);
+        }
         arcSeekBar.setProgress(current_fluence_progress);
 
     }
@@ -822,7 +825,10 @@ public class WorkSelectThreeActivity extends BaseActivity {
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
         }
-        arcSeekBar.setMax(current_fluence_max);
+        boolean b1 = setFluenceSettingMax(current_fluence_max);
+        if (!b1){
+            arcSeekBar.setMax(current_fluence_max);
+        }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
             tv_hz.setText("20");
@@ -840,7 +846,10 @@ public class WorkSelectThreeActivity extends BaseActivity {
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
         }
-        arcSeekBar.setMax(current_fluence_max);
+        boolean b1 = setFluenceSettingMax(current_fluence_max);
+        if (!b1){
+            arcSeekBar.setMax(current_fluence_max);
+        }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
             tv_hz.setText("20");
@@ -858,7 +867,10 @@ public class WorkSelectThreeActivity extends BaseActivity {
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
         }
-        arcSeekBar.setMax(current_fluence_max);
+        boolean b1 = setFluenceSettingMax(current_fluence_max);
+        if (!b1){
+            arcSeekBar.setMax(current_fluence_max);
+        }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
             tv_hz.setText("20");
@@ -876,7 +888,10 @@ public class WorkSelectThreeActivity extends BaseActivity {
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
         }
-        arcSeekBar.setMax(current_fluence_max);
+        boolean b1 = setFluenceSettingMax(current_fluence_max);
+        if (!b1){
+            arcSeekBar.setMax(current_fluence_max);
+        }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
             tv_hz.setText("20");
@@ -1046,5 +1061,18 @@ public class WorkSelectThreeActivity extends BaseActivity {
         super.onPause();
         stopWork();
         LogUtils.e("声音onPause");
+    }
+
+    public boolean setFluenceSettingMax(int currentMax){
+        int energyUpper = getEnergyUpper();
+        if (energyUpper != 0){
+            if (currentMax > energyUpper){//当前选择手具的最大值大于设置的最大值
+                current_fluence_max = energyUpper;
+                arcSeekBar.setMax(current_fluence_max-seekbar_count);
+                tv_max.setText(current_fluence_max+"");
+                return true;
+            }
+        }
+        return false;
     }
 }

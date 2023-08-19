@@ -65,7 +65,7 @@ public class WorkSelectSixActivity extends BaseActivity {
     private TextView tv_fluence, tv_hz, tv_temperature, tv_flow, tv_total, tv_current, tv_id, tv_exact,tv_raedy;
     //    private TextView tv_min, tv_max;
     private LinearLayout ll_raedy;
-    private SeekBar sb_frequency;
+    private SeekBar sb_fluence;
     private int fan_flag = 0;
     private int mode_type;
     private int skin_type;
@@ -160,7 +160,7 @@ public class WorkSelectSixActivity extends BaseActivity {
         fan_3 = findViewById(R.id.fan_3);
         fan_4 = findViewById(R.id.fan_4);
         fan_5 = findViewById(R.id.fan_5);
-        sb_frequency = findViewById(R.id.sb_frequency);
+        sb_fluence = findViewById(R.id.sb_fluence);
         tv_fluence = findViewById(R.id.tv_fluence);
         tv_hz = findViewById(R.id.tv_hz);
 //        tv_min = findViewById(R.id.tv_min);
@@ -257,7 +257,7 @@ public class WorkSelectSixActivity extends BaseActivity {
         View defaultView = new View(this);
         defaultView.setId(R.id.ll_auto);
         modeClick(defaultView);
-        sb_frequency.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        sb_fluence.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 current_fluence_progress = i;
@@ -404,7 +404,7 @@ public class WorkSelectSixActivity extends BaseActivity {
             case R.id.rl_reduce:
                 if (current_fluence_progress > current_fluence_min) {
                     current_fluence_progress--;
-                    sb_frequency.setProgress(current_fluence_progress);
+                    sb_fluence.setProgress(current_fluence_progress);
                     if (isHidden){
                         sendFluence();
                     }
@@ -413,7 +413,7 @@ public class WorkSelectSixActivity extends BaseActivity {
             case R.id.rl_add:
                 if (current_fluence_progress < current_fluence_max) {
                     current_fluence_progress++;
-                    sb_frequency.setProgress(current_fluence_progress);
+                    sb_fluence.setProgress(current_fluence_progress);
                     if (isHidden){
                         sendFluence();
                     }
@@ -518,10 +518,13 @@ public class WorkSelectSixActivity extends BaseActivity {
             setBright(current_hz_progress);
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            sb_frequency.setMin(current_fluence_min);
+            sb_fluence.setMin(current_fluence_min);
         }
-        sb_frequency.setMax(current_fluence_max);
-        sb_frequency.setProgress(current_fluence_progress);
+        boolean b1 = setFluenceSettingMax(current_fluence_max);
+        if (!b1){
+            sb_fluence.setMax(current_fluence_max);
+        }
+        sb_fluence.setProgress(current_fluence_progress);
 
     }
     /*
@@ -839,7 +842,10 @@ public class WorkSelectSixActivity extends BaseActivity {
         current_fluence_max = shrModeHzOrFluenceBean.getFluenceMax();
 //        tv_min.setText(shrModeHzOrFluenceBean.getFluenceMin()+"");
 //        tv_max.setText(shrModeHzOrFluenceBean.getFluenceMax()+"");
-        sb_frequency.setMax(current_fluence_max);
+        boolean b1 = setFluenceSettingMax(current_fluence_max);
+        if (!b1){
+            sb_fluence.setMax(current_fluence_max);
+        }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
             tv_hz.setText("20");
@@ -854,7 +860,10 @@ public class WorkSelectSixActivity extends BaseActivity {
         current_fluence_max = thirtyModeBean.getFluenceMax();
 //        tv_min.setText(thirtyModeBean.getFluenceMin()+"");
 //        tv_max.setText(thirtyModeBean.getFluenceMax()+"");
-        sb_frequency.setMax(current_fluence_max);
+        boolean b1 = setFluenceSettingMax(current_fluence_max);
+        if (!b1){
+            sb_fluence.setMax(current_fluence_max);
+        }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
             tv_hz.setText("20");
@@ -869,7 +878,10 @@ public class WorkSelectSixActivity extends BaseActivity {
         current_fluence_max = hundredModeBean.getFluenceMax();
 //        tv_min.setText(hundredModeBean.getFluenceMin()+"");
 //        tv_max.setText(hundredModeBean.getFluenceMax()+"");
-        sb_frequency.setMax(current_fluence_max);
+        boolean b1 = setFluenceSettingMax(current_fluence_max);
+        if (!b1){
+            sb_fluence.setMax(current_fluence_max);
+        }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
             tv_hz.setText("20");
@@ -884,7 +896,10 @@ public class WorkSelectSixActivity extends BaseActivity {
         current_fluence_max = fourHundredModeBean.getFluenceMax();
 //        tv_min.setText(fourHundredModeBean.getFluenceMin()+"");
 //        tv_max.setText(fourHundredModeBean.getFluenceMax()+"");
-        sb_frequency.setMax(current_fluence_max);
+        boolean b1 = setFluenceSettingMax(current_fluence_max);
+        if (!b1){
+            sb_fluence.setMax(current_fluence_max);
+        }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
             tv_hz.setText("20");
@@ -1049,5 +1064,17 @@ public class WorkSelectSixActivity extends BaseActivity {
         super.onPause();
         stopWork();
         LogUtils.e("声音onPause");
+    }
+
+    public boolean setFluenceSettingMax(int currentMax){
+        int energyUpper = getEnergyUpper();
+        if (energyUpper != 0){
+            if (currentMax > energyUpper){//当前选择手具的最大值大于设置的最大值
+                current_fluence_max = energyUpper;
+                sb_fluence.setMax(current_fluence_max);
+                return true;
+            }
+        }
+        return false;
     }
 }
