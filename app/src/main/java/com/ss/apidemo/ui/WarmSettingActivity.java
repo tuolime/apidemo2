@@ -309,9 +309,9 @@ public class WarmSettingActivity extends BaseActivity {
             rb_background_select_1.setChecked(true);
         }else if (backgroundSelect == 2){
             rb_background_select_2.setChecked(true);
-        }else if (backgroundSelect == 2){
+        }else if (backgroundSelect == 3){
             rb_background_select_3.setChecked(true);
-        }else if (backgroundSelect == 2){
+        }else if (backgroundSelect == 4){
             rb_background_select_4.setChecked(true);
         }
         //背景主题选择
@@ -484,7 +484,7 @@ public class WarmSettingActivity extends BaseActivity {
      * 预留调用方法 设置背景主题色
      * */
     private void SetBackgroundColor(int type){
-        SharedPrefsUtil.putIntValue(AppConfig.BACKGROUND_COLOR, type);//设置主题
+        SharedPrefsUtil.putIntValue(AppConfig.BACKGROUNDSELECT, type);//设置主题
         startA();
     }
 }

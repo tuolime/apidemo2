@@ -5,8 +5,17 @@
     android:id="@+id/rl_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/ic_logo"
+    android:background="@mipmap/ic_login_background1"
     tools:context=".ui.SplashActivity">
+
+
+    <LinearLayout
+        android:layout_marginTop="80dp"
+        android:background="@mipmap/ic_splash_people"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_deviceId"
@@ -33,6 +42,7 @@
         android:background="@color/black"
         android:text="232端口调测"
         android:textColor="@color/bt_gray" />
+
     <Button
         android:id="@+id/bt_serial"
         android:layout_width="180dp"

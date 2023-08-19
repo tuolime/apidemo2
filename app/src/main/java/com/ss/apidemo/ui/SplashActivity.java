@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ import com.ss.apidemo.Rs485AndRs232Activity;
 import com.ss.apidemo.TestDialogActivity;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.dialog.HintDialog;
+import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.DeviceInfoUtil;
 import com.ss.apidemo.utils.LogUtils;
 import com.ss.apidemo.utils.NetworkUtil;
@@ -151,6 +153,7 @@ public class SplashActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        BackgroundChangeUtils.backgroundLoginChange(this,rl_splash);
         if (animation != null) {
             rl_splash.setAnimation(animation);
         }
