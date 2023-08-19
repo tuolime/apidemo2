@@ -169,14 +169,36 @@ public class UserCreateActivity extends BaseActivity {
     }
 
     public void isHandger() {
-        int modeType = SharedPrefsUtil.getIntValue(AppConfig.MODETYPE, 1);
-        if (modeType == 1){
+
             int isHandgear = SharedPrefsUtil.getIntValue(AppConfig.HANDGEAR, 0);
             if (isHandgear == 0) {//单手具
-                Intent intent = new Intent(UserCreateActivity.this, ParameterActivity.class);
-                intent.putExtra("gender", "1");//自由人默认为男性
-                intent.putExtra("tel", "0");//自由人手机号默认为0
-                startActivity(intent);
+                int modeType = SharedPrefsUtil.getIntValue(AppConfig.MODETYPE, 1);
+                if (modeType == 1){
+                    Intent intent = new Intent(UserCreateActivity.this, ParameterActivity.class);
+                    intent.putExtra("gender", "1");//自由人默认为男性
+                    intent.putExtra("tel", "0");//自由人手机号默认为0
+                    startActivity(intent);
+                }else if (modeType == 2) {
+                    int intValue = SharedPrefsUtil.getIntValue(AppConfig.MODE_TWO_GB, 1);
+                    Intent intent = null;
+                    if (intValue == 1) {
+                        intent = new Intent(UserCreateActivity.this, ModeSelectOneActivity.class);
+                    } else if (intValue == 2) {
+                        intent = new Intent(UserCreateActivity.this, ModeSelectTwoActivity.class);
+                    } else if (intValue == 3) {
+                        intent = new Intent(UserCreateActivity.this, ModeSelectThreeActivity.class);
+                    } else if (intValue == 4) {
+                        intent = new Intent(UserCreateActivity.this, ModeSelectFourActivity.class);
+                    } else if (intValue == 5) {
+                        intent = new Intent(UserCreateActivity.this, ModeSelectFiveActivity.class);
+                    } else if (intValue == 6) {
+                        intent = new Intent(UserCreateActivity.this, ModeSelectSixActivity.class);
+                    }
+
+                    if (intent != null){
+                        startActivity(intent);
+                    }
+                }
 
             } else if (isHandgear == 1) {//双手具
                 Intent intent = new Intent(UserCreateActivity.this, HandgearActivity.class);
@@ -185,31 +207,7 @@ public class UserCreateActivity extends BaseActivity {
                 startActivity(intent);
 
             }
-        }else if (modeType == 2) {
-//            Intent intent = new Intent(UserCreateActivity.this, ParameterActivity.class);
-//            intent.putExtra("gender", "1");//自由人默认为男性
-//            intent.putExtra("tel", "0");//自由人手机号默认为0
-//            startActivity(intent);
-            int intValue = SharedPrefsUtil.getIntValue(AppConfig.MODE_TWO_GB, 1);
-            Intent intent = null;
-            if (intValue == 1) {
-                intent = new Intent(UserCreateActivity.this, ModeSelectOneActivity.class);
-            } else if (intValue == 2) {
-                intent = new Intent(UserCreateActivity.this, ModeSelectTwoActivity.class);
-            } else if (intValue == 3) {
-                intent = new Intent(UserCreateActivity.this, ModeSelectThreeActivity.class);
-            } else if (intValue == 4) {
-                intent = new Intent(UserCreateActivity.this, ModeSelectFourActivity.class);
-            } else if (intValue == 5) {
-                intent = new Intent(UserCreateActivity.this, ModeSelectFiveActivity.class);
-            } else if (intValue == 6) {
-                intent = new Intent(UserCreateActivity.this, ModeSelectSixActivity.class);
-            }
 
-            if (intent != null){
-                startActivity(intent);
-            }
-        }
 
     }
 

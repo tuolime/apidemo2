@@ -19,7 +19,10 @@ import com.ss.apidemo.R;
 import com.ss.apidemo.adapter.UserListAdapter;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.db.bean.User;
+import com.ss.apidemo.db.bean.UserValue;
 import com.ss.apidemo.db.dao.UserDao;
+import com.ss.apidemo.db.dao.UserValueDao;
+import com.ss.apidemo.dialog.HintDialog;
 import com.ss.apidemo.excel.ExcelExport;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
@@ -72,12 +75,18 @@ public class UserListActivity extends BaseActivity {
         iv_load.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //导出数据
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-                    intent.addCategory(Intent.CATEGORY_DEFAULT);
-                    startActivityForResult(intent, 0);
+                List<UserValue> allUserValue = UserValueDao.getInstance().getAllUserValue();
+                if (allUserValue != null && allUserValue.size()>0){
+                    //导出数据
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+                        intent.addCategory(Intent.CATEGORY_DEFAULT);
+                        startActivityForResult(intent, 0);
+                    }
+                }else {
+                    ShowDialog(R.string.excel_no_data);
                 }
+
             }
         });
         recyclerView = findViewById(R.id.recyclerview);
@@ -133,7 +142,7 @@ public class UserListActivity extends BaseActivity {
                     // 获得输出流
                     OutputStream excelOutputStream = UserListActivity.this.getContentResolver().openOutputStream(newFile.getUri());
                     // 进行输出操作（写文件）
-                    ExcelExport.exportUser2(excelOutputStream);
+                    ExcelExport.exportUser2(excelOutputStream,UserListActivity.this);
                 } catch (Exception e) {
                     // 进行异常处理
                     // showShortToast(e.getMessage());
@@ -143,5 +152,15 @@ public class UserListActivity extends BaseActivity {
             }
         }
 
+    }
+
+    private  void ShowDialog(int text){
+        HintDialog dialog = new HintDialog(UserListActivity.this);
+        dialog.loadDialog(UserListActivity.this, new HintDialog.OnClickIsConfirm() {
+            @Override
+            public void OnClickIsConfirmListener() {//确定
+            }
+
+        }, getResources().getString(text));
     }
 }

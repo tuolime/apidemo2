@@ -2,11 +2,15 @@ package com.ss.apidemo.excel;
 
 import android.os.Environment;
 
+import com.ss.apidemo.R;
 import com.ss.apidemo.db.bean.User;
 import com.ss.apidemo.db.bean.UserValue;
 import com.ss.apidemo.db.dao.UserDao;
 import com.ss.apidemo.db.dao.UserValueDao;
+import com.ss.apidemo.dialog.HintDialog;
 import com.ss.apidemo.excel.bean.UserExcelBean;
+import com.ss.apidemo.ui.SplashActivity;
+import com.ss.apidemo.ui.UserListActivity;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -52,7 +56,7 @@ public class ExcelExport {
         }
     }
 
-    public static void exportUser2(OutputStream excelOutputStream) throws Exception {
+    public static void exportUser2(OutputStream excelOutputStream, UserListActivity context) throws Exception {
         long t1 = System.currentTimeMillis();
         List<User> allUser = UserDao.getInstance().getAllUser();
         List<UserValue> allUserValue = UserValueDao.getInstance().getAllUserValue();
@@ -93,11 +97,24 @@ public class ExcelExport {
             double time = (t2 - t1) / 1000.0D;
             if (success) {
                 System.out.print("导出成功：\n用时:" + time + "秒");
+                ShowDialog(context,R.string.excel_success);
             } else {
                 System.err.print("导出失败");
+                ShowDialog(context,R.string.excel_fail);
             }
         }
 
+    }
+
+
+    private static void ShowDialog(UserListActivity context, int text){
+        HintDialog dialog = new HintDialog(context);
+        dialog.loadDialog(context, new HintDialog.OnClickIsConfirm() {
+            @Override
+            public void OnClickIsConfirmListener() {//确定
+            }
+
+        }, context.getResources().getString(text));
     }
 
     static void importUser() throws Exception {

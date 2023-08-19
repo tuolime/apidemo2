@@ -191,4 +191,8 @@
     <string name="tv_work_six_rate">Rate</string>
     <string name="tv_work_six_fluence">Fluence</string>
 
+    <string name="excel_success"> Export successful </string>
+    <string name="excel_fail"> Export failed </string>
+    <string name="excel_no_data"> There is currently no data available </string>
+
 </resources>
