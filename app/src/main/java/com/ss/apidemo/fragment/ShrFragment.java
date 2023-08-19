@@ -273,6 +273,13 @@ public class ShrFragment extends BaseFragment implements View.OnClickListener {
                 if (isHidden) {
                     PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
                 }
+                //调节频率的时候 能量只改变范围（最大值和最小值发出改变） 正好在范围内的情况
+                if (progress == sb_fluence.getMax()){
+                    sendFluence();
+                }
+                if (progress == sb_fluence.getMin()){
+                    sendFluence();
+                }
             }
 
             @Override
