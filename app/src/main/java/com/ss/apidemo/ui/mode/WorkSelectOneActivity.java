@@ -36,7 +36,9 @@ import com.ss.apidemo.bean.SetFluenceBean;
 import com.ss.apidemo.bean.ShrModeHzOrFluenceBean;
 import com.ss.apidemo.bean.SmartModeBean;
 import com.ss.apidemo.bean.ThirtyModeBean;
+import com.ss.apidemo.db.bean.User;
 import com.ss.apidemo.db.bean.UserValue;
+import com.ss.apidemo.db.dao.UserDao;
 import com.ss.apidemo.db.dao.UserValueDao;
 import com.ss.apidemo.dialog.HintDialog;
 import com.ss.apidemo.ui.OtherActivity;
@@ -55,6 +57,8 @@ import com.ss.apidemo.utils.ShrModeHzOrFluenceUtils;
 import com.ss.apidemo.utils.SmartModeUtils;
 import com.ss.apidemo.utils.ThirtyModeUtils;
 import com.ss.apidemo.utils.ToastUtil;
+
+import java.util.List;
 
 public class WorkSelectOneActivity extends BaseActivity {
     public int AUTOMODE = 6;
@@ -115,7 +119,8 @@ public class WorkSelectOneActivity extends BaseActivity {
     private boolean clear_count = false;
     private int current_count = 0;//首次work 触发声音
     UploadWorkingInfo uploadWorkingInfo_energy;
-
+    private int current_luminescence_auto_save_stop_count;
+    private int flag_number = 3;
 
 
     Handler handler = new Handler(){
@@ -341,7 +346,7 @@ public class WorkSelectOneActivity extends BaseActivity {
                 }
                 UserValue userValue1 = new UserValue();
                 userValue1.setTel(tel);
-//                userValue1.setGender(commonBean.getGender() + "");
+                userValue1.setGender(handgearType + "");
                 userValue1.setMode(setWorkingStatusDb.getWorkingModel() + "");
                 userValue1.setSkinType(skin_type + "");
                 userValue1.setBodyType(body_type + "");
@@ -990,6 +995,7 @@ public class WorkSelectOneActivity extends BaseActivity {
 
     @Subscribe(threadMode = ThreadMode.MainThread)
     public void helloEventBus(UploadWorkingInfo uploadWorkingInfo) {//結果集
+        setSendUserValues(uploadWorkingInfo);//单独处理上报治疗信息
         if (uploadWorkingInfo.getWorkingStatus() == 0) {//stby
             current_status = 0;
             ll_all.setVisibility(View.GONE);
@@ -1079,6 +1085,47 @@ public class WorkSelectOneActivity extends BaseActivity {
             }
         }
         return false;
+    }
+
+    public void setSendUserValues(UploadWorkingInfo uploadWorkingInfo) {
+        if (uploadWorkingInfo.getWorkingStatus() == 0) {//stby
+            flag_number++;
+            if (flag_number == 2){
+                setUserValueData();
+            }
+        } else if (uploadWorkingInfo.getWorkingStatus() == 1) {//reading
+
+        } else if (uploadWorkingInfo.getWorkingStatus() == 2) {//working
+            flag_number = 1;
+        }
+    }
+    public void setUserValueData(){
+        if (mode_type == 1){//专家模式
+            return;
+        }
+        if (tel == null || tel.equals("") || tel.equals("0")) {//自由人不记录数据
+            return;
+        }
+        UserValue userValue1 = new UserValue();
+        userValue1.setTel(tel);
+        userValue1.setGender(handgearType + "");
+        userValue1.setMode(setWorkingStatusDb.getWorkingModel() + "");
+        userValue1.setSkinType(skin_type + "");
+        userValue1.setBodyType(body_type + "");
+        if (uploadWorkingInfo_energy != null){
+            userValue1.setEnergy(uploadWorkingInfo_energy.getTotalEnergy() + "");
+        }
+        userValue1.setFrequency(setWorkingStatusDb.getFrequency() + "");
+        userValue1.setFluence(setWorkingStatusDb.getFluence() + "");
+        int work_count= current_luminescence_count - current_luminescence_auto_save_stop_count;
+        userValue1.setWorkCount(work_count+ "");
+        List<User> user = UserDao.getInstance().getUser(tel);
+        if (user != null && user.size() > 0) {
+            userValue1.setUser_id(user.get(0).get_id());
+        }
+        UserValueDao.getInstance().createUserValue(userValue1);
+        MyApplication.instance().sendUserValueMessage(userValue1);
+        current_luminescence_auto_save_stop_count = current_luminescence_count;
     }
 
 }
