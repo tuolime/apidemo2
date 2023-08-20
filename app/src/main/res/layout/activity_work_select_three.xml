@@ -442,6 +442,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_marginLeft="100dp"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
                     android:hapticFeedbackEnabled="true"
