@@ -12,7 +12,7 @@ public class AutoSkinBean implements Serializable {
 
     public int bodyType;//身体部位
 
-    public int modeType;//模式类型 6
+    public int modeType;//模式类型 7
 
     public int hzProposal;//身体部位对应的 HZ
 

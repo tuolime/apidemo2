@@ -28,7 +28,7 @@ public final class ThirtyModeUtils {
         switch (handgear) {
             case 1:
                 type.setHandgearType(1);
-                type.setModeType(7);
+                type.setModeType(8);
                 type.setHzMin(1);
                 type.setHzMax(10);
                 type.setFluenceMin(4);
@@ -36,7 +36,7 @@ public final class ThirtyModeUtils {
                 break;
             case 2:
                 type.setHandgearType(2);
-                type.setModeType(7);
+                type.setModeType(8);
                 type.setHzMin(1);
                 type.setHzMax(10);
                 type.setFluenceMin(4);
@@ -44,7 +44,7 @@ public final class ThirtyModeUtils {
                 break;
             case 3:
                 type.setHandgearType(3);
-                type.setModeType(7);
+                type.setModeType(8);
                 type.setHzMin(1);
                 type.setHzMax(8);
                 type.setFluenceMin(4);
@@ -52,7 +52,7 @@ public final class ThirtyModeUtils {
                 break;
             case 4:
                 type.setHandgearType(4);
-                type.setModeType(7);
+                type.setModeType(8);
                 type.setHzMin(1);
                 type.setHzMax(10);
                 type.setFluenceMin(4);
@@ -60,7 +60,7 @@ public final class ThirtyModeUtils {
                 break;
             case 5:
                 type.setHandgearType(5);
-                type.setModeType(7);
+                type.setModeType(8);
                 type.setHzMin(1);
                 type.setHzMax(10);
                 type.setFluenceMin(4);
@@ -68,7 +68,7 @@ public final class ThirtyModeUtils {
                 break;
             case 6:
                 type.setHandgearType(6);
-                type.setModeType(7);
+                type.setModeType(8);
                 type.setHzMin(1);
                 type.setHzMax(5);
                 type.setFluenceMin(4);
@@ -76,7 +76,7 @@ public final class ThirtyModeUtils {
                 break;
             case 7:
                 type.setHandgearType(7);
-                type.setModeType(7);
+                type.setModeType(8);
                 type.setHzMin(1);
                 type.setHzMax(8);
                 type.setFluenceMin(4);
@@ -84,7 +84,7 @@ public final class ThirtyModeUtils {
                 break;
             case 8:
                 type.setHandgearType(8);
-                type.setModeType(7);
+                type.setModeType(8);
                 type.setHzMin(1);
                 type.setHzMax(8);
                 type.setFluenceMin(4);
@@ -92,7 +92,7 @@ public final class ThirtyModeUtils {
                 break;
             case 9:
                 type.setHandgearType(9);
-                type.setModeType(7);
+                type.setModeType(8);
                 type.setHzMin(1);
                 type.setHzMax(8);
                 type.setFluenceMin(4);
@@ -100,7 +100,7 @@ public final class ThirtyModeUtils {
                 break;
             case 10:
                 type.setHandgearType(10);
-                type.setModeType(7);
+                type.setModeType(8);
                 type.setHzMin(1);
                 type.setHzMax(4);
                 type.setFluenceMin(4);

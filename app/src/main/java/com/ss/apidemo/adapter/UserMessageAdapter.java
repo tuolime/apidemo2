@@ -42,13 +42,30 @@ public class UserMessageAdapter extends RecyclerView.Adapter<UserMessageAdapter.
         String title = context.getResources().getString(R.string.event)+" "+(position+1);
         holder.tv_user_title.setText(title);
         holder.tv_user_data.setText(userValue.getDate());
-        String content = context.getResources().getString(R.string.mode)+": "+SetMode(userValue.getMode())+"   "+
-                context.getResources().getString(R.string.skin)+": "+SetSkinType(userValue.getSkinType())+"   "+
-                context.getResources().getString(R.string.body)+": "+SetBodyType(userValue.getGender(),userValue.getBodyType())+"   "+
-                context.getResources().getString(R.string.energy)+": "+userValue.getEnergy()+"J"+"   "+
-                context.getResources().getString(R.string.work_count)+": "+userValue.getWorkCount()+"   "+
-                context.getResources().getString(R.string.fluence)+": "+userValue.getFluence()+"   "+
-                context.getResources().getString(R.string.frequency)+": "+ userValue.getFrequency()+"Hz";
+        String content = "";
+        //工作模式 工作模式 stack 1 2 3 4 shr 5 hr  6  auto  7  30 8 100 9 400 10
+        if (userValue.getMode().equals("1") ||userValue.getMode().equals("2") ||
+                userValue.getMode().equals("3") ||userValue.getMode().equals("4") ||
+                userValue.getMode().equals("5")||userValue.getMode().equals("6")){
+            content = context.getResources().getString(R.string.mode)+": "+SetModeOne(userValue.getMode())+"   "+
+                    context.getResources().getString(R.string.skin)+": "+SetSkinType(userValue.getSkinType())+"   "+
+                    context.getResources().getString(R.string.body)+": "+SetModeOneBodyType(userValue.getGender(),userValue.getBodyType())+"   "+
+                    context.getResources().getString(R.string.energy)+": "+userValue.getEnergy()+"J"+"   "+
+                    context.getResources().getString(R.string.work_count)+": "+userValue.getWorkCount()+"   "+
+                    context.getResources().getString(R.string.fluence)+": "+userValue.getFluence()+"   "+
+                    context.getResources().getString(R.string.frequency)+": "+ userValue.getFrequency()+"Hz";
+        }
+        if (userValue.getMode().equals("7") ||userValue.getMode().equals("8") ||
+                userValue.getMode().equals("9") ||userValue.getMode().equals("10")){
+            content = context.getResources().getString(R.string.mode)+": "+SetModeTwo(userValue.getMode())+"   "+
+                    context.getResources().getString(R.string.skin)+": "+SetSkinType(userValue.getSkinType())+"   "+
+                    context.getResources().getString(R.string.body)+": "+SetModeTwoBodyType(userValue.getBodyType())+"   "+
+                    context.getResources().getString(R.string.energy)+": "+userValue.getEnergy()+"J"+"   "+
+                    context.getResources().getString(R.string.work_count)+": "+userValue.getWorkCount()+"   "+
+                    context.getResources().getString(R.string.fluence)+": "+userValue.getFluence()+"   "+
+                    context.getResources().getString(R.string.frequency)+": "+ userValue.getFrequency()+"Hz";
+        }
+
         holder.tv_user_content.setText(content);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +96,7 @@ public class UserMessageAdapter extends RecyclerView.Adapter<UserMessageAdapter.
         void onClickItem(int id,String tel);
     }
 
-    public String SetMode(String mode){
+    public String SetModeOne(String mode){
         //工作模式  1 2 3 4 5 shr 6 hr
         String modeString = "";
         switch (mode){
@@ -94,6 +111,26 @@ public class UserMessageAdapter extends RecyclerView.Adapter<UserMessageAdapter.
                 break;
             case "6":
                 modeString = "HR";
+                break;
+        }
+        return modeString;
+    }
+
+    public String SetModeTwo(String mode){
+        //工作模式  1 2 3 4 5 shr 6 hr
+        String modeString = "";
+        switch (mode){
+            case "7":
+                modeString = "AUTO";
+                break;
+            case "8":
+                modeString = "30";
+                break;
+            case "9":
+                modeString = "100";
+                break;
+            case "10":
+                modeString = "400";
                 break;
         }
         return modeString;
@@ -123,7 +160,10 @@ public class UserMessageAdapter extends RecyclerView.Adapter<UserMessageAdapter.
         }
         return skinTypeString;
     }
-    public String SetBodyType(String gender,String bodyType){
+    /*
+    * 工作模式一
+    * */
+    public String SetModeOneBodyType(String gender,String bodyType){
         // 男部位id
         //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
         // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -240,6 +280,36 @@ public class UserMessageAdapter extends RecyclerView.Adapter<UserMessageAdapter.
                     break;
 
             }
+        }
+
+        return bodyTypeString;
+    }
+    /*
+    * 工作模式二
+    * */
+    public String SetModeTwoBodyType(String bodyType){
+        //1：面部；2：四肢；3：腋下；4：腹部；
+        // 5：背部；6：隐私；
+        String bodyTypeString = "";
+        switch (bodyType){
+            case "1":
+                bodyTypeString = "face";
+                break;
+            case "2":
+                bodyTypeString = "the four limbs";
+                break;
+            case "3":
+                bodyTypeString = "armpit";
+                break;
+            case "4":
+                bodyTypeString = "abdomen";
+                break;
+            case "5":
+                bodyTypeString = "back";
+                break;
+            case "6":
+                bodyTypeString = "privacy";
+                break;
         }
 
         return bodyTypeString;

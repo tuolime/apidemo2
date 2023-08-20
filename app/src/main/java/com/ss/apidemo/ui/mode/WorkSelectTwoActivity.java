@@ -962,7 +962,16 @@ public class WorkSelectTwoActivity extends BaseActivity {
         String frequencyString = tv_hz.getText().toString();
         int frequencyInt = Integer.parseInt(frequencyString);
         SetWorkingStatus setWorkingStatus = new SetWorkingStatus();
-        setWorkingStatus.setWorkingModel(6); // 工作模式  1 2 3 4 5 shr 6 hr
+        //工作模式 stack 1 2 3 4 shr 5 hr  6  auto  7  30 8 100 9 400 10
+        if (current_mode_type == AUTOMODE) {//auto
+            setWorkingStatus.setWorkingModel(7);
+        }else if (current_mode_type == THIRTYMODE){//30
+            setWorkingStatus.setWorkingModel(8);
+        }else if (current_mode_type == HUNDREDMODE){//100
+            setWorkingStatus.setWorkingModel(9);
+        }else if (current_mode_type == FOURHUNDREDMODE){//400
+            setWorkingStatus.setWorkingModel(10);
+        }
         setWorkingStatus.setFluence(fluenceInt); // 单脉冲能量
         setWorkingStatus.setFrequency(frequencyInt); // 频率
         setWorkingStatus.setTotalEnergy(0);// 总能量

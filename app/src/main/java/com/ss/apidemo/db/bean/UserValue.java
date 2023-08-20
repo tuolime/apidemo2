@@ -14,7 +14,7 @@ public class UserValue implements Serializable {
     @DatabaseField
     private String gender;//性别
     @DatabaseField
-    private String mode;//工作模式
+    private String mode;//工作模式 stack 1 2 3 4 shr 5 hr  6  auto  7  30 8 100 9 400 10
     @DatabaseField
     private String skinType;//皮肤类型
     @DatabaseField

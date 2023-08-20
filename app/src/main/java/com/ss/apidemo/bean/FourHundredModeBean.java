@@ -10,7 +10,7 @@ public class FourHundredModeBean implements Serializable {
 
     public int handgearType;//手具类型
 
-    public int modeType;//模式类型 9
+    public int modeType;//模式类型 10
 
     public int hzMin;//手具对应的频率最小
 
