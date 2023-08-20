@@ -18,11 +18,6 @@ import java.util.List;
 import cn.hutool.core.util.HexUtil;
 
 public class ProtocalHandler {
-    public  byte[] frameData;
-
-    public  int index;
-    private Parser dataObj;
-
     public static final int FRAME_HEAD = 0xAA; // 帧开始符
     public static final int FRAME_END_CC = 0xCC; // 帧结束符2
     public static final int FRAME_END_33 = 0x33; // 帧结束符1
@@ -31,12 +26,29 @@ public class ProtocalHandler {
     public static int FRAME_START_HEAD_LEN = 3; // 帧开始符长度 + 控制位
 
     public static final String[] CTRL = {"40", "55", "5A", "5B"};
+
+
+    private byte[] frameData;
+    private int index;
+
     private static ProtocalHandler protocalHandler;
     public static  ProtocalHandler getInstance(){
         if (protocalHandler == null){
             protocalHandler = new ProtocalHandler();
         }
         return protocalHandler;
+    }
+
+    public Frame buildReplyUploadWorkingInfoFrame() {
+        Frame frame = new Frame();
+        byte[] frameBytes = new byte[5];
+        frameBytes[0] = (byte) FRAME_HEAD;
+        frameBytes[1] = (byte) 0x40; // c
+        frameBytes[2] = 2; // 长度
+        frameBytes[3] = (byte) FRAME_END_CC;
+        frameBytes[4] = (byte) FRAME_END_33;
+        frame.setFrame(frameBytes);
+        return frame;
     }
 
     public Frame buildSetWorkingStatusFrame(SetWorkingStatus setWorkingStatus) {
@@ -47,8 +59,13 @@ public class ProtocalHandler {
         frameBytes[2] = 18; // 长度
         frameBytes[19] = (byte) FRAME_END_CC;
         frameBytes[20] = (byte) FRAME_END_33;
+        frame.setCtrlCode( Integer.toHexString(frameBytes[1] & 0xFF).toUpperCase());
+
         // 工作模式
-        System.arraycopy(ByteUtil.intToByteArray2(setWorkingStatus.getWorkingModel()), 0, frameBytes, 3, 2);
+        // System.arraycopy(ByteUtil.intToByteArray2(setWorkingStatus.getWorkingModel()), 0, frameBytes, 3, 2);
+
+        // 工作模式（低字节） +制冷强度（高字节）
+        System.arraycopy(ByteUtil.intToByteArray2((setWorkingStatus.getCoolLevel() << 8) + setWorkingStatus.getWorkingModel()), 0, frameBytes, 3, 2);
 
         // 能量
         System.arraycopy(ByteUtil.intToByteArray2(setWorkingStatus.getFluence()), 0, frameBytes, 5, 2);
@@ -71,7 +88,6 @@ public class ProtocalHandler {
 
         // 工作状态
         System.arraycopy(ByteUtil.intToByteArray2(setWorkingStatus.getWorkingStatus()), 0, frameBytes, 17, 2);
-        frame.setCtrlCode( Integer.toHexString(frameBytes[1] & 0xFF).toUpperCase());
         frame.setFrame(frameBytes);
         return frame;
     }
@@ -94,10 +110,8 @@ public class ProtocalHandler {
         //  喇叭设置
         System.arraycopy(ByteUtil.intToByteArray2(setDeviceConfig.getHornFlag()), 0, frameBytes, 7, 2);
 
-        // 保留
-        frameBytes[9] = 0;
-        frameBytes[10] = 0;
-        frame.setCtrlCode( Integer.toHexString(frameBytes[1] & 0xFF).toUpperCase());
+        // 蓝牙开关
+        System.arraycopy(ByteUtil.intToByteArray2(setDeviceConfig.getBluetoothFlag()), 0, frameBytes, 9, 2);
         frame.setFrame(frameBytes);
         return frame;
     }
@@ -123,11 +137,15 @@ public class ProtocalHandler {
         // 保留
         frameBytes[9] = 0;
         frameBytes[10] = 0;
-        frame.setCtrlCode( Integer.toHexString(frameBytes[1] & 0xFF).toUpperCase());
         frame.setFrame(frameBytes);
         return frame;
     }
 
+    /**
+     * 解析报文
+     * @param buf
+     * @return
+     */
     public byte[] recognize(byte[] buf) {
         if (this.frameData != null) {
             // 拼接后续报文
@@ -166,6 +184,12 @@ public class ProtocalHandler {
         return null;
     }
 
+    /**
+     * 识别报文
+     * @param buf
+     * @param position
+     * @return
+     */
     public Frame recognizeFrame(byte[] buf, int position) {
         Frame frm = new Frame();
         for (int i = position; i < buf.length; i++) {
@@ -174,13 +198,12 @@ public class ProtocalHandler {
                     int dataLen = getDataLenOfLongRtuFrame(buf, i);
                     byte[] rtuFrm = getRtuFrameOfLongRtuFrame(buf, dataLen, i);
 
-//                    Log.i("识别出帧:" + HexUtil.encodeHexStr(rtuFrm).toUpperCase());
+//                    log.info("识别出帧:" + HexUtil.encodeHexStr(rtuFrm).toUpperCase());
                     frm.setIndex(i);
                     frm.setFrame(buf);
                     frm.setDataLen(dataLen);
                     frm.setFrameLen(dataLen + FRAME_HEAD_LEN);
                     frm.setFrameData(rtuFrm);
-
                     try {
                         this.resolveFrame(frm);
                     } catch (ParseException e) {
@@ -210,6 +233,11 @@ public class ProtocalHandler {
         return ((ParserUtil.toUnSignByte(buf[(pos + 2 + lenth)]) == FRAME_END_33) && (ParserUtil.toUnSignByte(buf[(pos + 2 + lenth - 1)]) == FRAME_END_CC));
     }
 
+    /**
+     * 判断控制位是否合法
+     * @param b
+     * @return
+     */
     public static boolean recognizeProtocol(byte b) {
         return Arrays.asList(CTRL).contains(Integer.toHexString(b & 0xFF).toUpperCase());
     }
@@ -218,24 +246,43 @@ public class ProtocalHandler {
         return buf[(pos + 2)] & 0xFF;
     }
 
+    /**
+     * 获取报文内容
+     * @param buf
+     * @param dataLen
+     * @param pos
+     * @return
+     */
     private byte[] getRtuFrameOfLongRtuFrame(byte[] buf, int dataLen, int pos) {
         byte[] rtuFrm = new byte[FRAME_START_HEAD_LEN + dataLen];
         System.arraycopy(buf, pos, rtuFrm, 0, rtuFrm.length);
         return rtuFrm;
     }
 
+
+    /**
+     * 解析类
+     * @return
+     */
     private String getParserName() {
-        return "com.example.protocol.frame.Parser";
+        return "com.aeonmed.protocol.frame.Parser";
     }
 
+    /**
+     * 解析反射类方法
+     * @param frame
+     * @return
+     * @throws ParseException
+     */
     public List<DataItem> resolveFrame(Frame frame) throws ParseException {
         List<DataItem> dataItems = new ArrayList<DataItem>();
         try {
-            if (this.dataObj == null) {
+            /*if (this.dataObj == null) {
                 String strObjName = getParserName();
                 this.dataObj = ((Parser) Class.forName(strObjName).newInstance());
             }
-            this.dataObj.parse(frame, dataItems);
+            this.dataObj.parse(frame, dataItems);*/
+            Parser.parse(frame, dataItems);
             frame.setDataItems(dataItems);
             return dataItems;
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -244,16 +291,5 @@ public class ProtocalHandler {
             throw new ParseException("规约处理解析帧失败（其他错误）", e);
         }
     }
-    public Frame buildReplyUploadWorkingInfoFrame() {
-        Frame frame = new Frame();
-        byte[] frameBytes = new byte[5];
-        frameBytes[0] = (byte) FRAME_HEAD;
-        frameBytes[1] = (byte) 0x40; // c
-        frameBytes[2] = 2; // 长度
-        frameBytes[3] = (byte) FRAME_END_CC;
-        frameBytes[4] = (byte) FRAME_END_33;
-        frame.setCtrlCode( Integer.toHexString(frameBytes[1] & 0xFF).toUpperCase());
-        frame.setFrame(frameBytes);
-        return frame;
-    }
+
 }

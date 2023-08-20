@@ -18,6 +18,11 @@ public class SetDeviceConfig {
      */
     private int hornFlag;
 
+    /**
+     * 蓝牙设置
+     */
+    private int bluetoothFlag;
+
     public int getPowerType() {
         return powerType;
     }
@@ -42,12 +47,21 @@ public class SetDeviceConfig {
         this.hornFlag = hornFlag;
     }
 
+    public int getBluetoothFlag() {
+        return bluetoothFlag;
+    }
+
+    public void setBluetoothFlag(int bluetoothFlag) {
+        this.bluetoothFlag = bluetoothFlag;
+    }
+
     @Override
     public String toString() {
         return "SetDeviceConfig{" +
                 "powerType=" + powerType +
                 ", qbflag=" + qbflag +
                 ", hornFlag=" + hornFlag +
+                ", bluetoothFlag=" + bluetoothFlag +
                 '}';
     }
 }

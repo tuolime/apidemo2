@@ -9,6 +9,11 @@ public class SetWorkingStatus {
     private int workingModel;
 
     /**
+     * 制冷等级
+     */
+    private int coolLevel;
+
+    /**
      * 单脉冲能量
      */
     private int fluence;
@@ -50,6 +55,14 @@ public class SetWorkingStatus {
 
     public void setWorkingModel(int workingModel) {
         this.workingModel = workingModel;
+    }
+
+    public int getCoolLevel() {
+        return coolLevel;
+    }
+
+    public void setCoolLevel(int coolLevel) {
+        this.coolLevel = coolLevel;
     }
 
     public int getFluence() {
@@ -112,6 +125,7 @@ public class SetWorkingStatus {
     public String toString() {
         return "SetWorkingStatus{" +
                 "workingModel=" + workingModel +
+                ", coolLevel=" + coolLevel +
                 ", fluence=" + fluence +
                 ", frequency=" + frequency +
                 ", totalEnergy=" + totalEnergy +
