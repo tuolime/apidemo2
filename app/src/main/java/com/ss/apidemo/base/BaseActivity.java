@@ -346,40 +346,40 @@ public abstract class BaseActivity extends AppCompatActivity {
             current_dialog = getResources().getString(R.string.short_board) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-            MyApplication.instance().sendWarmMessage(1);
+            MyApplication.instance().sendWarmMessage(1,getResources().getString(R.string.short_board));
         }
         if (uploadWorkingInfo.getQbConnFail() == 1) {//手具连接失败
             current_dialog = current_dialog + getResources().getString(R.string.hand_error) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-            MyApplication.instance().sendWarmMessage(2);
+            MyApplication.instance().sendWarmMessage(2,getResources().getString(R.string.hand_error));
         }
         if (uploadWorkingInfo.getTemperatureHi() == 1) {//水温高
             current_dialog = current_dialog + getResources().getString(R.string.temperature_high) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-            MyApplication.instance().sendWarmMessage(3);
+            MyApplication.instance().sendWarmMessage(3,getResources().getString(R.string.temperature_high));
 
         }
         if (uploadWorkingInfo.getTemperatureLow() == 1) {//水温低
             current_dialog = current_dialog + getResources().getString(R.string.temperature_low) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-            MyApplication.instance().sendWarmMessage(4);
+            MyApplication.instance().sendWarmMessage(4,getResources().getString(R.string.temperature_low));
 
         }
         if (uploadWorkingInfo.getFlowVelocityLow() == 1) {//水流低
             current_dialog = current_dialog + getResources().getString(R.string.water_low) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-            MyApplication.instance().sendWarmMessage(5);
+            MyApplication.instance().sendWarmMessage(5,getResources().getString(R.string.water_low));
 
         }
         if (uploadWorkingInfo.getNoFlowVelocity() == 1) {//无水流
             current_dialog = current_dialog + getResources().getString(R.string.water_no) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-            MyApplication.instance().sendWarmMessage(6);
+            MyApplication.instance().sendWarmMessage(6,getResources().getString(R.string.water_no));
 
         }
         if (current_dialog_flag) {

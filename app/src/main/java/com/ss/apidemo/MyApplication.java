@@ -20,6 +20,8 @@ import com.ss.apidemo.bean.QueueMessage;
 import com.ss.apidemo.bean.SendMessage;
 import com.ss.apidemo.bean.SendTimeBean;
 import com.ss.apidemo.bean.StopWorkBean;
+import com.ss.apidemo.db.bean.User;
+import com.ss.apidemo.db.bean.UserValue;
 import com.ss.apidemo.dialog.HintDialog;
 import com.ss.apidemo.socket.EMConnectionManager;
 import com.ss.apidemo.ui.SplashActivity;
@@ -89,6 +91,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
             if (!iswifi) return;
             boolean wifi = NetworkUtil.isWifi();
             if (wifi) {
+                Log.d("xuan", "应答次数"+response_count);
                 if (response_count == 0){
                     disconnectionCount();
                 }else {
@@ -224,24 +227,80 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
         }
 
     }
-
     /*
-     * 发送告警信息Socket
+     * 发送用户Socket
      * */
-    public void sendWarmMessage(int warmType) {
+    public void sendUserMessage(User user) {
         boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
         if (!iswifi) return;
         boolean wifi = NetworkUtil.isWifi();
         if (wifi) {
             if (mConnection != null) {
                 Frame frame = new Frame();
-                frame.setType(4);//告警上报
+                frame.setType(4);//上报用户
                 String deviceId = DeviceInfoUtil.getMac();
                 frame.setTerminalCode(deviceId);
-                frame.setWarmType(warmType);
+                JSONObject userObject = (JSONObject) JSONObject.toJSON(user);
+                String userString = userObject.toJSONString();
+                frame.setData(userString);
                 JSONObject jsonObject = (JSONObject) JSONObject.toJSON(frame);
                 String jsonString = jsonObject.toJSONString();
                 startSendQueue(jsonString);
+                Log.e("上报用户信息", "上报用户信息" + jsonString);
+//                mConnection.sendMessage(jsonString);
+            }
+        } else {
+            showTips(getResources().getString(R.string.no_network));
+            startSplashActivity();
+        }
+    }
+    /*
+     * 发送用户治疗信息Socket
+     * */
+    public void sendUserValueMessage(UserValue value) {
+        boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
+        if (!iswifi) return;
+        boolean wifi = NetworkUtil.isWifi();
+        if (wifi) {
+            if (mConnection != null) {
+                Frame frame = new Frame();
+                frame.setType(5);//上报用户治疗信息
+                String deviceId = DeviceInfoUtil.getMac();
+                frame.setTerminalCode(deviceId);
+                JSONObject userValueObject = (JSONObject) JSONObject.toJSON(value);
+                String userValueString = userValueObject.toJSONString();
+                frame.setData(userValueString);
+                JSONObject jsonObject = (JSONObject) JSONObject.toJSON(frame);
+                String jsonString = jsonObject.toJSONString();
+                startSendQueue(jsonString);
+                Log.e("上报用户治疗信息", "上报用户治疗信息" + jsonString);
+//                mConnection.sendMessage(jsonString);
+            }
+        } else {
+            showTips(getResources().getString(R.string.no_network));
+            startSplashActivity();
+        }
+    }
+
+    /*
+     * 发送告警信息Socket
+     * */
+    public void sendWarmMessage(int warmType,String warmMsg) {
+        boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
+        if (!iswifi) return;
+        boolean wifi = NetworkUtil.isWifi();
+        if (wifi) {
+            if (mConnection != null) {
+                Frame frame = new Frame();
+                frame.setType(6);//上报设备告警
+                String deviceId = DeviceInfoUtil.getMac();
+                frame.setTerminalCode(deviceId);
+                frame.setWarmType(warmType);
+                frame.setWarmMsg(warmMsg);
+                JSONObject jsonObject = (JSONObject) JSONObject.toJSON(frame);
+                String jsonString = jsonObject.toJSONString();
+                startSendQueue(jsonString);
+                Log.e("上报设备告警", "上报设备告警" + jsonString);
 //                mConnection.sendMessage(jsonString);
             }
         } else {
@@ -487,6 +546,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
 //                    handler.postDelayed(sendSocket, 3000);//延迟调用 3秒后开始执行
                     break;
                 case 2:
+                    response_count ++;
                     //数据处理 自己业务逻辑
                     bytes = (byte[]) msg.obj;
                     String str = new String(bytes);

@@ -289,7 +289,7 @@ public class UserMessageAdapter extends RecyclerView.Adapter<UserMessageAdapter.
     * */
     public String SetModeTwoBodyType(String bodyType){
         //1：面部；2：四肢；3：腋下；4：腹部；
-        // 5：背部；6：隐私；
+        // 5：背部；6：比基尼；
         String bodyTypeString = "";
         switch (bodyType){
             case "1":
@@ -308,7 +308,7 @@ public class UserMessageAdapter extends RecyclerView.Adapter<UserMessageAdapter.
                 bodyTypeString = "back";
                 break;
             case "6":
-                bodyTypeString = "privacy";
+                bodyTypeString = "Bikini";
                 break;
         }
 

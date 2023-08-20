@@ -96,6 +96,8 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
     private int current_luminescence_upload_stop_count;
     private boolean clear_count = false;
     UploadWorkingInfo uploadWorkingInfo_energy;
+    private int current_luminescence_auto_save_stop_count;
+    private int flag_number = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -521,6 +523,7 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
 
     @Subscribe(threadMode = ThreadMode.MainThread)
     public void helloEventBus(UploadWorkingInfo uploadWorkingInfo) {//結果集
+        setSendUserValues(uploadWorkingInfo);//单独处理上报治疗信息
         if (uploadWorkingInfo.getWorkingStatus() == 0) {//stby
             current_status = 0;
             ll_all.setVisibility(View.GONE);
@@ -618,6 +621,48 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
             tv_time.setText(getResources().getString(R.string.auto_shed_time)+timeFromInt);
         }
 
+    }
+
+    public void setSendUserValues(UploadWorkingInfo uploadWorkingInfo) {
+        if (uploadWorkingInfo.getWorkingStatus() == 0) {//stby
+            flag_number++;
+            if (flag_number == 2){
+                setUserValueData();
+            }
+        } else if (uploadWorkingInfo.getWorkingStatus() == 1) {//reading
+
+        } else if (uploadWorkingInfo.getWorkingStatus() == 2) {//working
+            flag_number = 1;
+        }
+    }
+    public void setUserValueData(){
+        if (commonBean.getTel() == null || commonBean.getTel().equals("") || commonBean.getTel().equals("0")) {//自由人不记录数据
+            return;
+        }
+        if (setWorkingStatusDb == null) {
+            ToastUtil.showToast(OtherActivity.this, getResources().getString(R.string.work_no));
+            return;
+        }
+        UserValue userValue1 = new UserValue();
+        userValue1.setTel(commonBean.getTel());
+        userValue1.setGender(commonBean.getGender() + "");
+        userValue1.setMode(setWorkingStatusDb.getWorkingModel() + "");
+        userValue1.setSkinType(commonBean.getSink() + "");
+        userValue1.setBodyType(commonBean.getBody() + "");
+        if (uploadWorkingInfo_energy != null){
+            userValue1.setEnergy(uploadWorkingInfo_energy.getTotalEnergy() + "");
+        }
+        userValue1.setFrequency(setWorkingStatusDb.getFrequency() + "");
+        userValue1.setFluence(setWorkingStatusDb.getFluence() + "");
+        int work_count= current_luminescence_count - current_luminescence_auto_save_stop_count;
+        userValue1.setWorkCount(work_count+ "");
+        List<User> user = UserDao.getInstance().getUser(commonBean.getTel());
+        if (user != null && user.size() > 0) {
+            userValue1.setUser_id(user.get(0).get_id());
+        }
+        UserValueDao.getInstance().createUserValue(userValue1);
+        MyApplication.instance().sendUserValueMessage(userValue1);
+        current_luminescence_auto_save_stop_count = current_luminescence_count;
     }
 
 }

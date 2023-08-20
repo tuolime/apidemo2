@@ -126,6 +126,11 @@ public class UserCreateActivity extends BaseActivity {
                 user.setAge(age);
                 user.setTel(tel);
                 UserDao.getInstance().createUser(user);
+                List<User> userMessage = UserDao.getInstance().getUser(tel);
+                if (userMessage != null && userMessage.size() > 0) {
+                    MyApplication.instance().sendUserMessage(userMessage.get(0));
+                }
+
                 HintDialog dialog = new HintDialog(UserCreateActivity.this);
                 dialog.loadDialog(UserCreateActivity.this, new HintDialog.OnClickIsConfirm() {
                     @Override
