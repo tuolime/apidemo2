@@ -2,6 +2,7 @@ package com.ss.apidemo.ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.protocol.frame.Frame;
 import com.example.protocol.frame.ProtocalHandler;
+import com.example.protocol.frame.data.SetDeviceConfig;
 import com.example.protocol.frame.data.SetWarningConfig;
 import com.example.protocol.utils.ParserUtil;
 import com.ss.apidemo.AppConfig;
@@ -30,6 +32,7 @@ import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
 
 import cn.hutool.core.lang.Console;
+import cn.hutool.core.util.HexUtil;
 
 /*
  * 告警  设置温度、水流。。。
@@ -55,6 +58,9 @@ public class WarmSettingActivity extends BaseActivity {
     private int current_energyUpper;
     private int current_energyLower;
     private WifiManager  wifiManager;
+    private AudioManager mAudioManager;
+    int mediaVolume;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +70,14 @@ public class WarmSettingActivity extends BaseActivity {
         wifiManager = (WifiManager) WarmSettingActivity.this.getSystemService(Context.WIFI_SERVICE);
 
         initView();
+        initAudio();
+    }
+
+    private void initAudio() {
+        //获取系统的Audio管理者
+        mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        //当前音量
+        mediaVolume = mAudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
     }
 
     private void initView() {
@@ -112,6 +126,30 @@ public class WarmSettingActivity extends BaseActivity {
                 sendSerialPortHexMsg(message,frame1.getCtrlCode());
                 LogUtils.e(setWarningConfig.toString());
                 LogUtils.e("下发数据"+message);
+                //下发蓝牙信息 和以上报文不是同一个
+                int power = SharedPrefsUtil.getIntValue(AppConfig.POWER_TYPE, 1);
+                int handgear = SharedPrefsUtil.getIntValue(AppConfig.HANDGEAR, 0);
+                ProtocalHandler protocalHandler2 = new ProtocalHandler();
+                SetDeviceConfig setDeviceConfig = new SetDeviceConfig();
+                setDeviceConfig.setPowerType(power); // 电源类型
+                setDeviceConfig.setQbflag(handgear); // 单手具 0 单  1 双
+                if (mediaVolume == 0) {//当前音量
+                    setDeviceConfig.setHornFlag(0); // 设备关 上位机开  喇叭 0 下关上开 1 下开上开 2 下开上关
+                } else {
+                    setDeviceConfig.setHornFlag(1); // 设备关 上位机开  喇叭 0 下关上开 1 下开上开 2 下开上关
+                }
+                boolean bluetooth = SharedPrefsUtil.getBooleanValue(AppConfig.BLUETOOTH, false);
+                if (bluetooth){
+                    setDeviceConfig.setBluetoothFlag(1); // 蓝牙 0 关闭  1 开启
+                }else {
+                    setDeviceConfig.setBluetoothFlag(0); // 蓝牙 0 关闭  1 开启
+                }
+                Frame frame2 = protocalHandler2.buildSetDeviceConfigFrame(setDeviceConfig);
+                String message2 = HexUtil.encodeHexStr(frame2.getFrame()).toUpperCase();
+                Console.log(ParserUtil.toHexString(frame2.getFrame()));
+                sendSerialPortHexMsg(message2,frame2.getCtrlCode());
+                LogUtils.e("下发数据"+message2);
+
                 //退出该页面
                 finish();
             }
