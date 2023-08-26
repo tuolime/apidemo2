@@ -357,6 +357,11 @@ public class WorkSelectFiveActivity extends BaseActivity {
                 }
             }
         });
+
+        int fan_level = SharedPrefsUtil.getIntValue(AppConfig.FAN_LEVEL, 4);//制冷等级默认为4
+        fan_flag = fan_level;
+        setSelectFan(fan_flag);
+
     }
 
     @Override
@@ -959,6 +964,7 @@ public class WorkSelectFiveActivity extends BaseActivity {
     public void setSelectFan(int fan_flag){
         PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
         if (fan_flag == 1) {
+            setSendFan(fan_flag);
             fan_1.setBackground(getResources().getDrawable(R.drawable.work_five_fan_1_select_corners));
             fan_2.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_unselect_corners));
             fan_3.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_unselect_corners));
@@ -966,6 +972,7 @@ public class WorkSelectFiveActivity extends BaseActivity {
             fan_5.setBackground(getResources().getDrawable(R.drawable.work_five_fan_3_unselect_corners));
         }
         if (fan_flag == 2) {
+            setSendFan(fan_flag);
             fan_1.setBackground(getResources().getDrawable(R.drawable.work_five_fan_1_select_corners));
             fan_2.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
             fan_3.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_unselect_corners));
@@ -973,6 +980,7 @@ public class WorkSelectFiveActivity extends BaseActivity {
             fan_5.setBackground(getResources().getDrawable(R.drawable.work_five_fan_3_unselect_corners));
         }
         if (fan_flag == 3) {
+            setSendFan(fan_flag);
             fan_1.setBackground(getResources().getDrawable(R.drawable.work_five_fan_1_select_corners));
             fan_2.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
             fan_3.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
@@ -980,6 +988,7 @@ public class WorkSelectFiveActivity extends BaseActivity {
             fan_5.setBackground(getResources().getDrawable(R.drawable.work_five_fan_3_unselect_corners));
         }
         if (fan_flag == 4) {
+            setSendFan(fan_flag);
             fan_1.setBackground(getResources().getDrawable(R.drawable.work_five_fan_1_select_corners));
             fan_2.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
             fan_3.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
@@ -987,12 +996,18 @@ public class WorkSelectFiveActivity extends BaseActivity {
             fan_5.setBackground(getResources().getDrawable(R.drawable.work_five_fan_3_unselect_corners));
         }
         if (fan_flag == 5) {
+            setSendFan(fan_flag);
             fan_1.setBackground(getResources().getDrawable(R.drawable.work_five_fan_1_select_corners));
             fan_2.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
             fan_3.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
             fan_4.setBackground(getResources().getDrawable(R.drawable.work_five_fan_2_select_corners));
             fan_5.setBackground(getResources().getDrawable(R.drawable.work_five_fan_3_select_corners));
         }
+    }
+
+    public void setSendFan(int fan_level){
+        sendFan(fan_flag);
+        SharedPrefsUtil.putIntValue(AppConfig.FAN_LEVEL,fan_level);
     }
 
     public void sendFluence(){

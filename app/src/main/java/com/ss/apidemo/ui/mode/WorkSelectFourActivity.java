@@ -312,6 +312,13 @@ public class WorkSelectFourActivity extends BaseActivity {
                 }
             }
         });
+
+        int fan_level = SharedPrefsUtil.getIntValue(AppConfig.FAN_LEVEL, 4);//制冷等级默认为4
+        View view = new View(this);
+        fan_flag = fan_level-1;
+        view.setId(R.id.iv_fan);
+        selectClick(view);
+
     }
 
     @Override
@@ -933,24 +940,29 @@ public class WorkSelectFourActivity extends BaseActivity {
             case R.id.iv_fan:
                 fan_flag++;
                 if (fan_flag == 1) {
+                    setSendFan(fan_flag);
                     fan_1.setBackground(getResources().getDrawable(R.mipmap.ic_work_four_fan_1_select));
                 }
                 if (fan_flag == 2) {
+                    setSendFan(fan_flag);
                     fan_1.setBackground(getResources().getDrawable(R.mipmap.ic_work_four_fan_1_select));
                     fan_2.setBackground(getResources().getDrawable(R.mipmap.ic_work_four_fan_2_select));
                 }
                 if (fan_flag == 3) {
+                    setSendFan(fan_flag);
                     fan_1.setBackground(getResources().getDrawable(R.mipmap.ic_work_four_fan_1_select));
                     fan_2.setBackground(getResources().getDrawable(R.mipmap.ic_work_four_fan_2_select));
                     fan_3.setBackground(getResources().getDrawable(R.mipmap.ic_work_four_fan_3_select));
                 }
                 if (fan_flag == 4) {
+                    setSendFan(fan_flag);
                     fan_1.setBackground(getResources().getDrawable(R.mipmap.ic_work_four_fan_1_select));
                     fan_2.setBackground(getResources().getDrawable(R.mipmap.ic_work_four_fan_2_select));
                     fan_3.setBackground(getResources().getDrawable(R.mipmap.ic_work_four_fan_3_select));
                     fan_4.setBackground(getResources().getDrawable(R.mipmap.ic_work_four_fan_4_select));
                 }
                 if (fan_flag == 5) {
+                    setSendFan(fan_flag);
                     fan_flag = 0;
                     fan_1.setBackground(getResources().getDrawable(R.mipmap.ic_work_four_fan_1_select));
                     fan_2.setBackground(getResources().getDrawable(R.mipmap.ic_work_four_fan_2_select));
@@ -960,6 +972,11 @@ public class WorkSelectFourActivity extends BaseActivity {
                 }
                 break;
         }
+    }
+
+    public void setSendFan(int fan_level){
+        sendFan(fan_flag);
+        SharedPrefsUtil.putIntValue(AppConfig.FAN_LEVEL,fan_level);
     }
 
     private void resetMenuState() {

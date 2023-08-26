@@ -295,6 +295,22 @@ public abstract class BaseActivity extends AppCompatActivity {
         sendSerialPortHexMsg(message, frame.getCtrlCode());
         LogUtils.e("下发数据" + message);
     }
+    /*
+    * 下发制冷
+    * */
+    public void sendFan(int fanLevel) {
+        SetWorkingStatus setWorkingStatus = new SetWorkingStatus();
+        setWorkingStatus.setTotalEnergy(0);
+        setWorkingStatus.setWorkingStatus(0);
+        setWorkingStatus.setCoolLevel(fanLevel);
+        LogUtils.e(setWorkingStatus.toString());
+        ProtocalHandler protocalHandler = new ProtocalHandler();
+        Frame frame = protocalHandler.buildSetWorkingStatusFrame(setWorkingStatus);
+        Console.log(ParserUtil.toHexString(frame.getFrame()));
+        String message = ParserUtil.toHexString(frame.getFrame());
+        sendSerialPortHexMsg(message, frame.getCtrlCode());
+        LogUtils.e("下发数据_制冷" + message);
+    }
     //-------------------------收到下位机报文后 应答一下--------------------------
 
     public void responseMessage() {
