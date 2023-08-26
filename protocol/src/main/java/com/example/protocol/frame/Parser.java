@@ -72,13 +72,14 @@ public class Parser {
             int workingStatsAndWarning =  ParserUtil.toBcdHexString(itemsValue, 16, 2);
             uploadWorkingInfo.setWorkingStatus(workingStatsAndWarning & 0xff);
 
-            String warnningFlag = ByteUtil.toBinaryString(((workingStatsAndWarning >> 8) & 0xff), 6);
-            uploadWorkingInfo.setShortCircuited(Integer.parseInt(warnningFlag.substring(5, 6)));
-            uploadWorkingInfo.setQbConnFail(Integer.parseInt(warnningFlag.substring(4, 5)));
-            uploadWorkingInfo.setTemperatureHi(Integer.parseInt(warnningFlag.substring(3, 4)));
-            uploadWorkingInfo.setTemperatureLow(Integer.parseInt(warnningFlag.substring(2, 3)));
-            uploadWorkingInfo.setFlowVelocityLow(Integer.parseInt(warnningFlag.substring(1, 2)));
-            uploadWorkingInfo.setNoFlowVelocity(Integer.parseInt(warnningFlag.substring(0, 1)));
+            String warnningFlag = ByteUtil.toBinaryString(((workingStatsAndWarning >> 8) & 0xff), 7);
+            uploadWorkingInfo.setShortCircuited(Integer.parseInt(warnningFlag.substring(6, 7)));
+            uploadWorkingInfo.setQbConnFail(Integer.parseInt(warnningFlag.substring(5, 6)));
+            uploadWorkingInfo.setTemperatureHi(Integer.parseInt(warnningFlag.substring(4, 5)));
+            uploadWorkingInfo.setTemperatureLow(Integer.parseInt(warnningFlag.substring(3, 4)));
+            uploadWorkingInfo.setFlowVelocityLow(Integer.parseInt(warnningFlag.substring(2, 3)));
+            uploadWorkingInfo.setNoFlowVelocity(Integer.parseInt(warnningFlag.substring(1, 2)));
+            uploadWorkingInfo.setCheckFilter(Integer.parseInt(warnningFlag.substring(0, 1)));
 
             frame.setDataValue(uploadWorkingInfo);
             Console.log(uploadWorkingInfo);

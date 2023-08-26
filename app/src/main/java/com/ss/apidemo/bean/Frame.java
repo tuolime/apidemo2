@@ -65,19 +65,9 @@ public class Frame implements Serializable {
      */
     private Integer reportUseNum = 0;
     /**
-     * 告警类型 //warmType 1.短板短路  2.手具连接失败  3.水温高  4.水温低  5.水温低  6.无水流
-     */
-    private Integer warmType = 0;
-    /**
-     * 告警消息
-     */
-    private String warmMsg;
-    /**
      * 用户信息、用户自疗信息
      */
     private String data;
-
-
 
     public int getType() {
         return type;
@@ -167,21 +157,6 @@ public class Frame implements Serializable {
         this.totalUseDays = totalUseDays;
     }
 
-    public void setWarmType(Integer warmType) {
-        this.warmType = warmType;
-    }
-
-    public Integer getWarmType() {
-        return warmType;
-    }
-
-    public String getWarmMsg() {
-        return warmMsg;
-    }
-
-    public void setWarmMsg(String warmMsg) {
-        this.warmMsg = warmMsg;
-    }
 
     public String getData() {
         return data;

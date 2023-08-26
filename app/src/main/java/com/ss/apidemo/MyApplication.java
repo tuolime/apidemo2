@@ -20,6 +20,7 @@ import com.ss.apidemo.bean.QueueMessage;
 import com.ss.apidemo.bean.SendMessage;
 import com.ss.apidemo.bean.SendTimeBean;
 import com.ss.apidemo.bean.StopWorkBean;
+import com.ss.apidemo.bean.WarmBean;
 import com.ss.apidemo.db.bean.User;
 import com.ss.apidemo.db.bean.UserValue;
 import com.ss.apidemo.dialog.HintDialog;
@@ -151,7 +152,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
         mConnection.setMainHandler(myhandler);
         if (!isScheduledTasks) {
             handler.postDelayed(sendSocket, 3000);//延迟调用 3秒后开始执行
-            handler.postDelayed(mDisconnectSocketTips, 3 * 10000);//延迟30秒调用
+//            handler.postDelayed(mDisconnectSocketTips, 3 * 10000);//延迟30秒调用
 
         }
 
@@ -295,8 +296,12 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 frame.setType(6);//上报设备告警
                 String deviceId = DeviceInfoUtil.getMac();
                 frame.setTerminalCode(deviceId);
-                frame.setWarmType(warmType);
-                frame.setWarmMsg(warmMsg);
+                WarmBean warmBean = new WarmBean();
+                warmBean.setWarmType(warmType);
+                warmBean.setWarmMsg(warmMsg);
+                JSONObject warmObject = (JSONObject) JSONObject.toJSON(warmBean);
+                String warmString = warmObject.toJSONString();
+                frame.setData(warmString);
                 JSONObject jsonObject = (JSONObject) JSONObject.toJSON(frame);
                 String jsonString = jsonObject.toJSONString();
                 startSendQueue(jsonString);

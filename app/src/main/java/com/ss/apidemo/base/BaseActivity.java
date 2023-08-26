@@ -64,6 +64,14 @@ public abstract class BaseActivity extends AppCompatActivity {
     public String current_dialog = "";
     public Boolean current_dialog_flag;
     public int current_dialog_count = 0;
+
+    public int current_warm_1_count = 0;//告警满十次 上报服务端一次
+    public int current_warm_2_count = 0;//告警满十次 上报服务端一次
+    public int current_warm_3_count = 0;//告警满十次 上报服务端一次
+    public int current_warm_4_count = 0;//告警满十次 上报服务端一次
+    public int current_warm_5_count = 0;//告警满十次 上报服务端一次
+    public int current_warm_6_count = 0;//告警满十次 上报服务端一次
+    public int current_warm_7_count = 0;//告警满十次 上报服务端一次
     //是否提示下发报文设置成功
     public Boolean isTips = false;
     Handler mHandlerWarm = new Handler() {
@@ -241,7 +249,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             if (AppConfig.current_count == 0) {
                 AppConfig.current_count = uploadWorkingInfo.getToalCount();
             }
-//            SetWarm(uploadWorkingInfo);
+            SetWarm(uploadWorkingInfo);
         }
         AppConfig.isDisconnect ++;//记录下位机响应
 
@@ -362,42 +370,74 @@ public abstract class BaseActivity extends AppCompatActivity {
             current_dialog = getResources().getString(R.string.short_board) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-            MyApplication.instance().sendWarmMessage(1,getResources().getString(R.string.short_board));
+            current_warm_1_count++;
+            if (current_warm_1_count == 10){
+                MyApplication.instance().sendWarmMessage(1,getResources().getString(R.string.short_board));
+                current_warm_1_count = 0;
+            }
         }
         if (uploadWorkingInfo.getQbConnFail() == 1) {//手具连接失败
             current_dialog = current_dialog + getResources().getString(R.string.hand_error) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-            MyApplication.instance().sendWarmMessage(2,getResources().getString(R.string.hand_error));
+            current_warm_2_count++;
+            if (current_warm_2_count == 10){
+                MyApplication.instance().sendWarmMessage(2,getResources().getString(R.string.hand_error));
+                current_warm_2_count = 0;
+            }
         }
         if (uploadWorkingInfo.getTemperatureHi() == 1) {//水温高
             current_dialog = current_dialog + getResources().getString(R.string.temperature_high) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-            MyApplication.instance().sendWarmMessage(3,getResources().getString(R.string.temperature_high));
-
+            current_warm_3_count++;
+            if (current_warm_3_count == 10){
+                MyApplication.instance().sendWarmMessage(3,getResources().getString(R.string.temperature_high));
+                current_warm_3_count = 0;
+            }
         }
         if (uploadWorkingInfo.getTemperatureLow() == 1) {//水温低
             current_dialog = current_dialog + getResources().getString(R.string.temperature_low) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-            MyApplication.instance().sendWarmMessage(4,getResources().getString(R.string.temperature_low));
-
+            current_warm_4_count++;
+            if (current_warm_4_count == 10){
+                MyApplication.instance().sendWarmMessage(4,getResources().getString(R.string.temperature_low));
+                current_warm_4_count = 0;
+            }
         }
         if (uploadWorkingInfo.getFlowVelocityLow() == 1) {//水流低
             current_dialog = current_dialog + getResources().getString(R.string.water_low) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-            MyApplication.instance().sendWarmMessage(5,getResources().getString(R.string.water_low));
-
+            current_warm_5_count++;
+            if (current_warm_5_count == 10){
+                MyApplication.instance().sendWarmMessage(5,getResources().getString(R.string.water_low));
+                current_warm_5_count = 0;
+            }
         }
         if (uploadWorkingInfo.getNoFlowVelocity() == 1) {//无水流
             current_dialog = current_dialog + getResources().getString(R.string.water_no) + "\n";
             current_dialog_flag = true;
             PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-            MyApplication.instance().sendWarmMessage(6,getResources().getString(R.string.water_no));
-
+            current_warm_6_count++;
+            if (current_warm_6_count == 10){
+                MyApplication.instance().sendWarmMessage(6,getResources().getString(R.string.water_no));
+                current_warm_6_count = 0;
+            }
         }
+
+        if (uploadWorkingInfo.getCheckFilter() == 1) {//更换过滤器装置
+            current_dialog = current_dialog + getResources().getString(R.string.replace_filter) + "\n";
+            current_dialog_flag = true;
+            PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
+            current_warm_7_count++;
+            if (current_warm_7_count == 10){
+                MyApplication.instance().sendWarmMessage(7,getResources().getString(R.string.replace_filter));
+                current_warm_7_count = 0;
+            }
+        }
+
         if (current_dialog_flag) {
             current_dialog_count++;
             if (current_dialog_count == 1) {

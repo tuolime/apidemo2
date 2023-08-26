@@ -81,6 +81,11 @@ public class UploadWorkingInfo implements Serializable {
      */
     private int noFlowVelocity;
 
+    /**
+     * 更换过滤器装置
+     */
+    private int checkFilter;
+
     public int getWorkingModel() {
         return workingModel;
     }
@@ -201,6 +206,14 @@ public class UploadWorkingInfo implements Serializable {
         this.noFlowVelocity = noFlowVelocity;
     }
 
+    public int getCheckFilter() {
+        return checkFilter;
+    }
+
+    public void setCheckFilter(int checkFilter) {
+        this.checkFilter = checkFilter;
+    }
+
     @Override
     public String toString() {
         return "UploadWorkingInfo{" +
@@ -219,6 +232,7 @@ public class UploadWorkingInfo implements Serializable {
                 ", temperatureLow=" + temperatureLow +
                 ", flowVelocityLow=" + flowVelocityLow +
                 ", noFlowVelocity=" + noFlowVelocity +
+                ", checkFilter=" + checkFilter +
                 '}';
     }
 }
