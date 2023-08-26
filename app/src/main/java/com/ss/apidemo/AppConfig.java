@@ -6,9 +6,14 @@ public class AppConfig {
     public static final String USERSETTINGPS = "592072";//用户设置密码
     public static final String USERSTARTPS = "256011";//用户开启导航栏密码
     // TODO Socket 正式地址
-    public static String SOCKET_HOST = "www.beatycp.com";
+//    public static String SOCKET_HOST = "www.beatycp.com";
     // TODO Socket 正式端口
-    public static final int SOCKET_PORT = 8888;
+//    public static final int SOCKET_PORT = 8888;
+
+    // TODO Socket 测试地址
+    public static String SOCKET_HOST = "8.131.82.126";
+    // TODO Socket 测试端口
+    public static final int SOCKET_PORT = 8889;
 
     /**
      * 锁定状态，0否1是 2 默认（没有获取到实际状态信息）
