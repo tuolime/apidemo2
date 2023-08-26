@@ -60,6 +60,12 @@ public class ModeSelectFourActivity extends BaseActivity {
 //        tv_content1.setTextColor(getResources().getColor(R.color.handgear_select));
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        resetMenuState();
+    }
+
     public void tabClick(View view) {
         PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
         resetMenuState();
