@@ -136,6 +136,7 @@ public class HandgearActivity extends BaseActivity {
             }
 
             if (intent != null){
+                intent.putExtra("gender", gender);//自由人默认为男性
                 intent.putExtra("tel", tel);
                 startActivity(intent);
             }

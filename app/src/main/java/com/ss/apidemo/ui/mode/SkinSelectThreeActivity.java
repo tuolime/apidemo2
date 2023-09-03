@@ -25,7 +25,7 @@ public class SkinSelectThreeActivity extends BaseActivity {
     private int skin_type = 0;
     private int body_type = 0;
     public String tel;//传递过来的用户手机号
-
+    private String gender;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,7 @@ public class SkinSelectThreeActivity extends BaseActivity {
         Intent intent = getIntent();
         if (intent != null) {
             tel = intent.getStringExtra("tel");
+            gender = intent.getStringExtra("gender");
         }
         initView();
     }
@@ -223,6 +224,7 @@ public class SkinSelectThreeActivity extends BaseActivity {
         intent.putExtra("skin_type", skin_type);
         intent.putExtra("body_type", body_type);
         intent.putExtra("tel", tel);
+        intent.putExtra("gender", gender);//自由人默认为男性
         startActivity(intent);
     }
 }

@@ -201,6 +201,7 @@ public class UserCreateActivity extends BaseActivity {
                     }
 
                     if (intent != null){
+                        intent.putExtra("gender", "1");//自由人默认为男性
                         startActivity(intent);
                     }
                 }

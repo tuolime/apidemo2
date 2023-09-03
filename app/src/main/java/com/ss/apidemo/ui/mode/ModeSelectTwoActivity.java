@@ -20,7 +20,7 @@ public class ModeSelectTwoActivity extends BaseActivity {
     private TextView tv_select2;
 
     public String tel;//传递过来的用户手机号
-
+    private String gender;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +28,7 @@ public class ModeSelectTwoActivity extends BaseActivity {
         Intent intent = getIntent();
         if (intent != null) {
             tel = intent.getStringExtra("tel");
+            gender = intent.getStringExtra("gender");
         }
         initView();
 
@@ -98,6 +99,7 @@ public class ModeSelectTwoActivity extends BaseActivity {
         }else if (flag == 2){//smart
             intent = new Intent(ModeSelectTwoActivity.this, SkinSelectTwoActivity.class);
             intent.putExtra("tel", tel);
+            intent.putExtra("gender", gender);//自由人默认为男性
         }
         if (intent != null){
             startActivity(intent);

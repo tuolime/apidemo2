@@ -18,8 +18,9 @@ import com.ss.apidemo.utils.PlayVoiceUtils;
 public class ModeSelectSixActivity extends BaseActivity {
     private TextView tv_select1;
     private TextView tv_select2;
-    public String tel;//传递过来的用户手机号
 
+    public String tel;//传递过来的用户手机号
+    private String gender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class ModeSelectSixActivity extends BaseActivity {
         Intent intent = getIntent();
         if (intent != null) {
             tel = intent.getStringExtra("tel");
+            gender = intent.getStringExtra("gender");
         }
         initView();
 
@@ -92,6 +94,7 @@ public class ModeSelectSixActivity extends BaseActivity {
         }else if (flag == 2){//smart
             intent = new Intent(ModeSelectSixActivity.this, SkinSelectSixActivity.class);
             intent.putExtra("tel", tel);
+            intent.putExtra("gender", gender);//自由人默认为男性
         }
         if (intent != null){
             startActivity(intent);

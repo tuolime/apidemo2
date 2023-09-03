@@ -116,7 +116,7 @@ public class WorkSelectThreeActivity extends BaseActivity {
     UploadWorkingInfo uploadWorkingInfo_energy;
     private int current_luminescence_auto_save_stop_count;
     private int flag_number = 3;
-
+    private String gender;
 
     Handler handler = new Handler(){
         @Override
@@ -193,7 +193,7 @@ public class WorkSelectThreeActivity extends BaseActivity {
                 skin_type = intent.getIntExtra("skin_type", 0);
                 body_type = intent.getIntExtra("body_type", 0);
                 tel = intent.getStringExtra("tel");
-
+                gender = intent.getStringExtra("gender");
 
             }
         }
@@ -357,7 +357,7 @@ public class WorkSelectThreeActivity extends BaseActivity {
                 }
                 UserValue userValue1 = new UserValue();
                 userValue1.setTel(tel);
-                userValue1.setGender(handgearType + "");
+                userValue1.setGender(gender);
                 userValue1.setMode(setWorkingStatusDb.getWorkingModel() + "");
                 userValue1.setSkinType(skin_type + "");
                 userValue1.setBodyType(body_type + "");

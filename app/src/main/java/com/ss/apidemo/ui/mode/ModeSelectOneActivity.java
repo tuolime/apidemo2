@@ -32,7 +32,7 @@ public class ModeSelectOneActivity extends BaseActivity {
     private ImageView iv_smart_select;
 
     public String tel;//传递过来的用户手机号
-
+    private String gender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,7 @@ public class ModeSelectOneActivity extends BaseActivity {
         Intent intent = getIntent();
         if (intent != null) {
             tel = intent.getStringExtra("tel");
+            gender = intent.getStringExtra("gender");
         }
         initView();
 
@@ -117,6 +118,7 @@ public class ModeSelectOneActivity extends BaseActivity {
         }else if (flag == 2){//smart
             intent = new Intent(ModeSelectOneActivity.this, SkinSelectOneActivity.class);
             intent.putExtra("tel", tel);
+            intent.putExtra("gender", gender);//自由人默认为男性
         }
         if (intent != null){
             startActivity(intent);

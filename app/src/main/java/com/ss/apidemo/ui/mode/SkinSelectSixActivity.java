@@ -23,6 +23,7 @@ public class SkinSelectSixActivity extends BaseActivity {
     private int skin_type = 0;
     private int body_type = 0;
     public String tel;//传递过来的用户手机号
+    private String gender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class SkinSelectSixActivity extends BaseActivity {
         Intent intent = getIntent();
         if (intent != null) {
             tel = intent.getStringExtra("tel");
+            gender = intent.getStringExtra("gender");
         }
         initView();
     }
@@ -205,6 +207,7 @@ public class SkinSelectSixActivity extends BaseActivity {
         intent.putExtra("skin_type", skin_type);
         intent.putExtra("body_type", body_type);
         intent.putExtra("tel", tel);
+        gender = intent.getStringExtra("gender");
         startActivity(intent);
     }
 }
