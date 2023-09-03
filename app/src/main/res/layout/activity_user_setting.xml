@@ -153,6 +153,7 @@
                                 android:background="@color/line" />
 
                             <TextView
+                                android:onClick="languageSelect"
                                 android:id="@+id/tv_en"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
@@ -166,6 +167,7 @@
                                 android:background="@color/line" />
 
                             <TextView
+                                android:onClick="languageSelect"
                                 android:id="@+id/tv_ru"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
@@ -179,7 +181,8 @@
                                 android:background="@color/line" />
 
                             <TextView
-                                android:id="@+id/tb_sp"
+                                android:onClick="languageSelect"
+                                android:id="@+id/tb_es"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
@@ -192,11 +195,194 @@
                                 android:background="@color/line" />
 
                             <TextView
+                                android:onClick="languageSelect"
                                 android:id="@+id/tv_de"
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
                                 android:text="Deutsch"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_cn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="中文"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_vn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="Vietnam"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_it"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="Italy"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_ua"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="Ukraine"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_tr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="Turkey"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_th"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="Thailand"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_jp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="Japan"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_pt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="Portugal"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_ro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="Romania"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_nl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="Netherlands"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_fr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="France"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_pe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="Persia"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_pl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="Poland"
+                                android:textColor="@color/white" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/line" />
+                            <TextView
+                                android:onClick="languageSelect"
+                                android:id="@+id/tv_sa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:gravity="center|left"
+                                android:text="Arabia"
                                 android:textColor="@color/white" />
 
                             <View

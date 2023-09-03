@@ -23,6 +23,9 @@
     <string name="qb_2_16">QB-2-16</string>
     <string name="qb_2_24">QB-2-24</string>
     <string name="qb_4_24">QB-4-24</string>
+    <string name="qb_star_30">QB-*-30</string>
+    <string name="qb_6_200">QB-6-200</string>
+    <string name="qb_6_40">QB-6-40</string>
 
     <string name="right_hand_tool">RIGHT HAND TOOL</string>
     <string name="power_supply_type">POWER SUPPLY TYPE</string>
@@ -121,5 +124,82 @@
 
 
     <string name="frequency_hz">FREQUENCY</string>
+
+    <string name="thematic_style">THEMATIC STYLE</string>
+    <string name="mode_two_bg_1">STYLE   I</string>
+    <string name="mode_two_bg_2">STYLE   II</string>
+    <string name="mode_two_bg_3">STYLE   III</string>
+    <string name="mode_two_bg_4">STYLE   IV</string>
+    <string name="mode_two_bg_5">STYLE   V</string>
+    <string name="mode_two_bg_6">STYLE   VI</string>
+    <string name="user_down">USER BOOK DATA DOWNLOAD</string>
+    <string name="mode_select">OPERATION MODE SELECTION</string>
+    <string name="mode_select_1">I</string>
+    <string name="mode_select_2">II</string>
+    <string name="wlan_select">WLAN</string>
+    <string name="background_select">OPERATION BACKGROUND SELECTION</string>
+    <string name="background_select_1">I</string>
+    <string name="background_select_2">II</string>
+    <string name="background_select_3">III</string>
+    <string name="background_select_4">IV</string>
+    <string name="bluetooth_select">BLUETOOTH</string>
+    <string name="upper_str">UPPER</string>
+    <string name="lower_str">LOWER</string>
+    <string name="enger_str">ENERGY</string>
+    <string name="limit_str">LIMIT</string>
+    <string name="version_code">VERSION</string>
+    <string name="expert_str">EXPERT</string>
+    <string name="smart_str">SMART</string>
+
+    <string name="skin_tyoe">Skin Type</string>
+    <string name="skin_1">I</string>
+    <string name="skin_2">II</string>
+    <string name="skin_3">III</string>
+    <string name="skin_4">IV</string>
+    <string name="skin_5">V</string>
+    <string name="skin_6">VI</string>
+    <string name="skin_location">Location</string>
+
+    <string name="tv_mode_one_ok">Ok</string>
+    <string name="tv_mode_one_cancel">Cancel</string>
+    <string name="tv_work_one_temperature">Temperature</string>
+    <string name="tv_work_one_flow">Flow</string>
+    <string name="tv_work_one_totla">Totla</string>
+    <string name="tv_work_one_current">Current</string>
+    <string name="tv_work_one_id">ID</string>
+    <string name="tv_work_one_exact">EXACT</string>
+    <string name="tv_work_one_raedy">Raedy</string>
+    <string name="tv_work_one_auto">AUTO</string>
+    <string name="tv_work_one_30">30</string>
+    <string name="tv_work_one_100">100</string>
+    <string name="tv_work_one_400">400</string>
+    <string name="tv_work_one_l">L</string>
+    <string name="tv_work_one_f">F</string>
+    <string name="tv_work_one_m">M</string>
+    <string name="tv_work_one_rate">Rate</string>
+    <string name="tv_work_one_hz">Hz</string>
+    <string name="tv_work_one_fluence">Fluence</string>
+    <string name="tv_work_one_j">J</string>
+    <string name="select_skin">Please select a skin part!</string>
+    <string name="tv_work_two_l">Slow</string>
+    <string name="tv_work_two_f">Fast</string>
+    <string name="tv_work_two_m">Med</string>
+
+    <string name="tv_work_three_pulse">Pulse（MS）</string>
+    <string name="tv_work_three_fluence">Fluence（J）</string>
+    <string name="tv_work_three_rate">Rate（Hz）</string>
+    <string name="tv_work_six_rate">Rate</string>
+    <string name="tv_work_six_fluence">Fluence</string>
+
+    <string name="excel_success"> Export successful </string>
+    <string name="excel_fail"> Export failed </string>
+    <string name="excel_no_data"> There is currently no data available </string>
+
+    <string name="wifi_open"> WiFi on </string>
+    <string name="wifi_close"> WiFi Off </string>
+    <string name="wifi_no_close"> WiFi cannot be turned off </string>
+
+    <string name="replace_filter"> Please replace the filter device！</string>
+
 
 </resources>

@@ -115,76 +115,80 @@ public class UserSettingActivity extends BaseActivity implements NumberKeyboardV
                 finish();
             }
         });
+    }
 
-        findViewById(R.id.tv_en).setOnClickListener(new View.OnClickListener() {
+    public void languageSelect(View view){
+        PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+        switch (view.getId()) {
+            case R.id.tv_en://英语
+                selectL("en");
+                break;
+            case R.id.tv_ru://俄罗斯
+                selectL("ru");
+                break;
+            case R.id.tb_es://西班牙
+                selectL("es");
+                break;
+            case R.id.tv_de://德语
+                selectL("de");
+                break;
+            case R.id.tv_cn://中文
+                selectL("cn");
+                break;
+            case R.id.tv_vn://越南
+                selectL("vn");
+                break;
+            case R.id.tv_it://意大利
+                selectL("it");
+                break;
+            case R.id.tv_ua://乌克兰
+                selectL("ua");
+                break;
+            case R.id.tv_tr://土耳其
+                selectL("tr");
+                break;
+            case R.id.tv_th://泰国
+                selectL("th");
+                break;
+            case R.id.tv_jp://日本
+                selectL("jp");
+                break;
+            case R.id.tv_pt://葡萄牙
+                selectL("pt");
+                break;
+            case R.id.tv_ro://罗马尼亚
+                selectL("ro");
+                break;
+            case R.id.tv_nl://荷兰
+                selectL("nl");
+                break;
+            case R.id.tv_fr://法国
+                selectL("fr");
+                break;
+            case R.id.tv_pe://波斯
+                selectL("pe");
+                break;
+            case R.id.tv_pl://波兰
+                selectL("pl");
+                break;
+            case R.id.tv_sa://阿拉伯
+                selectL("sa");
+                break;
+        }
+    }
+
+    public void selectL(String language){
+        CallDialog dialog = new CallDialog(UserSettingActivity.this);
+        dialog.loadDialog(UserSettingActivity.this, new CallDialog.OnClickIsConfirm() {
             @Override
-            public void onClick(View view) {
+            public void OnClickIsConfirmListener() {//确定
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-                CallDialog dialog = new CallDialog(UserSettingActivity.this);
-                dialog.loadDialog(UserSettingActivity.this, new CallDialog.OnClickIsConfirm() {
-                    @Override
-                    public void OnClickIsConfirmListener() {//确定
-                        PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-                        // 切换语言
-                        LocaleHelper.setLocale(UserSettingActivity.this, "en");
-                        startA();
-                    }
-
-                }, getResources().getString(R.string.switching_languages));
+                // 切换语言
+                LocaleHelper.setLocale(UserSettingActivity.this, language);
+                startA();
             }
-        });
-        findViewById(R.id.tv_ru).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-                CallDialog dialog = new CallDialog(UserSettingActivity.this);
-                dialog.loadDialog(UserSettingActivity.this, new CallDialog.OnClickIsConfirm() {
-                    @Override
-                    public void OnClickIsConfirmListener() {//确定
-                        PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-                        // 切换语言 俄语
-                        LocaleHelper.setLocale(UserSettingActivity.this, "ru");
-                        startA();
-                    }
 
-                }, getResources().getString(R.string.switching_languages));
-            }
-        });
-        findViewById(R.id.tb_sp).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-                CallDialog dialog = new CallDialog(UserSettingActivity.this);
-                dialog.loadDialog(UserSettingActivity.this, new CallDialog.OnClickIsConfirm() {
-                    @Override
-                    public void OnClickIsConfirmListener() {//确定
-                        PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-                        // 切换语言 西班牙语
-                        LocaleHelper.setLocale(UserSettingActivity.this, "sp");
-                        startA();
-                    }
-
-                }, getResources().getString(R.string.switching_languages));
-            }
-        });
-        findViewById(R.id.tv_de).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-                CallDialog dialog = new CallDialog(UserSettingActivity.this);
-                dialog.loadDialog(UserSettingActivity.this, new CallDialog.OnClickIsConfirm() {
-                    @Override
-                    public void OnClickIsConfirmListener() {//确定
-                        PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-                        // 切换语言 德语
-                        LocaleHelper.setLocale(UserSettingActivity.this, "de");
-                        startA();
-                    }
-
-                }, getResources().getString(R.string.switching_languages));
-
-            }
-        });
+        }, getResources().getString(R.string.switching_languages));
     }
 
     @Override
