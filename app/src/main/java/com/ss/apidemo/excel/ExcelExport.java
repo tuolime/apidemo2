@@ -66,14 +66,26 @@ public class ExcelExport {
                 UserExcelBean u = new UserExcelBean();
                 u.setGender(allUserValue.get(i).getGender());
                 u.setTel(allUserValue.get(i).getTel());
-                u.setMode(allUserValue.get(i).getMode());
-                u.setSkinType(allUserValue.get(i).getSkinType());
-                u.setBodyType(allUserValue.get(i).getBodyType());
                 u.setEnergy(allUserValue.get(i).getEnergy());
                 u.setFrequency(allUserValue.get(i).getFrequency());
                 u.setWorkCount(allUserValue.get(i).getWorkCount());
                 u.setFluence(allUserValue.get(i).getFluence());
                 u.setDate(allUserValue.get(i).getDate());
+                u.setSkinType(SetSkinType(allUserValue.get(i).getSkinType()));
+                if (allUserValue.get(i).getMode().equals("1") ||allUserValue.get(i).getMode().equals("2") ||
+                        allUserValue.get(i).getMode().equals("3") ||allUserValue.get(i).getMode().equals("4") ||
+                        allUserValue.get(i).getMode().equals("5")||allUserValue.get(i).getMode().equals("6")){
+                    u.setMode(SetModeOne(allUserValue.get(i).getMode()));
+                    u.setBodyType(SetModeOneBodyType(allUserValue.get(i).getGender(),allUserValue.get(i).getBodyType()));
+                }
+                if (allUserValue.get(i).getMode().equals("7") ||allUserValue.get(i).getMode().equals("8") ||
+                        allUserValue.get(i).getMode().equals("9") ||allUserValue.get(i).getMode().equals("10")){
+                    u.setMode(SetModeTwo(allUserValue.get(i).getMode()));
+                    u.setBodyType(SetModeTwoBodyType(allUserValue.get(i).getBodyType()));
+                }
+
+
+
                 if (allUser != null && allUser.size()>0){
                     for (int j = 0; j < allUser.size(); j++) {
                         if (allUserValue.get(i).getTel().equals(allUser.get(j).getTel())){
@@ -140,5 +152,224 @@ public class ExcelExport {
             file.mkdirs();
         }
         return file.getAbsolutePath();
+    }
+
+    public static  String SetModeOne(String mode){
+        //工作模式  1 2 3 4 5 shr 6 hr
+        String modeString = "";
+        switch (mode){
+            case "1":
+            case "2":
+            case "3":
+            case "4":
+                modeString = "SHR STACK";
+                break;
+            case "5":
+                modeString = "SHR";
+                break;
+            case "6":
+                modeString = "HR";
+                break;
+        }
+        return modeString;
+    }
+
+    public static String SetModeTwo(String mode){
+        //工作模式  1 2 3 4 5 shr 6 hr
+        String modeString = "";
+        switch (mode){
+            case "7":
+                modeString = "AUTO";
+                break;
+            case "8":
+                modeString = "30";
+                break;
+            case "9":
+                modeString = "100";
+                break;
+            case "10":
+                modeString = "400";
+                break;
+        }
+        return modeString;
+    }
+
+    public static  String SetSkinType(String skinType){
+        String skinTypeString = "";
+        switch (skinType){
+            case "1":
+                skinTypeString = "I";
+                break;
+            case "2":
+                skinTypeString = "II";
+                break;
+            case "3":
+                skinTypeString = "III";
+                break;
+            case "4":
+                skinTypeString = "IV";
+                break;
+            case "5":
+                skinTypeString = "V";
+                break;
+            case "6":
+                skinTypeString = "VI";
+                break;
+        }
+        return skinTypeString;
+    }
+    /*
+     * 工作模式一
+     * */
+    public static String SetModeOneBodyType(String gender,String bodyType){
+        // 男部位id
+        //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
+        // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
+        // 13：后颈；14：后背；15：臀；16：肩；
+
+        // 部位id
+        // 1：女性额头；2：女性面颊；3：女性嘴唇；4：女性脖子；
+        // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手臂；13：手；
+        // 14：后颈；15：后背；16：臀；17：肩；
+        String bodyTypeString = "";
+        if (gender.equals("1")){//男
+            switch (bodyType){
+                case "1":
+                    bodyTypeString = "forehead";
+                    break;
+                case "2":
+                    bodyTypeString = "cheek";
+                    break;
+                case "3":
+                    bodyTypeString = "lip";
+                    break;
+                case "4":
+                    bodyTypeString = "neck";
+                    break;
+                case "5":
+                    bodyTypeString = "chest";
+                    break;
+                case "6":
+                    bodyTypeString = "abdomen";
+                    break;
+                case "7":
+                    bodyTypeString = "Bikini";
+                    break;
+                case "8":
+                    bodyTypeString = "thigh";
+                    break;
+                case "9":
+                    bodyTypeString = "knee";
+                    break;
+                case "10":
+                    bodyTypeString = "leg";
+                    break;
+                case "11":
+                    bodyTypeString = "armpit";
+                    break;
+                case "12":
+                    bodyTypeString = "hand";
+                    break;
+                case "13":
+                    bodyTypeString = "nape";
+                    break;
+                case "14":
+                    bodyTypeString = "back";
+                    break;
+                case "15":
+                    bodyTypeString = "Buttocks";
+                    break;
+                case "16":
+                    bodyTypeString = "shoulder";
+                    break;
+
+            }
+        }else {//女
+            switch (bodyType){
+                case "1":
+                    bodyTypeString = "forehead";
+                    break;
+                case "2":
+                    bodyTypeString = "cheek";
+                    break;
+                case "3":
+                    bodyTypeString = "lip";
+                    break;
+                case "4":
+                    bodyTypeString = "neck";
+                    break;
+                case "5":
+                    bodyTypeString = "chest";
+                    break;
+                case "6":
+                    bodyTypeString = "abdomen";
+                    break;
+                case "7":
+                    bodyTypeString = "Bikini";
+                    break;
+                case "8":
+                    bodyTypeString = "thigh";
+                    break;
+                case "9":
+                    bodyTypeString = "knee";
+                    break;
+                case "10":
+                    bodyTypeString = "leg";
+                    break;
+                case "11":
+                    bodyTypeString = "armpit";
+                    break;
+                case "12":
+                    bodyTypeString = "arm";
+                case "13":
+                    bodyTypeString = "hand";
+                    break;
+                case "14":
+                    bodyTypeString = "nape";
+                    break;
+                case "15":
+                    bodyTypeString = "back";
+                    break;
+                case "16":
+                    bodyTypeString = "Buttocks";
+                    break;
+                case "17":
+                    bodyTypeString = "shoulder";
+                    break;
+
+            }
+        }
+
+        return bodyTypeString;
+    }
+    /*
+     * 工作模式二
+     * */
+    public static String SetModeTwoBodyType(String bodyType){
+        //1：面部；2：四肢；3：腋下；4：腹部；
+        // 5：背部；6：比基尼；
+        String bodyTypeString = "";
+        switch (bodyType){
+            case "1":
+                bodyTypeString = "face";
+                break;
+            case "2":
+                bodyTypeString = "the four limbs";
+                break;
+            case "3":
+                bodyTypeString = "armpit";
+                break;
+            case "4":
+                bodyTypeString = "abdomen";
+                break;
+            case "5":
+                bodyTypeString = "back";
+                break;
+            case "6":
+                bodyTypeString = "Bikini";
+                break;
+        }
+
+        return bodyTypeString;
     }
 }
