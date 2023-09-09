@@ -442,7 +442,12 @@ public class WorkSelectOneActivity extends BaseActivity {
     private void getData(int type) {
         if (type == AUTOMODE) {
             l_range_auto = 0;
-            m_range_auto = 3;//方便第一次默认为4
+            if (mode_type == 1) {//1 专家  2 智能
+                m_range_auto = 3;//方便第一次默认为4
+
+            } else if (mode_type == 2) {
+                m_range_auto = autoSkinBean.getHzProposal()-1;//方便第一次的默认值
+            }
             f_range_auto = 5;
             tv_fluence.setText(autoSkinBean.getFluenceProposal() + "");
             tv_hz.setText(autoSkinBean.getHzProposal() + "");
