@@ -457,7 +457,7 @@ public class WorkSelectOneActivity extends BaseActivity {
             setBright(current_hz_progress);
         } else if (type == THIRTYMODE) {
             l_range_30 = 0;
-            m_range_30 = 2;//方便第一次默认为4
+            m_range_30 = 3;//方便第一次默认为4
             f_range_30 = 5;
             smartModeBean = smartModeUtils.modeType(type);
             tv_fluence.setText(smartModeBean.getFluenceProposal() + "");
