@@ -837,6 +837,10 @@ public class WorkSelectOneActivity extends BaseActivity {
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
         }
+        if (current_fluence_max<=current_fluence_progress){
+            arcSeekBar.setProgress(current_fluence_max);
+            arcSeekBar.setMax(current_fluence_max);
+        }
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             arcSeekBar.setMax(current_fluence_max);
@@ -857,6 +861,14 @@ public class WorkSelectOneActivity extends BaseActivity {
         tv_max.setText(thirtyModeBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
+        }
+        if (current_fluence_max<=current_fluence_progress){
+            arcSeekBar.setProgress(current_fluence_max);
+            arcSeekBar.setMax(current_fluence_max);
+        }
+        if (current_fluence_max<=current_fluence_progress){
+            arcSeekBar.setProgress(current_fluence_max);
+            arcSeekBar.setMax(current_fluence_max);
         }
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
@@ -879,6 +891,10 @@ public class WorkSelectOneActivity extends BaseActivity {
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
         }
+        if (current_fluence_max<=current_fluence_progress){
+            arcSeekBar.setProgress(current_fluence_max);
+            arcSeekBar.setMax(current_fluence_max);
+        }
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             arcSeekBar.setMax(current_fluence_max);
@@ -899,6 +915,10 @@ public class WorkSelectOneActivity extends BaseActivity {
         tv_max.setText(fourHundredModeBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
+        }
+        if (current_fluence_max<=current_fluence_progress){
+            arcSeekBar.setProgress(current_fluence_max);
+            arcSeekBar.setMax(current_fluence_max);
         }
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
