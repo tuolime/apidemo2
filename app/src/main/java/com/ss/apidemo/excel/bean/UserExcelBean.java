@@ -19,33 +19,33 @@ import jxl.write.WriteException;
 public class UserExcelBean {
 
     @ExcelContent(titleName = "Name")
-    private String Name;
+    private String a_Name;
 
     @ExcelContent(titleName = "Gender")
-    private String Gender;
+    private String b_Gender;
 
     @ExcelContent(titleName = "Age")
-    private String Age;
+    private String c_Age;
 
     @ExcelContent(titleName = "Tel")
-    private String Tel;
+    private String d_Tel;
 
     @ExcelContent(titleName = "mode")
-    private String mode;//工作模式
+    private String e_mode;//工作模式
     @ExcelContent(titleName = "skinType")
-    private String skinType;//皮肤类型
+    private String f_skinType;//皮肤类型
     @ExcelContent(titleName = "bodyType")
-    private String bodyType;//身体部位
+    private String g_bodyType;//身体部位
     @ExcelContent(titleName = "energy")
-    private String energy;//能量
+    private String h_energy;//能量
     @ExcelContent(titleName = "frequency")
-    private String frequency;//频率 就是 Hz
+    private String i_frequency;//频率 就是 Hz
     @ExcelContent(titleName = "workCount")
-    private String workCount;//工作次数
+    private String j_workCount;//工作次数
     @ExcelContent(titleName = "fluence")
-    private String fluence;//单脉冲
+    private String k_fluence;//单脉冲
     @ExcelContent(titleName = "date")
-    private String date;//时间
+    private String l_date;//时间
 
 //    @ExcelContent(titleName = "其他")
 //    private String Other;
@@ -108,7 +108,7 @@ public class UserExcelBean {
                 format.setBackground(Colour.GRAY_25);
             }
 
-            if (Name.contains("4")) {
+            if (a_Name.contains("4")) {
                 format.setBackground(Colour.RED);
             }
 
@@ -288,99 +288,99 @@ public class UserExcelBean {
 
     }
 
-    public String getName() {
-        return Name;
+    public String getA_Name() {
+        return a_Name;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setA_Name(String a_Name) {
+        this.a_Name = a_Name;
     }
 
-    public String getGender() {
-        return Gender;
+    public String getB_Gender() {
+        return b_Gender;
     }
 
-    public void setGender(String gender) {
-        Gender = gender;
+    public void setB_Gender(String b_Gender) {
+        this.b_Gender = b_Gender;
     }
 
-    public String getAge() {
-        return Age;
+    public String getC_Age() {
+        return c_Age;
     }
 
-    public void setAge(String age) {
-        Age = age;
+    public void setC_Age(String c_Age) {
+        this.c_Age = c_Age;
     }
 
-    public String getTel() {
-        return Tel;
+    public String getD_Tel() {
+        return d_Tel;
     }
 
-    public void setTel(String tel) {
-        Tel = tel;
+    public void setD_Tel(String d_Tel) {
+        this.d_Tel = d_Tel;
     }
 
-    public String getMode() {
-        return mode;
+    public String getE_mode() {
+        return e_mode;
     }
 
-    public void setMode(String mode) {
-        this.mode = mode;
+    public void setE_mode(String e_mode) {
+        this.e_mode = e_mode;
     }
 
-    public String getSkinType() {
-        return skinType;
+    public String getF_skinType() {
+        return f_skinType;
     }
 
-    public void setSkinType(String skinType) {
-        this.skinType = skinType;
+    public void setF_skinType(String f_skinType) {
+        this.f_skinType = f_skinType;
     }
 
-    public String getBodyType() {
-        return bodyType;
+    public String getG_bodyType() {
+        return g_bodyType;
     }
 
-    public void setBodyType(String bodyType) {
-        this.bodyType = bodyType;
+    public void setG_bodyType(String g_bodyType) {
+        this.g_bodyType = g_bodyType;
     }
 
-    public String getEnergy() {
-        return energy;
+    public String getH_energy() {
+        return h_energy;
     }
 
-    public void setEnergy(String energy) {
-        this.energy = energy;
+    public void setH_energy(String h_energy) {
+        this.h_energy = h_energy;
     }
 
-    public String getFrequency() {
-        return frequency;
+    public String getI_frequency() {
+        return i_frequency;
     }
 
-    public void setFrequency(String frequency) {
-        this.frequency = frequency;
+    public void setI_frequency(String i_frequency) {
+        this.i_frequency = i_frequency;
     }
 
-    public String getWorkCount() {
-        return workCount;
+    public String getJ_workCount() {
+        return j_workCount;
     }
 
-    public void setWorkCount(String workCount) {
-        this.workCount = workCount;
+    public void setJ_workCount(String j_workCount) {
+        this.j_workCount = j_workCount;
     }
 
-    public String getFluence() {
-        return fluence;
+    public String getK_fluence() {
+        return k_fluence;
     }
 
-    public void setFluence(String fluence) {
-        this.fluence = fluence;
+    public void setK_fluence(String k_fluence) {
+        this.k_fluence = k_fluence;
     }
 
-    public String getDate() {
-        return date;
+    public String getL_date() {
+        return l_date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setL_date(String l_date) {
+        this.l_date = l_date;
     }
 }

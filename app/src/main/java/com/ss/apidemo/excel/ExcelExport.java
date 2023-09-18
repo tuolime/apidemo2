@@ -33,7 +33,7 @@ public class ExcelExport {
         List<UserExcelBean> users = new ArrayList<>();
         for (int i = 1; i <= 150; i++) {
             UserExcelBean u = new UserExcelBean();
-            u.setName("大到飞起来" + i);
+            u.setA_Name("大到飞起来" + i);
 //            u.setMobile("手机号" + i);
 //            u.setSex("男");
 //            u.setAddress("地点" + i);
@@ -64,24 +64,24 @@ public class ExcelExport {
         if (allUserValue != null && allUserValue.size()>0){
             for (int i = 0; i < allUserValue.size(); i++) {
                 UserExcelBean u = new UserExcelBean();
-                u.setGender(allUserValue.get(i).getGender());
-                u.setTel(allUserValue.get(i).getTel());
-                u.setEnergy(allUserValue.get(i).getEnergy());
-                u.setFrequency(allUserValue.get(i).getFrequency());
-                u.setWorkCount(allUserValue.get(i).getWorkCount());
-                u.setFluence(allUserValue.get(i).getFluence());
-                u.setDate(allUserValue.get(i).getDate());
-                u.setSkinType(SetSkinType(allUserValue.get(i).getSkinType()));
+                u.setB_Gender(allUserValue.get(i).getGender());
+                u.setD_Tel(allUserValue.get(i).getTel());
+                u.setH_energy(allUserValue.get(i).getEnergy());
+                u.setI_frequency(allUserValue.get(i).getFrequency());
+                u.setJ_workCount(allUserValue.get(i).getWorkCount());
+                u.setK_fluence(allUserValue.get(i).getFluence());
+                u.setL_date(allUserValue.get(i).getDate());
+                u.setF_skinType(SetSkinType(allUserValue.get(i).getSkinType()));
                 if (allUserValue.get(i).getMode().equals("1") ||allUserValue.get(i).getMode().equals("2") ||
                         allUserValue.get(i).getMode().equals("3") ||allUserValue.get(i).getMode().equals("4") ||
                         allUserValue.get(i).getMode().equals("5")||allUserValue.get(i).getMode().equals("6")){
-                    u.setMode(SetModeOne(allUserValue.get(i).getMode()));
-                    u.setBodyType(SetModeOneBodyType(allUserValue.get(i).getGender(),allUserValue.get(i).getBodyType()));
+                    u.setE_mode(SetModeOne(allUserValue.get(i).getMode()));
+                    u.setG_bodyType(SetModeOneBodyType(allUserValue.get(i).getGender(),allUserValue.get(i).getBodyType()));
                 }
                 if (allUserValue.get(i).getMode().equals("7") ||allUserValue.get(i).getMode().equals("8") ||
                         allUserValue.get(i).getMode().equals("9") ||allUserValue.get(i).getMode().equals("10")){
-                    u.setMode(SetModeTwo(allUserValue.get(i).getMode()));
-                    u.setBodyType(SetModeTwoBodyType(allUserValue.get(i).getBodyType()));
+                    u.setE_mode(SetModeTwo(allUserValue.get(i).getMode()));
+                    u.setG_bodyType(SetModeTwoBodyType(allUserValue.get(i).getBodyType()));
                 }
 
 
@@ -89,8 +89,8 @@ public class ExcelExport {
                 if (allUser != null && allUser.size()>0){
                     for (int j = 0; j < allUser.size(); j++) {
                         if (allUserValue.get(i).getTel().equals(allUser.get(j).getTel())){
-                            u.setName(allUser.get(j).getName());
-                            u.setAge(allUser.get(j).getAge());
+                            u.setA_Name(allUser.get(j).getName());
+                            u.setC_Age(allUser.get(j).getAge());
                         }
                     }
                 }
