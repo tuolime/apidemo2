@@ -226,7 +226,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Vietnam"
+                                android:text="Việt Nam"
                                 android:textColor="@color/white" />
 
                             <View
@@ -239,7 +239,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Italy"
+                                android:text="Italia"
                                 android:textColor="@color/white" />
 
                             <View
@@ -252,7 +252,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Ukraine"
+                                android:text="Україна"
                                 android:textColor="@color/white" />
 
                             <View
@@ -265,7 +265,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Turkey"
+                                android:text="T ürkiye"
                                 android:textColor="@color/white" />
 
                             <View
@@ -278,7 +278,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Thailand"
+                                android:text="ประเทศไทย"
                                 android:textColor="@color/white" />
 
                             <View
@@ -291,7 +291,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Japan"
+                                android:text="Japanese"
                                 android:textColor="@color/white" />
 
                             <View
@@ -317,7 +317,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Romania"
+                                android:text="România"
                                 android:textColor="@color/white" />
 
                             <View
@@ -330,7 +330,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Netherlands"
+                                android:text="Nederland"
                                 android:textColor="@color/white" />
 
                             <View
@@ -356,7 +356,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Persia"
+                                android:text="پرسیا"
                                 android:textColor="@color/white" />
 
                             <View
@@ -369,7 +369,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Poland"
+                                android:text="Polska"
                                 android:textColor="@color/white" />
 
                             <View
@@ -382,7 +382,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Arabia"
+                                android:text="  عرب .  "
                                 android:textColor="@color/white" />
 
                             <View
