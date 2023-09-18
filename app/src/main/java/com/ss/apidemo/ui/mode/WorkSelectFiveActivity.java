@@ -706,11 +706,11 @@ public class WorkSelectFiveActivity extends BaseActivity {
 
                 }else if (range == R.id.ll_f){
                     f_range_30++;
-                    if (f_range_auto == 6){
+                    if (f_range_30 == 6){
                         setThirty(6);
-                    }else if (f_range_auto == 7){
+                    }else if (f_range_30 == 7){
                         setThirty(7);
-                    }else if (f_range_auto == 8){
+                    }else if (f_range_30 == 8){
                         setThirty(8);
                         f_range_30 = 5;
                     }
