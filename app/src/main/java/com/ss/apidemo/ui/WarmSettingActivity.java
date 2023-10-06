@@ -85,6 +85,8 @@ public class WarmSettingActivity extends BaseActivity {
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
 //                double waterDouble = water_count_array[water_count];
 //                int waterInt = (int) (waterDouble *10);
                 String waterString = tv_water.getText().toString();

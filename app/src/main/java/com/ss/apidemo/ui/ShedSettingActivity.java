@@ -45,6 +45,8 @@ public class ShedSettingActivity extends BaseActivity implements View.OnClickLis
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
                 //退出时 下发报文选择好的温度和水流。。。。
                 //退出该页面
                 finish();
@@ -68,6 +70,8 @@ public class ShedSettingActivity extends BaseActivity implements View.OnClickLis
         findViewById(R.id.bt_continue).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
                 if (current_time > 0){
                     if (current_time == AppConfig.INFINITE){
                         AppConfig.AUTOSHEDTIME = AppConfig.INFINITE;

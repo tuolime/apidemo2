@@ -93,6 +93,8 @@ public class UserMessageActivity extends BaseActivity {
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
                 //退出时 下发报文选择好的温度和水流。。。。
                 //退出该页面
                 finish();
@@ -150,6 +152,8 @@ public class UserMessageActivity extends BaseActivity {
         findViewById(R.id.tv_delete).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
                 CallDialog dialog = new CallDialog(UserMessageActivity.this);
                 dialog.loadDialog(UserMessageActivity.this, new CallDialog.OnClickIsConfirm() {
                     @Override

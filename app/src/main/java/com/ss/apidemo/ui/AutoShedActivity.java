@@ -15,10 +15,12 @@ import com.example.protocol.frame.ProtocalHandler;
 import com.example.protocol.frame.data.SetDeviceConfig;
 import com.example.protocol.utils.ParserUtil;
 import com.ss.apidemo.AppConfig;
+import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
 import com.ss.apidemo.utils.LogUtils;
+import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
 import com.ss.apidemo.widget.NumberKeyboardView;
 
@@ -50,7 +52,9 @@ public class AutoShedActivity extends BaseActivity implements NumberKeyboardView
         findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              finish();
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
+                finish();
             }
         });
         tvList = new TextView[6];

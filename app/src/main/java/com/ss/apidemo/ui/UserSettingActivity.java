@@ -92,6 +92,8 @@ public class UserSettingActivity extends BaseActivity implements NumberKeyboardV
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
 //                SsApi.getInstance().execCmd("am broadcast -a \"action.ACTION_API_HIDE_NAVIGATION\"");
 //                SsApi.getInstance().execCmd("am broadcast -a \"action.ACTION_API_HIDE_STATUS_BAR\"");
                 int power = SharedPrefsUtil.getIntValue(AppConfig.POWER_TYPE, 1);

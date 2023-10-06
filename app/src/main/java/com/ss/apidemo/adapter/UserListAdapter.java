@@ -9,9 +9,12 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import com.ss.apidemo.AppConfig;
+import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
 import com.ss.apidemo.db.bean.User;
 import com.ss.apidemo.db.bean.UserValue;
+import com.ss.apidemo.utils.PlayVoiceUtils;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -54,6 +57,8 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
                 clickItem.onClickItem(user.getTel());
             }
         });

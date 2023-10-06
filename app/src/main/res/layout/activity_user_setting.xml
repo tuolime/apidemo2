@@ -125,6 +125,22 @@
                         android:src="@mipmap/ic_brightness" />
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_limit"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:gravity="center|left"
+                        tools:text="条件"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -226,7 +242,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Việt Nam"
+                                android:text="Tiếng Việt"
                                 android:textColor="@color/white" />
 
                             <View
@@ -239,7 +255,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Italia"
+                                android:text="Italiano"
                                 android:textColor="@color/white" />
 
                             <View
@@ -265,7 +281,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="T ürkiye"
+                                android:text="Türkçe"
                                 android:textColor="@color/white" />
 
                             <View
@@ -291,7 +307,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="Japanese"
+                                android:text="日本語"
                                 android:textColor="@color/white" />
 
                             <View
@@ -317,7 +333,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="35dp"
                                 android:gravity="center|left"
-                                android:text="România"
+                                android:text="Română"
                                 android:textColor="@color/white" />
 
                             <View
@@ -392,21 +408,7 @@
 
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:layout_marginTop="30dp"
-                            android:gravity="center"
-                            android:orientation="vertical">
 
-                            <TextView
-                                android:id="@+id/tv_limit"
-                                android:layout_width="match_parent"
-                                android:layout_height="35dp"
-                                android:gravity="center|left"
-                                android:text="条件"
-                                android:textColor="@color/white" />
-                        </LinearLayout>
 
                     </LinearLayout>
                 </ScrollView>

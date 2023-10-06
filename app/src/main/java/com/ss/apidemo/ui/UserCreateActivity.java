@@ -60,6 +60,8 @@ public class UserCreateActivity extends BaseActivity {
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
                 hideInput();
                 //退出该页面
                 startActivity(new Intent(UserCreateActivity.this, SplashActivity.class));
@@ -146,6 +148,8 @@ public class UserCreateActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 hideInput();
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
                 String s = et_search.getText().toString();
                 if (s != null && !s.equals("")) {
                     List<User> allUser = UserDao.getInstance().getLikeUser(s);
@@ -168,6 +172,8 @@ public class UserCreateActivity extends BaseActivity {
         findViewById(R.id.tv_free).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
                 isHandger();
             }
         });

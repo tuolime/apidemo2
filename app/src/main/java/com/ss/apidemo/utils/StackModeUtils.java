@@ -73,7 +73,7 @@ public final class StackModeUtils {
                 case 10:
                     type.setHandgearType(10);
                     type.setFluenceMin(4);
-                    type.setFluenceMax(60);
+                    type.setFluenceMax(32);
                     break;
             }
 

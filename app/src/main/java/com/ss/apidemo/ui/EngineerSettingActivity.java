@@ -59,6 +59,8 @@ public class EngineerSettingActivity extends BaseActivity {
         findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
                 int power = SharedPrefsUtil.getIntValue(AppConfig.POWER_TYPE, 1);
                 int handgear = SharedPrefsUtil.getIntValue(AppConfig.HANDGEAR, 0);
                 ProtocalHandler protocalHandler = new ProtocalHandler();

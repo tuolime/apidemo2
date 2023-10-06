@@ -15,6 +15,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import com.ss.apidemo.AppConfig;
+import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
 import com.ss.apidemo.adapter.UserListAdapter;
 import com.ss.apidemo.base.BaseActivity;
@@ -25,6 +26,7 @@ import com.ss.apidemo.db.dao.UserValueDao;
 import com.ss.apidemo.dialog.HintDialog;
 import com.ss.apidemo.excel.ExcelExport;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
 
 import androidx.annotation.Nullable;
@@ -59,6 +61,8 @@ public class UserListActivity extends BaseActivity {
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
                 //退出时 下发报文选择好的温度和水流。。。。
                 //退出该页面
                 finish();
@@ -75,6 +79,8 @@ public class UserListActivity extends BaseActivity {
         iv_load.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
                 List<UserValue> allUserValue = UserValueDao.getInstance().getAllUserValue();
                 if (allUserValue != null && allUserValue.size()>0){
                     //导出数据

@@ -52,6 +52,7 @@ public class SkinSelectThreeActivity extends BaseActivity {
         iv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
                 //退出该页面
                 finish();
             }
@@ -60,6 +61,7 @@ public class SkinSelectThreeActivity extends BaseActivity {
         iv_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
                 startActivity(new Intent(SkinSelectThreeActivity.this, SplashActivity.class));
             }
         });

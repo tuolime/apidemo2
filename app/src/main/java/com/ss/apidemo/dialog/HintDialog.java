@@ -5,7 +5,10 @@ import android.os.Build;
 import android.view.View;
 import android.widget.TextView;
 
+import com.ss.apidemo.AppConfig;
+import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
+import com.ss.apidemo.utils.PlayVoiceUtils;
 
 
 /**
@@ -31,6 +34,8 @@ public class HintDialog extends BaseCustomDialog {
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
+
                 listener.OnClickIsConfirmListener();
                 dismiss();
             }
