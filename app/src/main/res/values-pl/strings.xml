@@ -11,8 +11,8 @@
     <string name="remote_control">KONTROLA ZDALNA</string>
     <string name="on_str">NA</string>
     <string name="off_str">WYŁĄCZONY</string>
-    <string name="quantity">Ilość</string>
-    <string name="of_hand_tools">Ręczne narzędzia</string>
+
+    <string name="of_hand_tools">Narzędzia ręczne</string>
     <string name="one">JEDEN</string>
     <string name="two">DWA</string>
     <string name="left_hand_tool">LEWE NARZĘDZIE</string>
@@ -63,7 +63,7 @@
     <string name="cancel">anulować</string>
     <string name="sure">Jasne</string>
     <string name="tv_next">NASTĘPNY</string>
-    <string name="trio">DOKŁADNY</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">FLUENCJA</string>
     <string name="frequency">CZĘSTOTLIWOŚĆ</string>
     <string name="time">CZAS</string>
@@ -106,7 +106,7 @@
     <string name="current">AKTUALNY</string>
     <string name="stby">STBY</string>
     <string name="ready">GOTOWY</string>
-    <string name="working">PRACUJĄCY</string>
+    <string name="working">PRACA</string>
     <string name="auto_shed_time">Pozostały czas:</string>
     <string name="disconnect_tips">Komunikacja z systemem sterowania jest nieprawidłowa. Skontaktuj się z producentem!</string>
     <string name="phone_count"> Numer telefonu komórkowego powinien mieć mniej niż 13 cyfr!</string>
@@ -164,12 +164,12 @@
     <string name="tv_mode_one_cancel">anulować</string>
     <string name="tv_work_one_temperature">temperatura</string>
     <string name="tv_work_one_flow">Przepływ</string>
-    <string name="tv_work_one_totla">Totla</string>
-    <string name="tv_work_one_current">AKTUALNY</string>
+    <string name="tv_work_one_totla">Łącznie</string>
+    <string name="tv_work_one_current">bieżący</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">DOKŁADNY</string>
     <string name="tv_work_one_raedy">Gotowy</string>
-    <string name="tv_work_one_auto">Automatyczny</string>
+    <string name="tv_work_one_auto">AUTO</string>
     <string name="tv_work_one_30">30</string>
     <string name="tv_work_one_100">100</string>
     <string name="tv_work_one_400">400</string>

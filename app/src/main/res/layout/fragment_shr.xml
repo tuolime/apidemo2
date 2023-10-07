@@ -123,6 +123,7 @@
                     android:layout_weight="1.2"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:gravity="center"
                         android:textSize="20sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -130,7 +131,7 @@
                         android:text="@string/frequency_hz"/>
                     <TextView
                         android:gravity="center"
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         android:text="Hz"/>
@@ -245,14 +246,16 @@
                     android:layout_weight="1.2"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:gravity="center"
                         android:textSize="20sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
+                        android:lines="1"
                         android:text="@string/grid_size"/>
                     <TextView
                         android:gravity="center"
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         android:text="c㎡"/>

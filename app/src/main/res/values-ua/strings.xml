@@ -3,16 +3,16 @@
     <string name="app_name">medical care</string>
 
     <string name="next">ПРОДОВЖУЙТЕ</string>
-    <string name="ps_title">РЕЖИМ САМООБСЛУГОВУВАННЯ</string>
+    <string name="ps_title">контроль</string>
     <string name="ps_content">ПАРОЛЬ</string>
     <string name="engineer_mode">ІНЖЕНЕРНИЙ РЕЖИМ</string>
     <string name="count_cleaning">ОЧИСТКА ГРАФІКА</string>
     <string name="cleaning">ОЧИСТКА</string>
     <string name="remote_control">Дистанційне керування</string>
-    <string name="on_str">УВІМКНЕНО</string>
-    <string name="off_str">ВИМК</string>
-    <string name="quantity">КВАТИТА</string>
-    <string name="of_hand_tools">Маніпула</string>
+    <string name="on_str">відкрити</string>
+    <string name="off_str">закрити</string>
+
+    <string name="of_hand_tools">Ручні інструменти</string>
     <string name="one">ОДИН</string>
     <string name="two">ДВА</string>
     <string name="left_hand_tool">Ліва рука</string>
@@ -63,7 +63,7 @@
     <string name="cancel">СКАСУВАТИ</string>
     <string name="sure">ПІДТВЕРДЖУВАТИ</string>
     <string name="tv_next">ДАЛІ</string>
-    <string name="trio">точний</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">ЕНЕРГІЯ</string>
     <string name="frequency">ЧАСТОТА</string>
     <string name="time">ЧАС</string>
@@ -104,7 +104,7 @@
     <string name="burst">ВИПЛАХ</string>
     <string name="total">РАЗОМ</string>
     <string name="current">ПОТОМ</string>
-    <string name="stby">РЕЖИМ ОЧІКУВАННЯ</string>
+    <string name="stby">Почекайте</string>
     <string name="ready">ГОТОВИЙ</string>
     <string name="working">РОБОТА</string>
     <string name="auto_shed_time">Час Залишився</string>
@@ -163,7 +163,7 @@
     <string name="tv_mode_one_ok">Гаразд</string>
     <string name="tv_mode_one_cancel">СКАСУВАТИ</string>
     <string name="tv_work_one_temperature">температура</string>
-    <string name="tv_work_one_flow">Водний потік</string>
+    <string name="tv_work_one_flow">потік</string>
     <string name="tv_work_one_totla">Всього</string>
     <string name="tv_work_one_current">ПОТОМ</string>
     <string name="tv_work_one_id">ID</string>

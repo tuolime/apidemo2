@@ -11,8 +11,8 @@
     <string name="remote_control">REMOTE CONTROL</string>
     <string name="on_str">ON</string>
     <string name="off_str">OFF</string>
-    <string name="quantity">QUANTITY</string>
-    <string name="of_hand_tools">OF HAND TOOLS</string>
+
+    <string name="of_hand_tools">HAND TOOLS</string>
     <string name="one">ONE</string>
     <string name="two">TWO</string>
     <string name="left_hand_tool">LEFT HAND TOOL</string>
@@ -132,7 +132,7 @@
     <string name="mode_two_bg_4">STYLE   IV</string>
     <string name="mode_two_bg_5">STYLE   V</string>
     <string name="mode_two_bg_6">STYLE   VI</string>
-    <string name="user_down">USER BOOK DATA DOWNLOAD</string>
+    <string name="user_down">USER  DATA DOWNLOAD</string>
     <string name="mode_select">OPERATION MODE SELECTION</string>
     <string name="mode_select_1">I</string>
     <string name="mode_select_2">II</string>
@@ -164,11 +164,11 @@
     <string name="tv_mode_one_cancel">Cancel</string>
     <string name="tv_work_one_temperature">Temperature</string>
     <string name="tv_work_one_flow">Flow</string>
-    <string name="tv_work_one_totla">Totla</string>
+    <string name="tv_work_one_totla">Total</string>
     <string name="tv_work_one_current">Current</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">EXACT</string>
-    <string name="tv_work_one_raedy">Raedy</string>
+    <string name="tv_work_one_raedy">Ready</string>
     <string name="tv_work_one_auto">AUTO</string>
     <string name="tv_work_one_30">30</string>
     <string name="tv_work_one_100">100</string>
@@ -195,11 +195,8 @@
     <string name="excel_fail"> Export failed </string>
     <string name="excel_no_data"> There is currently no data available </string>
 
-    <string name="wifi_open"> WiFi on </string>
-    <string name="wifi_close"> WiFi Off </string>
+    <string name="wifi_open"> WiFi ON </string>
+    <string name="wifi_close"> WiFi OFF</string>
     <string name="wifi_no_close"> WiFi cannot be turned off </string>
-
-    <string name="replace_filter"> Please replace the filter device！</string>
-
 
 </resources>

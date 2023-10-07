@@ -19,57 +19,88 @@
         android:background="@mipmap/ic_work_six_main_bg_2"
         android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_marginTop="10dp"
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/iv_fan_reduce"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@mipmap/ic_work_six_fan_reduce" />
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_fan_reduce"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/ic_work_six_fan_reduce" />
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/fan_1"
+                        android:background="@drawable/work_six_fan_1_unselect_corners"
+                        android:layout_width="50dp"
+                        android:layout_height="5dp"/>
+                    <TextView
+                        android:id="@+id/fan_2"
+                        android:background="@drawable/work_six_fan_1_unselect_corners"
+                        android:layout_width="50dp"
+                        android:layout_height="5dp"/>
+                    <TextView
+                        android:id="@+id/fan_3"
+                        android:background="@drawable/work_six_fan_1_unselect_corners"
+                        android:layout_width="50dp"
+                        android:layout_height="5dp"/>
+                    <TextView
+                        android:id="@+id/fan_4"
+                        android:background="@drawable/work_six_fan_1_unselect_corners"
+                        android:layout_width="50dp"
+                        android:layout_height="5dp"/>
+                    <TextView
+                        android:id="@+id/fan_5"
+                        android:background="@drawable/work_six_fan_1_unselect_corners"
+                        android:layout_width="50dp"
+                        android:layout_height="5dp"/>
+
+                </LinearLayout>
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/iv_fan_add"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/ic_work_six_fan_add" />
+            </LinearLayout>
 
             <LinearLayout
-                android:layout_marginLeft="10dp"
+                android:layout_alignParentRight="true"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/fan_1"
-                    android:background="@drawable/work_six_fan_1_unselect_corners"
-                    android:layout_width="50dp"
-                    android:layout_height="5dp"/>
-                <TextView
-                    android:id="@+id/fan_2"
-                    android:background="@drawable/work_six_fan_1_unselect_corners"
-                    android:layout_width="50dp"
-                    android:layout_height="5dp"/>
-                <TextView
-                    android:id="@+id/fan_3"
-                    android:background="@drawable/work_six_fan_1_unselect_corners"
-                    android:layout_width="50dp"
-                    android:layout_height="5dp"/>
-                <TextView
-                    android:id="@+id/fan_4"
-                    android:background="@drawable/work_six_fan_1_unselect_corners"
-                    android:layout_width="50dp"
-                    android:layout_height="5dp"/>
-                <TextView
-                    android:id="@+id/fan_5"
-                    android:background="@drawable/work_six_fan_1_unselect_corners"
-                    android:layout_width="50dp"
-                    android:layout_height="5dp"/>
 
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    android:text="@string/auto_shed_time"/>
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:visibility="invisible"
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    android:text="@string/name"/>
             </LinearLayout>
-            <ImageView
-                android:layout_marginLeft="10dp"
-                android:id="@+id/iv_fan_add"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@mipmap/ic_work_six_fan_add" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_weight="1"
@@ -381,7 +412,7 @@
                             android:id="@+id/ll_f"
                             android:orientation="horizontal"
                             android:gravity="center"
-                            android:layout_width="80dp"
+                            android:layout_width="130dp"
                             android:layout_height="90dp">
                             <TextView
                                 android:id="@+id/tv_f"
@@ -398,7 +429,7 @@
                             android:id="@+id/ll_m"
                             android:orientation="vertical"
                             android:gravity="center"
-                            android:layout_width="80dp"
+                            android:layout_width="130dp"
                             android:layout_height="90dp">
                             <TextView
                                 android:id="@+id/tv_m"
@@ -416,7 +447,7 @@
                             android:id="@+id/ll_l"
                             android:orientation="horizontal"
                             android:gravity="center"
-                            android:layout_width="80dp"
+                            android:layout_width="130dp"
                             android:layout_height="90dp">
                             <TextView
                                 android:id="@+id/tv_l"
@@ -464,7 +495,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
-                    android:textSize="25sp"
+                    android:lines="1"
+                    android:textSize="20sp"
                     android:id="@+id/tv_exact"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -636,7 +668,7 @@
                 android:layout_height="50dp">
                 <TextView
                     android:id="@+id/tv_raedy"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_work_one_raedy"

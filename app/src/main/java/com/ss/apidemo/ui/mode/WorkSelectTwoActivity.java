@@ -29,6 +29,7 @@ import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.bean.AutoSkinBean;
 import com.ss.apidemo.bean.FourHundredModeBean;
 import com.ss.apidemo.bean.HundredModeBean;
+import com.ss.apidemo.bean.SendTimeBean;
 import com.ss.apidemo.bean.SetFluenceBean;
 import com.ss.apidemo.bean.ShrModeHzOrFluenceBean;
 import com.ss.apidemo.bean.SmartModeBean;
@@ -41,6 +42,7 @@ import com.ss.apidemo.dialog.HintDialog;
 import com.ss.apidemo.ui.SplashActivity;
 import com.ss.apidemo.ui.UserSettingActivity;
 import com.ss.apidemo.utils.AutoSkinTypeUtils;
+import com.ss.apidemo.utils.DateUtil;
 import com.ss.apidemo.utils.DeviceInfoUtil;
 import com.ss.apidemo.utils.ExpertModeUtils;
 import com.ss.apidemo.utils.FourHundredModeUtils;
@@ -117,6 +119,8 @@ public class WorkSelectTwoActivity extends BaseActivity {
     private int current_luminescence_auto_save_stop_count;
     private int flag_number = 3;
     private String gender;
+    private TextView tv_time;
+    private TextView tv_name;
 
     Handler handler = new Handler(){
         @Override
@@ -187,6 +191,40 @@ public class WorkSelectTwoActivity extends BaseActivity {
 
             }
         }
+        tv_time = findViewById(R.id.tv_time);
+        boolean booleanValue = SharedPrefsUtil.getBooleanValue(AppConfig.SHED, false);
+        if (booleanValue) {
+            tv_time.setVisibility(View.VISIBLE);
+            if (AppConfig.AUTOSHEDTIME == AppConfig.INFINITE){
+                tv_time.setText(getResources().getString(R.string.auto_shed_time)+"∞");
+            }
+        } else {
+            tv_time.setVisibility(View.INVISIBLE);
+        }
+        tv_name = findViewById(R.id.tv_name);
+        if (tel != null){
+            if (!tel.isEmpty()) {
+                List<User> user = UserDao.getInstance().getUser(tel);
+                if (user != null && user.size() > 0){
+                    tv_name.setVisibility(View.VISIBLE);
+                    tv_name.setText(getResources().getString(R.string.name)+"："+user.get(0).getName());
+                }
+
+            } else {
+                tv_name.setVisibility(View.INVISIBLE);
+            }
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MainThread)
+    public void helloEventBus(SendTimeBean sendTimeBean) {//脱毛倒计时时间
+        if (sendTimeBean != null) {
+            int autoShedTime = sendTimeBean.getTime();
+//            LogUtils.e("倒计时" + DateUtil.getTimeFromInt(autoShedTime * 1000));
+            String timeFromInt = DateUtil.getTimeFromInt(autoShedTime * 1000);
+            tv_time.setText(getResources().getString(R.string.auto_shed_time)+timeFromInt);
+        }
+
     }
 
     private void initData() {

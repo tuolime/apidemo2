@@ -11,7 +11,7 @@
     <string name="remote_control">远程控制</string>
     <string name="on_str">开</string>
     <string name="off_str">关</string>
-    <string name="quantity">数量</string>
+
     <string name="of_hand_tools">手具</string>
     <string name="one">单手具</string>
     <string name="two">双手具</string>
@@ -53,11 +53,11 @@
     <string name="temperature_alarm">温度报警设置</string>
     <string name="handle">手柄</string>
     <string name="count_clearing">计数器清零</string>
-    <string name="upper">上</string>
+    <string name="upper">上限</string>
     <string name="temperature">温度</string>
     <string name="limit">限制</string>
     <string name="lower_limit">下限</string>
-    <string name="of">的</string>
+    <string name="of"> </string>
     <string name="water_flow">水流</string>
     <string name="tips">提示</string>
     <string name="cancel">取消</string>
@@ -89,21 +89,21 @@
     <string name="tel_no_hint">手机号码是空的？</string>
     <string name="select_body">请选择身体部位！</string>
     <string name="work_no">未开始工作</string>
-    <string name="event">事件</string>
+    <string name="event">记录事件</string>
     <string name="mode">模式</string>
     <string name="send_fail">发送失败</string>
-    <string name="ends_time">自我脱毛时间结束</string>
-    <string name="skin">皮肤</string>
+    <string name="ends_time">自主脱毛时间结束</string>
+    <string name="skin">皮肤类型</string>
     <string name="body">身体</string>
-    <string name="work_count">工作数</string>
+    <string name="work_count">工作计数</string>
     <string name="name_cannot">用户名不能为空！ </string>
     <string name="phone_cannot">手机号码不能为空！</string>
     <string name="phone_already">手机号码已经存在</string>
-    <string name="trio_3d">四轮驱动系统3 d</string>
+    <string name="trio_3d">QUATTRO 3D</string>
     <string name="select">选择</string>
     <string name="burst">BURST</string>
     <string name="total">总计数器</string>
-    <string name="current">当前</string>
+    <string name="current">当前计数器</string>
     <string name="stby">待机</string>
     <string name="ready">准备</string>
     <string name="working">工作中</string>
@@ -120,7 +120,7 @@
     <string name="network_connection_exception">网络连接异常</string>
 
     <string name="system_setting"> 系统设置完成！</string>
-    <string name="name_count">名称长度应小于10个字符！</string>
+    <string name="name_count">名称长度应小于20个字符！</string>
 
 
     <string name="frequency_hz">频率</string>
@@ -132,7 +132,7 @@
     <string name="mode_two_bg_4">风格四</string>
     <string name="mode_two_bg_5">风格五</string>
     <string name="mode_two_bg_6">风格六</string>
-    <string name="user_down">用户手册数据下载</string>
+    <string name="user_down">用户数据下载</string>
     <string name="mode_select">工作界面选择</string>
     <string name="mode_select_1">I</string>
     <string name="mode_select_2">II</string>
@@ -143,8 +143,8 @@
     <string name="background_select_3">III</string>
     <string name="background_select_4">IV</string>
     <string name="bluetooth_select">蓝牙</string>
-    <string name="upper_str">上</string>
-    <string name="lower_str">较低的</string>
+    <string name="upper_str">上限</string>
+    <string name="lower_str">下限</string>
     <string name="enger_str">总能量</string>
     <string name="limit_str">限制</string>
     <string name="version_code">版本</string>
@@ -163,40 +163,40 @@
     <string name="tv_mode_one_ok">确认</string>
     <string name="tv_mode_one_cancel">取消</string>
     <string name="tv_work_one_temperature">温度</string>
-    <string name="tv_work_one_flow">流</string>
-    <string name="tv_work_one_totla">Totla</string>
-    <string name="tv_work_one_current">当前</string>
-    <string name="tv_work_one_id">唯一识别码</string>
+    <string name="tv_work_one_flow">水流</string>
+    <string name="tv_work_one_totla">总计数器</string>
+    <string name="tv_work_one_current">当前计数器</string>
+    <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">EXACT</string>
-    <string name="tv_work_one_raedy">Raedy</string>
-    <string name="tv_work_one_auto">自动</string>
+    <string name="tv_work_one_raedy">准备</string>
+    <string name="tv_work_one_auto">AUTO</string>
     <string name="tv_work_one_30">30</string>
     <string name="tv_work_one_100">100</string>
     <string name="tv_work_one_400">400</string>
     <string name="tv_work_one_l">L</string>
     <string name="tv_work_one_f">F</string>
     <string name="tv_work_one_m">M</string>
-    <string name="tv_work_one_rate">率</string>
+    <string name="tv_work_one_rate">频率</string>
     <string name="tv_work_one_hz">Hz</string>
     <string name="tv_work_one_fluence">能量</string>
     <string name="tv_work_one_j">J</string>
-    <string name="select_skin">请选择皮肤部位!</string>
+    <string name="select_skin">请选择皮肤类型!</string>
     <string name="tv_work_two_l">慢</string>
     <string name="tv_work_two_f">快</string>
-    <string name="tv_work_two_m">地中海</string>
+    <string name="tv_work_two_m">中</string>
 
-    <string name="tv_work_three_pulse">脉冲(女士)</string>
-    <string name="tv_work_three_fluence">影响(J)</string>
-    <string name="tv_work_three_rate">率(赫兹)</string>
-    <string name="tv_work_six_rate">率</string>
+    <string name="tv_work_three_pulse">脉冲宽度(ms)</string>
+    <string name="tv_work_three_fluence">能量(J)</string>
+    <string name="tv_work_three_rate">频率(Hz)</string>
+    <string name="tv_work_six_rate">频率</string>
     <string name="tv_work_six_fluence">能量</string>
 
-    <string name="excel_success"> 出口成功的 </string>
+    <string name="excel_success"> 导出成功 </string>
     <string name="excel_fail"> 导出失败 </string>
-    <string name="excel_no_data">目前尚无相关数据 </string>
+    <string name="excel_no_data">当前数据无效 </string>
 
-    <string name="wifi_open"> 无线上</string>
-    <string name="wifi_close"> 无线网络了</string>
+    <string name="wifi_open"> 网络开</string>
+    <string name="wifi_close"> 网络关</string>
     <string name="wifi_no_close"> WiFi无法关闭</string>
 
 </resources>

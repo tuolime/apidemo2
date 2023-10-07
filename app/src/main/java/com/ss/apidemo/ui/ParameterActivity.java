@@ -34,6 +34,7 @@ import com.ss.apidemo.fragment.WoManBackFragment;
 import com.ss.apidemo.fragment.WoManFragment;
 import com.ss.apidemo.fragment.WoManHeadFragment;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.DateUtil;
 import com.ss.apidemo.utils.LogUtils;
 import com.ss.apidemo.utils.PlayVoiceUtils;
@@ -150,6 +151,10 @@ public class ParameterActivity extends BaseActivity implements View.OnClickListe
         findViewById(R.id.tv_next).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 int gender_int = Integer.parseInt(gender);
                 SharedPrefsUtil.putIntValue(AppConfig.GENDER, gender_int);
                 int currentItem = viewPager.getCurrentItem();

@@ -9,13 +9,13 @@
     <string name="count_cleaning">CONTA PULIZIA</string>
     <string name="cleaning">PULIZIA</string>
     <string name="remote_control">TELECOMANDO</string>
-    <string name="on_str">SU</string>
-    <string name="off_str">SPENTO</string>
-    <string name="quantity">QUANTITÀ</string>
-    <string name="of_hand_tools">DI UTENSILI MANUALI</string>
+    <string name="on_str">aperto</string>
+    <string name="off_str">chiudi</string>
+
+    <string name="of_hand_tools">Utensili manuali</string>
     <string name="one">UNO</string>
     <string name="two">DUE</string>
-    <string name="left_hand_tool">UTENSILE PER LA MANO SINISTRA</string>
+    <string name="left_hand_tool">SINISTRA</string>
     <string name="qb_6_10">QB-6-10</string>
     <string name="qb_6_16">QB-6-16</string>
     <string name="qb_6_20">QB-6-20</string>
@@ -27,7 +27,7 @@
     <string name="qb_6_200">QB-6-200</string>
     <string name="qb_6_40">QB-6-40</string>
 
-    <string name="right_hand_tool">UTENSILE PER LA MANO DESTRA</string>
+    <string name="right_hand_tool">DESTRA</string>
     <string name="power_supply_type">TIPO DI ALIMENTAZIONE</string>
     <string name="minute">MINUTO</string>
     <string name="ok">OK</string>
@@ -62,12 +62,12 @@
     <string name="cancel">Annulla</string>
     <string name="sure">Sicuro</string>
     <string name="tv_next">PROSSIMO</string>
-    <string name="trio">ESATTA（女性）ESATTO（男性）</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">FLUENZA</string>
     <string name="frequency">FREQUENZA</string>
     <string name="time">TEMPO</string>
     <string name="sec">Sez</string>
-    <string name="grid_size">DIMENSIONE DELLA GRIGLIA</string>
+    <string name="grid_size">REGINOE</string>
     <string name="energy">ENERGIA</string>
     <string name="ps_error">Password errata</string>
     <string name="user_information">Informazioni utente registrate con successo!</string>
@@ -131,12 +131,12 @@
     <string name="mode_two_bg_4">STILE   IV</string>
     <string name="mode_two_bg_5">STILE  V</string>
     <string name="mode_two_bg_6">STILE   VI</string>
-    <string name="user_down">DOWNLOAD DEI DATI DEL LIBRO UTENTE</string>
-    <string name="mode_select">SELEZIONE DELLA MODALITÀ DI FUNZIONAMENTO</string>
+    <string name="user_down">Scarica dati</string>
+    <string name="mode_select">Selezione modalità</string>
     <string name="mode_select_1">I</string>
     <string name="mode_select_2">II</string>
     <string name="wlan_select">Connessione WLAN</string>
-    <string name="background_select">SELEZIONE DEL BACKGROUND DELL OPERAZIONE</string>
+    <string name="background_select">Selezione sfondo</string>
     <string name="background_select_1">I</string>
     <string name="background_select_2">II</string>
     <string name="background_select_3">III</string>
@@ -180,13 +180,13 @@
     <string name="tv_work_one_fluence">Fluence</string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">Si prega di selezionare una parte della pelle!</string>
-    <string name="tv_work_two_l">Lenta（女性）Lento（男性）</string>
-    <string name="tv_work_two_f">Rapida（女性）Rapido（男性）</string>
+    <string name="tv_work_two_l">Lento</string>
+    <string name="tv_work_two_f">Veloce</string>
     <string name="tv_work_two_m">Med</string>
 
-    <string name="tv_work_three_pulse">Polso (MS)</string>
+    <string name="tv_work_three_pulse">Polso(ms)</string>
     <string name="tv_work_three_fluence">Fluenza(J)</string>
-    <string name="tv_work_three_rate">Tasso (Hz)</string>
+    <string name="tv_work_three_rate">Tasso(Hz)</string>
     <string name="tv_work_six_rate">Tasso</string>
     <string name="tv_work_six_fluence">FLUENZA</string>
 

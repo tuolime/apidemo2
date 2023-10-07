@@ -11,7 +11,7 @@
     <string name="remote_control">التحكم عن بعد</string>
     <string name="on_str">على</string>
     <string name="off_str">عن</string>
-    <string name="quantity">الكمية</string>
+
     <string name="of_hand_tools">الأدوات اليدوية</string>
     <string name="one">واحد</string>
     <string name="two">اثنين</string>
@@ -63,7 +63,7 @@
     <string name="cancel">يلغي</string>
     <string name="sure">بالتأكيد</string>
     <string name="tv_next">التالي</string>
-    <string name="trio">بالضبط</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">فلوينس</string>
     <string name="frequency">تكرار</string>
     <string name="time">وقت</string>
@@ -99,7 +99,7 @@
     <string name="name_cannot">اسم المستخدم لا يمكن أن يكون فارغا </string>
     <string name="phone_cannot">لا يمكن أن يكون رقم الهاتف المحمول فارغًا</string>
     <string name="phone_already">رقم الهاتف المحمول موجود بالفعل</string>
-    <string name="trio_3d">رباعي الأبعاد</string>
+    <string name="trio_3d">QUATTRO 3D</string>
     <string name="select">يختار</string>
     <string name="burst">ينفجر</string>
     <string name="total">المجموع</string>
@@ -180,13 +180,13 @@
     <string name="tv_work_one_hz">Hz</string>
     <string name="tv_work_one_fluence">فلوينس</string>
     <string name="tv_work_one_j">J</string>
-    <string name="select_skin">الرجاء اختيار جزء الجلد</string>
+    <string name="select_skin">الرجاء اختيار جزء الجلد! </string>
     <string name="tv_work_two_l">ببطئ</string>
     <string name="tv_work_two_f">أسرع</string>
     <string name="tv_work_two_m">Med</string>
 
     <string name="tv_work_three_pulse">النبض (MS)</string>
-    <string name="tv_work_three_fluence">الطلاقة (ي)</string>
+    <string name="tv_work_three_fluence">فلوينس (J)</string>
     <string name="tv_work_three_rate">المعدل (Hz)</string>
     <string name="tv_work_six_rate">السعر</string>
     <string name="tv_work_six_fluence">فلوينس</string>

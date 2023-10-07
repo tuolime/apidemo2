@@ -11,10 +11,10 @@
     <string name="remote_control">รีโมต</string>
     <string name="on_str">ใน</string>
     <string name="off_str">ปิด</string>
-    <string name="quantity">ปริมาณ</string>
-    <string name="of_hand_tools">จํานวนเครื่องมือช่าง</string>
-    <string name="one">หัวปฏิบัติการเดียว</string>
-    <string name="two">หัวปฏิบัติการคู่</string>
+
+    <string name="of_hand_tools">อุปกรณ์มือ</string>
+    <string name="one">เดี่ยว</string>
+    <string name="two">คู่</string>
     <string name="left_hand_tool">เครื่องมือมือซ้าย</string>
     <string name="qb_6_10">QB-6-10</string>
     <string name="qb_6_16">QB-6-16</string>
@@ -32,13 +32,13 @@
     <string name="minute">นาที</string>
     <string name="ok">OK</string>
     <string name="new_user">ผู้ใช้ใหม่</string>
-    <string name="id">ตัวระบุเฉพาะ (หมายเลขโทรศัพท์)</string>
+    <string name="id">ID</string>
     <string name="name">ชื่อ</string>
     <string name="gender">เพศ</string>
     <string name="man">ชาย</string>
     <string name="woman">หญิง</string>
     <string name="age">อายุ</string>
-    <string name="tel">หมายเลขโทรศัพท์</string>
+    <string name="tel">โทรศัพท์</string>
     <string name="stcrage">พื้นที่จัดเก็บ</string>
     <string name="user_lookup">ค้นหาผู้ใช้</string>
     <string name="please_enter">กรุณากรอกหมายเลขโทรศัพท์มือถือ</string>
@@ -63,7 +63,7 @@
     <string name="cancel">ยกเลิก</string>
     <string name="sure">ยืนยัน</string>
     <string name="tv_next">ต่อไป</string>
-    <string name="trio">แม่นยำ</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">การควบคุมพลังงาน</string>
     <string name="frequency">ความถี่</string>
     <string name="time">เวลา</string>
@@ -104,9 +104,9 @@
     <string name="burst">ระเบิด</string>
     <string name="total">ทั้งหมด</string>
     <string name="current">ปัจจุบัน</string>
-    <string name="stby">เตรียมพร้อม</string>
+    <string name="stby">หยุด</string>
     <string name="ready">พร้อม</string>
-    <string name="working">การทำงาน</string>
+    <string name="working">งาน</string>
     <string name="auto_shed_time">เวลาที่เหลืออยู่:</string>
     <string name="disconnect_tips">การสื่อสารกับระบบควบคุมผิดปกติ ติดต่อผู้ผลิต!</string>
     <string name="phone_count"> หมายเลขโทรศัพท์มือถือควรมีน้อยกว่า 13 หลัก !</string>
@@ -169,7 +169,7 @@
     <string name="tv_work_one_id">เอกสารประจำตัว</string>
     <string name="tv_work_one_exact">แม่นยำ</string>
     <string name="tv_work_one_raedy">พร้อมแล้ว</string>
-    <string name="tv_work_one_auto">อัตโนมัติ</string>
+    <string name="tv_work_one_auto">AUTO</string>
     <string name="tv_work_one_30">30</string>
     <string name="tv_work_one_100">100</string>
     <string name="tv_work_one_400">400</string>
@@ -178,15 +178,15 @@
     <string name="tv_work_one_m">M</string>
     <string name="tv_work_one_rate">ความเร็ว</string>
     <string name="tv_work_one_hz">Hz</string>
-    <string name="tv_work_one_fluence">ความคล่องแคล่ว </string>
+    <string name="tv_work_one_fluence">พลังงาน </string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">กรุณาเลือกส่วนของผิว!</string>
     <string name="tv_work_two_l">ช้า</string>
     <string name="tv_work_two_f">รวดเร็ว</string>
-    <string name="tv_work_two_m">ทางการแพทย์</string>
+    <string name="tv_work_two_m">กลาง</string>
 
     <string name="tv_work_three_pulse">ชีพจร (MS)</string>
-    <string name="tv_work_three_fluence">ความคล่องแคล่ว (J)</string>
+    <string name="tv_work_three_fluence">พลังงาน (J)</string>
     <string name="tv_work_three_rate">อัตรา (Hz)</string>
     <string name="tv_work_six_rate">ความเร็ว</string>
     <string name="tv_work_six_fluence">Fluence</string>

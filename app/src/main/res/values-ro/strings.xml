@@ -11,8 +11,8 @@
     <string name="remote_control">TELECOMANDĂ</string>
     <string name="on_str">Pe</string>
     <string name="off_str">Off</string>
-    <string name="quantity">TELECOMANDĂ</string>
-    <string name="of_hand_tools">OF HAND TOOLS</string>
+
+    <string name="of_hand_tools">Unelte manuale</string>
     <string name="one">Unu</string>
     <string name="two">Două</string>
     <string name="left_hand_tool">LEFT HAND TOOL</string>
@@ -164,8 +164,8 @@
     <string name="tv_mode_one_cancel">Cancel</string>
     <string name="tv_work_one_temperature">temperatură</string>
     <string name="tv_work_one_flow">Curge</string>
-    <string name="tv_work_one_totla">Totla</string>
-    <string name="tv_work_one_current">Current</string>
+    <string name="tv_work_one_totla">Total</string>
+    <string name="tv_work_one_current">Curent</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">EXACT</string>
     <string name="tv_work_one_raedy">Gata</string>

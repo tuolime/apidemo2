@@ -9,10 +9,10 @@
     <string name="count_cleaning">Đếm số 0</string>
     <string name="cleaning">Đếm số 0</string>
     <string name="remote_control">ĐIỀU KHIỂN TỪ XA</string>
-    <string name="on_str">ON</string>
-    <string name="off_str">OFF</string>
-    <string name="quantity">SỐ LƯỢNG</string>
-    <string name="of_hand_tools">DỤNG CỤ CẦM TAY</string>
+    <string name="on_str">Mở</string>
+    <string name="off_str">Tắt</string>
+
+    <string name="of_hand_tools">Trang chủ</string>
     <string name="one">MỘT</string>
     <string name="two">HAI</string>
     <string name="left_hand_tool">DỤNG CỤ TAY TRÁI</string>
@@ -63,7 +63,7 @@
     <string name="cancel">Hủy bỏ</string>
     <string name="sure">ok</string>
     <string name="tv_next">KẾ TIẾP</string>
-    <string name="trio">Chính xác</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">Mật độ năng lượng</string>
     <string name="frequency">Tần số lặp lại</string>
     <string name="time">THỜI GIAN</string>
@@ -106,7 +106,7 @@
     <string name="current">hiện hành</string>
     <string name="stby">Đứng gần</string>
     <string name="ready">Chuẩn bị</string>
-    <string name="working">Tại nơi làm việc</string>
+    <string name="working">Công việc</string>
     <string name="auto_shed_time">thời gian còn lại</string>
     <string name="disconnect_tips">Kỷ luật với hệ thống kiểm soát. Liên hệ với nhà sản xuất!</string>
     <string name="phone_count"> Số điện thoại di động nên ít hơn 13 bit!</string>
@@ -164,12 +164,12 @@
     <string name="tv_mode_one_cancel">Hủy bỏ</string>
     <string name="tv_work_one_temperature">nhiệt độ</string>
     <string name="tv_work_one_flow">Chảy</string>
-    <string name="tv_work_one_totla">Totla</string>
+    <string name="tv_work_one_totla">Tổng số</string>
     <string name="tv_work_one_current">hiện hành</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">Chính xác</string>
     <string name="tv_work_one_raedy">Raedy</string>
-    <string name="tv_work_one_auto">Tự động</string>
+    <string name="tv_work_one_auto">AUTO</string>
     <string name="tv_work_one_30">30</string>
     <string name="tv_work_one_100">100</string>
     <string name="tv_work_one_400">400</string>
@@ -189,7 +189,7 @@
     <string name="tv_work_three_fluence">Lưu loát（J）</string>
     <string name="tv_work_three_rate">Suất（Hz）</string>
     <string name="tv_work_six_rate">Suất</string>
-    <string name="tv_work_six_fluence">Mật độ năng lượng</string>
+    <string name="tv_work_six_fluence">năng lượng</string>
 
     <string name="excel_success"> Xuất khẩu thành công </string>
     <string name="excel_fail"> Xuất không thành công </string>

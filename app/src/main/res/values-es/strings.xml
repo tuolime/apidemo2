@@ -9,9 +9,9 @@
     <string name="count_cleaning">Contador se borra a cero</string>
     <string name="cleaning">Volver a zero</string>
     <string name="remote_control">CONTROL remoto</string>
-    <string name="on_str">Encendido</string>
-    <string name="off_str">Apagado</string>
-    <string name="quantity">La cantidad</string>
+    <string name="on_str">Abrir</string>
+    <string name="off_str">Guan</string>
+
     <string name="of_hand_tools">Herramientas de mano</string>
     <string name="one">Uno</string>
     <string name="two">Dos</string>
@@ -63,7 +63,7 @@
     <string name="cancel">Cancelar</string>
     <string name="sure">Seguro</string>
     <string name="tv_next">NEXT</string>
-    <string name="trio">Siguiente</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">Fluencia</string>
     <string name="frequency">Frecuencia</string>
     <string name="time">Tiempo</string>
@@ -106,7 +106,7 @@
     <string name="current">Actual</string>
     <string name="stby">Espera</string>
     <string name="ready">Listo</string>
-    <string name="working">Funcionado</string>
+    <string name="working">Trabajo</string>
     <string name="auto_shed_time">Tiempo restante</string>
     <string name="disconnect_tips">La comunicación con el sistema de control es anormal. Póngase en contacto con el fabricante!</string>
     <string name="phone_count"> Número de teléfono móvil debe ser menos de 13 dígitos!</string>
@@ -163,9 +163,9 @@
     <string name="tv_mode_one_ok">Está bien.</string>
     <string name="tv_mode_one_cancel">anulować</string>
     <string name="tv_work_one_temperature">temperatura</string>
-    <string name="tv_work_one_flow">Flujo de flujo</string>
-    <string name="tv_work_one_totla">Totla</string>
-    <string name="tv_work_one_current">AKTUALNY</string>
+    <string name="tv_work_one_flow">Tráfico</string>
+    <string name="tv_work_one_totla">Total</string>
+    <string name="tv_work_one_current">Actual</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">exacto</string>
     <string name="tv_work_one_raedy">listo</string>

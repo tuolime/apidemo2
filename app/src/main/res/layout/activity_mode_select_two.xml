@@ -45,6 +45,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:lines="1"
                 android:id="@+id/tv_select1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -56,7 +57,7 @@
                 android:paddingBottom="10dp"
                 android:text="@string/expert_str"
                 android:textColor="@color/mode_two_bt_unselect"
-                android:textSize="50sp" />
+                android:textSize="35sp" />
 
         </LinearLayout>
 
@@ -70,6 +71,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:lines="1"
                 android:id="@+id/tv_select2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -81,7 +83,7 @@
                 android:paddingBottom="10dp"
                 android:text="@string/smart_str"
                 android:textColor="@color/mode_two_bt_unselect"
-                android:textSize="50sp" />
+                android:textSize="35sp" />
 
         </LinearLayout>
 

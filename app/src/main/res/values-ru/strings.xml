@@ -11,10 +11,10 @@
     <string name="remote_control">Дистанционное управление</string>
     <string name="on_str">Включи </string>
     <string name="off_str">Выключи </string>
-    <string name="quantity">Количество</string>
-    <string name="of_hand_tools">Манипула</string>
-    <string name="one">Одна ручка</string>
-    <string name="two">Двойная ручка</string>
+
+    <string name="of_hand_tools">Руки</string>
+    <string name="one">Один</string>
+    <string name="two">Два.</string>
     <string name="left_hand_tool">Левая манипула</string>
     <string name="qb_6_10">QB-6-10</string>
     <string name="qb_6_16">QB-6-16</string>
@@ -63,7 +63,7 @@
     <string name="cancel">Отмена</string>
     <string name="sure">Подтверждать</string>
     <string name="tv_next">Далее</string>
-    <string name="trio">Tочно</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">Энергия</string>
     <string name="frequency">ЧАСТОТА</string>
     <string name="time">ВРЕМЯ</string>
@@ -104,7 +104,7 @@
     <string name="burst">ЛОПНУЛ</string>
     <string name="total">ИТОГ</string>
     <string name="current">ТЕКУЩИЙ</string>
-    <string name="stby">ОЖИДАНИЯ</string>
+    <string name="stby">СТОП</string>
     <string name="ready">ГОТОВ</string>
     <string name="working">РАБОТА</string>
     <string name="auto_shed_time">Оставшееся время:</string>
@@ -163,7 +163,7 @@
     <string name="tv_mode_one_ok">Ok</string>
     <string name="tv_mode_one_cancel">Отмена</string>
     <string name="tv_work_one_temperature">Tемпература </string>
-    <string name="tv_work_one_flow">Поток воды</string>
+    <string name="tv_work_one_flow">Поток</string>
     <string name="tv_work_one_totla">Общий</string>
     <string name="tv_work_one_current">ТЕКУЩИЙ</string>
     <string name="tv_work_one_id">ID</string>
@@ -185,7 +185,7 @@
     <string name="tv_work_two_f">Быстро</string>
     <string name="tv_work_two_m">Средно</string>
 
-    <string name="tv_work_three_pulse">Импульсы (мс)</string>
+    <string name="tv_work_three_pulse">Импульсы (мs)</string>
     <string name="tv_work_three_fluence">Флюэнс (J)</string>
     <string name="tv_work_three_rate">Частота (гц)</string>
     <string name="tv_work_six_rate">Частота</string>

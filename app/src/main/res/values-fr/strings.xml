@@ -6,13 +6,13 @@
     <string name="ps_title">MODÈLE DAUTO-ASSISTANCE</string>
     <string name="ps_content">MOT DE PASSE</string>
     <string name="engineer_mode">MODE INGÉNIEUR</string>
-    <string name="count_cleaning">COMPTER LE NETTOYAGE</string>
+    <string name="count_cleaning">Clear zéro</string>
     <string name="cleaning">NETTOYAGE</string>
     <string name="remote_control">Contrôle à distance</string>
-    <string name="on_str">SUR</string>
-    <string name="off_str">DÉSACTIVÉ</string>
-    <string name="quantity">La quantité</string>
-    <string name="of_hand_tools">Des outils à main</string>
+    <string name="on_str">Ouvrir</string>
+    <string name="off_str">Fermé</string>
+
+    <string name="of_hand_tools">Outils pour les mains</string>
     <string name="one">UN</string>
     <string name="two">DEUX</string>
     <string name="left_hand_tool">Outil à gauche</string>
@@ -27,10 +27,10 @@
     <string name="qb_6_200">QB-6-200</string>
     <string name="qb_6_40">QB-6-40</string>
 
-    <string name="right_hand_tool">Outils pour la main droite</string>
+    <string name="right_hand_tool">Outil de main droite</string>
     <string name="power_supply_type">TYPE DALIMENTATION</string>
     <string name="minute">MINUTE</string>
-    <string name="ok">Bien</string>
+    <string name="ok">DACCORD</string>
     <string name="new_user">NOUVEL UTILISATEUR</string>
     <string name="id">IDENTIFIANT</string>
     <string name="name">NOM</string>
@@ -68,7 +68,7 @@
     <string name="frequency">FRÉQUENCE</string>
     <string name="time">TEMPS</string>
     <string name="sec">Seconde</string>
-    <string name="grid_size">TAILLE DE LA GRILLE</string>
+    <string name="grid_size">RÉGION</string>
     <string name="energy">ÉNERGIE</string>
     <string name="ps_error">Erreur de mot de passe</string>
     <string name="user_information">Informations utilisateur enregistrées avec succès!</string>
@@ -106,7 +106,7 @@
     <string name="current">ACTUEL</string>
     <string name="stby">VEILLE</string>
     <string name="ready">PRÊT</string>
-    <string name="working">FONCTIONNEMENT</string>
+    <string name="working">TRAVAIL</string>
     <string name="auto_shed_time">Temps restant:</string>
     <string name="disconnect_tips">La communication avec le système de contrôle est anormale. Contactez le fabricant !</string>
     <string name="phone_count"> Le numéro de téléphone portable doit comporter moins de 13 chiffres !</string>
@@ -116,11 +116,11 @@
     <string name="days_remaining">Jours restant</string>
     <string name="hours_remaining">Heures restantes</string>
     <string name="count_remaining">Temps restants</string>
-    <string name="no_network">Pas de réseau, veuillez vous reconnecter au réseau disponible !</string>
+    <string name="no_network">Pas de réseau, veuillez vous reconnecter au réseau disponible!</string>
     <string name="network_connection_exception">Exception de connexion réseau！</string>
 
-    <string name="system_setting"> Configuration du système terminée </string>
-    <string name="name_count"> Le nom doit contenir moins de 20 caractères !</string>
+    <string name="system_setting">La configuration du système est terminée! </string>
+    <string name="name_count">La longueur du nom doit être inférieure à 20 caractères ! </string>
 
 
     <string name="frequency_hz">FRÉQUENCE</string>
@@ -162,11 +162,11 @@
 
     <string name="tv_mode_one_ok">DACCORD</string>
     <string name="tv_mode_one_cancel">Annuler</string>
-    <string name="tv_work_one_temperature">La température</string>
+    <string name="tv_work_one_temperature">température</string>
     <string name="tv_work_one_flow">Flow</string>
-    <string name="tv_work_one_totla">À propos de Totla</string>
+    <string name="tv_work_one_totla">Total</string>
     <string name="tv_work_one_current">ACTUEL</string>
-    <string name="tv_work_one_id">IDENTIFIANT</string>
+    <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">EXACT</string>
     <string name="tv_work_one_raedy">Prêt à l’emploi</string>
     <string name="tv_work_one_auto">Auto</string>
@@ -183,7 +183,7 @@
     <string name="select_skin">Veuillez sélectionner une partie de la peau!</string>
     <string name="tv_work_two_l">lent</string>
     <string name="tv_work_two_f">rapide</string>
-    <string name="tv_work_two_m">Ce qui est</string>
+    <string name="tv_work_two_m">Général</string>
 
     <string name="tv_work_three_pulse">Pulse（MS）</string>
     <string name="tv_work_three_fluence">Fluence（J）</string>

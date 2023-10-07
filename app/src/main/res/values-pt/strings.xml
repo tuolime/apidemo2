@@ -3,16 +3,16 @@
     <string name="app_name">medical care</string>
 
     <string name="next">CONTINUAR</string>
-    <string name="ps_title">MODELO DE AUTO-AJUDA</string>
+    <string name="ps_title">AUTO-AJUDA</string>
     <string name="ps_content">SENHA</string>
     <string name="engineer_mode">MODO ENGENHEIRO</string>
-    <string name="count_cleaning">CONTAGEM DE LIMPEZA</string>
+    <string name="count_cleaning">ZERANDO</string>
     <string name="cleaning">LIMPEZA</string>
     <string name="remote_control">CONTROLO REMOTO</string>
-    <string name="on_str">ABRIR</string>
-    <string name="off_str">DESLIGADO</string>
-    <string name="quantity">QUANTIDADE</string>
-    <string name="of_hand_tools">DE FERRAMENTAS DE MÃO</string>
+    <string name="on_str">ON</string>
+    <string name="off_str">OFF</string>
+
+    <string name="of_hand_tools">Punho</string>
     <string name="one">UM</string>
     <string name="two">DOIS</string>
     <string name="left_hand_tool">FERRAMENTA DA MÃO Esquerda</string>
@@ -38,7 +38,7 @@
     <string name="man">HOMEM</string>
     <string name="woman">MULHER</string>
     <string name="age">IDADE</string>
-    <string name="tel">NÚMERO DE TELEFONE</string>
+    <string name="tel">TELEFONE</string>
     <string name="stcrage">ARMAZENAR</string>
     <string name="user_lookup">PROCURA DE USUÁRIO</string>
     <string name="please_enter">Introduza o seu número de telemóvel</string>
@@ -63,7 +63,7 @@
     <string name="cancel">Cancelar</string>
     <string name="sure">Claro</string>
     <string name="tv_next">PRÓXIMO</string>
-    <string name="trio">EXACTO</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">FLUÊNCIA</string>
     <string name="frequency">FREQUÊNCIA</string>
     <string name="time">TEMPO</string>
@@ -106,7 +106,7 @@
     <string name="current">ATUAL</string>
     <string name="stby">ESPERA</string>
     <string name="ready">PREPARAR</string>
-    <string name="working">TRABALHANDO</string>
+    <string name="working">TRABALHO</string>
     <string name="auto_shed_time">Tempo restante:</string>
     <string name="disconnect_tips">A comunicação com o sistema de controle está anormal. Entre em contato com o fabricante!</string>
     <string name="phone_count"> O número do celular deve ter menos de 13 dígitos!</string>
@@ -126,12 +126,12 @@
     <string name="frequency_hz">FREQUÊNCIA</string>
 
     <string name="thematic_style">ESTILO TEMÁTICO</string>
-    <string name="mode_two_bg_1">ESTILO I</string>
-    <string name="mode_two_bg_2">ESTILO   II</string>
-    <string name="mode_two_bg_3">ESTILO   III</string>
+    <string name="mode_two_bg_1">ESTILO  I</string>
+    <string name="mode_two_bg_2">ESTILO  II</string>
+    <string name="mode_two_bg_3">ESTILO  III</string>
     <string name="mode_two_bg_4">ESTILO  IV</string>
     <string name="mode_two_bg_5">ESTILO  V</string>
-    <string name="mode_two_bg_6">ESTILO   VI</string>
+    <string name="mode_two_bg_6">ESTILO  VI</string>
     <string name="user_down">DOWNLOAD DOS DADOS DO LIVRO DO UTILIZADOR</string>
     <string name="mode_select">SELEÇÃO DO MODO DE OPERAÇÃO</string>
     <string name="mode_select_1">I</string>
@@ -164,7 +164,7 @@
     <string name="tv_mode_one_cancel">Cancelar</string>
     <string name="tv_work_one_temperature">temperatura</string>
     <string name="tv_work_one_flow">Fluxo</string>
-    <string name="tv_work_one_totla">Totla</string>
+    <string name="tv_work_one_totla">Total</string>
     <string name="tv_work_one_current">ATUAL</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">EXACT</string>
@@ -185,7 +185,7 @@
     <string name="tv_work_two_f">Rápido</string>
     <string name="tv_work_two_m">Med</string>
 
-    <string name="tv_work_three_pulse">Pulso (EM)</string>
+    <string name="tv_work_three_pulse">Pulso (ms)</string>
     <string name="tv_work_three_fluence">Fluência(J)</string>
     <string name="tv_work_three_rate">Taxa (Hz)</string>
     <string name="tv_work_six_rate">Taxa</string>

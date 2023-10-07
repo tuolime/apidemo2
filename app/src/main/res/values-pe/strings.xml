@@ -11,8 +11,8 @@
     <string name="remote_control">کنترل از راه دور</string>
     <string name="on_str">باز کن</string>
     <string name="off_str">بستن</string>
-    <string name="quantity">مقدار</string>
-    <string name="of_hand_tools">ابزارهای دستی</string>
+
+    <string name="of_hand_tools">ابزارهای دست</string>
     <string name="one">یکی</string>
     <string name="two">دو</string>
     <string name="left_hand_tool">ابزار دست چپ</string>
@@ -63,7 +63,7 @@
     <string name="cancel">لغو</string>
     <string name="sure">تایید</string>
     <string name="tv_next">بعد از</string>
-    <string name="trio">دقیق</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">فلوئنس</string>
     <string name="frequency">فرکانس</string>
     <string name="time">زمان</string>
@@ -99,7 +99,7 @@
     <string name="name_cannot">نام کاربری نمی تواند خالی باشد </string>
     <string name="phone_cannot">شماره تلفن همراه نمی تواند خالی باشد</string>
     <string name="phone_already">شماره موبایل از قبل وجود دارد</string>
-    <string name="trio_3d">کواترو 3D</string>
+    <string name="trio_3d">QUATTRO 3D</string>
     <string name="select">انتخاب کنید</string>
     <string name="burst">BURST</string>
     <string name="total">جمع</string>
@@ -126,12 +126,12 @@
     <string name="frequency_hz">فرکانس</string>
 
     <string name="thematic_style">سبک موضوعی</string>
-    <string name="mode_two_bg_1">سبک I</string>
-    <string name="mode_two_bg_2">سبک دوم</string>
-    <string name="mode_two_bg_3">سبک سوم</string>
-    <string name="mode_two_bg_4">سبک چهارم</string>
-    <string name="mode_two_bg_5">سبک   V</string>
-    <string name="mode_two_bg_6">سبک   VI</string>
+    <string name="mode_two_bg_1"> Ⅰ</string>
+    <string name="mode_two_bg_2"> Ⅱ</string>
+    <string name="mode_two_bg_3"> Ⅲ</string>
+    <string name="mode_two_bg_4"> Ⅳ</string>
+    <string name="mode_two_bg_5"> Ⅴ</string>
+    <string name="mode_two_bg_6"> Ⅵ</string>
     <string name="user_down">دانلود اطلاعات کتاب کاربر</string>
     <string name="mode_select">انتخاب رابط کاری</string>
     <string name="mode_select_1">I</string>
@@ -148,7 +148,7 @@
     <string name="enger_str">انرژی</string>
     <string name="limit_str">محدود</string>
     <string name="version_code">نسخهٔ</string>
-    <string name="expert_str">EXPERT</string>
+    <string name="expert_str">متخصص</string>
     <string name="smart_str">هوشمندانه</string>
 
     <string name="skin_tyoe">نوع پوست</string>
@@ -176,7 +176,7 @@
     <string name="tv_work_one_l">L</string>
     <string name="tv_work_one_f">F</string>
     <string name="tv_work_one_m">M</string>
-    <string name="tv_work_one_rate">نرخe</string>
+    <string name="tv_work_one_rate">فرکانس</string>
     <string name="tv_work_one_hz">Hz</string>
     <string name="tv_work_one_fluence">فلوئنس</string>
     <string name="tv_work_one_j">J</string>
@@ -187,8 +187,8 @@
 
     <string name="tv_work_three_pulse">پالس (MS)</string>
     <string name="tv_work_three_fluence">فلونس (J)</string>
-    <string name="tv_work_three_rate">نرخ (هرتز)</string>
-    <string name="tv_work_six_rate">نرخr</string>
+    <string name="tv_work_three_rate">فرکانس(Hz)</string>
+    <string name="tv_work_six_rate">نرخ </string>
     <string name="tv_work_six_fluence">فلوئنس</string>
 
     <string name="excel_success"> صادرات موفق </string>

@@ -12,7 +12,7 @@ import java.lang.reflect.Field;
  *
  */
 public class ToastUtil {
-
+    private static Toast toast = null;
 
     public static void showToast(Context context, int res) {
         if (context == null) {
@@ -50,7 +50,15 @@ public class ToastUtil {
 
     private static void realShowToast(Context context, CharSequence text, int duration) {
         // 安卓7弹toast有可能因ui线程阻塞而崩溃，hook加个try,
-        hookToast(Toast.makeText(context, text, duration)).show();
+//        hookToast(Toast.makeText(context, text, duration)).show();
+
+        if (toast == null) {
+            toast = Toast.makeText(context, text, duration);
+        } else {
+            toast.setText(text);
+            toast.setDuration(duration);
+        }
+        toast.show();
     }
 
     @SuppressWarnings("JavaReflectionMemberAccess")

@@ -11,10 +11,10 @@
     <string name="remote_control">リモコン</string>
     <string name="on_str">オン</string>
     <string name="off_str">オフ</string>
-    <string name="quantity">量</string>
+
     <string name="of_hand_tools">手持工具の</string>
-    <string name="one">シングルハンドピース</string>
-    <string name="two">ダブルハンドピース</string>
+    <string name="one">一つ</string>
+    <string name="two">二つ</string>
     <string name="left_hand_tool">左手ツール</string>
     <string name="qb_6_10">QB-6-10</string>
     <string name="qb_6_16">QB-6-16</string>
@@ -39,11 +39,11 @@
     <string name="woman">女性</string>
     <string name="age">年齢</string>
     <string name="tel">電話番号</string>
-    <string name="stcrage">保存</string>
+    <string name="stcrage">きおく</string>
     <string name="user_lookup">ユーザー検索</string>
     <string name="please_enter">携帯番号を入力してください</string>
     <string name="search_hint">見つかりませんもう一度お試しください。</string>
-    <string name="lookup">探索</string>
+    <string name="lookup">検索</string>
     <string name="free_users">無料ユーザー</string>
     <string name="no_fatent">自由モード、患者アカウント情報を作成する必要はありません</string>
     <string name="get_info">情报収集ルート</string>
@@ -53,7 +53,7 @@
     <string name="temperature_alarm">温度監視</string>
     <string name="handle">ハンドピース</string>
     <string name="count_clearing">カウントクリア</string>
-    <string name="upper">上</string>
+    <string name="upper">最大値</string>
     <string name="temperature">温度</string>
     <string name="limit">制限</string>
     <string name="lower_limit">下限</string>
@@ -63,7 +63,7 @@
     <string name="cancel">キャンセル</string>
     <string name="sure">確認</string>
     <string name="tv_next">次へ</string>
-    <string name="trio">正確な</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">パワー</string>
     <string name="frequency">周波数</string>
     <string name="time">タイマー</string>
@@ -82,8 +82,8 @@
     <string name="water_low">水流アラーム</string>
     <string name="water_no">水流なし</string>
     <string name="netwrok_no">インターネット接続がありません </string>
-    <string name="setting_succeeded">設置成功</string>
-    <string name="setting_failed">設置失敗</string>
+    <string name="setting_succeeded">設定に成功しました</string>
+    <string name="setting_failed">設定に失敗しました</string>
     <string name="switching_languages">言語の切り替えには再起動が必要</string>
     <string name="user_delete">このユーザーを削除してもよろしいですか</string>
     <string name="tel_no_hint">電話番号は存在しません</string>
@@ -126,11 +126,11 @@
     <string name="frequency_hz">周波数</string>
 
     <string name="thematic_style">テーマスタイル</string>
-    <string name="mode_two_bg_1">リーダーシップのスタイル</string>
+    <string name="mode_two_bg_1">スタイル1世</string>
     <string name="mode_two_bg_2">スタイル2世</string>
     <string name="mode_two_bg_3">スタイル3世</string>
-    <string name="mode_two_bg_4">スタイルIV</string>
-    <string name="mode_two_bg_5">スタイルV</string>
+    <string name="mode_two_bg_4">スタイル4世</string>
+    <string name="mode_two_bg_5">スタイル5世</string>
     <string name="mode_two_bg_6">スタイル6世</string>
     <string name="user_down">ユーザブックデータダウンロード</string>
     <string name="mode_select">モード設定</string>
@@ -149,7 +149,7 @@
     <string name="limit_str">制限</string>
     <string name="version_code">版</string>
     <string name="expert_str">プロモード</string>
-    <string name="smart_str">スマートモード</string>
+    <string name="smart_str">ガイド人</string>
 
     <string name="skin_tyoe">肌タイプ</string>
     <string name="skin_1">I</string>
@@ -162,21 +162,21 @@
 
     <string name="tv_mode_one_ok">Ok</string>
     <string name="tv_mode_one_cancel">キャンセル</string>
-    <string name="tv_work_one_temperature">温度</string>
+    <string name="tv_work_one_temperature">おんど</string>
     <string name="tv_work_one_flow">フロー</string>
-    <string name="tv_work_one_totla">Totla</string>
+    <string name="tv_work_one_totla">合計数</string>
     <string name="tv_work_one_current">今回ショット数</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">正確な</string>
     <string name="tv_work_one_raedy">準備y</string>
-    <string name="tv_work_one_auto">自動モード</string>
+    <string name="tv_work_one_auto">AUTO</string>
     <string name="tv_work_one_30">30</string>
     <string name="tv_work_one_100">100</string>
     <string name="tv_work_one_400">400</string>
     <string name="tv_work_one_l">L</string>
     <string name="tv_work_one_f">F</string>
     <string name="tv_work_one_m">M</string>
-    <string name="tv_work_one_rate">率</string>
+    <string name="tv_work_one_rate">頻度</string>
     <string name="tv_work_one_hz">Hz</string>
     <string name="tv_work_one_fluence">パワー</string>
     <string name="tv_work_one_j">J</string>
@@ -187,8 +187,8 @@
 
     <string name="tv_work_three_pulse">パルス(MS)</string>
     <string name="tv_work_three_fluence">Fluence (J)</string>
-    <string name="tv_work_three_rate">率(Hz)</string>
-    <string name="tv_work_six_rate">率</string>
+    <string name="tv_work_three_rate">頻度(Hz)</string>
+    <string name="tv_work_six_rate">頻度</string>
     <string name="tv_work_six_fluence">パワー</string>
 
     <string name="excel_success"> 輸出成功 </string>

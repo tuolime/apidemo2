@@ -10,11 +10,11 @@
     <string name="cleaning">Klar</string>
     <string name="remote_control">Fernsteuerung</string>
     <string name="on_str">Offen</string>
-    <string name="off_str">Schließung</string>
-    <string name="quantity">QUANTITÄT</string>
-    <string name="of_hand_tools">DER HANDWERKSTELLE</string>
-    <string name="one">Einzelgriff</string>
-    <string name="two">Doppelgriff</string>
+    <string name="off_str">schließen</string>
+
+    <string name="of_hand_tools">Handwerkzeuge</string>
+    <string name="one">eine</string>
+    <string name="two">zwei</string>
     <string name="left_hand_tool">LINKS-WERKZEUG</string>
     <string name="qb_6_10">QB-6-10</string>
     <string name="qb_6_16">QB-6-16</string>
@@ -63,7 +63,7 @@
     <string name="cancel">stornieren</string>
     <string name="sure">Sicher</string>
     <string name="tv_next">NÄCHSTE</string>
-    <string name="trio">Genau</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">FLUENCE</string>
     <string name="frequency">FREQUENZ</string>
     <string name="time">Zeit</string>
@@ -178,18 +178,18 @@
     <string name="tv_work_one_m">M</string>
     <string name="tv_work_one_rate">Rate</string>
     <string name="tv_work_one_hz">Hz</string>
-    <string name="tv_work_one_fluence">FLUENCE</string>
+    <string name="tv_work_one_fluence">FLUENZ</string>
     <string name="tv_work_one_j">J</string>
-    <string name="select_skin">PPlease select a skin part!</string>
+    <string name="select_skin">Please select a skin part!</string>
     <string name="tv_work_two_l">Langsam</string>
     <string name="tv_work_two_f">Fast</string>
     <string name="tv_work_two_m">Med</string>
 
     <string name="tv_work_three_pulse">Puls(MS)</string>
-    <string name="tv_work_three_fluence">Fluence（J）</string>
-    <string name="tv_work_three_rate">Rate（Hz）</string>
+    <string name="tv_work_three_fluence">Fluenz(J)</string>
+    <string name="tv_work_three_rate">Rate(Hz)</string>
     <string name="tv_work_six_rate">Rate</string>
-    <string name="tv_work_six_fluence">FLUENCE</string>
+    <string name="tv_work_six_fluence">FLUENZ</string>
 
     <string name="excel_success"> Export successful </string>
     <string name="excel_fail"> Export fehlgeschlagen</string>

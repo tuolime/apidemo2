@@ -11,8 +11,8 @@
     <string name="remote_control">Kontrolü sil</string>
     <string name="on_str">AÇIK</string>
     <string name="off_str">KAPALI</string>
-    <string name="quantity">GÜNİT</string>
-    <string name="of_hand_tools">el aletlerinin</string>
+
+    <string name="of_hand_tools">Eller araçları</string>
     <string name="one">BİR</string>
     <string name="two">İKİ</string>
     <string name="left_hand_tool">sol el aracı</string>
@@ -63,7 +63,7 @@
     <string name="cancel">iptal etmek</string>
     <string name="sure">Elbette</string>
     <string name="tv_next">SONRAKİ</string>
-    <string name="trio">BİRE BİR AYNI</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">AKICILIK</string>
     <string name="frequency">SIKLIK</string>
     <string name="time">ZAMAN</string>
@@ -164,7 +164,7 @@
     <string name="tv_mode_one_cancel">iptal etmek</string>
     <string name="tv_work_one_temperature">sıcaklığı</string>
     <string name="tv_work_one_flow">Çevir</string>
-    <string name="tv_work_one_totla">Totla</string>
+    <string name="tv_work_one_totla">Istatistikler</string>
     <string name="tv_work_one_current">AKIM</string>
     <string name="tv_work_one_id">İD</string>
     <string name="tv_work_one_exact">BİRE BİR AYNI</string>
@@ -186,8 +186,8 @@
     <string name="tv_work_two_m">Med</string>
 
     <string name="tv_work_three_pulse">Puls(MS)</string>
-    <string name="tv_work_three_fluence">Fluence(J)）</string>
-    <string name="tv_work_three_rate">Rate（Hz）</string>
+    <string name="tv_work_three_fluence">Fluence(J)</string>
+    <string name="tv_work_three_rate">Rate(Hz))</string>
     <string name="tv_work_six_rate">Rate</string>
     <string name="tv_work_six_fluence">AKICILIK</string>
 

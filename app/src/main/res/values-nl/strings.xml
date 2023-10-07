@@ -11,7 +11,7 @@
     <string name="remote_control">afstandsbediening</string>
     <string name="on_str">OP</string>
     <string name="off_str">UIT</string>
-    <string name="quantity">bedrag</string>
+
     <string name="of_hand_tools">handgereedschap</string>
     <string name="one">EEN</string>
     <string name="two">TWEE</string>
@@ -63,7 +63,7 @@
     <string name="cancel">annuleren</string>
     <string name="sure">Zeker</string>
     <string name="tv_next">VOLGENDE</string>
-    <string name="trio">exacte</string>
+    <string name="trio">EXACT</string>
     <string name="fluence">FLUENCE</string>
     <string name="frequency">FREQUENTIE</string>
     <string name="time">TIJD</string>
@@ -99,7 +99,7 @@
     <string name="name_cannot">Gebruikersnaam mag niet leeg zijn! </string>
     <string name="phone_cannot">Mobiel telefoonnummer mag niet leeg zijn!</string>
     <string name="phone_already">Mobiel nummer bestaat al!</string>
-    <string name="trio_3d">Vierwielaandrijving systeem 3 d</string>
+    <string name="trio_3d">QUATTRO 3D</string>
     <string name="select">SELECTEER</string>
     <string name="burst">UITBARSTING</string>
     <string name="total">TOTAAL</string>
@@ -126,13 +126,13 @@
     <string name="frequency_hz">FREQUENTIE</string>
 
     <string name="thematic_style">Thematische stijl</string>
-    <string name="mode_two_bg_1">Mijn stijl</string>
-    <string name="mode_two_bg_2">Stijl ii</string>
-    <string name="mode_two_bg_3">Stijl iii</string>
-    <string name="mode_two_bg_4">Stijl iv</string>
-    <string name="mode_two_bg_5">Stijl V</string>
-    <string name="mode_two_bg_6">Stijl vi</string>
-    <string name="user_down">Gebruikershandleiding voor het downloaden van gegevens</string>
+    <string name="mode_two_bg_1">Stijl  i</string>
+    <string name="mode_two_bg_2">Stijl  ii</string>
+    <string name="mode_two_bg_3">Stijl  iii</string>
+    <string name="mode_two_bg_4">Stijl  iv</string>
+    <string name="mode_two_bg_5">Stijl  V</string>
+    <string name="mode_two_bg_6">Stijl  vi</string>
+    <string name="user_down">Gegevens downloaden</string>
     <string name="mode_select">KEUZE VAN DE WERKMODUS</string>
     <string name="mode_select_1">I</string>
     <string name="mode_select_2">II</string>
@@ -164,7 +164,7 @@
     <string name="tv_mode_one_cancel">annuleren</string>
     <string name="tv_work_one_temperature">temperatuur</string>
     <string name="tv_work_one_flow">stream</string>
-    <string name="tv_work_one_totla">Totla</string>
+    <string name="tv_work_one_totla">Totaal</string>
     <string name="tv_work_one_current">HUIDIG</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">EXACT</string>
@@ -183,13 +183,13 @@
     <string name="select_skin">Selecteer de zone van de huid!</string>
     <string name="tv_work_two_l">slow</string>
     <string name="tv_work_two_f">snelle</string>
-    <string name="tv_work_two_m">Middellandse zee</string>
+    <string name="tv_work_two_m">midden</string>
 
-    <string name="tv_work_three_pulse">(mevrouw)</string>
+    <string name="tv_work_three_pulse">Mevrouw</string>
     <string name="tv_work_three_fluence">Effect (J)</string>
-    <string name="tv_work_three_rate">Tarief (in hertz)</string>
-    <string name="tv_work_six_rate">tarieven</string>
-    <string name="tv_work_six_fluence">FLUENCE</string>
+    <string name="tv_work_three_rate">Tarief (Hz)</string>
+    <string name="tv_work_six_rate">Tarief</string>
+    <string name="tv_work_six_fluence">Effect</string>
 
     <string name="excel_success"> Succesvolle export </string>
     <string name="excel_fail"> Niet exporteren </string>
