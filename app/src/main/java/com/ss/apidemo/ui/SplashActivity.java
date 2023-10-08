@@ -21,11 +21,13 @@ import com.ss.apidemo.TestDialogActivity;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.dialog.HintDialog;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.DeviceInfoUtil;
 import com.ss.apidemo.utils.LogUtils;
 import com.ss.apidemo.utils.NetworkUtil;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
+import com.ss.apidemo.utils.ToastUtil;
 import com.ss.apidemo.widget.LongPressView;
 
 /*
@@ -66,6 +68,10 @@ public class SplashActivity extends BaseActivity {
         bt_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
                 boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
                 if (iswifi){
@@ -83,6 +89,7 @@ public class SplashActivity extends BaseActivity {
                         } else if(AppConfig.lockStatus == 2) {//默认（没有获取到实际状态信息）
                             MyApplication.instance().destroyTask();
                             MyApplication.instance().connetSocket();
+                            ToastUtil.showToast(SplashActivity.this,getResources().getString(R.string.splash_tips));
                         }
 
                     }

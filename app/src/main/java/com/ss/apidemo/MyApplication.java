@@ -127,9 +127,10 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
 
     @Override
     public void onCreate() {
+        initLanguage();
         super.onCreate();
         instance = this;
-        initLanguage();
+
         initTimer();
         openSerialPort();
         startLoopListener();
