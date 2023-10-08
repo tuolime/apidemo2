@@ -134,9 +134,9 @@ public class WorkSelectThreeActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_work_select_three);
-        initView();
-        initIntentData();
-        initData();
+//        initView();
+//        initIntentData();
+//        initData();
     }
 
     private void initView() {
@@ -364,7 +364,9 @@ public class WorkSelectThreeActivity extends BaseActivity {
         isHidden = true;
         handler.sendMessageDelayed(new Message(),500);
         LogUtils.e("=====获取焦点 shr");
-
+        initView();
+        initIntentData();
+        initData();
     }
 
     public void setCount() {
@@ -1135,7 +1137,11 @@ public class WorkSelectThreeActivity extends BaseActivity {
 
         }
         tv_total.setText(uploadWorkingInfo.getToalCount()+"");
-        tv_flow.setText(uploadWorkingInfo.getFlowVelocity()+"L/min");
+        if(uploadWorkingInfo.getFlowVelocity() != 0){
+            tv_flow.setText((uploadWorkingInfo.getFlowVelocity()/10)+"L/min");//整数变成小数
+        }else {
+            tv_flow.setText(uploadWorkingInfo.getFlowVelocity()+"L/min");
+        }
         tv_temperature.setText(uploadWorkingInfo.getTemperature()+"℃");
     }
 
