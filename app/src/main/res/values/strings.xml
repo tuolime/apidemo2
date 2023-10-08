@@ -200,6 +200,7 @@
     <string name="wifi_no_close"> WiFi cannot be turned off </string>
 
     <string name="replace_filter"> Please replace the filter device！</string>
+    <string name="splash_tips">  Establishing connection, please click to enter later！</string>
 
 
 </resources>
