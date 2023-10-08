@@ -60,6 +60,7 @@ public class WarmSettingActivity extends BaseActivity {
     private WifiManager  wifiManager;
     private AudioManager mAudioManager;
     int mediaVolume;
+    private boolean clickFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -322,21 +323,33 @@ public class WarmSettingActivity extends BaseActivity {
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
                 switch (i) {
                     case R.id.rb_wlan_on:
+                        if (clickFlag){
+                            return;
+                        }
 //                        SharedPrefsUtil.putBooleanValue(AppConfig.WLAN,true);
                         if (wifiManager != null){
                             wifiManager.setWifiEnabled(true);
                             ShowDialog(R.string.wifi_open);
+                            SharedPrefsUtil.putBooleanValue(AppConfig.WIFI, true);
+                            MyApplication.instance().destroyTask();
+                            MyApplication.instance().connetSocket();
                         }
                         break;
                     case R.id.rb_wlan_off:
+                        clickFlag = false;
 //                        SharedPrefsUtil.putBooleanValue(AppConfig.WLAN,false);
                         //useLimitedFlag 用限制标识，0否1是
                         if (AppConfig.useLimitedFlag == 0){
                             if (wifiManager != null){
                                 wifiManager.setWifiEnabled(false);
                                 ShowDialog(R.string.wifi_close);
+                                SharedPrefsUtil.putBooleanValue(AppConfig.WIFI, false);
+                                MyApplication.instance().destroyTask();
+//                                MyApplication.instance().connetSocket();
                             }
                         }else {
+                            clickFlag = true;
+                            rb_wlan_on.setChecked(true);
                             ShowDialog(R.string.wifi_no_close);
                         }
                         break;
