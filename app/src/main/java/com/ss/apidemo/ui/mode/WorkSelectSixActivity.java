@@ -379,12 +379,13 @@ public class WorkSelectSixActivity extends BaseActivity {
     @Override
     public void onResume() {
         super.onResume();
-        isHidden = true;
-        handler.sendMessageDelayed(new Message(),500);
-        LogUtils.e("=====获取焦点 shr");
         initView();
         initIntentData();
         initData();
+        isHidden = true;
+        handler.sendMessageDelayed(new Message(),500);
+        LogUtils.e("=====获取焦点 shr");
+
     }
 
     public void setCount() {
@@ -1023,8 +1024,11 @@ public class WorkSelectSixActivity extends BaseActivity {
     public void sendFluence(){
         //值改变 发送报文到下位机
         SetFluenceBean setFluenceBean = new SetFluenceBean();
-        setFluenceBean.setFluence(current_fluence_progress);
-        LogUtils.e("下发单脉冲hr"+current_fluence_progress);
+        String fluenceString = tv_fluence.getText().toString();
+        int fluenceInt = Integer.parseInt(fluenceString);
+        setFluenceBean.setFluence(fluenceInt);
+//        setFluenceBean.setFluence(current_fluence_progress);
+        LogUtils.e("下发单脉冲hr"+fluenceInt);
         EventBus.getDefault().post(setFluenceBean);
     }
 
