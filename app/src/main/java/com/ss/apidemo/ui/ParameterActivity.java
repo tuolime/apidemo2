@@ -339,12 +339,20 @@ public class ParameterActivity extends BaseActivity implements View.OnClickListe
         LogUtils.e("声音4");
         switch (view.getId()) {
             case R.id.iv_main:
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 startActivity(new Intent(ParameterActivity.this, SplashActivity.class));
                 break;
             case R.id.iv_main_back:
                 finish();
                 break;
             case R.id.iv_main_setting:
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 startActivity(new Intent(ParameterActivity.this, UserSettingActivity.class));
                 break;
         }

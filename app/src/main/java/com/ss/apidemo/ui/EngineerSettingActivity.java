@@ -20,6 +20,7 @@ import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.LogUtils;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
@@ -60,7 +61,10 @@ public class EngineerSettingActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 int power = SharedPrefsUtil.getIntValue(AppConfig.POWER_TYPE, 1);
                 int handgear = SharedPrefsUtil.getIntValue(AppConfig.HANDGEAR, 0);
                 ProtocalHandler protocalHandler = new ProtocalHandler();

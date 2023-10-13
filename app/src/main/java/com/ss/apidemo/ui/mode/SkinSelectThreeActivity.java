@@ -14,6 +14,7 @@ import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.ui.SplashActivity;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.ToastUtil;
 
@@ -61,6 +62,10 @@ public class SkinSelectThreeActivity extends BaseActivity {
         iv_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
                 startActivity(new Intent(SkinSelectThreeActivity.this, SplashActivity.class));
             }
@@ -221,6 +226,10 @@ public class SkinSelectThreeActivity extends BaseActivity {
     }
 
     public void startA() {
+        //多次点击直接返回
+        if (ClickUtil.isFastClick()) {
+            return;
+        }
         Intent intent = new Intent(SkinSelectThreeActivity.this, WorkSelectThreeActivity.class);
         intent.putExtra("mode_type", 2);//1 专家  2 智能
         intent.putExtra("skin_type", skin_type);

@@ -30,6 +30,7 @@ import com.ss.apidemo.db.dao.UserValueDao;
 import com.ss.apidemo.dialog.CallDialog;
 import com.ss.apidemo.utils.AppUtil;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.DeviceInfoUtil;
 import com.ss.apidemo.utils.LocaleHelper;
 import com.ss.apidemo.utils.LogUtils;
@@ -372,6 +373,10 @@ public class UserSettingActivity extends BaseActivity implements NumberKeyboardV
     }
 
     public void startA() {
+        //多次点击直接返回
+        if (ClickUtil.isFastClick()) {
+            return;
+        }
         startActivity(new Intent(UserSettingActivity.this, SplashActivity.class));
 
     }

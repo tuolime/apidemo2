@@ -43,6 +43,7 @@ import com.ss.apidemo.dialog.HintDialog;
 import com.ss.apidemo.ui.SplashActivity;
 import com.ss.apidemo.ui.UserSettingActivity;
 import com.ss.apidemo.utils.AutoSkinTypeUtils;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.DateUtil;
 import com.ss.apidemo.utils.DeviceInfoUtil;
 import com.ss.apidemo.utils.ExpertModeUtils;
@@ -439,12 +440,20 @@ public class WorkSelectSixActivity extends BaseActivity {
                 }, getResources().getString(R.string.user_information));
                 break;
             case R.id.iv_setting:
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 startActivity(new Intent(WorkSelectSixActivity.this, UserSettingActivity.class));
                 break;
             case R.id.iv_back:
                 finish();
                 break;
             case R.id.iv_main:
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 startActivity(new Intent(WorkSelectSixActivity.this, SplashActivity.class));
                 break;
         }

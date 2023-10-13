@@ -29,6 +29,7 @@ import com.ss.apidemo.ui.mode.ModeSelectSixActivity;
 import com.ss.apidemo.ui.mode.ModeSelectThreeActivity;
 import com.ss.apidemo.ui.mode.ModeSelectTwoActivity;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.DateUtil;
 import com.ss.apidemo.utils.LogUtils;
 import com.ss.apidemo.utils.PlayVoiceUtils;
@@ -194,7 +195,10 @@ public class UserMessageActivity extends BaseActivity {
     }
 
     public void isHandger() {
-
+        //多次点击直接返回
+        if (ClickUtil.isFastClick()) {
+            return;
+        }
         int isHandgear = SharedPrefsUtil.getIntValue(AppConfig.HANDGEAR, 0);
         if (isHandgear == 0) {//单手具
             int modeType = SharedPrefsUtil.getIntValue(AppConfig.MODETYPE, 1);

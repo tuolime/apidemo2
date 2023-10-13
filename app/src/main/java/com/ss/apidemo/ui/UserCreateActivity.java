@@ -29,6 +29,7 @@ import com.ss.apidemo.ui.mode.ModeSelectSixActivity;
 import com.ss.apidemo.ui.mode.ModeSelectThreeActivity;
 import com.ss.apidemo.ui.mode.ModeSelectTwoActivity;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
 import com.ss.apidemo.utils.ToastUtil;
@@ -61,7 +62,10 @@ public class UserCreateActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 hideInput();
                 //退出该页面
                 startActivity(new Intent(UserCreateActivity.this, SplashActivity.class));
@@ -149,7 +153,10 @@ public class UserCreateActivity extends BaseActivity {
             public void onClick(View view) {
                 hideInput();
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 String s = et_search.getText().toString();
                 if (s != null && !s.equals("")) {
                     List<User> allUser = UserDao.getInstance().getLikeUser(s);
@@ -173,7 +180,10 @@ public class UserCreateActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 isHandger();
             }
         });

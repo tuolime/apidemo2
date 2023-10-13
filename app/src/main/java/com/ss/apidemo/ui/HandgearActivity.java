@@ -18,6 +18,7 @@ import com.ss.apidemo.ui.mode.ModeSelectSixActivity;
 import com.ss.apidemo.ui.mode.ModeSelectThreeActivity;
 import com.ss.apidemo.ui.mode.ModeSelectTwoActivity;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
 
@@ -114,6 +115,10 @@ public class HandgearActivity extends BaseActivity {
 
     }
     public void startA(){
+        //多次点击直接返回
+        if (ClickUtil.isFastClick()) {
+            return;
+        }
         int modeType = SharedPrefsUtil.getIntValue(AppConfig.MODETYPE, 1);
         if (modeType == 1){
             Intent intent = new Intent(HandgearActivity.this, ParameterActivity.class);

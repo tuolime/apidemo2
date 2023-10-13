@@ -16,6 +16,7 @@ import com.ss.apidemo.ui.OtherActivity;
 import com.ss.apidemo.ui.ParameterActivity;
 import com.ss.apidemo.ui.SplashActivity;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
 
@@ -61,6 +62,10 @@ public class ModeSelectOneActivity extends BaseActivity {
         iv_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
                 startActivity(new Intent(ModeSelectOneActivity.this, SplashActivity.class));
             }
@@ -113,6 +118,10 @@ public class ModeSelectOneActivity extends BaseActivity {
     }
 
     public void startA(int flag) {
+        //多次点击直接返回
+        if (ClickUtil.isFastClick()) {
+            return;
+        }
         Intent intent = null;
         if (flag == 1){//expert
             intent = new Intent(ModeSelectOneActivity.this, WorkSelectOneActivity.class);

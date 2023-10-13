@@ -12,6 +12,7 @@ import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 
 /*
@@ -71,7 +72,10 @@ public class ShedSettingActivity extends BaseActivity implements View.OnClickLis
             @Override
             public void onClick(View view) {
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 if (current_time > 0){
                     if (current_time == AppConfig.INFINITE){
                         AppConfig.AUTOSHEDTIME = AppConfig.INFINITE;

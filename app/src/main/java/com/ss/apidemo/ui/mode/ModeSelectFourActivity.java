@@ -13,6 +13,7 @@ import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
 import com.ss.apidemo.base.BaseActivity;
 import com.ss.apidemo.ui.SplashActivity;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 
 public class ModeSelectFourActivity extends BaseActivity {
@@ -49,6 +50,10 @@ public class ModeSelectFourActivity extends BaseActivity {
         iv_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
                 startActivity(new Intent(ModeSelectFourActivity.this, SplashActivity.class));
             }
@@ -95,6 +100,10 @@ public class ModeSelectFourActivity extends BaseActivity {
     }
 
     public void startA(int flag) {
+        //多次点击直接返回
+        if (ClickUtil.isFastClick()) {
+            return;
+        }
         Intent intent = null;
         if (flag == 1){//expert
             intent = new Intent(ModeSelectFourActivity.this, WorkSelectFourActivity.class);

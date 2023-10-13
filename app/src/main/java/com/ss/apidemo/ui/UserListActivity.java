@@ -26,6 +26,7 @@ import com.ss.apidemo.db.dao.UserValueDao;
 import com.ss.apidemo.dialog.HintDialog;
 import com.ss.apidemo.excel.ExcelExport;
 import com.ss.apidemo.utils.BackgroundChangeUtils;
+import com.ss.apidemo.utils.ClickUtil;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
 
@@ -80,7 +81,10 @@ public class UserListActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
-
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 List<UserValue> allUserValue = UserValueDao.getInstance().getAllUserValue();
                 if (allUserValue != null && allUserValue.size()>0){
                     //导出数据
@@ -107,6 +111,10 @@ public class UserListActivity extends BaseActivity {
         adapter.setClickItem(new UserListAdapter.ClickItem() {
             @Override
             public void onClickItem(String tel) {
+                //多次点击直接返回
+                if (ClickUtil.isFastClick()) {
+                    return;
+                }
                 Intent intent = new Intent(UserListActivity.this, UserMessageActivity.class);
                 intent.putExtra("tel", tel);
                 startActivity(intent);
