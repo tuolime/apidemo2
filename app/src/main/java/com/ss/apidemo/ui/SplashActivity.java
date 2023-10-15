@@ -86,11 +86,12 @@ public class SplashActivity extends BaseActivity {
                             isAutoShed();
                         } else if(AppConfig.lockStatus == 1) {//锁定
                             ShowDialog();
-                        } else if(AppConfig.lockStatus == 2) {//默认（没有获取到实际状态信息）
-                            MyApplication.instance().destroyTask();
-                            MyApplication.instance().connetSocket();
-                            ToastUtil.showToast(SplashActivity.this,getResources().getString(R.string.splash_tips));
                         }
+//                        else if(AppConfig.lockStatus == 2) {//默认（没有获取到实际状态信息）
+//                            MyApplication.instance().destroyTask();
+//                            MyApplication.instance().connetSocket();
+//                            ToastUtil.showToast(SplashActivity.this,getResources().getString(R.string.splash_tips));
+//                        }
 
                     }
                 }else {//工程师没有设置wifi
@@ -134,7 +135,7 @@ public class SplashActivity extends BaseActivity {
             if (!wifi){
             }else {
 //                if (AppConfig.lockStatus == 0){//未锁定
-                    AppConfig.lockStatus = 2;// 2 默认（没有获取到实际状态信息）
+//                    AppConfig.lockStatus = 2;// 2 默认（没有获取到实际状态信息）
                     MyApplication.instance().destroyTask();
                     MyApplication.instance().connetSocket();
 //                }

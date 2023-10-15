@@ -153,7 +153,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
         mConnection.setMainHandler(myhandler);
         if (!isScheduledTasks) {
             handler.postDelayed(sendSocket, 3000);//延迟调用 3秒后开始执行
-//            handler.postDelayed(mDisconnectSocketTips, 3 * 10000);//延迟30秒调用
+            handler.postDelayed(mDisconnectSocketTips, 3 * 10000);//延迟30秒调用
 
         }
 
