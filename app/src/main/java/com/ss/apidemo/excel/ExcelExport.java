@@ -1,5 +1,6 @@
 package com.ss.apidemo.excel;
 
+import android.content.Context;
 import android.os.Environment;
 
 import com.ss.apidemo.R;
@@ -71,17 +72,17 @@ public class ExcelExport {
                 u.setJ_workCount(allUserValue.get(i).getWorkCount());
                 u.setK_fluence(allUserValue.get(i).getFluence());
                 u.setL_date(allUserValue.get(i).getDate());
-                u.setF_skinType(SetSkinType(allUserValue.get(i).getSkinType()));
+                u.setF_skinType(SetSkinType(allUserValue.get(i).getSkinType(),context));
                 if (allUserValue.get(i).getMode().equals("1") ||allUserValue.get(i).getMode().equals("2") ||
                         allUserValue.get(i).getMode().equals("3") ||allUserValue.get(i).getMode().equals("4") ||
                         allUserValue.get(i).getMode().equals("5")||allUserValue.get(i).getMode().equals("6")){
-                    u.setE_mode(SetModeOne(allUserValue.get(i).getMode()));
-                    u.setG_bodyType(SetModeOneBodyType(allUserValue.get(i).getGender(),allUserValue.get(i).getBodyType()));
+                    u.setE_mode(SetModeOne(allUserValue.get(i).getMode(),context));
+                    u.setG_bodyType(SetModeOneBodyType(allUserValue.get(i).getGender(),allUserValue.get(i).getBodyType(),context));
                 }
                 if (allUserValue.get(i).getMode().equals("7") ||allUserValue.get(i).getMode().equals("8") ||
                         allUserValue.get(i).getMode().equals("9") ||allUserValue.get(i).getMode().equals("10")){
-                    u.setE_mode(SetModeTwo(allUserValue.get(i).getMode()));
-                    u.setG_bodyType(SetModeTwoBodyType(allUserValue.get(i).getBodyType()));
+                    u.setE_mode(SetModeTwo(allUserValue.get(i).getMode(),context));
+                    u.setG_bodyType(SetModeTwoBodyType(allUserValue.get(i).getBodyType(),context));
                 }
 
 
@@ -154,7 +155,7 @@ public class ExcelExport {
         return file.getAbsolutePath();
     }
 
-    public static  String SetModeOne(String mode){
+    public static  String SetModeOne(String mode,Context context){
         //工作模式  1 2 3 4 5 shr 6 hr
         String modeString = "";
         switch (mode){
@@ -162,58 +163,58 @@ public class ExcelExport {
             case "2":
             case "3":
             case "4":
-                modeString = "SHR STACK";
+                modeString = context.getString(R.string.mode_shr_stack);
                 break;
             case "5":
-                modeString = "SHR";
+                modeString = context.getString(R.string.mode_shr);
                 break;
             case "6":
-                modeString = "HR";
+                modeString = context.getString(R.string.mode_hr);
                 break;
         }
         return modeString;
     }
 
-    public static String SetModeTwo(String mode){
+    public static String SetModeTwo(String mode, Context context){
         //工作模式  1 2 3 4 5 shr 6 hr
         String modeString = "";
         switch (mode){
             case "7":
-                modeString = "AUTO";
+                modeString = context.getString(R.string.tv_work_one_auto);
                 break;
             case "8":
-                modeString = "30";
+                modeString = context.getString(R.string.tv_work_one_30);
                 break;
             case "9":
-                modeString = "100";
+                modeString = context.getString(R.string.tv_work_one_100);
                 break;
             case "10":
-                modeString = "400";
+                modeString = context.getString(R.string.tv_work_one_400);
                 break;
         }
         return modeString;
     }
 
-    public static  String SetSkinType(String skinType){
+    public static  String SetSkinType(String skinType,Context context){
         String skinTypeString = "";
         switch (skinType){
             case "1":
-                skinTypeString = "I";
+                skinTypeString = context.getString(R.string.skin_1);
                 break;
             case "2":
-                skinTypeString = "II";
+                skinTypeString = context.getString(R.string.skin_2);
                 break;
             case "3":
-                skinTypeString = "III";
+                skinTypeString = context.getString(R.string.skin_3);
                 break;
             case "4":
-                skinTypeString = "IV";
+                skinTypeString = context.getString(R.string.skin_4);
                 break;
             case "5":
-                skinTypeString = "V";
+                skinTypeString = context.getString(R.string.skin_5);
                 break;
             case "6":
-                skinTypeString = "VI";
+                skinTypeString = context.getString(R.string.skin_6);
                 break;
         }
         return skinTypeString;
@@ -221,7 +222,7 @@ public class ExcelExport {
     /*
      * 工作模式一
      * */
-    public static String SetModeOneBodyType(String gender,String bodyType){
+    public static String SetModeOneBodyType(String gender,String bodyType,Context context){
         // 男部位id
         //1：男性额头；2：男性面颊；3：男性嘴唇；4：男性脖子；
         // 5：胸；6：腹；7：比基尼；8：大腿；9：膝盖；10：小腿；11：腋下；12：手；
@@ -235,106 +236,106 @@ public class ExcelExport {
         if (gender.equals("1")){//男
             switch (bodyType){
                 case "1":
-                    bodyTypeString = "forehead";
+                    bodyTypeString = context.getString(R.string.mode_one_man_forehead);
                     break;
                 case "2":
-                    bodyTypeString = "cheek";
+                    bodyTypeString = context.getString(R.string.mode_one_man_cheek);
                     break;
                 case "3":
-                    bodyTypeString = "lip";
+                    bodyTypeString = context.getString(R.string.mode_one_man_lip);
                     break;
                 case "4":
-                    bodyTypeString = "neck";
+                    bodyTypeString = context.getString(R.string.mode_one_man_neck);
                     break;
                 case "5":
-                    bodyTypeString = "chest";
+                    bodyTypeString = context.getString(R.string.mode_one_man_chest);
                     break;
                 case "6":
-                    bodyTypeString = "abdomen";
+                    bodyTypeString = context.getString(R.string.mode_one_man_abdomen);
                     break;
                 case "7":
-                    bodyTypeString = "Bikini";
+                    bodyTypeString = context.getString(R.string.mode_one_man_bikini);
                     break;
                 case "8":
-                    bodyTypeString = "thigh";
+                    bodyTypeString = context.getString(R.string.mode_one_man_thigh);
                     break;
                 case "9":
-                    bodyTypeString = "knee";
+                    bodyTypeString = context.getString(R.string.mode_one_man_knee);
                     break;
                 case "10":
-                    bodyTypeString = "leg";
+                    bodyTypeString = context.getString(R.string.mode_one_man_leg);
                     break;
                 case "11":
-                    bodyTypeString = "armpit";
+                    bodyTypeString = context.getString(R.string.mode_one_man_armpit);
                     break;
                 case "12":
-                    bodyTypeString = "hand";
+                    bodyTypeString = context.getString(R.string.mode_one_man_hand);
                     break;
                 case "13":
-                    bodyTypeString = "nape";
+                    bodyTypeString = context.getString(R.string.mode_one_man_nape);
                     break;
                 case "14":
-                    bodyTypeString = "back";
+                    bodyTypeString = context.getString(R.string.mode_one_man_back);
                     break;
                 case "15":
-                    bodyTypeString = "Buttocks";
+                    bodyTypeString = context.getString(R.string.mode_one_man_buttocks);
                     break;
                 case "16":
-                    bodyTypeString = "shoulder";
+                    bodyTypeString = context.getString(R.string.mode_one_man_shoulder);
                     break;
 
             }
         }else {//女
             switch (bodyType){
                 case "1":
-                    bodyTypeString = "forehead";
+                    bodyTypeString = context.getString(R.string.mode_one_man_forehead);
                     break;
                 case "2":
-                    bodyTypeString = "cheek";
+                    bodyTypeString = context.getString(R.string.mode_one_man_cheek);
                     break;
                 case "3":
-                    bodyTypeString = "lip";
+                    bodyTypeString = context.getString(R.string.mode_one_man_lip);
                     break;
                 case "4":
-                    bodyTypeString = "neck";
+                    bodyTypeString = context.getString(R.string.mode_one_man_neck);
                     break;
                 case "5":
-                    bodyTypeString = "chest";
+                    bodyTypeString = context.getString(R.string.mode_one_man_chest);
                     break;
                 case "6":
-                    bodyTypeString = "abdomen";
+                    bodyTypeString = context.getString(R.string.mode_one_man_abdomen);
                     break;
                 case "7":
-                    bodyTypeString = "Bikini";
+                    bodyTypeString = context.getString(R.string.mode_one_man_bikini);
                     break;
                 case "8":
-                    bodyTypeString = "thigh";
+                    bodyTypeString = context.getString(R.string.mode_one_man_thigh);
                     break;
                 case "9":
-                    bodyTypeString = "knee";
+                    bodyTypeString = context.getString(R.string.mode_one_man_knee);
                     break;
                 case "10":
-                    bodyTypeString = "leg";
+                    bodyTypeString = context.getString(R.string.mode_one_man_leg);
                     break;
                 case "11":
-                    bodyTypeString = "armpit";
+                    bodyTypeString = context.getString(R.string.mode_one_man_armpit);
                     break;
                 case "12":
-                    bodyTypeString = "arm";
+                    bodyTypeString = context.getString(R.string.mode_one_woman_arm);
                 case "13":
-                    bodyTypeString = "hand";
+                    bodyTypeString = context.getString(R.string.mode_one_man_hand);
                     break;
                 case "14":
-                    bodyTypeString = "nape";
+                    bodyTypeString = context.getString(R.string.mode_one_man_nape);
                     break;
                 case "15":
-                    bodyTypeString = "back";
+                    bodyTypeString = context.getString(R.string.mode_one_man_back);
                     break;
                 case "16":
-                    bodyTypeString = "Buttocks";
+                    bodyTypeString = context.getString(R.string.mode_one_man_buttocks);
                     break;
                 case "17":
-                    bodyTypeString = "shoulder";
+                    bodyTypeString = context.getString(R.string.mode_one_man_shoulder);
                     break;
 
             }
@@ -345,28 +346,28 @@ public class ExcelExport {
     /*
      * 工作模式二
      * */
-    public static String SetModeTwoBodyType(String bodyType){
+    public static String SetModeTwoBodyType(String bodyType,Context context){
         //1：面部；2：四肢；3：腋下；4：腹部；
         // 5：背部；6：比基尼；
         String bodyTypeString = "";
         switch (bodyType){
             case "1":
-                bodyTypeString = "face";
+                bodyTypeString = context.getString(R.string.mode_two_people_face);
                 break;
             case "2":
-                bodyTypeString = "the four limbs";
+                bodyTypeString = context.getString(R.string.mode_two_people_four_limbs);
                 break;
             case "3":
-                bodyTypeString = "armpit";
+                bodyTypeString = context.getString(R.string.mode_two_people_armpit);
                 break;
             case "4":
-                bodyTypeString = "abdomen";
+                bodyTypeString = context.getString(R.string.mode_two_people_abdomen);
                 break;
             case "5":
-                bodyTypeString = "back";
+                bodyTypeString = context.getString(R.string.mode_two_people_back);
                 break;
             case "6":
-                bodyTypeString = "Bikini";
+                bodyTypeString = context.getString(R.string.mode_two_people_bikini);
                 break;
         }
 
