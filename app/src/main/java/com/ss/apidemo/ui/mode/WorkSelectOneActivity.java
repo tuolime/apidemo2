@@ -186,11 +186,12 @@ public class WorkSelectOneActivity extends BaseActivity {
             mode_type = intent.getIntExtra("mode_type", 0);
             if (mode_type == 1) {//1 专家  2 智能
                 mode_type = 1;
+                tel  = intent.getStringExtra("tel");
             } else if (mode_type == 2) {
                 mode_type = 2;
                 skin_type = intent.getIntExtra("skin_type", 0);
                 body_type = intent.getIntExtra("body_type", 0);
-                tel = intent.getStringExtra("tel");
+                tel  = intent.getStringExtra("tel");
                 gender = intent.getStringExtra("gender");
 
             }

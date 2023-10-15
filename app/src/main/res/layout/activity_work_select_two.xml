@@ -16,6 +16,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:layout_marginTop="60dp"
             android:layout_alignParentRight="true"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
@@ -61,8 +62,8 @@
                             android:onClick="tabClick"
                             android:id="@+id/iv_save"
                             android:layout_marginLeft="45dp"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@mipmap/ic_work_two_save" />
                         <View
                             android:layout_width="0dp"
@@ -71,8 +72,8 @@
                         <ImageView
                             android:onClick="tabClick"
                             android:id="@+id/iv_setting"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@mipmap/ic_work_two_setting" />
                         <View
                             android:layout_width="0dp"
@@ -80,8 +81,8 @@
                             android:layout_weight="1"/>
                         <ImageView
                             android:visibility="invisible"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"/>
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"/>
                         <View
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -89,8 +90,8 @@
                         <ImageView
                             android:onClick="tabClick"
                             android:id="@+id/iv_back"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@mipmap/ic_work_two_back" />
                         <View
                             android:layout_width="0dp"
@@ -100,8 +101,8 @@
                             android:onClick="tabClick"
                             android:layout_marginRight="45dp"
                             android:id="@+id/iv_main"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@mipmap/ic_work_two_main" />
                     </LinearLayout>
 
@@ -122,6 +123,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent">
                             <TextView
+                                android:lines="1"
                                 android:textSize="18sp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -150,6 +152,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent">
                             <TextView
+                                android:lines="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/tv_work_one_totla"
@@ -174,6 +177,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent">
                             <TextView
+                                android:lines="1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/tv_work_one_current"
@@ -542,8 +546,8 @@
                                     android:layout_marginTop="10dp"
                                     android:onClick="selectClick"
                                     android:id="@+id/iv_fan"
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
                                     android:src="@mipmap/ic_work_two_fan" />
 
                             </LinearLayout>
@@ -610,6 +614,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent">
                     <TextView
+                        android:lines="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/tv_work_one_temperature"
@@ -636,6 +641,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent">
                     <TextView
+                        android:lines="1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/tv_work_one_flow"

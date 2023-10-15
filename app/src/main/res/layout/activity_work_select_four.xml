@@ -17,6 +17,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:layout_marginTop="70dp"
             android:layout_alignParentRight="true"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
@@ -28,7 +29,7 @@
                 android:id="@+id/tv_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/mode_four_tv"
                 android:textSize="23sp"
                 android:text="@string/auto_shed_time"/>
             <TextView
@@ -37,7 +38,7 @@
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/mode_four_tv"
                 android:textSize="23sp"
                 android:text="@string/name"/>
         </LinearLayout>
@@ -105,8 +106,8 @@
                         android:layout_centerHorizontal="true"
                         android:onClick="selectClick"
                         android:id="@+id/iv_fan"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@mipmap/ic_work_four_fan" />
                     <LinearLayout
                         android:layout_marginTop="20dp"
@@ -584,6 +585,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
+                    android:lines="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_work_one_flow"
@@ -612,6 +614,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
+                    android:lines="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_work_one_temperature"
@@ -663,6 +666,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
+                    android:lines="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_work_one_totla"
@@ -691,6 +695,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
+                    android:lines="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_work_one_current"

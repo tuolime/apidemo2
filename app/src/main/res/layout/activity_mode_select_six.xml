@@ -36,8 +36,8 @@
                 <ImageView
                     android:id="@+id/iv_back"
                     android:layout_marginLeft="280dp"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:src="@mipmap/ic_mode_back_six" />
                 <View
                     android:layout_width="0dp"
@@ -46,8 +46,8 @@
                 <ImageView
                     android:layout_marginRight="280dp"
                     android:id="@+id/iv_main"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:src="@mipmap/ic_main_six" />
             </LinearLayout>
             <LinearLayout

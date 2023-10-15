@@ -118,8 +118,8 @@
 
                     <RadioButton
                         android:id="@+id/rb_man"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:background="@drawable/radio_button_selector"
                         android:button="@null"
                         android:textColor="@color/white"></RadioButton>
@@ -129,6 +129,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="@string/man"
+                        android:lines="1"
                         android:textColor="@color/white" />
 
                     <View
@@ -137,8 +138,8 @@
 
                     <RadioButton
                         android:id="@+id/rb_woman"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:background="@drawable/radio_button_selector"
                         android:button="@null"
                         android:textColor="@color/white"></RadioButton>
@@ -148,6 +149,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="@string/woman"
+                        android:lines="1"
                         android:textColor="@color/white" />
                 </RadioGroup>
             </LinearLayout>

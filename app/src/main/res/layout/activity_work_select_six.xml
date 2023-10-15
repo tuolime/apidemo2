@@ -30,8 +30,8 @@
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/iv_fan_reduce"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:src="@mipmap/ic_work_six_fan_reduce" />
 
                 <LinearLayout
@@ -69,8 +69,8 @@
                 <ImageView
                     android:layout_marginLeft="10dp"
                     android:id="@+id/iv_fan_add"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:src="@mipmap/ic_work_six_fan_add" />
             </LinearLayout>
 
@@ -86,7 +86,7 @@
                     android:id="@+id/tv_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/mode_four_tv"
                     android:textSize="23sp"
                     android:text="@string/auto_shed_time"/>
                 <TextView
@@ -95,7 +95,7 @@
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/mode_four_tv"
                     android:textSize="23sp"
                     android:text="@string/name"/>
             </LinearLayout>
@@ -137,8 +137,8 @@
                     <ImageView
                         android:onClick="tabClick"
                         android:id="@+id/iv_back"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@mipmap/ic_work_six_back" />
                     <View
                         android:layout_width="match_parent"
@@ -148,8 +148,8 @@
                     <ImageView
                         android:onClick="tabClick"
                         android:id="@+id/iv_setting"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@mipmap/ic_work_six_setting" />
                     <View
                         android:layout_width="match_parent"
@@ -159,8 +159,8 @@
                     <ImageView
                         android:onClick="tabClick"
                         android:id="@+id/iv_save"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@mipmap/ic_work_six_save" />
                     <View
                         android:layout_width="match_parent"
@@ -169,8 +169,8 @@
                     <ImageView
                         android:onClick="tabClick"
                         android:id="@+id/iv_main"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@mipmap/ic_work_six_main" />
                 </LinearLayout>
 
@@ -518,6 +518,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
+                    android:lines="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_work_one_flow"
@@ -547,6 +548,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
+                    android:lines="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_work_one_temperature"
@@ -577,6 +579,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
+                    android:lines="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_work_one_current"
@@ -606,6 +609,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
+                    android:lines="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_work_one_totla"
@@ -635,6 +639,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent">
                 <TextView
+                    android:lines="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_work_one_id"
