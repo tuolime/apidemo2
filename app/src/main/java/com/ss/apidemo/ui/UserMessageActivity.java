@@ -71,6 +71,12 @@ public class UserMessageActivity extends BaseActivity {
         initData();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        adapter.setDatas(getArrayList());
+    }
+
     private void initData() {
         userList = getData();
         if (userList != null && userList.size() > 0) {
