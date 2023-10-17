@@ -20,7 +20,7 @@
             android:layout_marginLeft="45dp"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@mipmap/ic_mode_back_two" />
+            android:src="@mipmap/ic_work_two_back" />
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -30,7 +30,7 @@
             android:id="@+id/iv_main"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@mipmap/ic_main_two" />
+            android:src="@mipmap/ic_work_two_main" />
     </LinearLayout>
     <LinearLayout
         android:gravity="center"

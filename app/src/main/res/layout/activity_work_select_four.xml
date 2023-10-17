@@ -64,8 +64,6 @@
                         android:id="@+id/iv_setting"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:padding="15dp"
-                        android:background="@mipmap/ic_mode_four_top_bg"
                         android:src="@mipmap/ic_work_four_setting" />
 
                     <View
@@ -78,8 +76,6 @@
                         android:id="@+id/iv_save"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:padding="15dp"
-                        android:background="@mipmap/ic_mode_four_top_bg"
                         android:src="@mipmap/ic_work_four_save" />
 
                     <View
@@ -92,8 +88,6 @@
                         android:id="@+id/iv_back"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:padding="15dp"
-                        android:background="@mipmap/ic_mode_four_top_bg"
                         android:src="@mipmap/ic_work_four_back" />
                 </LinearLayout>
 
@@ -204,8 +198,6 @@
                         android:id="@+id/iv_main"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:padding="15dp"
-                        android:background="@mipmap/ic_mode_four_top_bg"
                         android:src="@mipmap/ic_work_four_main" />
                 </LinearLayout>
 
