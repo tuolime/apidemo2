@@ -185,7 +185,7 @@
     <string name="tv_work_two_f">سریعt</string>
     <string name="tv_work_two_m">پزشکی</string>
 
-    <string name="tv_work_three_pulse">پالس (MS)</string>
+    <string name="tv_work_three_pulse">پالس (ms)</string>
     <string name="tv_work_three_fluence">فلونس (J)</string>
     <string name="tv_work_three_rate">فرکانس(Hz)</string>
     <string name="tv_work_six_rate">نرخ </string>
@@ -198,5 +198,35 @@
     <string name="wifi_open"> WiFi روشن است </string>
     <string name="wifi_close"> فای خاموش </string>
     <string name="wifi_no_close"> WiFi را نمی توان خاموش کرد </string>
+
+    <string name="replace_filter"> لطفا جایگزینی پالایه!</string>
+    <string name="splash_tips">  ارتباط شبکه در حال پیشرفت ، لطفا صبر کنید!</string>
+    <string name="mode_one_man_forehead">پیشانی</string>
+    <string name="mode_one_man_cheek">رنگ</string>
+    <string name="mode_one_man_lip">لیپ</string>
+    <string name="mode_one_man_neck">گردن</string>
+    <string name="mode_one_man_chest">سینه</string>
+    <string name="mode_one_man_abdomen">شکم پایین</string>
+    <string name="mode_one_man_bikini">بیکینی</string>
+    <string name="mode_one_man_thigh">پای</string>
+    <string name="mode_one_man_knee">زانو</string>
+    <string name="mode_one_man_leg">گوساله</string>
+    <string name="mode_one_man_armpit">زیر بغل</string>
+    <string name="mode_one_woman_arm">اسلحه</string>
+    <string name="mode_one_man_hand">دست</string>
+    <string name="mode_one_man_nape">گردن</string>
+    <string name="mode_one_man_back">عقب</string>
+    <string name="mode_one_man_buttocks">کون‌ها</string>
+    <string name="mode_one_man_shoulder">شونه</string>
+    <string name="mode_two_people_face">صورت</string>
+    <string name="mode_two_people_four_limbs">پای</string>
+    <string name="mode_two_people_armpit">زیر بغل</string>
+    <string name="mode_two_people_abdomen">شکم پایین</string>
+    <string name="mode_two_people_back">عقب</string>
+    <string name="mode_two_people_bikini">بیکینی</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
+
 
 </resources>

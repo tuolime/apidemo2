@@ -185,7 +185,7 @@
     <string name="tv_work_two_f">Fast</string>
     <string name="tv_work_two_m">Med</string>
 
-    <string name="tv_work_three_pulse">Pulse（MS）</string>
+    <string name="tv_work_three_pulse">Pulse（ms）</string>
     <string name="tv_work_three_fluence">Fluence（J）</string>
     <string name="tv_work_three_rate">Rate（Hz）</string>
     <string name="tv_work_six_rate">Rate</string>
@@ -198,5 +198,36 @@
     <string name="wifi_open"> WiFi ON </string>
     <string name="wifi_close"> WiFi OFF</string>
     <string name="wifi_no_close"> WiFi cannot be turned off </string>
+
+    <string name="replace_filter"> Please replace the filter device!</string>
+    <string name="splash_tips">The network is attempting to connect, please wait!</string>
+    <string name="mode_one_man_forehead">forehead</string>
+    <string name="mode_one_man_cheek">cheek</string>
+    <string name="mode_one_man_lip">lip</string>
+    <string name="mode_one_man_neck">neck</string>
+    <string name="mode_one_man_chest">chest</string>
+    <string name="mode_one_man_abdomen">abdomen</string>
+    <string name="mode_one_man_bikini">Bikini</string>
+    <string name="mode_one_man_thigh">thigh</string>
+    <string name="mode_one_man_knee">knee</string>
+    <string name="mode_one_man_leg">leg</string>
+    <string name="mode_one_man_armpit">armpit</string>
+    <string name="mode_one_woman_arm">arm</string>
+    <string name="mode_one_man_hand">hand</string>
+    <string name="mode_one_man_nape">nape</string>
+    <string name="mode_one_man_back">back</string>
+    <string name="mode_one_man_buttocks">Buttocks</string>
+    <string name="mode_one_man_shoulder">shoulder</string>
+    <string name="mode_two_people_face">face</string>
+    <string name="mode_two_people_four_limbs">the four limbs</string>
+    <string name="mode_two_people_armpit">armpit</string>
+    <string name="mode_two_people_abdomen">abdomen</string>
+    <string name="mode_two_people_back">back</string>
+    <string name="mode_two_people_bikini">Bikini</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
+
+
 
 </resources>

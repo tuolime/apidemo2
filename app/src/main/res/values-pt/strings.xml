@@ -165,7 +165,7 @@
     <string name="tv_work_one_temperature">temperatura</string>
     <string name="tv_work_one_flow">Fluxo</string>
     <string name="tv_work_one_totla">Total</string>
-    <string name="tv_work_one_current">ATUAL</string>
+    <string name="tv_work_one_current">Atual</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">EXACT</string>
     <string name="tv_work_one_raedy">Pronto</string>
@@ -178,7 +178,7 @@
     <string name="tv_work_one_m">M</string>
     <string name="tv_work_one_rate">Taxa</string>
     <string name="tv_work_one_hz">Hz</string>
-    <string name="tv_work_one_fluence">FLUÊNCIA</string>
+    <string name="tv_work_one_fluence">Fluência</string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">Por favor, seleccione uma parte da pele!</string>
     <string name="tv_work_two_l">Devagar</string>
@@ -189,7 +189,7 @@
     <string name="tv_work_three_fluence">Fluência(J)</string>
     <string name="tv_work_three_rate">Taxa (Hz)</string>
     <string name="tv_work_six_rate">Taxa</string>
-    <string name="tv_work_six_fluence">FLUÊNCIA</string>
+    <string name="tv_work_six_fluence">Fluência</string>
 
     <string name="excel_success"> Exportar com sucesso </string>
     <string name="excel_fail"> A exportação falhou </string>
@@ -198,5 +198,34 @@
     <string name="wifi_open"> Wi-Fi ligado </string>
     <string name="wifi_close"> WiFi desligado </string>
     <string name="wifi_no_close"> O WiFi não pode ser desligado</string>
+
+    <string name="replace_filter">Por favor, substitua o filtro!</string>
+    <string name="splash_tips"> Ligação de rede em curso, aguarde por favor!</string>
+    <string name="mode_one_man_forehead">testa</string>
+    <string name="mode_one_man_cheek">bochecha</string>
+    <string name="mode_one_man_lip">Lábios</string>
+    <string name="mode_one_man_neck">Pescoço anterior</string>
+    <string name="mode_one_man_chest">tórax</string>
+    <string name="mode_one_man_abdomen">abdómen</string>
+    <string name="mode_one_man_bikini">biquíni</string>
+    <string name="mode_one_man_thigh">coxa</string>
+    <string name="mode_one_man_knee">joelho</string>
+    <string name="mode_one_man_leg">vitelo</string>
+    <string name="mode_one_man_armpit">Armpit</string>
+    <string name="mode_one_woman_arm">Braços</string>
+    <string name="mode_one_man_hand">Mão</string>
+    <string name="mode_one_man_nape">Pescoço posterior</string>
+    <string name="mode_one_man_back">para trás</string>
+    <string name="mode_one_man_buttocks">nádegas</string>
+    <string name="mode_one_man_shoulder">ombro</string>
+    <string name="mode_two_people_face">parte facial</string>
+    <string name="mode_two_people_four_limbs">membro</string>
+    <string name="mode_two_people_armpit">Armpit</string>
+    <string name="mode_two_people_abdomen">abdómen</string>
+    <string name="mode_two_people_back">para trás</string>
+    <string name="mode_two_people_bikini">biquíni</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
 
 </resources>

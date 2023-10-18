@@ -45,7 +45,7 @@
     <string name="search_hint">ZIEL NICHT GEFUNDEN, BITTE ERNEUT EINGEBEN!</string>
     <string name="lookup">NACHSCHLAGEN</string>
     <string name="free_users">KOSTENLOSE BENUTZER</string>
-    <string name="no_fatent">NO PATIENT TREATMENT INFORMATION CAN BE STORED IN FREE MODE!</string>
+    <string name="no_fatent">Der Testmodus erfordert keine Kontoregistrierung und Parameter können nicht gespeichert werden!</string>
     <string name="get_info">INFORMATIONEN BEKOMMEN</string>
     <string name="user_list">BENUTZERLISTE</string>
     <string name="usage_record">NUTZUNGSAUFZEICHNUNG</string>
@@ -104,7 +104,7 @@
     <string name="burst">PLATZEN</string>
     <string name="total">GESAMT</string>
     <string name="current">AKTUELL</string>
-    <string name="stby">Sstehen zu</string>
+    <string name="stby">STANDBY</string>
     <string name="ready">BEREIT</string>
     <string name="working">ARBEITEN</string>
     <string name="auto_shed_time">Verbleibende Zeit:</string>
@@ -165,7 +165,7 @@
     <string name="tv_work_one_temperature">Temperatur</string>
     <string name="tv_work_one_flow">Strömung</string>
     <string name="tv_work_one_totla">Insgesamt</string>
-    <string name="tv_work_one_current">AKTUELL</string>
+    <string name="tv_work_one_current">Aktuell</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">EXACT</string>
     <string name="tv_work_one_raedy">Bereity</string>
@@ -178,18 +178,18 @@
     <string name="tv_work_one_m">M</string>
     <string name="tv_work_one_rate">Rate</string>
     <string name="tv_work_one_hz">Hz</string>
-    <string name="tv_work_one_fluence">FLUENZ</string>
+    <string name="tv_work_one_fluence">Fluenz</string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">Please select a skin part!</string>
     <string name="tv_work_two_l">Langsam</string>
     <string name="tv_work_two_f">Fast</string>
     <string name="tv_work_two_m">Med</string>
 
-    <string name="tv_work_three_pulse">Puls(MS)</string>
+    <string name="tv_work_three_pulse">Puls(ms)</string>
     <string name="tv_work_three_fluence">Fluenz(J)</string>
     <string name="tv_work_three_rate">Rate(Hz)</string>
     <string name="tv_work_six_rate">Rate</string>
-    <string name="tv_work_six_fluence">FLUENZ</string>
+    <string name="tv_work_six_fluence">Fluenz</string>
 
     <string name="excel_success"> Export successful </string>
     <string name="excel_fail"> Export fehlgeschlagen</string>
@@ -198,5 +198,35 @@
     <string name="wifi_open">WiFi an</string>
     <string name="wifi_close"> WiFi ausgeschaltet</string>
     <string name="wifi_no_close"> WLAN kann nicht ausgeschaltet werden </string>
+
+    <string name="replace_filter"> Bitte ersetzen Sie den Filter!</string>
+    <string name="splash_tips"> Netzwerkverbindung läuft, bitte warten!</string>
+    <string name="mode_one_man_forehead">die Stirn</string>
+    <string name="mode_one_man_cheek">Wange</string>
+    <string name="mode_one_man_lip">die Lippen</string>
+    <string name="mode_one_man_neck">die H lse</string>
+    <string name="mode_one_man_chest">die Brüste</string>
+    <string name="mode_one_man_abdomen">die Taillen</string>
+    <string name="mode_one_man_bikini">die Schlechtsteile</string>
+    <string name="mode_one_man_thigh">Oberschenkel</string>
+    <string name="mode_one_man_knee">Knie</string>
+    <string name="mode_one_man_leg">Kalb</string>
+    <string name="mode_one_man_armpit">Substantiv</string>
+    <string name="mode_one_woman_arm">die Arme</string>
+    <string name="mode_one_man_hand">die H nde</string>
+    <string name="mode_one_man_nape">die H lse</string>
+    <string name="mode_one_man_back">die Rücken</string>
+    <string name="mode_one_man_buttocks">die Hintern</string>
+    <string name="mode_one_man_shoulder">die Schultern</string>
+    <string name="mode_two_people_face">die Gesichter</string>
+    <string name="mode_two_people_four_limbs">Gliedmaßen</string>
+    <string name="mode_two_people_armpit">Substantiv</string>
+    <string name="mode_two_people_abdomen">die Taillen</string>
+    <string name="mode_two_people_back">die Rücken</string>
+    <string name="mode_two_people_bikini">die Schlechtsteile</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
+
 
 </resources>

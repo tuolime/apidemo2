@@ -161,12 +161,12 @@
     <string name="skin_location">สถานที่</string>
 
     <string name="tv_mode_one_ok">โอเค</string>
-    <string name="tv_mode_one_cancel">Cancel</string>
+    <string name="tv_mode_one_cancel">การยกเลิก</string>
     <string name="tv_work_one_temperature">อุณหภูมิ</string>
     <string name="tv_work_one_flow">สตรีม</string>
     <string name="tv_work_one_totla">ทั้งหมด</string>
-    <string name="tv_work_one_current">Current</string>
-    <string name="tv_work_one_id">เอกสารประจำตัว</string>
+    <string name="tv_work_one_current">ปัจจุบัน</string>
+    <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">แม่นยำ</string>
     <string name="tv_work_one_raedy">พร้อมแล้ว</string>
     <string name="tv_work_one_auto">AUTO</string>
@@ -185,11 +185,11 @@
     <string name="tv_work_two_f">รวดเร็ว</string>
     <string name="tv_work_two_m">กลาง</string>
 
-    <string name="tv_work_three_pulse">ชีพจร (MS)</string>
+    <string name="tv_work_three_pulse">ชีพจร (ms)</string>
     <string name="tv_work_three_fluence">พลังงาน (J)</string>
     <string name="tv_work_three_rate">อัตรา (Hz)</string>
     <string name="tv_work_six_rate">ความเร็ว</string>
-    <string name="tv_work_six_fluence">Fluence</string>
+    <string name="tv_work_six_fluence">พลังงาน</string>
 
     <string name="excel_success">ส่งออกสำเร็จ </string>
     <string name="excel_fail">ส่งออกล้มเหลว </string>
@@ -198,5 +198,35 @@
     <string name="wifi_open"> เปิด WiFi </string>
     <string name="wifi_close">WiFi ปิด</string>
     <string name="wifi_no_close"> WiFi ไม่สามารถปิดได้ </string>
+
+    <string name="replace_filter"> กรุณาเปลี่ยนตัวกรอง!</string>
+    <string name="splash_tips">  ในการเชื่อมต่อเครือข่ายโปรดรอ!</string>
+    <string name="mode_one_man_forehead">หน้าผาก</string>
+    <string name="mode_one_man_cheek">แก้ม</string>
+    <string name="mode_one_man_lip">ริมฝีปาก</string>
+    <string name="mode_one_man_neck">คอด้านหน้า</string>
+    <string name="mode_one_man_chest">หน้าอก</string>
+    <string name="mode_one_man_abdomen">หน้าท้อง</string>
+    <string name="mode_one_man_bikini">โซนสามเหลี่ยม</string>
+    <string name="mode_one_man_thigh">ต้นขา</string>
+    <string name="mode_one_man_knee">หัวเข่า</string>
+    <string name="mode_one_man_leg">น่อง</string>
+    <string name="mode_one_man_armpit">ใต้วงแขน</string>
+    <string name="mode_one_woman_arm">แขน</string>
+    <string name="mode_one_man_hand">มือ</string>
+    <string name="mode_one_man_nape">คอ</string>
+    <string name="mode_one_man_back">ด้านหลัง</string>
+    <string name="mode_one_man_buttocks">สะโพก</string>
+    <string name="mode_one_man_shoulder">ไหล่</string>
+    <string name="mode_two_people_face">หน้า</string>
+    <string name="mode_two_people_four_limbs">แขนขา</string>
+    <string name="mode_two_people_armpit">ใต้วงแขน</string>
+    <string name="mode_two_people_abdomen">หน้าท้อง</string>
+    <string name="mode_two_people_back">ด้านหลัง</string>
+    <string name="mode_two_people_bikini">โซนสามเหลี่ยม</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
+
 
 </resources>

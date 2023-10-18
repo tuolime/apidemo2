@@ -45,7 +45,7 @@
     <string name="search_hint">Objetivo no encontrado, por favor vuelva a entrar!</string>
     <string name="lookup">Búsqueda</string>
     <string name="free_users">Usuarios libres</string>
-    <string name="no_fatent">NO PATIENT TREATMENT INFORMATION CAN BE STORED IN FREE MODE!</string>
+    <string name="no_fatent">Teste modusu hesap kayıtlarını istemiyor ve parametreler kaydedilmez.</string>
     <string name="get_info">Obtener información</string>
     <string name="user_list">Lista de usuarios</string>
     <string name="usage_record">Registro de uso</string>
@@ -178,18 +178,18 @@
     <string name="tv_work_one_m">M</string>
     <string name="tv_work_one_rate">tarifa</string>
     <string name="tv_work_one_hz">Hz</string>
-    <string name="tv_work_one_fluence">FLUENCJA</string>
+    <string name="tv_work_one_fluence">Fluencja</string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">Por favor, seleccione una parte de piel!</string>
     <string name="tv_work_two_l">lento</string>
     <string name="tv_work_two_f">rápido</string>
     <string name="tv_work_two_m">Med</string>
 
-    <string name="tv_work_three_pulse">Pulso (MS)</string>
-    <string name="tv_work_three_fluence">Fluence（J）</string>
+    <string name="tv_work_three_pulse">Pulso (ms)</string>
+    <string name="tv_work_three_fluence">Fluencja(J)</string>
     <string name="tv_work_three_rate">Frecuencia (Hz)</string>
     <string name="tv_work_six_rate">tarifa</string>
-    <string name="tv_work_six_fluence">FLUENCJA</string>
+    <string name="tv_work_six_fluence">Fluencja</string>
 
     <string name="excel_success"> Éxito de exportación </string>
     <string name="excel_fail"> Fracaso de la exportación </string>
@@ -198,5 +198,34 @@
     <string name="wifi_open"> Wifi encendida </string>
     <string name="wifi_close"> WiFi desactivada </string>
     <string name="wifi_no_close"> WiFi no se puede apagar</string>
+
+    <string name="replace_filter"> Por favor, cambie el filtro!</string>
+    <string name="splash_tips">En conexión a la red, por favor espere!</string>
+    <string name="mode_one_man_forehead">Frente</string>
+    <string name="mode_one_man_cheek">Mejillas</string>
+    <string name="mode_one_man_lip">Labios</string>
+    <string name="mode_one_man_neck">Cuello anterior</string>
+    <string name="mode_one_man_chest">Pecho</string>
+    <string name="mode_one_man_abdomen">Abdomen</string>
+    <string name="mode_one_man_bikini">Bikini</string>
+    <string name="mode_one_man_thigh">Muslo</string>
+    <string name="mode_one_man_knee">Rodilla</string>
+    <string name="mode_one_man_leg">Pantorrilla</string>
+    <string name="mode_one_man_armpit">Axila</string>
+    <string name="mode_one_woman_arm">Brazo</string>
+    <string name="mode_one_man_hand">Mano</string>
+    <string name="mode_one_man_nape">Cuello trasero</string>
+    <string name="mode_one_man_back">Espalda</string>
+    <string name="mode_one_man_buttocks">Caderas</string>
+    <string name="mode_one_man_shoulder">Hombro</string>
+    <string name="mode_two_people_face">Cara</string>
+    <string name="mode_two_people_four_limbs">Extremidades</string>
+    <string name="mode_two_people_armpit">Axila</string>
+    <string name="mode_two_people_abdomen">Abdomen</string>
+    <string name="mode_two_people_back">Espalda</string>
+    <string name="mode_two_people_bikini">Bikini</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
 
 </resources>

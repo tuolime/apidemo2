@@ -116,11 +116,11 @@
     <string name="days_remaining">Jours restant</string>
     <string name="hours_remaining">Heures restantes</string>
     <string name="count_remaining">Temps restants</string>
-    <string name="no_network">Pas de réseau, veuillez vous reconnecter au réseau disponible!</string>
+    <string name="no_network">Pas de réseau, veuillez vous reconnecter au réseau disponible !</string>
     <string name="network_connection_exception">Exception de connexion réseau！</string>
 
-    <string name="system_setting">La configuration du système est terminée! </string>
-    <string name="name_count">La longueur du nom doit être inférieure à 20 caractères ! </string>
+    <string name="system_setting"> La configuration du système est terminée !</string>
+    <string name="name_count">La longueur du nom doit être inférieure à 20 caractères !</string>
 
 
     <string name="frequency_hz">FRÉQUENCE</string>
@@ -165,7 +165,7 @@
     <string name="tv_work_one_temperature">température</string>
     <string name="tv_work_one_flow">Flow</string>
     <string name="tv_work_one_totla">Total</string>
-    <string name="tv_work_one_current">ACTUEL</string>
+    <string name="tv_work_one_current">Actuel</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">EXACT</string>
     <string name="tv_work_one_raedy">Prêt à l’emploi</string>
@@ -178,18 +178,18 @@
     <string name="tv_work_one_m">M</string>
     <string name="tv_work_one_rate">Taux de</string>
     <string name="tv_work_one_hz">Hz</string>
-    <string name="tv_work_one_fluence">FLUENCE</string>
+    <string name="tv_work_one_fluence">Fluence</string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">Veuillez sélectionner une partie de la peau!</string>
     <string name="tv_work_two_l">lent</string>
     <string name="tv_work_two_f">rapide</string>
     <string name="tv_work_two_m">Général</string>
 
-    <string name="tv_work_three_pulse">Pulse（MS）</string>
-    <string name="tv_work_three_fluence">Fluence（J）</string>
+    <string name="tv_work_three_pulse">Pulse(ms)</string>
+    <string name="tv_work_three_fluence">Fluence(J)</string>
     <string name="tv_work_three_rate">Taux (Hz)</string>
     <string name="tv_work_six_rate">Taux de</string>
-    <string name="tv_work_six_fluence">FLUENCE</string>
+    <string name="tv_work_six_fluence">Fluence</string>
 
     <string name="excel_success"> Exportation réussie </string>
     <string name="excel_fail"> Échec de l’exportation </string>
@@ -199,4 +199,32 @@
     <string name="wifi_close"> WiFi éteint</string>
     <string name="wifi_no_close"> Le WiFi ne peut pas être éteint </string>
 
+    <string name="replace_filter"> Veuillez remplacer le filtre!</string>
+    <string name="splash_tips">  Dans la connexion réseau, veuillez attendre!</string>
+    <string name="mode_one_man_forehead">Front</string>
+    <string name="mode_one_man_cheek">Les joues</string>
+    <string name="mode_one_man_lip">Les lèvres</string>
+    <string name="mode_one_man_neck">Le cou avant</string>
+    <string name="mode_one_man_chest">La poitrine</string>
+    <string name="mode_one_man_abdomen">Labdomen</string>
+    <string name="mode_one_man_bikini">Le triangle</string>
+    <string name="mode_one_man_thigh">la cuisse</string>
+    <string name="mode_one_man_knee">Les genoux</string>
+    <string name="mode_one_man_leg">Les petites jambes</string>
+    <string name="mode_one_man_armpit">l’aisselle</string>
+    <string name="mode_one_woman_arm">les bras</string>
+    <string name="mode_one_man_hand">lamain</string>
+    <string name="mode_one_man_nape">le cou</string>
+    <string name="mode_one_man_back">le dos</string>
+    <string name="mode_one_man_buttocks">la fesse</string>
+    <string name="mode_one_man_shoulder">l’épaule</string>
+    <string name="mode_two_people_face">Le visage</string>
+    <string name="mode_two_people_four_limbs">Les quatre membres</string>
+    <string name="mode_two_people_armpit">l’aisselle</string>
+    <string name="mode_two_people_abdomen">Labdomen</string>
+    <string name="mode_two_people_back">le dos</string>
+    <string name="mode_two_people_bikini">Le triangle</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
 </resources>

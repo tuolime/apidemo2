@@ -162,10 +162,10 @@
 
     <string name="tv_mode_one_ok">OK</string>
     <string name="tv_mode_one_cancel">anulować</string>
-    <string name="tv_work_one_temperature">temperatura</string>
+    <string name="tv_work_one_temperature">Temperatura</string>
     <string name="tv_work_one_flow">Przepływ</string>
     <string name="tv_work_one_totla">Łącznie</string>
-    <string name="tv_work_one_current">bieżący</string>
+    <string name="tv_work_one_current">Bieżący</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">DOKŁADNY</string>
     <string name="tv_work_one_raedy">Gotowy</string>
@@ -178,18 +178,18 @@
     <string name="tv_work_one_m">M</string>
     <string name="tv_work_one_rate">Stawka</string>
     <string name="tv_work_one_hz">Hz</string>
-    <string name="tv_work_one_fluence">FLUENCJA</string>
+    <string name="tv_work_one_fluence">Fluencja</string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">Proszę wybrać część skóry!</string>
     <string name="tv_work_two_l">Powoli</string>
     <string name="tv_work_two_f">Szybko</string>
     <string name="tv_work_two_m">Med</string>
 
-    <string name="tv_work_three_pulse">Puls (MS)</string>
-    <string name="tv_work_three_fluence">Fluence(J)</string>
+    <string name="tv_work_three_pulse">Puls (ms)</string>
+    <string name="tv_work_three_fluence">Fluencja(J)</string>
     <string name="tv_work_three_rate">Szybkość(Hz)</string>
     <string name="tv_work_six_rate">Stawka</string>
-    <string name="tv_work_six_fluence">FLUENCJA</string>
+    <string name="tv_work_six_fluence">Fluencja</string>
 
     <string name="excel_success">Eksport pomyślny </string>
     <string name="excel_fail"> Eksport nie powiodł się </string>
@@ -198,5 +198,35 @@
     <string name="wifi_open"> WiFi włączone </string>
     <string name="wifi_close"> Wyłączone WiFi</string>
     <string name="wifi_no_close"> Nie można wyłączyć WiFi </string>
+
+    <string name="replace_filter"> Proszę wymienić filtr!</string>
+    <string name="splash_tips"> Połączenie sieciowe w toku, proszę poczekać!</string>
+    <string name="mode_one_man_forehead">czoło</string>
+    <string name="mode_one_man_cheek">czoło</string>
+    <string name="mode_one_man_lip">Usta</string>
+    <string name="mode_one_man_neck">Przednia szyja</string>
+    <string name="mode_one_man_chest">klatka piersiowa</string>
+    <string name="mode_one_man_abdomen">brzuch</string>
+    <string name="mode_one_man_bikini">bikini</string>
+    <string name="mode_one_man_thigh">udo</string>
+    <string name="mode_one_man_knee">kolano</string>
+    <string name="mode_one_man_leg">cielęce</string>
+    <string name="mode_one_man_armpit">Pacha</string>
+    <string name="mode_one_woman_arm">Ramiona</string>
+    <string name="mode_one_man_hand">Ręka</string>
+    <string name="mode_one_man_nape">Szyja dolna</string>
+    <string name="mode_one_man_back">z tyłu</string>
+    <string name="mode_one_man_buttocks">pośladki</string>
+    <string name="mode_one_man_shoulder">ramię</string>
+    <string name="mode_two_people_face">twarz</string>
+    <string name="mode_two_people_four_limbs">kończyna</string>
+    <string name="mode_two_people_armpit">Pacha</string>
+    <string name="mode_two_people_abdomen">brzuch</string>
+    <string name="mode_two_people_back">z tyłu</string>
+    <string name="mode_two_people_bikini">bikini</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
+
 
 </resources>

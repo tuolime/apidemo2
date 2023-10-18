@@ -103,7 +103,7 @@
     <string name="burst">SCOPPIARE</string>
     <string name="total">TOTALE</string>
     <string name="current">ATTUALE</string>
-    <string name="stby">Stand-by</string>
+    <string name="stby">ATAND-BY</string>
     <string name="ready">PRONTO</string>
     <string name="working">LAVORANDO</string>
     <string name="auto_shed_time">Tempo rimanente:</string>
@@ -163,11 +163,11 @@
     <string name="tv_mode_one_cancel">Annulla</string>
     <string name="tv_work_one_temperature">temperatura</string>
     <string name="tv_work_one_flow">Fluire</string>
-    <string name="tv_work_one_totla">Totla</string>
-    <string name="tv_work_one_current">ATTUALE</string>
+    <string name="tv_work_one_totla">Numero</string>
+    <string name="tv_work_one_current">Attuale</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">EXACT</string>
-    <string name="tv_work_one_raedy">Pronta(女性)Pronto（男性）</string>
+    <string name="tv_work_one_raedy">Pronto</string>
     <string name="tv_work_one_auto">Auto</string>
     <string name="tv_work_one_30">30</string>
     <string name="tv_work_one_100">100</string>
@@ -177,7 +177,7 @@
     <string name="tv_work_one_m">M</string>
     <string name="tv_work_one_rate">Tasso</string>
     <string name="tv_work_one_hz">Hz</string>
-    <string name="tv_work_one_fluence">Fluence</string>
+    <string name="tv_work_one_fluence">Fluenza</string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">Si prega di selezionare una parte della pelle!</string>
     <string name="tv_work_two_l">Lento</string>
@@ -188,7 +188,7 @@
     <string name="tv_work_three_fluence">Fluenza(J)</string>
     <string name="tv_work_three_rate">Tasso(Hz)</string>
     <string name="tv_work_six_rate">Tasso</string>
-    <string name="tv_work_six_fluence">FLUENZA</string>
+    <string name="tv_work_six_fluence">Fluenza</string>
 
     <string name="excel_success"> Esportazione riuscita </string>
     <string name="excel_fail"> Esportazione non riuscita </string>
@@ -197,5 +197,34 @@
     <string name="wifi_open">WiFi acceso</string>
     <string name="wifi_close"> WiFi disattivato </string>
     <string name="wifi_no_close"> Il WiFi non può essere disattivato </string>
+
+    <string name="replace_filter">Sostituire il filtro!</string>
+    <string name="splash_tips"> Connessione di rete in corso, attendere!</string>
+    <string name="mode_one_man_forehead">fronte</string>
+    <string name="mode_one_man_cheek">guancia</string>
+    <string name="mode_one_man_lip">Labbra</string>
+    <string name="mode_one_man_neck">Collo anteriore</string>
+    <string name="mode_one_man_chest">torace</string>
+    <string name="mode_one_man_abdomen">addome</string>
+    <string name="mode_one_man_bikini">bikini</string>
+    <string name="mode_one_man_thigh">coscia</string>
+    <string name="mode_one_man_knee">ginocchio</string>
+    <string name="mode_one_man_leg">vitello</string>
+    <string name="mode_one_man_armpit">ascella</string>
+    <string name="mode_one_woman_arm">Braccia</string>
+    <string name="mode_one_man_hand">Mano</string>
+    <string name="mode_one_man_nape">Collo posteriore</string>
+    <string name="mode_one_man_back">indietro</string>
+    <string name="mode_one_man_buttocks">glutei</string>
+    <string name="mode_one_man_shoulder">spalla</string>
+    <string name="mode_two_people_face">faccia</string>
+    <string name="mode_two_people_four_limbs">arto</string>
+    <string name="mode_two_people_armpit">ascella</string>
+    <string name="mode_two_people_abdomen">addome</string>
+    <string name="mode_two_people_back">indietro</string>
+    <string name="mode_two_people_bikini">bikini</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
 
 </resources>

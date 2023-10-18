@@ -165,7 +165,7 @@
     <string name="tv_work_one_temperature">sıcaklığı</string>
     <string name="tv_work_one_flow">Çevir</string>
     <string name="tv_work_one_totla">Istatistikler</string>
-    <string name="tv_work_one_current">AKIM</string>
+    <string name="tv_work_one_current">Akim</string>
     <string name="tv_work_one_id">İD</string>
     <string name="tv_work_one_exact">BİRE BİR AYNI</string>
     <string name="tv_work_one_raedy">Hazır</string>
@@ -178,18 +178,18 @@
     <string name="tv_work_one_m">M</string>
     <string name="tv_work_one_rate">Rate</string>
     <string name="tv_work_one_hz">Hz</string>
-    <string name="tv_work_one_fluence">AKICILIK</string>
+    <string name="tv_work_one_fluence">Akicilik</string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">Lütfen deri parçasını seçin!</string>
     <string name="tv_work_two_l">Yavaş</string>
     <string name="tv_work_two_f">Hızlı</string>
     <string name="tv_work_two_m">Med</string>
 
-    <string name="tv_work_three_pulse">Puls(MS)</string>
-    <string name="tv_work_three_fluence">Fluence(J)</string>
+    <string name="tv_work_three_pulse">Puls(ms)</string>
+    <string name="tv_work_three_fluence">Akicilik(J)</string>
     <string name="tv_work_three_rate">Rate(Hz))</string>
     <string name="tv_work_six_rate">Rate</string>
-    <string name="tv_work_six_fluence">AKICILIK</string>
+    <string name="tv_work_six_fluence">Akicilik</string>
 
     <string name="excel_success">İhraç başarılı</string>
     <string name="excel_fail"> İhraç başarısız oldu </string>
@@ -198,5 +198,34 @@
     <string name="wifi_open">WiFi açıldı</string>
     <string name="wifi_close"> WiFi Kapalı </string>
     <string name="wifi_no_close"> WiFi kapatılabilir </string>
+
+    <string name="replace_filter"> Dört lime, lütfen filtrü değiştirin!</string>
+    <string name="splash_tips">Ağ bağlantısı ilerliyor, lütfen bekleyin!</string>
+    <string name="mode_one_man_forehead">forehead</string>
+    <string name="mode_one_man_cheek">yanaklar</string>
+    <string name="mode_one_man_lip">dudak</string>
+    <string name="mode_one_man_neck">boyun</string>
+    <string name="mode_one_man_chest">göğüs</string>
+    <string name="mode_one_man_abdomen">abdomen</string>
+    <string name="mode_one_man_bikini">bikini</string>
+    <string name="mode_one_man_thigh">uyluk</string>
+    <string name="mode_one_man_knee">diz</string>
+    <string name="mode_one_man_leg">bacak</string>
+    <string name="mode_one_man_armpit">Altkol</string>
+    <string name="mode_one_woman_arm">kol</string>
+    <string name="mode_one_man_hand">el</string>
+    <string name="mode_one_man_nape">boyun</string>
+    <string name="mode_one_man_back">geri</string>
+    <string name="mode_one_man_buttocks">Köpekler</string>
+    <string name="mode_one_man_shoulder">omuz</string>
+    <string name="mode_two_people_face">Yüz</string>
+    <string name="mode_two_people_four_limbs">limb</string>
+    <string name="mode_two_people_armpit">Altkol</string>
+    <string name="mode_two_people_abdomen">abdomen</string>
+    <string name="mode_two_people_back">geri</string>
+    <string name="mode_two_people_bikini">bikini</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
 
 </resources>

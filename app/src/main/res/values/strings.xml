@@ -185,7 +185,7 @@
     <string name="tv_work_two_f">Fast</string>
     <string name="tv_work_two_m">Med</string>
 
-    <string name="tv_work_three_pulse">Pulse（MS）</string>
+    <string name="tv_work_three_pulse">Pulse（ms）</string>
     <string name="tv_work_three_fluence">Fluence（J）</string>
     <string name="tv_work_three_rate">Rate（Hz）</string>
     <string name="tv_work_six_rate">Rate</string>

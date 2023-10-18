@@ -165,7 +165,7 @@
     <string name="tv_work_one_temperature">temperatuur</string>
     <string name="tv_work_one_flow">stream</string>
     <string name="tv_work_one_totla">Totaal</string>
-    <string name="tv_work_one_current">HUIDIG</string>
+    <string name="tv_work_one_current">Huidig</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">EXACT</string>
     <string name="tv_work_one_raedy">Klaar om te gaan</string>
@@ -178,7 +178,7 @@
     <string name="tv_work_one_m">M</string>
     <string name="tv_work_one_rate">tarieven</string>
     <string name="tv_work_one_hz">Hz</string>
-    <string name="tv_work_one_fluence">FLUENCE</string>
+    <string name="tv_work_one_fluence">Effect</string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">Selecteer de zone van de huid!</string>
     <string name="tv_work_two_l">slow</string>
@@ -199,4 +199,32 @@
     <string name="wifi_close"> Draadloos internet is beschikbaar </string>
     <string name="wifi_no_close"> WiFi kan niet worden uitgeschakeld</string>
 
+    <string name="replace_filter"> Vervang het filter!</string>
+    <string name="splash_tips">  Netwerkverbinding in gang, wacht alstublieft!</string>
+    <string name="mode_one_man_forehead">voorhoofd</string>
+    <string name="mode_one_man_cheek">wang</string>
+    <string name="mode_one_man_lip">Lippen</string>
+    <string name="mode_one_man_neck">Voorhals</string>
+    <string name="mode_one_man_chest">borst</string>
+    <string name="mode_one_man_abdomen">buik</string>
+    <string name="mode_one_man_bikini">bikini</string>
+    <string name="mode_one_man_thigh">dij</string>
+    <string name="mode_one_man_knee">knie</string>
+    <string name="mode_one_man_leg">kalf</string>
+    <string name="mode_one_man_armpit">Oksel</string>
+    <string name="mode_one_woman_arm">Wapens</string>
+    <string name="mode_one_man_hand">Hand</string>
+    <string name="mode_one_man_nape">Achterhals</string>
+    <string name="mode_one_man_back">terug</string>
+    <string name="mode_one_man_buttocks">billen</string>
+    <string name="mode_one_man_shoulder">schouder</string>
+    <string name="mode_two_people_face">gezicht</string>
+    <string name="mode_two_people_four_limbs">ledemaat</string>
+    <string name="mode_two_people_armpit">Oksel</string>
+    <string name="mode_two_people_abdomen">buik</string>
+    <string name="mode_two_people_back">terug</string>
+    <string name="mode_two_people_bikini">bikini</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
 </resources>

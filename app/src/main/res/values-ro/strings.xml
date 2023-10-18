@@ -178,18 +178,18 @@
     <string name="tv_work_one_m">M</string>
     <string name="tv_work_one_rate">Rată</string>
     <string name="tv_work_one_hz">Hz</string>
-    <string name="tv_work_one_fluence">Fluence</string>
+    <string name="tv_work_one_fluence">Fluență</string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">Vă rugăm să selectați o parte a pielii!</string>
     <string name="tv_work_two_l">Încet</string>
     <string name="tv_work_two_f">Repede</string>
     <string name="tv_work_two_m">Med</string>
 
-    <string name="tv_work_three_pulse">Puls (MS)</string>
+    <string name="tv_work_three_pulse">Puls (ms)</string>
     <string name="tv_work_three_fluence">Fluență(J)</string>
     <string name="tv_work_three_rate">Rată (Hz)</string>
     <string name="tv_work_six_rate">Rată</string>
-    <string name="tv_work_six_fluence">Fluence</string>
+    <string name="tv_work_six_fluence">Fluență</string>
 
     <string name="excel_success"> Export realizat cu succes </string>
     <string name="excel_fail"> Exportul nu a reușit </string>
@@ -198,5 +198,34 @@
     <string name="wifi_open"> WiFi pornit </string>
     <string name="wifi_close"> WiFi dezactivat </string>
     <string name="wifi_no_close"> WiFi-ul nu poate fi oprit </string>
+
+    <string name="replace_filter"> Vă rugăm să înlocuiți filtrul!</string>
+    <string name="splash_tips">  Conexiune la reţea în desfăşurare, vă rugăm să aşteptaţi!</string>
+    <string name="mode_one_man_forehead">frunte</string>
+    <string name="mode_one_man_cheek">obraz</string>
+    <string name="mode_one_man_lip">Buze</string>
+    <string name="mode_one_man_neck">Gât anterior</string>
+    <string name="mode_one_man_chest">piept</string>
+    <string name="mode_one_man_abdomen">abdomen</string>
+    <string name="mode_one_man_bikini">Regiune triunghiulară</string>
+    <string name="mode_one_man_thigh">coapsă</string>
+    <string name="mode_one_man_knee">genunchi</string>
+    <string name="mode_one_man_leg">vițel</string>
+    <string name="mode_one_man_armpit">Subbraţ</string>
+    <string name="mode_one_woman_arm">Brațe</string>
+    <string name="mode_one_man_hand">Mână</string>
+    <string name="mode_one_man_nape">Gât</string>
+    <string name="mode_one_man_back">înapoi</string>
+    <string name="mode_one_man_buttocks">fese</string>
+    <string name="mode_one_man_shoulder">umăr</string>
+    <string name="mode_two_people_face">fata</string>
+    <string name="mode_two_people_four_limbs">membru</string>
+    <string name="mode_two_people_armpit">Subbraţ</string>
+    <string name="mode_two_people_abdomen">abdomen</string>
+    <string name="mode_two_people_back">înapoi</string>
+    <string name="mode_two_people_bikini">Regiune triunghiulară</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
 
 </resources>

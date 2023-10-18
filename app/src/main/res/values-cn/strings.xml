@@ -44,8 +44,8 @@
     <string name="please_enter">请输入您的手机号码</string>
     <string name="search_hint">找不到目标，请重新输入！</string>
     <string name="lookup">查找</string>
-    <string name="free_users">免费用户</string>
-    <string name="no_fatent">没有病人的治疗信息可以在免费模式下存储!</string>
+    <string name="free_users">自由用户</string>
+    <string name="no_fatent">在自由模式下不能存储任何患者治疗信息!</string>
     <string name="get_info">获取信息</string>
     <string name="user_list">用户列表</string>
     <string name="usage_record">使用记录</string>
@@ -198,5 +198,35 @@
     <string name="wifi_open"> 网络开</string>
     <string name="wifi_close"> 网络关</string>
     <string name="wifi_no_close"> WiFi无法关闭</string>
+
+    <string name="replace_filter"> 请更换过滤器!</string>
+    <string name="splash_tips">  网络连接中，请等待!</string>
+    <string name="mode_one_man_forehead">前额</string>
+    <string name="mode_one_man_cheek">脸颊</string>
+    <string name="mode_one_man_lip">嘴唇</string>
+    <string name="mode_one_man_neck">前颈</string>
+    <string name="mode_one_man_chest">胸部</string>
+    <string name="mode_one_man_abdomen">腹部</string>
+    <string name="mode_one_man_bikini">比基尼</string>
+    <string name="mode_one_man_thigh">大腿</string>
+    <string name="mode_one_man_knee">膝盖</string>
+    <string name="mode_one_man_leg">小腿</string>
+    <string name="mode_one_man_armpit">腋窝</string>
+    <string name="mode_one_woman_arm">胳膊</string>
+    <string name="mode_one_man_hand">手部</string>
+    <string name="mode_one_man_nape">后颈</string>
+    <string name="mode_one_man_back">后背</string>
+    <string name="mode_one_man_buttocks">臀部</string>
+    <string name="mode_one_man_shoulder">肩部</string>
+    <string name="mode_two_people_face">面部</string>
+    <string name="mode_two_people_four_limbs">四肢</string>
+    <string name="mode_two_people_armpit">腋窝</string>
+    <string name="mode_two_people_abdomen">腹部</string>
+    <string name="mode_two_people_back">后背</string>
+    <string name="mode_two_people_bikini">比基尼</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
+
 
 </resources>

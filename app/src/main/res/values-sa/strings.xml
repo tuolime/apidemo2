@@ -185,7 +185,7 @@
     <string name="tv_work_two_f">أسرع</string>
     <string name="tv_work_two_m">Med</string>
 
-    <string name="tv_work_three_pulse">النبض (MS)</string>
+    <string name="tv_work_three_pulse">النبض (ms)</string>
     <string name="tv_work_three_fluence">فلوينس (J)</string>
     <string name="tv_work_three_rate">المعدل (Hz)</string>
     <string name="tv_work_six_rate">السعر</string>
@@ -199,4 +199,32 @@
     <string name="wifi_close"> إيقاف تشغيل </string>
     <string name="wifi_no_close"> لا يمكن إيقاف تشغيل </string>
 
+    <string name="replace_filter"> يرجى استبدال فلتر!</string>
+    <string name="splash_tips">  في اتصال الشبكة ، يرجى الانتظار!</string>
+    <string name="mode_one_man_forehead">جبهته</string>
+    <string name="mode_one_man_cheek">خد</string>
+    <string name="mode_one_man_lip">الشفاه</string>
+    <string name="mode_one_man_neck">الجبهة الرقبة</string>
+    <string name="mode_one_man_chest">صدري</string>
+    <string name="mode_one_man_abdomen">بطن .</string>
+    <string name="mode_one_man_bikini">منطقة المثلث</string>
+    <string name="mode_one_man_thigh">فخذ</string>
+    <string name="mode_one_man_knee">الركبتين</string>
+    <string name="mode_one_man_leg">العجل</string>
+    <string name="mode_one_man_armpit">إبطي</string>
+    <string name="mode_one_woman_arm">الذراع</string>
+    <string name="mode_one_man_hand">من ناحية</string>
+    <string name="mode_one_man_nape">رقبة .</string>
+    <string name="mode_one_man_back">ظهر</string>
+    <string name="mode_one_man_buttocks">الأرداف</string>
+    <string name="mode_one_man_shoulder">الكتفين</string>
+    <string name="mode_two_people_face">الوجه</string>
+    <string name="mode_two_people_four_limbs">أطرافه</string>
+    <string name="mode_two_people_armpit">إبطي</string>
+    <string name="mode_two_people_abdomen">بطن .</string>
+    <string name="mode_two_people_back">ظهر</string>
+    <string name="mode_two_people_bikini">منطقة المثلث</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
 </resources>

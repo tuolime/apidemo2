@@ -178,18 +178,18 @@
     <string name="tv_work_one_m">M</string>
     <string name="tv_work_one_rate">Suất</string>
     <string name="tv_work_one_hz">Hz</string>
-    <string name="tv_work_one_fluence">Mật độ năng lượng</string>
+    <string name="tv_work_one_fluence">Lưu loát</string>
     <string name="tv_work_one_j">J</string>
     <string name="select_skin">Hãy chọn một phần da!</string>
     <string name="tv_work_two_l">Chậm</string>
     <string name="tv_work_two_f">Nhanh</string>
     <string name="tv_work_two_m">Med</string>
 
-    <string name="tv_work_three_pulse">Mạch（MS）</string>
+    <string name="tv_work_three_pulse">Mạch（ms）</string>
     <string name="tv_work_three_fluence">Lưu loát（J）</string>
     <string name="tv_work_three_rate">Suất（Hz）</string>
     <string name="tv_work_six_rate">Suất</string>
-    <string name="tv_work_six_fluence">năng lượng</string>
+    <string name="tv_work_six_fluence">Lưu loát</string>
 
     <string name="excel_success"> Xuất khẩu thành công </string>
     <string name="excel_fail"> Xuất không thành công </string>
@@ -198,5 +198,35 @@
     <string name="wifi_open">Bật WiFi </string>
     <string name="wifi_close"> Tắt WiFi </string>
     <string name="wifi_no_close"> Không thể tắt WiFi </string>
+
+    <string name="replace_filter"> Vui lòng thay bộ lọc</string>
+    <string name="splash_tips">Kết nối mạng, vui lòng vào sau!</string>
+    <string name="mode_one_man_forehead">trán</string>
+    <string name="mode_one_man_cheek">Trang chủ</string>
+    <string name="mode_one_man_lip">Môi</string>
+    <string name="mode_one_man_neck">Cổ</string>
+    <string name="mode_one_man_chest">Ngực</string>
+    <string name="mode_one_man_abdomen">Bụng</string>
+    <string name="mode_one_man_bikini">Tam giác</string>
+    <string name="mode_one_man_thigh">Trang chủ</string>
+    <string name="mode_one_man_knee">đầu gối</string>
+    <string name="mode_one_man_leg">Chân</string>
+    <string name="mode_one_man_armpit">Nách</string>
+    <string name="mode_one_woman_arm">Cánh tay</string>
+    <string name="mode_one_man_hand">bàn tay</string>
+    <string name="mode_one_man_nape">cổ họng</string>
+    <string name="mode_one_man_back">Phía sau</string>
+    <string name="mode_one_man_buttocks">Mông</string>
+    <string name="mode_one_man_shoulder">vai</string>
+    <string name="mode_two_people_face">mặt</string>
+    <string name="mode_two_people_four_limbs">Chân tay</string>
+    <string name="mode_two_people_armpit">Nách</string>
+    <string name="mode_two_people_abdomen">Bụng</string>
+    <string name="mode_two_people_back">Phía sau</string>
+    <string name="mode_two_people_bikini">Tam giác</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
+
 
 </resources>

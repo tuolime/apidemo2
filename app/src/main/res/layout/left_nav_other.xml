@@ -27,7 +27,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="100dp"
             android:gravity="center"
-            android:src="@mipmap/ic_main_back"
+            android:src="@mipmap/ic_work_one_back"
             />
 
         <ImageView

@@ -58,7 +58,7 @@
     <string name="limit">制限</string>
     <string name="lower_limit">下限</string>
     <string name="of">の</string>
-    <string name="water_flow">水流</string>
+    <string name="water_flow">水の流れ</string>
     <string name="tips">チップ</string>
     <string name="cancel">キャンセル</string>
     <string name="sure">確認</string>
@@ -68,7 +68,7 @@
     <string name="frequency">周波数</string>
     <string name="time">タイマー</string>
     <string name="sec">秒</string>
-    <string name="grid_size">部位</string>
+    <string name="grid_size">部品</string>
     <string name="energy">パワー</string>
     <string name="ps_error">パスワードエラー</string>
     <string name="user_information">ユーザ情報の記録に成功!</string>
@@ -146,7 +146,7 @@
     <string name="upper_str">上</string>
     <string name="lower_str">下</string>
     <string name="enger_str">パワー</string>
-    <string name="limit_str">制限</string>
+    <string name="limit_str">限界</string>
     <string name="version_code">版</string>
     <string name="expert_str">プロモード</string>
     <string name="smart_str">ガイド人</string>
@@ -185,8 +185,8 @@
     <string name="tv_work_two_f">速く</string>
     <string name="tv_work_two_m">医学</string>
 
-    <string name="tv_work_three_pulse">パルス(MS)</string>
-    <string name="tv_work_three_fluence">Fluence (J)</string>
+    <string name="tv_work_three_pulse">パルス(ms)</string>
+    <string name="tv_work_three_fluence">パワー (J)</string>
     <string name="tv_work_three_rate">頻度(Hz)</string>
     <string name="tv_work_six_rate">頻度</string>
     <string name="tv_work_six_fluence">パワー</string>
@@ -196,7 +196,37 @@
     <string name="excel_no_data">現在入手可能なデータはありません </string>
 
     <string name="wifi_open"> WiFi</string>
-    <string name="wifi_close"> WiFiから </string>
+    <string name="wifi_close"> WiFiから </string>-
     <string name="wifi_no_close">wifiはオフにできません </string>
+
+
+    <string name="replace_filter"> フィルターを交換してください!</string>
+    <string name="splash_tips">ネットワーク接続中でしばらくお待ちください!</string>
+    <string name="mode_one_man_forehead">額</string>
+    <string name="mode_one_man_cheek">頬</string>
+    <string name="mode_one_man_lip">唇</string>
+    <string name="mode_one_man_neck">首</string>
+    <string name="mode_one_man_chest">胸</string>
+    <string name="mode_one_man_abdomen">腹部</string>
+    <string name="mode_one_man_bikini">VIO</string>
+    <string name="mode_one_man_thigh">太もも</string>
+    <string name="mode_one_man_knee">膝</string>
+    <string name="mode_one_man_leg">ふくらはぎ</string>
+    <string name="mode_one_man_armpit">脇</string>
+    <string name="mode_one_woman_arm">腕</string>
+    <string name="mode_one_man_hand">手</string>
+    <string name="mode_one_man_nape">首</string>
+    <string name="mode_one_man_back">背中</string>
+    <string name="mode_one_man_buttocks">臀部</string>
+    <string name="mode_one_man_shoulder">肩</string>
+    <string name="mode_two_people_face">顔</string>
+    <string name="mode_two_people_four_limbs">四肢</string>
+    <string name="mode_two_people_armpit">脇</string>
+    <string name="mode_two_people_abdomen">腹部</string>
+    <string name="mode_two_people_back">背中</string>
+    <string name="mode_two_people_bikini">VIO</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
 
 </resources>

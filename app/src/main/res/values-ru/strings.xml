@@ -33,7 +33,7 @@
     <string name="ok">OK</string>
     <string name="new_user">Новый пользователь </string>
     <string name="id">ID</string>
-    <string name="name">Фамилия имя</string>
+    <string name="name">Имя</string>
     <string name="gender">Пол</string>
     <string name="man">Мужчина </string>
     <string name="woman">Женщина</string>
@@ -45,7 +45,7 @@
     <string name="search_hint">Не удалось найти цель. Повторите попытку.</string>
     <string name="lookup">Искание </string>
     <string name="free_users">Свободный пользователь</string>
-    <string name="no_fatent">NO PATIENT TREATMENT INFORMATION CAN BE STORED IN FREE MODE!</string>
+    <string name="no_fatent">Никакая информация о лечении пациента не может храниться в пробном режиме!</string>
     <string name="get_info">Получение информации</string>
     <string name="user_list">Список пользователей</string>
     <string name="usage_record">Запись об использовании</string>
@@ -65,8 +65,8 @@
     <string name="tv_next">Далее</string>
     <string name="trio">EXACT</string>
     <string name="fluence">Энергия</string>
-    <string name="frequency">ЧАСТОТА</string>
-    <string name="time">ВРЕМЯ</string>
+    <string name="frequency">Частота</string>
+    <string name="time">Время</string>
     <string name="sec">Секунда</string>
     <string name="grid_size">Область</string>
     <string name="energy">Общая энергия</string>
@@ -89,21 +89,21 @@
     <string name="tel_no_hint">Номер мобильного телефона пуст?</string>
     <string name="select_body">Пожалуйста, выберите часть тела!</string>
     <string name="work_no">Работа не началась</string>
-    <string name="event">СОБЫТИЕ</string>
-    <string name="mode">РЕЖИМ</string>
+    <string name="event">Записи</string>
+    <string name="mode">Режем</string>
     <string name="send_fail">Отказ в отправке</string>
     <string name="ends_time">Время самостоятельного удаления волос заканчивается</string>
-    <string name="skin">КОЖА</string>
-    <string name="body">ТЕЛО</string>
-    <string name="work_count">WORKCOUNT</string>
+    <string name="skin">Кожа</string>
+    <string name="body">Тело</string>
+    <string name="work_count">Вспышка</string>
     <string name="name_cannot">Имя пользователя не может быть пустым! </string>
     <string name="phone_cannot">Номер мобильного телефона не может быть пустым!</string>
     <string name="phone_already">Номер мобильного телефона уже не  существует</string>
     <string name="trio_3d">QUATTRO 3D</string>
-    <string name="select">ВЫБИРАТЬ</string>
-    <string name="burst">ЛОПНУЛ</string>
-    <string name="total">ИТОГ</string>
-    <string name="current">ТЕКУЩИЙ</string>
+    <string name="select">Выбирать</string>
+    <string name="burst">Лопнул</string>
+    <string name="total">Итог</string>
+    <string name="current">Текущий</string>
     <string name="stby">СТОП</string>
     <string name="ready">ГОТОВ</string>
     <string name="working">РАБОТА</string>
@@ -123,7 +123,7 @@
     <string name="name_count">Длина имени должна быть не более 20 символов!</string>
 
 
-    <string name="frequency_hz">ЧАСТОТА</string>
+    <string name="frequency_hz">Частота</string>
 
     <string name="thematic_style">Тематический стиль работы</string>
     <string name="mode_two_bg_1">Стиль I</string>
@@ -158,14 +158,14 @@
     <string name="skin_4">IV</string>
     <string name="skin_5">V</string>
     <string name="skin_6">VI</string>
-    <string name="skin_location">Расположениеn</string>
+    <string name="skin_location">Зона обработки</string>
 
     <string name="tv_mode_one_ok">Ok</string>
     <string name="tv_mode_one_cancel">Отмена</string>
     <string name="tv_work_one_temperature">Tемпература </string>
     <string name="tv_work_one_flow">Поток</string>
     <string name="tv_work_one_totla">Общий</string>
-    <string name="tv_work_one_current">ТЕКУЩИЙ</string>
+    <string name="tv_work_one_current">Текущий</string>
     <string name="tv_work_one_id">ID</string>
     <string name="tv_work_one_exact">Tочно</string>
     <string name="tv_work_one_raedy">Готов</string>
@@ -176,7 +176,7 @@
     <string name="tv_work_one_l">L</string>
     <string name="tv_work_one_f">F</string>
     <string name="tv_work_one_m">M</string>
-    <string name="tv_work_one_rate">Rate</string>
+    <string name="tv_work_one_rate">Частота</string>
     <string name="tv_work_one_hz">Hz</string>
     <string name="tv_work_one_fluence">Энергия</string>
     <string name="tv_work_one_j">J</string>
@@ -186,7 +186,7 @@
     <string name="tv_work_two_m">Средно</string>
 
     <string name="tv_work_three_pulse">Импульсы (мs)</string>
-    <string name="tv_work_three_fluence">Флюэнс (J)</string>
+    <string name="tv_work_three_fluence">Энергия (J)</string>
     <string name="tv_work_three_rate">Частота (гц)</string>
     <string name="tv_work_six_rate">Частота</string>
     <string name="tv_work_six_fluence">Энергия</string>
@@ -198,5 +198,34 @@
     <string name="wifi_open"> Wi-fi включен </string>
     <string name="wifi_close"> Wi-fi выключен</string>
     <string name="wifi_no_close"> Wi-fi не может быть выключен </string>
+
+    <string name="replace_filter"> Пожалуйста, замените фильтр!</string>
+    <string name="splash_tips">Сетевое соединение, пожалуйста, подождите!</string>
+    <string name="mode_one_man_forehead">Лоб</string>
+    <string name="mode_one_man_cheek">Щеки</string>
+    <string name="mode_one_man_lip">Губы</string>
+    <string name="mode_one_man_neck">Передняя часть шеи</string>
+    <string name="mode_one_man_chest">грудь</string>
+    <string name="mode_one_man_abdomen">Живот</string>
+    <string name="mode_one_man_bikini">Бикини</string>
+    <string name="mode_one_man_thigh">Ляжка</string>
+    <string name="mode_one_man_knee">Колени</string>
+    <string name="mode_one_man_leg">Голень</string>
+    <string name="mode_one_man_armpit">Подмышки</string>
+    <string name="mode_one_woman_arm">Руки</string>
+    <string name="mode_one_man_hand">Кисть</string>
+    <string name="mode_one_man_nape">Задняя часть шеи</string>
+    <string name="mode_one_man_back">Спина</string>
+    <string name="mode_one_man_buttocks">Бедра</string>
+    <string name="mode_one_man_shoulder">Плечо</string>
+    <string name="mode_two_people_face">Лицо</string>
+    <string name="mode_two_people_four_limbs">Конечности</string>
+    <string name="mode_two_people_armpit">Подмышки</string>
+    <string name="mode_two_people_abdomen">Живот</string>
+    <string name="mode_two_people_back">Спина</string>
+    <string name="mode_two_people_bikini">Бикини</string>
+    <string name="mode_shr_stack">SHR STACK</string>
+    <string name="mode_shr">SHR</string>
+    <string name="mode_hr">HR</string>
 
 </resources>
