@@ -26,6 +26,7 @@ import com.ss.api.utils.StringUtils;
 import com.ss.apidemo.AppConfig;
 import com.ss.apidemo.MyApplication;
 import com.ss.apidemo.R;
+import com.ss.apidemo.bean.EventTipsBean;
 import com.ss.apidemo.bean.QueueMessage;
 import com.ss.apidemo.bean.SendMessage;
 import com.ss.apidemo.bean.SendTimeBean;
@@ -36,6 +37,7 @@ import com.ss.apidemo.ui.SplashActivity;
 import com.ss.apidemo.ui.UserCreateActivity;
 import com.ss.apidemo.utils.LocaleHelper;
 import com.ss.apidemo.utils.LogUtils;
+import com.ss.apidemo.utils.MyActivityManager;
 import com.ss.apidemo.utils.NetworkUtil;
 import com.ss.apidemo.utils.PlayVoiceUtils;
 import com.ss.apidemo.utils.SharedPrefsUtil;
@@ -498,6 +500,88 @@ public abstract class BaseActivity extends AppCompatActivity {
         }else {
             return current_energyUpper;
         }
+
+    }
+    @Subscribe(threadMode = ThreadMode.MainThread)
+    public void helloEventBus(EventTipsBean eventTipsBean) {//Myapplication里不能使用文字资源 否则多语言不翻译
+        if(eventTipsBean != null){
+            switch (eventTipsBean.getType()){
+                case 1:
+                    showMyapplicationTips(getResources().getString(R.string.disconnect_tips));
+                    break;
+                case 2:
+                    showMyapplicationTips(getResources().getString(R.string.no_network));
+                    break;
+                case 3:
+                    showMyapplicationTips(getResources().getString(R.string.network_connection_exception));
+                    break;
+                case 4:
+                    showLockTips(getResources().getString(R.string.lock_tips));
+                    break;
+                case 5:
+                    showEndTimeTips(getResources().getString(R.string.ends_time));
+                    break;
+            }
+        }
+
+    }
+
+    public void showMyapplicationTips(String hint) {
+        if (dialog != null) {
+            dialog.closeDialog();
+            dialog.loadDialog(BaseActivity.this, new HintDialog.OnClickIsConfirm() {
+                @Override
+                public void OnClickIsConfirmListener() {//确定
+                    if (hint.equals(getResources().getString(R.string.no_network))) {
+                        MyApplication.instance().startSplashActivity();
+                    }
+                    if (hint.equals(getResources().getString(R.string.network_connection_exception))) {
+                        MyApplication.instance().startSplashActivity();
+                    }
+                }
+
+            }, hint);
+        } else {
+            dialog = new HintDialog(BaseActivity.this);
+            dialog.loadDialog(BaseActivity.this, new HintDialog.OnClickIsConfirm() {
+                @Override
+                public void OnClickIsConfirmListener() {//确定
+                    if (hint.equals(getResources().getString(R.string.no_network))) {
+                        MyApplication.instance().startSplashActivity();
+                    }
+                    if (hint.equals(getResources().getString(R.string.network_connection_exception))) {
+                        MyApplication.instance().startSplashActivity();
+                    }
+                }
+
+            }, hint);
+        }
+    }
+    public void showLockTips(String hint) {
+        MyApplication.instance().lock_count ++;
+        if (MyApplication.instance().lock_count == 1){
+            HintDialog dialogTips = new HintDialog(BaseActivity.this);
+            dialogTips.loadDialog(BaseActivity.this, new HintDialog.OnClickIsConfirm() {
+                @Override
+                public void OnClickIsConfirmListener() {//确定
+                    MyApplication.instance().lock_count = 0;
+                    MyApplication.instance().startSplashActivity();
+                }
+
+            }, hint);
+        }
+
+    }
+    public void showEndTimeTips(String hint) {
+        HintDialog dialog = new HintDialog(BaseActivity.this);
+        dialog.loadDialog(BaseActivity.this, new HintDialog.OnClickIsConfirm() {
+            @Override
+            public void OnClickIsConfirmListener() {//确定
+                MyApplication.instance().startSplashActivity();
+//                ToastUtil.showToast(MyApplication.instance(),getResources().getString(R.string.ends_time));
+            }
+
+        }, hint);
 
     }
 }

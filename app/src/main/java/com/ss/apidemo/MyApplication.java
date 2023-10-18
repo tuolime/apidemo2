@@ -15,6 +15,7 @@ import com.example.protocol.frame.ProtocalHandler;
 import com.google.gson.Gson;
 import com.ss.api.HardwareCtrl;
 import com.ss.api.serialport.SerialPort;
+import com.ss.apidemo.bean.EventTipsBean;
 import com.ss.apidemo.bean.Frame;
 import com.ss.apidemo.bean.QueueMessage;
 import com.ss.apidemo.bean.SendMessage;
@@ -56,7 +57,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
 
     private String address_message;
     private int disconnection_count = 0;//断连计数
-    private int lock_count = 0;//锁定计数
+    public int lock_count = 0;//锁定计数
     private boolean isScheduledTasks = false;//是否开启定时心跳任务
     private int response_count = 0;//应答次数
 
@@ -75,7 +76,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 public void run() {
                     if (AppConfig.isDisconnect == 0) {
                         PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.WARM);
-                        showTips(getResources().getString(R.string.disconnect_tips));
+                        EventBus.getDefault().post(new EventTipsBean(1));
                     }
                     // TODOAuto-generated method stub
                     handler.postDelayed(this, 20000);//延迟20秒调用
@@ -101,7 +102,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 handler.postDelayed(this, 3 * 10000);//设置延迟时间，此处是30s
                 //需要执行的代码
             } else {//无网络
-                showTips(getResources().getString(R.string.no_network));
+                EventBus.getDefault().post(new EventTipsBean(2));
             }
 
         }
@@ -119,7 +120,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 isScheduledTasks = true;
                 //需要执行的代码
             } else {//无网络
-                showTips(getResources().getString(R.string.no_network));
+                EventBus.getDefault().post(new EventTipsBean(2));
             }
 
         }
@@ -224,7 +225,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
 //                mConnection.sendMessage(jsonString);
             }
         } else {
-            showTips(getResources().getString(R.string.no_network));
+            EventBus.getDefault().post(new EventTipsBean(2));
             startSplashActivity();
         }
 
@@ -252,7 +253,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
 //                mConnection.sendMessage(jsonString);
             }
         } else {
-            showTips(getResources().getString(R.string.no_network));
+            EventBus.getDefault().post(new EventTipsBean(2));
             startSplashActivity();
         }
     }
@@ -279,7 +280,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
 //                mConnection.sendMessage(jsonString);
             }
         } else {
-            showTips(getResources().getString(R.string.no_network));
+            EventBus.getDefault().post(new EventTipsBean(2));
             startSplashActivity();
         }
     }
@@ -310,7 +311,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
 //                mConnection.sendMessage(jsonString);
             }
         } else {
-            showTips(getResources().getString(R.string.no_network));
+            EventBus.getDefault().post(new EventTipsBean(2));
             startSplashActivity();
         }
     }
@@ -469,15 +470,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
     public void expire() {
         AppConfig.AUTOSHEDTIME = 0;
         EventBus.getDefault().post(new StopWorkBean());
-        HintDialog dialog = new HintDialog(MyActivityManager.getInstance().getCurrentActivity());
-        dialog.loadDialog(MyActivityManager.getInstance().getCurrentActivity(), new HintDialog.OnClickIsConfirm() {
-            @Override
-            public void OnClickIsConfirmListener() {//确定
-                startSplashActivity();
-//                ToastUtil.showToast(MyApplication.instance(),getResources().getString(R.string.ends_time));
-            }
-
-        }, getResources().getString(R.string.ends_time));
+        EventBus.getDefault().post(new EventTipsBean(5));
 
     }
 
@@ -572,7 +565,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                             if (frame.getLockStatus().equals("lock")) { //锁定状态，0否1是
                                 AppConfig.lockStatus = 1;
                                 EventBus.getDefault().post(new StopWorkBean());
-                                showLockTips(getResources().getString(R.string.lock_tips));
+                                EventBus.getDefault().post(new EventTipsBean(4));
                             } else {
                                 AppConfig.lockStatus = 0;
                             }
@@ -599,7 +592,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                             if (frame.getLockStatus().equals("lock")) { //锁定状态，0否1是
                                 AppConfig.lockStatus = 1;
                                 EventBus.getDefault().post(new StopWorkBean());
-                                showLockTips(getResources().getString(R.string.lock_tips));
+                                EventBus.getDefault().post(new EventTipsBean(4));
                             } else {
                                 AppConfig.lockStatus = 0;
                             }
@@ -625,58 +618,14 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
 //        disconnection_count++;//socket连接服务器失败(三次每次一分钟后发起连接均失败) 会走该方法
 //        if (disconnection_count >= 100){//累计100次提醒一下
 //            disconnection_count = 0;
-        showTips(getResources().getString(R.string.network_connection_exception));
+        EventBus.getDefault().post(new EventTipsBean(3));
 //        }
     }
 
 
-    public void showTips(String hint) {
-        if (dialog != null) {
-            dialog.closeDialog();
-            dialog.loadDialog(MyActivityManager.getInstance().getCurrentActivity(), new HintDialog.OnClickIsConfirm() {
-                @Override
-                public void OnClickIsConfirmListener() {//确定
-                    if (hint.equals(getResources().getString(R.string.no_network))) {
-                        startSplashActivity();
-                    }
-                    if (hint.equals(getResources().getString(R.string.network_connection_exception))) {
-                        startSplashActivity();
-                    }
-                }
 
-            }, hint);
-        } else {
-            dialog = new HintDialog(MyActivityManager.getInstance().getCurrentActivity());
-            dialog.loadDialog(MyActivityManager.getInstance().getCurrentActivity(), new HintDialog.OnClickIsConfirm() {
-                @Override
-                public void OnClickIsConfirmListener() {//确定
-                    if (hint.equals(getResources().getString(R.string.no_network))) {
-                        startSplashActivity();
-                    }
-                    if (hint.equals(getResources().getString(R.string.network_connection_exception))) {
-                        startSplashActivity();
-                    }
-                }
 
-            }, hint);
-        }
-    }
 
-    public void showLockTips(String hint) {
-        lock_count ++;
-        if (lock_count == 1){
-            HintDialog dialogTips = new HintDialog(MyActivityManager.getInstance().getCurrentActivity());
-            dialogTips.loadDialog(MyActivityManager.getInstance().getCurrentActivity(), new HintDialog.OnClickIsConfirm() {
-                @Override
-                public void OnClickIsConfirmListener() {//确定
-                    lock_count = 0;
-                    startSplashActivity();
-                }
-
-            }, hint);
-        }
-
-    }
 
     /*
      * 销毁线程
