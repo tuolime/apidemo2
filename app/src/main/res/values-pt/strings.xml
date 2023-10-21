@@ -148,8 +148,8 @@
     <string name="enger_str">ENERGIA</string>
     <string name="limit_str">LIMITE</string>
     <string name="version_code">VERSÃO</string>
-    <string name="expert_str">MODO EXPERT</string>
-    <string name="smart_str">MODO INTELIGENTE</string>
+    <string name="expert_str">Modo expert</string>
+    <string name="smart_str">Modo inteligente</string>
 
     <string name="skin_tyoe">Tipo de pele</string>
     <string name="skin_1">I</string>

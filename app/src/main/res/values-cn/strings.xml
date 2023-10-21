@@ -76,7 +76,7 @@
     <string name="user_delete_record">您确定要删除此记录吗？</string>
     <string name="port_error">端口打开失败</string>
     <string name="short_board">脚或手开关故障，请检查!</string>
-    <string name="hand_error">连接治疗工具失败!</string>
+    <string name="hand_error">连接治疗手具失败!</string>
     <string name="temperature_high">温度高报警</string>
     <string name="temperature_low">温度低报警</string>
     <string name="water_low">水流低报警</string>
