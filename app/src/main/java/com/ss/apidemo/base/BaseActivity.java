@@ -335,6 +335,12 @@ public abstract class BaseActivity extends AppCompatActivity {
     //-------------------------单独发送单脉冲能量--------------------------
 
     public void SetFluenceMessage(int fluence) {
+        int current_handgear = 0;
+        if (AppConfig.handgearSelect == 1) {//单手==左手
+            current_handgear = SharedPrefsUtil.getIntValue(AppConfig.HAND_LEFT, 1);
+        } else if (AppConfig.handgearSelect == 0) {//双手 =  左右手
+            current_handgear = SharedPrefsUtil.getIntValue(AppConfig.HAND_RIGHT, 1);
+        }
         //停止状态  工作状态给 0  总能量 也能 0
         ProtocalHandler protocalHandler = new ProtocalHandler();
         SetWorkingStatus setWorkingStatus = new SetWorkingStatus();
@@ -343,7 +349,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         setWorkingStatus.setFrequency(0); // 频率
         setWorkingStatus.setTotalEnergy(0);// 总能量
         setWorkingStatus.setWorkingTime(0); // 工作时间  秒
-        setWorkingStatus.setQbConfig(0); // 手具选择 1-7
+        setWorkingStatus.setQbConfig(current_handgear); // 手具选择 1-7
         setWorkingStatus.setChangeQbPortFlag(AppConfig.handgearSelect); // 是否切换手具端口 1 left 0 right
         setWorkingStatus.setWorkingStatus(0);// 工作状态 0  stby和停止  1 reading 2 working
         Frame frame = protocalHandler.buildSetWorkingStatusFrame(setWorkingStatus);
