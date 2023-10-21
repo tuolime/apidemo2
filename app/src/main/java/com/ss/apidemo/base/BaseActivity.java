@@ -344,7 +344,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         setWorkingStatus.setTotalEnergy(0);// 总能量
         setWorkingStatus.setWorkingTime(0); // 工作时间  秒
         setWorkingStatus.setQbConfig(0); // 手具选择 1-7
-        setWorkingStatus.setChangeQbPortFlag(0); // 是否切换手具端口 1 left 0 right
+        setWorkingStatus.setChangeQbPortFlag(AppConfig.handgearSelect); // 是否切换手具端口 1 left 0 right
         setWorkingStatus.setWorkingStatus(0);// 工作状态 0  stby和停止  1 reading 2 working
         Frame frame = protocalHandler.buildSetWorkingStatusFrame(setWorkingStatus);
         Console.log(ParserUtil.toHexString(frame.getFrame()));
