@@ -668,15 +668,12 @@
                         android:textColor="@color/mode_work_one_tv" />
                 </LinearLayout>
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+
 
                 <LinearLayout
                     android:gravity="center"
                     android:layout_marginLeft="45dp"
-                    android:layout_weight="3"
+                    android:layout_weight="4"
                     android:orientation="vertical"
                     android:layout_width="0dp"
                     android:layout_height="match_parent">
