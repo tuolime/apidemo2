@@ -42,28 +42,28 @@
             android:layout_weight="1"/>
 
         <RelativeLayout
-            android:layout_width="280dp"
-            android:layout_height="280dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:gravity="center"
             android:background="@mipmap/ic_mode_four_top_bg"
             android:orientation="vertical">
             <View
                 android:id="@+id/vv_bg1"
-                android:layout_margin="35dp"
+                android:layout_margin="37dp"
                 android:background="@drawable/mode_four_bt_unselect_corners"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
             <TextView
-                android:lines="1"
                 android:id="@+id/tv_select1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:lines="1"
                 android:onClick="tabClick"
                 android:text="@string/expert_str"
                 android:textColor="@color/mode_four_bt_unselect"
-                android:textSize="35sp" />
+                android:textSize="25sp" />
         </RelativeLayout>
 
         <View
@@ -71,14 +71,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
         <RelativeLayout
-            android:layout_width="280dp"
-            android:layout_height="280dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:gravity="center"
             android:background="@mipmap/ic_mode_four_top_bg"
             android:orientation="vertical">
             <View
                 android:id="@+id/vv_bg2"
-                android:layout_margin="35dp"
+                android:layout_margin="37dp"
                 android:background="@drawable/mode_four_bt_unselect_corners"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
@@ -92,7 +92,7 @@
                 android:onClick="tabClick"
                 android:text="@string/smart_str"
                 android:textColor="@color/mode_four_bt_unselect"
-                android:textSize="35sp" />
+                android:textSize="25sp" />
         </RelativeLayout>
 
         <View

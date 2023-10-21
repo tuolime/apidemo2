@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:textSize="23sp"
+                android:textSize="15sp"
                 android:text="@string/auto_shed_time"/>
             <TextView
                 android:layout_marginRight="10dp"
@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:textSize="23sp"
+                android:textSize="15sp"
                 android:text="@string/name"/>
         </LinearLayout>
 
