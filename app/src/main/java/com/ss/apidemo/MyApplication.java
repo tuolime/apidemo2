@@ -414,7 +414,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                         if (sendloopDatas.size() > 0) {
                             SendMessage value = sendloopDatas.poll();
                             if (value != null) {
-                                Thread.sleep(500);//队列执行间隔
+                                Thread.sleep(1000);//队列执行间隔
                                 LogUtils.e("出队列" + value.getMessage());
                                 //需要执行的代码
                                 MyActivityManager.getInstance().getCurrentActivity().runOnUiThread(new Runnable() {
