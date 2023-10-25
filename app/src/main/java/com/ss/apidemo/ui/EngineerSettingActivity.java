@@ -397,10 +397,12 @@ public class EngineerSettingActivity extends BaseActivity {
                 switch (i) {
                     case R.id.rb_wifi_on:
                         SharedPrefsUtil.putBooleanValue(AppConfig.WIFI, true);
-
+                        AppConfig.lockStatus = -1;
                         break;
                     case R.id.rb_wifi_off:
                         SharedPrefsUtil.putBooleanValue(AppConfig.WIFI, false);
+                        AppConfig.lockStatus = 0;
+                        MyApplication.instance().destroyTask();
                         break;
                 }
             }

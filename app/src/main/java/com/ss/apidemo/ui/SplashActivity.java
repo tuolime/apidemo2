@@ -134,11 +134,10 @@ public class SplashActivity extends BaseActivity {
             boolean wifi = NetworkUtil.isWifi();
             if (!wifi){
             }else {
-//                if (AppConfig.lockStatus == 0){//未锁定
-//                    AppConfig.lockStatus = 2;// 2 默认（没有获取到实际状态信息）
+                if (AppConfig.lockStatus == -1){//开启网络
                     MyApplication.instance().destroyTask();
                     MyApplication.instance().connetSocket();
-//                }
+                }
 //                else {
 //                    ShowDialog();
 //                }

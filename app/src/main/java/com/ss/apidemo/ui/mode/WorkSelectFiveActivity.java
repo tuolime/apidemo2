@@ -123,6 +123,7 @@ public class WorkSelectFiveActivity extends BaseActivity {
     UploadWorkingInfo uploadWorkingInfo_energy;
     private int current_luminescence_auto_save_stop_count;
     private int flag_number = 3;
+    private int flag_count = 3;
     private String gender;
     private TextView tv_time;
     private TextView tv_name;
@@ -1070,11 +1071,8 @@ public class WorkSelectFiveActivity extends BaseActivity {
     public void sendFluence(){
         //值改变 发送报文到下位机
         SetFluenceBean setFluenceBean = new SetFluenceBean();
-        String fluenceString = tv_fluence.getText().toString();
-        int fluenceInt = Integer.parseInt(fluenceString);
-        setFluenceBean.setFluence(fluenceInt);
-//        setFluenceBean.setFluence(current_fluence_progress);
-        LogUtils.e("下发单脉冲hr"+fluenceInt);
+        setFluenceBean.setFluence(current_fluence_progress);
+        LogUtils.e("下发单脉冲hr"+current_fluence_progress);
         EventBus.getDefault().post(setFluenceBean);
     }
 
@@ -1113,6 +1111,7 @@ public class WorkSelectFiveActivity extends BaseActivity {
     @Subscribe(threadMode = ThreadMode.MainThread)
     public void helloEventBus(UploadWorkingInfo uploadWorkingInfo) {//結果集
         setSendUserValues(uploadWorkingInfo);//单独处理上报治疗信息
+        setSendCountValues(uploadWorkingInfo);
         if (uploadWorkingInfo.getWorkingStatus() == 0) {//stby
             current_status = 0;
             ll_all.setVisibility(View.GONE);
@@ -1139,15 +1138,7 @@ public class WorkSelectFiveActivity extends BaseActivity {
             tv_raedy.setTextColor(getResources().getColor(R.color.working));
             tv_raedy.setText(getResources().getString(R.string.working));
             LogUtils.e("firstSendMsg","11="+current_luminescence_count+"22 ="+current_luminescence_upload_stop_count);
-            int work_upload_count= current_luminescence_count - current_luminescence_upload_stop_count;
-//            if (AppConfig.useLimitedFlag == 1){//开启限制且限制的是次数，上报服务端发数次数
-//                if (AppConfig.useLimitedType.equals("count")){
-//                    MyApplication.instance().sendCountMessage(work_upload_count);
-//                }
-//            }
-            if (work_upload_count > 0){
-                MyApplication.instance().sendCountMessage(work_upload_count);
-            }
+
             current_luminescence_upload_stop_count = current_luminescence_count;
             LogUtils.e("firstSendMsg","33="+current_luminescence_upload_stop_count);
 
@@ -1246,6 +1237,27 @@ public class WorkSelectFiveActivity extends BaseActivity {
         UserValueDao.getInstance().createUserValue(userValue1);
         MyApplication.instance().sendUserValueMessage(userValue1);
         current_luminescence_auto_save_stop_count = current_luminescence_count;
+    }
+
+    public void setSendCountValues(UploadWorkingInfo uploadWorkingInfo) {
+        if (uploadWorkingInfo.getWorkingStatus() == 0) {//stby
+            flag_count++;
+            if (flag_count == 2){
+                int work_upload_count= current_luminescence_count - current_luminescence_upload_stop_count;
+//            if (AppConfig.useLimitedFlag == 1){//开启限制且限制的是次数，上报服务端发数次数
+//                if (AppConfig.useLimitedType.equals("count")){
+//                    MyApplication.instance().sendCountMessage(work_upload_count);
+//                }
+//            }
+                if (work_upload_count > 0){
+                    MyApplication.instance().sendCountMessage(work_upload_count);
+                }
+            }
+        } else if (uploadWorkingInfo.getWorkingStatus() == 1) {//reading
+
+        } else if (uploadWorkingInfo.getWorkingStatus() == 2) {//working
+            flag_count = 1;
+        }
     }
 
 }

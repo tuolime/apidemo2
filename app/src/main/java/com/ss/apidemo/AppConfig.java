@@ -16,9 +16,9 @@ public class AppConfig {
 //    public static final int SOCKET_PORT = 8889;
 
     /**
-     * 锁定状态，0否1是 2 默认（没有获取到实际状态信息）
+     * 锁定状态，0否1是 -1 默认（没有获取到实际状态信息）
      */
-    public static  int lockStatus = 0;
+    public static  int lockStatus = -1;
     /**
      * 使用限制标识，0否1是
      */

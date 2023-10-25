@@ -99,7 +99,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 }else {
                     response_count = 0;
                 }
-                handler.postDelayed(this, 3 * 10000);//设置延迟时间，此处是30s
+                handler.postDelayed(this, 6 * 10000);//设置延迟时间，此处是60s
                 //需要执行的代码
             } else {//无网络
                 EventBus.getDefault().post(new EventTipsBean(2));
@@ -153,8 +153,8 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
         mConnection = new EMConnectionManager(this);
         mConnection.setMainHandler(myhandler);
         if (!isScheduledTasks) {
-            handler.postDelayed(sendSocket, 3000);//延迟调用 3秒后开始执行
-            handler.postDelayed(mDisconnectSocketTips, 3 * 10000);//延迟30秒调用
+            handler.postDelayed(sendSocket, 2 * 10000);//延迟调用 延迟20秒调用
+            handler.postDelayed(mDisconnectSocketTips, 6 * 10000);//延迟60秒调用
 
         }
 

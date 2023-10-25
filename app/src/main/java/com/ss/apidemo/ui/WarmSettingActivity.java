@@ -332,6 +332,7 @@ public class WarmSettingActivity extends BaseActivity {
                             wifiManager.setWifiEnabled(true);
                             ShowDialog(R.string.wifi_open);
                             SharedPrefsUtil.putBooleanValue(AppConfig.WIFI, true);
+                            AppConfig.lockStatus = -1;
                             MyApplication.instance().destroyTask();
                             MyApplication.instance().connetSocket();
                         }
@@ -345,6 +346,7 @@ public class WarmSettingActivity extends BaseActivity {
                                 wifiManager.setWifiEnabled(false);
                                 ShowDialog(R.string.wifi_close);
                                 SharedPrefsUtil.putBooleanValue(AppConfig.WIFI, false);
+                                AppConfig.lockStatus = 0;
                                 MyApplication.instance().destroyTask();
 //                                MyApplication.instance().connetSocket();
                             }
