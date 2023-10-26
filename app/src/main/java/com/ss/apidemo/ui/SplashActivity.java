@@ -82,10 +82,10 @@ public class SplashActivity extends BaseActivity {
                         i = new Intent(Settings.ACTION_WIFI_SETTINGS);
                         startActivity(i);
                     }else {
-                        if (AppConfig.lockStatus == 0){//未锁定
-                            isAutoShed();
-                        } else if(AppConfig.lockStatus == 1) {//锁定
+                        if(AppConfig.lockStatus == 1) {//锁定
                             ShowDialog();
+                        }else{//未锁定 未联网。。
+                            isAutoShed();
                         }
 //                        else if(AppConfig.lockStatus == 2) {//默认（没有获取到实际状态信息）
 //                            MyApplication.instance().destroyTask();

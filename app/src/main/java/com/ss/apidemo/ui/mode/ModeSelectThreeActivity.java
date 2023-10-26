@@ -72,6 +72,10 @@ public class ModeSelectThreeActivity extends BaseActivity {
     }
 
     public void tabClick(View view) {
+        //多次点击直接返回
+        if (ClickUtil.isFastClick()) {
+            return;
+        }
         PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
         resetMenuState();
         switch (view.getId()) {
@@ -99,10 +103,6 @@ public class ModeSelectThreeActivity extends BaseActivity {
     }
 
     public void startA(int flag) {
-        //多次点击直接返回
-        if (ClickUtil.isFastClick()) {
-            return;
-        }
         Intent intent = null;
         if (flag == 1){//expert
             intent = new Intent(ModeSelectThreeActivity.this, WorkSelectThreeActivity.class);

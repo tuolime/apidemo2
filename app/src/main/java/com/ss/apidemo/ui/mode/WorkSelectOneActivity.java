@@ -123,6 +123,7 @@ public class WorkSelectOneActivity extends BaseActivity {
     private int current_luminescence_auto_save_stop_count;
     private int flag_number = 3;
     private int flag_count = 3;
+    private int flag_seekBar = 0;
     private String gender;
     private TextView tv_time;
     private TextView tv_name;
@@ -287,11 +288,18 @@ public class WorkSelectOneActivity extends BaseActivity {
                 if (isHidden) {
                     PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
                 }
+                if (flag_seekBar == 1){
+                    if (isHidden){
+                        sendFluence();
+                        flag_seekBar = 0;
+                    }
+                }
             }
 
             @Override
             public void onStopTrackingTouch(boolean isCanDrag) {
                 if (isHidden){
+                    flag_seekBar = 1;
                     sendFluence();
                 }
             }
@@ -1047,8 +1055,9 @@ public class WorkSelectOneActivity extends BaseActivity {
     public void sendFluence(){
         //值改变 发送报文到下位机
         SetFluenceBean setFluenceBean = new SetFluenceBean();
-        setFluenceBean.setFluence(current_fluence_progress+seekbar_count);
-        LogUtils.e("下发单脉冲hr"+current_fluence_progress+seekbar_count);
+        int sendFluence = current_fluence_progress + seekbar_count;
+        setFluenceBean.setFluence(sendFluence);
+        LogUtils.e("下发单脉冲hr"+sendFluence);
         EventBus.getDefault().post(setFluenceBean);
     }
 
