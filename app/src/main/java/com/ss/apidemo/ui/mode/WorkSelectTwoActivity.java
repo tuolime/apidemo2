@@ -371,7 +371,7 @@ public class WorkSelectTwoActivity extends BaseActivity {
         isHidden = true;
         handler.sendMessageDelayed(new Message(),500);
         LogUtils.e("=====获取焦点 shr");
-
+        current_luminescence_upload_stop_count = 0;
     }
 
     public void setCount() {
@@ -1130,10 +1130,6 @@ public class WorkSelectTwoActivity extends BaseActivity {
             LogUtils.e("working");
             ll_raedy.setBackground(getResources().getDrawable(R.drawable.work_two_working_rounded_corners));
             tv_raedy.setText(getResources().getString(R.string.working));
-            LogUtils.e("firstSendMsg","11="+current_luminescence_count+"22 ="+current_luminescence_upload_stop_count);
-
-            current_luminescence_upload_stop_count = current_luminescence_count;
-            LogUtils.e("firstSendMsg","33="+current_luminescence_upload_stop_count);
 
         }
 
@@ -1238,7 +1234,11 @@ public class WorkSelectTwoActivity extends BaseActivity {
         if (uploadWorkingInfo.getWorkingStatus() == 0) {//stby
             flag_count++;
             if (flag_count == 2){
-                int work_upload_count= current_luminescence_count - current_luminescence_upload_stop_count;
+                LogUtils.e("firstSendMsg","44="+current_luminescence_count);
+                String s = tv_current.getText().toString();
+                int current_number = Integer.parseInt(s);
+                int work_upload_count= current_number - current_luminescence_upload_stop_count;
+                LogUtils.e("firstSendMsg","44="+work_upload_count);
 //            if (AppConfig.useLimitedFlag == 1){//开启限制且限制的是次数，上报服务端发数次数
 //                if (AppConfig.useLimitedType.equals("count")){
 //                    MyApplication.instance().sendCountMessage(work_upload_count);
@@ -1247,6 +1247,7 @@ public class WorkSelectTwoActivity extends BaseActivity {
                 if (work_upload_count > 0){
                     MyApplication.instance().sendCountMessage(work_upload_count);
                 }
+                current_luminescence_upload_stop_count = work_upload_count;
             }
         } else if (uploadWorkingInfo.getWorkingStatus() == 1) {//reading
 
