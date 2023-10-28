@@ -475,7 +475,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
     }
 
     public void startSplashActivity() {
-        destroyTask();
+//        destroyTask();
         EventBus.getDefault().post(new StopWorkBean());
         Intent intent = new Intent(MyApplication.this, SplashActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
