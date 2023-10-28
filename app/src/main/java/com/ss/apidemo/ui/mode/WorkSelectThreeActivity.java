@@ -579,9 +579,10 @@ public class WorkSelectThreeActivity extends BaseActivity {
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             arcSeekBar.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
         arcSeekBar.setProgress(current_fluence_progress);
-
+        flag_seekBar = 1;
     }
     /*
      * 设置l m f 那个灯亮  根据hz的范围
@@ -900,14 +901,17 @@ public class WorkSelectThreeActivity extends BaseActivity {
         tv_max.setText(shrModeHzOrFluenceBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
+            flag_seekBar = 1;
         }
         if (current_fluence_max<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
             arcSeekBar.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             arcSeekBar.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -925,14 +929,17 @@ public class WorkSelectThreeActivity extends BaseActivity {
         tv_max.setText(thirtyModeBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
+            flag_seekBar = 1;
         }
         if (current_fluence_max<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
             arcSeekBar.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             arcSeekBar.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -950,14 +957,17 @@ public class WorkSelectThreeActivity extends BaseActivity {
         tv_max.setText(hundredModeBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
+            flag_seekBar = 1;
         }
         if (current_fluence_max<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
             arcSeekBar.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             arcSeekBar.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -975,14 +985,17 @@ public class WorkSelectThreeActivity extends BaseActivity {
         tv_max.setText(fourHundredModeBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
+            flag_seekBar = 1;
         }
         if (current_fluence_max<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
             arcSeekBar.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             arcSeekBar.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -1180,6 +1193,7 @@ public class WorkSelectThreeActivity extends BaseActivity {
                 current_fluence_max = energyUpper;
                 arcSeekBar.setMax(current_fluence_max-seekbar_count);
                 tv_max.setText(current_fluence_max+"");
+                flag_seekBar = 1;
                 return true;
             }
         }

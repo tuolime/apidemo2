@@ -122,6 +122,7 @@ public class WorkSelectSixActivity extends BaseActivity {
     private int current_luminescence_auto_save_stop_count;
     private int flag_number = 3;
     private int flag_count = 3;
+    private int flag_seekBar = 0;
     private String gender;
     private TextView tv_time;
     private TextView tv_name;
@@ -312,6 +313,13 @@ public class WorkSelectSixActivity extends BaseActivity {
                 if (isHidden) {
                     PlayVoiceUtils.startPlayVoice(MyApplication.instance(), AppConfig.KEY);
                 }
+                if (flag_seekBar == 1){
+                    if (isHidden){
+                        sendFluence();
+                        flag_seekBar = 0;
+                        LogUtils.e("下发单脉冲hr--4--");
+                    }
+                }
             }
 
             @Override
@@ -322,7 +330,9 @@ public class WorkSelectSixActivity extends BaseActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 if (isHidden){
+                    flag_seekBar = 1;
                     sendFluence();
+                    LogUtils.e("下发单脉冲hr--5--");
                 }
             }
         });
@@ -591,9 +601,10 @@ public class WorkSelectSixActivity extends BaseActivity {
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             sb_fluence.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
         sb_fluence.setProgress(current_fluence_progress);
-
+        flag_seekBar = 1;
     }
     /*
      * 设置l m f 那个灯亮  根据hz的范围
@@ -913,6 +924,7 @@ public class WorkSelectSixActivity extends BaseActivity {
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             sb_fluence.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -931,6 +943,7 @@ public class WorkSelectSixActivity extends BaseActivity {
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             sb_fluence.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -949,6 +962,7 @@ public class WorkSelectSixActivity extends BaseActivity {
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             sb_fluence.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -967,6 +981,7 @@ public class WorkSelectSixActivity extends BaseActivity {
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             sb_fluence.setMax(current_fluence_max);
+            flag_seekBar = 1;
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -1156,6 +1171,7 @@ public class WorkSelectSixActivity extends BaseActivity {
             if (currentMax > energyUpper){//当前选择手具的最大值大于设置的最大值
                 current_fluence_max = energyUpper;
                 sb_fluence.setMax(current_fluence_max);
+                flag_seekBar = 1;
                 return true;
             }
         }
