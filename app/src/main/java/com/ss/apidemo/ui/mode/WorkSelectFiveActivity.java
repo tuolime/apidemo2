@@ -1161,6 +1161,9 @@ public class WorkSelectFiveActivity extends BaseActivity {
                     current_luminescence_count = uploadWorkingInfo.getToalCount() - AppConfig.current_count;
                     if (current_luminescence_count >= 0) {
                         tv_current.setText(current_luminescence_count+"");
+                        if (current_luminescence_upload_stop_count == 0){
+                            current_luminescence_upload_stop_count = current_luminescence_count;
+                        }
                     }
                 }else {
                     int clearCount = current_luminescence_count + uploadWorkingInfo.getToalCount();
@@ -1268,7 +1271,8 @@ public class WorkSelectFiveActivity extends BaseActivity {
                 if (work_upload_count > 0){
                     MyApplication.instance().sendCountMessage(work_upload_count);
                 }
-                current_luminescence_upload_stop_count = work_upload_count;
+                current_luminescence_upload_stop_count = current_luminescence_count;
+
             }
         } else if (uploadWorkingInfo.getWorkingStatus() == 1) {//reading
 
