@@ -887,6 +887,7 @@ public class WorkSelectTwoActivity extends BaseActivity {
     }
 
     public void setAuto(int hz){
+        flag_seekBar = 1;
         shrModeHzOrFluenceBean = shrModeHzOrFluenceUtils.modeType(handgearType, hz);
         current_fluence_min = shrModeHzOrFluenceBean.getFluenceMin()-seekbar_count;
         current_fluence_max = shrModeHzOrFluenceBean.getFluenceMax()-seekbar_count;
@@ -894,17 +895,17 @@ public class WorkSelectTwoActivity extends BaseActivity {
         tv_max.setText(shrModeHzOrFluenceBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
-            flag_seekBar = 1;
+
         }
         if (current_fluence_max<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
             arcSeekBar.setMax(current_fluence_max);
-            flag_seekBar = 1;
+
         }
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             arcSeekBar.setMax(current_fluence_max);
-            flag_seekBar = 1;
+
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -916,23 +917,24 @@ public class WorkSelectTwoActivity extends BaseActivity {
     }
 
     public void setThirty(int hz){
+        flag_seekBar = 1;
         current_fluence_min = thirtyModeBean.getFluenceMin()-seekbar_count;
         current_fluence_max = thirtyModeBean.getFluenceMax()-seekbar_count;
         tv_min.setText(thirtyModeBean.getFluenceMin()+"");
         tv_max.setText(thirtyModeBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
-            flag_seekBar = 1;
+
         }
         if (current_fluence_max<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
             arcSeekBar.setMax(current_fluence_max);
-            flag_seekBar = 1;
+
         }
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             arcSeekBar.setMax(current_fluence_max);
-            flag_seekBar = 1;
+
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -944,23 +946,24 @@ public class WorkSelectTwoActivity extends BaseActivity {
     }
 
     public void setHundred(int hz){
+        flag_seekBar = 1;
         current_fluence_min = hundredModeBean.getFluenceMin()-seekbar_count;
         current_fluence_max = hundredModeBean.getFluenceMax()-seekbar_count;
         tv_min.setText(hundredModeBean.getFluenceMin()+"");
         tv_max.setText(hundredModeBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
-            flag_seekBar = 1;
+
         }
         if (current_fluence_max<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
             arcSeekBar.setMax(current_fluence_max);
-            flag_seekBar = 1;
+
         }
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             arcSeekBar.setMax(current_fluence_max);
-            flag_seekBar = 1;
+
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -972,23 +975,24 @@ public class WorkSelectTwoActivity extends BaseActivity {
     }
 
     public void setFourHundred(int hz){
+        flag_seekBar = 1;
         current_fluence_min = fourHundredModeBean.getFluenceMin()-seekbar_count;
         current_fluence_max = fourHundredModeBean.getFluenceMax()-seekbar_count;
         tv_min.setText(fourHundredModeBean.getFluenceMin()+"");
         tv_max.setText(fourHundredModeBean.getFluenceMax()+"");
         if (arcSeekBar.getMax()<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
-            flag_seekBar = 1;
+
         }
         if (current_fluence_max<=current_fluence_progress){
             arcSeekBar.setProgress(current_fluence_max);
             arcSeekBar.setMax(current_fluence_max);
-            flag_seekBar = 1;
+
         }
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             arcSeekBar.setMax(current_fluence_max);
-            flag_seekBar = 1;
+
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -1185,7 +1189,7 @@ public class WorkSelectTwoActivity extends BaseActivity {
                 current_fluence_max = energyUpper;
                 arcSeekBar.setMax(current_fluence_max-seekbar_count);
                 tv_max.setText(current_fluence_max+"");
-                flag_seekBar = 1;
+
                 return true;
             }
         }

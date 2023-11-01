@@ -916,6 +916,7 @@ public class WorkSelectSixActivity extends BaseActivity {
     }
 
     public void setAuto(int hz){
+        flag_seekBar = 1;
         shrModeHzOrFluenceBean = shrModeHzOrFluenceUtils.modeType(handgearType, hz);
         current_fluence_min = shrModeHzOrFluenceBean.getFluenceMin();
         current_fluence_max = shrModeHzOrFluenceBean.getFluenceMax();
@@ -924,7 +925,7 @@ public class WorkSelectSixActivity extends BaseActivity {
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             sb_fluence.setMax(current_fluence_max);
-            flag_seekBar = 1;
+
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -936,6 +937,7 @@ public class WorkSelectSixActivity extends BaseActivity {
     }
 
     public void setThirty(int hz){
+        flag_seekBar = 1;
         current_fluence_min = thirtyModeBean.getFluenceMin();
         current_fluence_max = thirtyModeBean.getFluenceMax();
 //        tv_min.setText(thirtyModeBean.getFluenceMin()+"");
@@ -943,7 +945,7 @@ public class WorkSelectSixActivity extends BaseActivity {
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             sb_fluence.setMax(current_fluence_max);
-            flag_seekBar = 1;
+
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -955,6 +957,7 @@ public class WorkSelectSixActivity extends BaseActivity {
     }
 
     public void setHundred(int hz){
+        flag_seekBar = 1;
         current_fluence_min = hundredModeBean.getFluenceMin();
         current_fluence_max = hundredModeBean.getFluenceMax();
 //        tv_min.setText(hundredModeBean.getFluenceMin()+"");
@@ -962,7 +965,7 @@ public class WorkSelectSixActivity extends BaseActivity {
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             sb_fluence.setMax(current_fluence_max);
-            flag_seekBar = 1;
+
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -974,6 +977,7 @@ public class WorkSelectSixActivity extends BaseActivity {
     }
 
     public void setFourHundred(int hz){
+        flag_seekBar = 1;
         current_fluence_min = fourHundredModeBean.getFluenceMin();
         current_fluence_max = fourHundredModeBean.getFluenceMax();
 //        tv_min.setText(fourHundredModeBean.getFluenceMin()+"");
@@ -981,7 +985,7 @@ public class WorkSelectSixActivity extends BaseActivity {
         boolean b1 = setFluenceSettingMax(current_fluence_max);
         if (!b1){
             sb_fluence.setMax(current_fluence_max);
-            flag_seekBar = 1;
+
         }
 
         if (hz == 11){//部分手具有20hz,在实际数据中对应的数值是11，所以单独处理
@@ -1170,7 +1174,7 @@ public class WorkSelectSixActivity extends BaseActivity {
             if (currentMax > energyUpper){//当前选择手具的最大值大于设置的最大值
                 current_fluence_max = energyUpper;
                 sb_fluence.setMax(current_fluence_max);
-                flag_seekBar = 1;
+
                 return true;
             }
         }
