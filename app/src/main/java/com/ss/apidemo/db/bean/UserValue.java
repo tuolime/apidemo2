@@ -31,6 +31,7 @@ public class UserValue implements Serializable {
     private String date;//时间
 
     private int user_id;//用户信息的自增id
+    private String user_name;//用户信息的名称
 
     public int get_id() {
         return _id;
@@ -128,4 +129,11 @@ public class UserValue implements Serializable {
         this.user_id = user_id;
     }
 
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
+    }
 }

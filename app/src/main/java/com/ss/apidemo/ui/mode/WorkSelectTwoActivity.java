@@ -1231,6 +1231,7 @@ public class WorkSelectTwoActivity extends BaseActivity {
         List<User> user = UserDao.getInstance().getUser(tel);
         if (user != null && user.size() > 0) {
             userValue1.setUser_id(user.get(0).get_id());
+            userValue1.setUser_name(user.get(0).getName());
         }
         UserValueDao.getInstance().createUserValue(userValue1);
         MyApplication.instance().sendUserValueMessage(userValue1);

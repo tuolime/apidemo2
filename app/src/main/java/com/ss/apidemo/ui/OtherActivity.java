@@ -662,6 +662,7 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
         List<User> user = UserDao.getInstance().getUser(commonBean.getTel());
         if (user != null && user.size() > 0) {
             userValue1.setUser_id(user.get(0).get_id());
+            userValue1.setUser_name(user.get(0).getName());
         }
         UserValueDao.getInstance().createUserValue(userValue1);
         MyApplication.instance().sendUserValueMessage(userValue1);
