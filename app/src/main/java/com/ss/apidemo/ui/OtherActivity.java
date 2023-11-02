@@ -3,6 +3,7 @@ package com.ss.apidemo.ui;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Message;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -215,6 +216,14 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
             }
         });
         initViewPager();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        current_luminescence_save_stop_count = 0;
+        current_luminescence_auto_save_stop_count = 0;
+        current_luminescence_upload_stop_count = 0;
     }
 
     public void initViewPagerMode() {
@@ -583,6 +592,15 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
                     current_luminescence_count = uploadWorkingInfo.getToalCount() - AppConfig.current_count;
                     if (current_luminescence_count >= 0) {
                         tv_current.setText(getResources().getString(R.string.current)+":" + current_luminescence_count);
+                        if (current_luminescence_save_stop_count == 0){
+                            current_luminescence_save_stop_count = current_luminescence_count;
+                        }
+                        if (current_luminescence_auto_save_stop_count == 0){
+                            current_luminescence_auto_save_stop_count = current_luminescence_count;
+                        }
+                        if (current_luminescence_upload_stop_count == 0){
+                            current_luminescence_upload_stop_count = current_luminescence_count;
+                        }
                     }
                 }else {
                     int clearCount = current_luminescence_count + uploadWorkingInfo.getToalCount();
@@ -673,7 +691,11 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
         if (uploadWorkingInfo.getWorkingStatus() == 0) {//stby
             flag_count++;
             if (flag_count == 2){
-                int work_upload_count= current_luminescence_count - current_luminescence_upload_stop_count;
+                LogUtils.e("firstSendMsg","44="+current_luminescence_count);
+                String s = tv_current.getText().toString();
+                int current_number = Integer.parseInt(s);
+                int work_upload_count= current_number - current_luminescence_upload_stop_count;
+                LogUtils.e("firstSendMsg","44="+work_upload_count);
 //            if (AppConfig.useLimitedFlag == 1){//开启限制且限制的是次数，上报服务端发数次数
 //                if (AppConfig.useLimitedType.equals("count")){
 //                    MyApplication.instance().sendCountMessage(work_upload_count);
@@ -682,6 +704,7 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
                 if (work_upload_count > 0){
                     MyApplication.instance().sendCountMessage(work_upload_count);
                 }
+                current_luminescence_upload_stop_count = current_luminescence_count;
             }
         } else if (uploadWorkingInfo.getWorkingStatus() == 1) {//reading
 
