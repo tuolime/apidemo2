@@ -1231,7 +1231,7 @@ public class WorkSelectThreeActivity extends BaseActivity {
         }
         UserValue userValue1 = new UserValue();
         userValue1.setTel(tel);
-        userValue1.setGender(handgearType + "");
+        userValue1.setGender(gender);
         userValue1.setMode(setWorkingStatusDb.getWorkingModel() + "");
         userValue1.setSkinType(skin_type + "");
         userValue1.setBodyType(body_type + "");
