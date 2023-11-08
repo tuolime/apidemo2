@@ -28,6 +28,7 @@ import com.ss.apidemo.dialog.HintDialog;
 import com.ss.apidemo.socket.EMConnectionManager;
 import com.ss.apidemo.ui.SplashActivity;
 import com.ss.apidemo.utils.ChjTimer;
+import com.ss.apidemo.utils.DateUtil;
 import com.ss.apidemo.utils.DeviceInfoUtil;
 import com.ss.apidemo.utils.LocaleHelper;
 import com.ss.apidemo.utils.LocationUtils;
@@ -90,9 +91,11 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
     private Runnable mDisconnectSocketTips = new Runnable() {
         public void run() {
             boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
-            if (!iswifi) return;
-            boolean wifi = NetworkUtil.isWifi();
-            if (wifi) {
+            if (!iswifi){
+                return;
+            }
+//            boolean wifi = NetworkUtil.isWifi();
+//            if (wifi) {
                 Log.d("xuan", "应答次数"+response_count);
                 if (response_count == 0){
                     disconnectionCount();
@@ -101,9 +104,9 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 }
                 handler.postDelayed(this, 6 * 10000);//设置延迟时间，此处是60s
                 //需要执行的代码
-            } else {//无网络
-                EventBus.getDefault().post(new EventTipsBean(2));
-            }
+//            } else {//无网络
+//                EventBus.getDefault().post(new EventTipsBean(2));
+//            }
 
         }
     };
@@ -111,17 +114,19 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
     private Runnable sendSocket = new Runnable() {
         public void run() {
             boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
-            if (!iswifi) return;
-            boolean wifi = NetworkUtil.isWifi();
-            if (wifi) {
+            if (!iswifi){
+                return;
+            }
+//            boolean wifi = NetworkUtil.isWifi();
+//            if (wifi) {
                 startSendQueue(sendHeartMessage());
                 Log.d("xuan", "handleMessage: 执行");
                 handler.postDelayed(this, 5 * 1000);//设置延迟时间，此处是10s
                 isScheduledTasks = true;
                 //需要执行的代码
-            } else {//无网络
-                EventBus.getDefault().post(new EventTipsBean(2));
-            }
+//            } else {//无网络
+//                EventBus.getDefault().post(new EventTipsBean(2));
+//            }
 
         }
     };
@@ -209,9 +214,11 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
      * */
     public void sendCountMessage(int count) {
         boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
-        if (!iswifi) return;
-        boolean wifi = NetworkUtil.isWifi();
-        if (wifi) {
+        if (!iswifi){
+            return;
+        }
+//        boolean wifi = NetworkUtil.isWifi();
+//        if (wifi) {
             if (mConnection != null) {
                 Frame frame = new Frame();
                 frame.setType(3);//次数上报
@@ -224,10 +231,10 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 startSendQueue(jsonString);
 //                mConnection.sendMessage(jsonString);
             }
-        } else {
-            EventBus.getDefault().post(new EventTipsBean(2));
-            startSplashActivity();
-        }
+//        } else {
+//            EventBus.getDefault().post(new EventTipsBean(2));
+//            startSplashActivity();
+//        }
 
     }
     /*
@@ -235,9 +242,11 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
      * */
     public void sendUserMessage(User user) {
         boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
-        if (!iswifi) return;
-        boolean wifi = NetworkUtil.isWifi();
-        if (wifi) {
+        if (!iswifi){
+            return;
+        }
+//        boolean wifi = NetworkUtil.isWifi();
+//        if (wifi) {
             if (mConnection != null) {
                 Frame frame = new Frame();
                 frame.setType(4);//上报用户
@@ -252,19 +261,23 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 Log.e("上报用户信息", "上报用户信息" + jsonString);
 //                mConnection.sendMessage(jsonString);
             }
-        } else {
-            EventBus.getDefault().post(new EventTipsBean(2));
-            startSplashActivity();
-        }
+//        } else {
+//            EventBus.getDefault().post(new EventTipsBean(2));
+//            startSplashActivity();
+//        }
     }
     /*
      * 发送用户治疗信息Socket
      * */
     public void sendUserValueMessage(UserValue value) {
+        String nowTime = DateUtil.getNowTime();
+        value.setUserDate(nowTime);
         boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
-        if (!iswifi) return;
-        boolean wifi = NetworkUtil.isWifi();
-        if (wifi) {
+        if (!iswifi){
+            return;
+        }
+//        boolean wifi = NetworkUtil.isWifi();
+//        if (wifi) {
             if (mConnection != null) {
                 Frame frame = new Frame();
                 frame.setType(5);//上报用户治疗信息
@@ -279,10 +292,10 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 Log.e("上报用户治疗信息", "上报用户治疗信息" + jsonString);
 //                mConnection.sendMessage(jsonString);
             }
-        } else {
-            EventBus.getDefault().post(new EventTipsBean(2));
-            startSplashActivity();
-        }
+//        } else {
+//            EventBus.getDefault().post(new EventTipsBean(2));
+//            startSplashActivity();
+//        }
     }
 
     /*
@@ -290,9 +303,11 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
      * */
     public void sendWarmMessage(int warmType,String warmMsg) {
         boolean iswifi = SharedPrefsUtil.getBooleanValue(AppConfig.WIFI, false);
-        if (!iswifi) return;
-        boolean wifi = NetworkUtil.isWifi();
-        if (wifi) {
+        if (!iswifi){
+            return;
+        }
+//        boolean wifi = NetworkUtil.isWifi();
+//        if (wifi) {
             if (mConnection != null) {
                 Frame frame = new Frame();
                 frame.setType(6);//上报设备告警
@@ -310,10 +325,10 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 Log.e("上报设备告警", "上报设备告警" + jsonString);
 //                mConnection.sendMessage(jsonString);
             }
-        } else {
-            EventBus.getDefault().post(new EventTipsBean(2));
-            startSplashActivity();
-        }
+//        } else {
+//            EventBus.getDefault().post(new EventTipsBean(2));
+//            startSplashActivity();
+//        }
     }
 
     /*
