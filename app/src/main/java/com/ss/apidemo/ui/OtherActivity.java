@@ -593,7 +593,7 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
                 if (!clear_count){
                     current_luminescence_count = uploadWorkingInfo.getToalCount() - AppConfig.current_count;
                     if (current_luminescence_count >= 0) {
-                        tv_current.setText(getResources().getString(R.string.current)+":" + current_luminescence_count);
+                        tv_current.setText(current_luminescence_count+"");
                         if (current_luminescence_save_stop_count == 0){
                             current_luminescence_save_stop_count = current_luminescence_count;
                         }
@@ -606,12 +606,12 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
                     }
                 }else {
                     int clearCount = current_luminescence_count + uploadWorkingInfo.getToalCount();
-                    tv_current.setText(getResources().getString(R.string.current)+":" + clearCount);
+                    tv_current.setText(clearCount+"");
                     clear_count = true;
                 }
             }else {
                 int clearCount = current_luminescence_count + uploadWorkingInfo.getToalCount();
-                tv_current.setText(getResources().getString(R.string.current)+":" + clearCount);
+                tv_current.setText(clearCount+"");
                 clear_count = true;
             }
 
