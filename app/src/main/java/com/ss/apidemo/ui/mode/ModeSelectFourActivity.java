@@ -71,6 +71,7 @@ public class ModeSelectFourActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        AppConfig.current_count = 0;
         resetMenuState();
     }
 

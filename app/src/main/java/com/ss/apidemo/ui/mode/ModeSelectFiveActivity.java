@@ -68,6 +68,7 @@ public class ModeSelectFiveActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        AppConfig.current_count = 0;
         resetMenuState();
     }
 
