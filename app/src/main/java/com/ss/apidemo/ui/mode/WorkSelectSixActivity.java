@@ -441,7 +441,9 @@ public class WorkSelectSixActivity extends BaseActivity {
                 userValue1.setFrequency(setWorkingStatusDb.getFrequency() + "");
                 userValue1.setFluence(setWorkingStatusDb.getFluence() + "");
 
-                int work_count= current_luminescence_count - current_luminescence_save_stop_count;
+                String s = tv_current.getText().toString();
+                int current_number = Integer.parseInt(s);
+                int work_count= current_number - current_luminescence_save_stop_count;
                 userValue1.setWorkCount(work_count+ "");
                 UserValueDao.getInstance().createUserValue(userValue1);
                 current_luminescence_save_stop_count = current_luminescence_count;
@@ -1219,12 +1221,15 @@ public class WorkSelectSixActivity extends BaseActivity {
         }
         userValue1.setFrequency(setWorkingStatusDb.getFrequency() + "");
         userValue1.setFluence(setWorkingStatusDb.getFluence() + "");
-        int work_count= current_luminescence_count - current_luminescence_auto_save_stop_count;
+        String s = tv_current.getText().toString();
+        int current_number = Integer.parseInt(s);
+        int work_count= current_number - current_luminescence_auto_save_stop_count;
         userValue1.setWorkCount(work_count+ "");
         List<User> user = UserDao.getInstance().getUser(tel);
         if (user != null && user.size() > 0) {
-            userValue1.setUser_id(user.get(0).get_id());
-            userValue1.setUser_name(user.get(0).getName());
+            userValue1.setUserId(user.get(0).get_id());
+            userValue1.setUserName(user.get(0).getName());
+            userValue1.setAge(user.get(0).getAge());
         }
         UserValueDao.getInstance().createUserValue(userValue1);
         MyApplication.instance().sendUserValueMessage(userValue1);

@@ -30,8 +30,10 @@ public class UserValue implements Serializable {
     @DatabaseField
     private String date;//时间
 
-    private int user_id;//用户信息的自增id
-    private String user_name;//用户信息的名称
+    private int userId;//用户信息的自增id
+    private String userName;//用户信息的名称
+    private String age;//用户年龄
+    private String userDate;//当前操作时间
 
     public int get_id() {
         return _id;
@@ -121,19 +123,35 @@ public class UserValue implements Serializable {
         this.fluence = fluence;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getUserDate() {
+        return userDate;
+    }
+
+    public void setUserDate(String userDate) {
+        this.userDate = userDate;
     }
 }
