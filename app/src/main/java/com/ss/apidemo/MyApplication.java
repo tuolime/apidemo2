@@ -102,7 +102,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 }else {
                     response_count = 0;
                 }
-                handler.postDelayed(this, 6 * 10000);//设置延迟时间，此处是60s
+                handler.postDelayed(this, 9 * 10000);//设置延迟时间，此处是90s
                 //需要执行的代码
 //            } else {//无网络
 //                EventBus.getDefault().post(new EventTipsBean(2));
@@ -121,7 +121,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
 //            if (wifi) {
                 startSendQueue(sendHeartMessage());
                 Log.d("xuan", "handleMessage: 执行");
-                handler.postDelayed(this, 5 * 1000);//设置延迟时间，此处是10s
+                handler.postDelayed(this, 10 * 1000);//设置延迟时间，此处是10s
                 isScheduledTasks = true;
                 //需要执行的代码
 //            } else {//无网络
