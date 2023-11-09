@@ -574,11 +574,6 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
             LogUtils.e("working");
             tv_next.setBackground(getResources().getDrawable(R.drawable.other_bt_working_rounded_corners));
             tv_next.setText(getResources().getString(R.string.working));
-            LogUtils.e("firstSendMsg","11="+current_luminescence_count+"22 ="+current_luminescence_upload_stop_count);
-
-            current_luminescence_upload_stop_count = current_luminescence_count;
-            LogUtils.e("firstSendMsg","33="+current_luminescence_upload_stop_count);
-
         }
         int currentItem = viewPager_mode.getCurrentItem();
         if (currentItem == 0) {//Stack
@@ -594,15 +589,15 @@ public class OtherActivity extends BaseActivity implements View.OnClickListener 
                     current_luminescence_count = uploadWorkingInfo.getToalCount() - AppConfig.current_count;
                     if (current_luminescence_count >= 0) {
                         tv_current.setText(current_luminescence_count+"");
-                        if (current_luminescence_save_stop_count == 0){
-                            current_luminescence_save_stop_count = current_luminescence_count;
-                        }
-                        if (current_luminescence_auto_save_stop_count == 0){
-                            current_luminescence_auto_save_stop_count = current_luminescence_count;
-                        }
-                        if (current_luminescence_upload_stop_count == 0){
-                            current_luminescence_upload_stop_count = current_luminescence_count;
-                        }
+//                        if (current_luminescence_save_stop_count == 0){
+//                            current_luminescence_save_stop_count = current_luminescence_count;
+//                        }
+//                        if (current_luminescence_auto_save_stop_count == 0){
+//                            current_luminescence_auto_save_stop_count = current_luminescence_count;
+//                        }
+//                        if (current_luminescence_upload_stop_count == 0){
+//                            current_luminescence_upload_stop_count = current_luminescence_count;
+//                        }
                     }
                 }else {
                     int clearCount = current_luminescence_count + uploadWorkingInfo.getToalCount();

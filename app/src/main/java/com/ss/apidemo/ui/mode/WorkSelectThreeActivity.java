@@ -1154,15 +1154,15 @@ public class WorkSelectThreeActivity extends BaseActivity {
                     current_luminescence_count = uploadWorkingInfo.getToalCount() - AppConfig.current_count;
                     if (current_luminescence_count >= 0) {
                         tv_current.setText(current_luminescence_count+"");
-                        if (current_luminescence_save_stop_count == 0){
-                            current_luminescence_save_stop_count = current_luminescence_count;
-                        }
-                        if (current_luminescence_auto_save_stop_count == 0){
-                            current_luminescence_auto_save_stop_count = current_luminescence_count;
-                        }
-                        if (current_luminescence_upload_stop_count == 0){
-                            current_luminescence_upload_stop_count = current_luminescence_count;
-                        }
+//                        if (current_luminescence_save_stop_count == 0){
+//                            current_luminescence_save_stop_count = current_luminescence_count;
+//                        }
+//                        if (current_luminescence_auto_save_stop_count == 0){
+//                            current_luminescence_auto_save_stop_count = current_luminescence_count;
+//                        }
+//                        if (current_luminescence_upload_stop_count == 0){
+//                            current_luminescence_upload_stop_count = current_luminescence_count;
+//                        }
                     }
                 }else {
                     int clearCount = current_luminescence_count + uploadWorkingInfo.getToalCount();
