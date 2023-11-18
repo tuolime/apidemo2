@@ -59,9 +59,11 @@ public class Parser {
             uploadWorkingInfo.setFluence(ParserUtil.toBcdHexString(itemsValue, 2, 2));
             uploadWorkingInfo.setFrequency(ParserUtil.toBcdHexString(itemsValue, 4, 2));
 
-            int toalCountHi = ParserUtil.toBcdHexString(itemsValue, 6, 2);
-            int toalCountLow = ParserUtil.toBcdHexString(itemsValue, 8, 2);
-            uploadWorkingInfo.setToalCount((toalCountHi << 8) + toalCountLow);
+//            int toalCountHi = ParserUtil.toBcdHexString(itemsValue, 6, 2);
+//            int toalCountLow = ParserUtil.toBcdHexString(itemsValue, 8, 2);
+//            uploadWorkingInfo.setToalCount((toalCountHi << 8) + toalCountLow);
+            int toalCount = ParserUtil.toBcdHexString(itemsValue, 6, 4);
+            uploadWorkingInfo.setToalCount(toalCount);
             uploadWorkingInfo.setWorkingTime(ParserUtil.toBcdHexString(itemsValue, 10, 2));
             uploadWorkingInfo.setTotalEnergy(ParserUtil.toBcdHexString(itemsValue, 12, 2));
 
