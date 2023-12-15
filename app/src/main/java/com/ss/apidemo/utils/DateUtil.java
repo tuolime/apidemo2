@@ -8,7 +8,7 @@ public class DateUtil {
 
     public static String YYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss"; // 长日期格式
 
-    public static String YYY_MM_DD_HH_MM_SS_SSS = "yyyy-MM-dd HH:mm:ss SSS"; // 年月日时分秒毫秒
+    public static String YYY_MM_DD_HH_MM_SS_SSS = "yyyy-MM-dd HH:mm:ss.SSS"; // 年月日时分秒毫秒
 
     public static String timeStamp2Date(long time, String format) {
         if (format == null || format.isEmpty()) {
