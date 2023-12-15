@@ -8,6 +8,8 @@ public class DateUtil {
 
     public static String YYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss"; // 长日期格式
 
+    public static String YYY_MM_DD_HH_MM_SS_SSS = "yyyy-MM-dd HH:mm:ss SSS"; // 年月日时分秒毫秒
+
     public static String timeStamp2Date(long time, String format) {
         if (format == null || format.isEmpty()) {
             //  format = "yyyy-MM-dd HH:mm:ss";
@@ -53,6 +55,16 @@ public class DateUtil {
      */
     public static String getNowTime(){
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(YYY_MM_DD_HH_MM_SS);
+        Date date = new Date(System.currentTimeMillis());
+        return simpleDateFormat.format(date);
+    }
+
+    /**
+     * 获取当前时间及毫秒
+     * @return
+     */
+    public static String getNowMsTime(){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(YYY_MM_DD_HH_MM_SS_SSS);
         Date date = new Date(System.currentTimeMillis());
         return simpleDateFormat.format(date);
     }

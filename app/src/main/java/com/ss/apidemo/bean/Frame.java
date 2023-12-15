@@ -69,6 +69,12 @@ public class Frame implements Serializable {
      */
     private String data;
 
+    /**
+    * 发送信息时间
+    */
+    private String sendTime;
+
+
     public int getType() {
         return type;
     }
@@ -164,5 +170,13 @@ public class Frame implements Serializable {
 
     public void setData(String data) {
         this.data = data;
+    }
+
+    public String getSendTime() {
+        return sendTime;
+    }
+
+    public void setSendTime(String sendTime) {
+        this.sendTime = sendTime;
     }
 }

@@ -436,6 +436,8 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                                     @Override
                                     public void run() {
                                         if (mConnection != null) {
+                                            Frame parse = (Frame) JSONObject.parse(value.getMessage());
+                                            parse.setSendTime(DateUtil.getNowMsTime());
                                             mConnection.sendMessage(value.getMessage());
                                         }
                                     }
