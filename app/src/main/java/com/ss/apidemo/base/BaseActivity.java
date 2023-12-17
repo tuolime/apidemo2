@@ -251,7 +251,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             if (AppConfig.current_count == 0) {
                 AppConfig.current_count = uploadWorkingInfo.getToalCount();
             }
-            SetWarm(uploadWorkingInfo);
+//            SetWarm(uploadWorkingInfo);
         }
         AppConfig.isDisconnect ++;//记录下位机响应
 

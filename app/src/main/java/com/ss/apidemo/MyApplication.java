@@ -102,7 +102,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                 }else {
                     response_count = 0;
                 }
-                handler.postDelayed(this, 9 * 10000);//设置延迟时间，此处是90s
+                handler.postDelayed(this, 30 * 10000);//设置延迟时间，此处是5分钟
                 //需要执行的代码
 //            } else {//无网络
 //                EventBus.getDefault().post(new EventTipsBean(2));
@@ -159,7 +159,7 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
         mConnection.setMainHandler(myhandler);
         if (!isScheduledTasks) {
             handler.postDelayed(sendSocket, 2 * 10000);//延迟调用 延迟20秒调用
-            handler.postDelayed(mDisconnectSocketTips, 6 * 10000);//延迟60秒调用
+            handler.postDelayed(mDisconnectSocketTips, 30 * 10000);//延迟5分钟后调用
 
         }
 
@@ -430,15 +430,19 @@ public class MyApplication extends Application implements ChjTimer.ChjTimerInter
                             SendMessage value = sendloopDatas.poll();
                             if (value != null) {
                                 Thread.sleep(1000);//队列执行间隔
-                                LogUtils.e("出队列" + value.getMessage());
                                 //需要执行的代码
                                 MyActivityManager.getInstance().getCurrentActivity().runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
                                         if (mConnection != null) {
-                                            Frame parse = (Frame) JSONObject.parse(value.getMessage());
+                                            Frame parse = JSONObject.parseObject(value.getMessage(),Frame.class);
                                             parse.setSendTime(DateUtil.getNowMsTime());
-                                            mConnection.sendMessage(value.getMessage());
+                                            JSONObject jsonObject = (JSONObject) JSONObject.toJSON(parse);
+                                            String jsonString = jsonObject.toJSONString();
+                                            SendMessage sendMessage = new SendMessage();
+                                            sendMessage.setMessage(jsonString);
+                                            LogUtils.e("出队列" + sendMessage.getMessage());
+                                            mConnection.sendMessage(sendMessage.getMessage());
                                         }
                                     }
                                 });

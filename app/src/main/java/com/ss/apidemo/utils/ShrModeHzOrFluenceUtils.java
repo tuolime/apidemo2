@@ -36,39 +36,39 @@ public final class ShrModeHzOrFluenceUtils {
                         break;
                     case 2:
                         type.setHz(2);
-                        type.setFluenceMax(60);
+                        type.setFluenceMax(80);
                         break;
                     case 3:
                         type.setHz(3);
-                        type.setFluenceMax(40);
+                        type.setFluenceMax(53);
                         break;
                     case 4:
                         type.setHz(4);
-                        type.setFluenceMax(30);
+                        type.setFluenceMax(40);
                         break;
                     case 5:
                         type.setHz(5);
-                        type.setFluenceMax(24);
+                        type.setFluenceMax(32);
                         break;
                     case 6:
                         type.setHz(6);
-                        type.setFluenceMax(20);
+                        type.setFluenceMax(26);
                         break;
                     case 7:
                         type.setHz(7);
-                        type.setFluenceMax(17);
+                        type.setFluenceMax(23);
                         break;
                     case 8:
                         type.setHz(8);
-                        type.setFluenceMax(15);
+                        type.setFluenceMax(20);
                         break;
                     case 9:
                         type.setHz(9);
-                        type.setFluenceMax(13);
+                        type.setFluenceMax(17);
                         break;
                     case 10:
                         type.setHz(10);
-                        type.setFluenceMax(12);
+                        type.setFluenceMax(16);
                         break;
                 }
 
@@ -188,39 +188,39 @@ public final class ShrModeHzOrFluenceUtils {
                         break;
                     case 2:
                         type.setHz(2);
-                        type.setFluenceMax(60);
+                        type.setFluenceMax(80);
                         break;
                     case 3:
                         type.setHz(3);
-                        type.setFluenceMax(40);
+                        type.setFluenceMax(53);
                         break;
                     case 4:
                         type.setHz(4);
-                        type.setFluenceMax(30);
+                        type.setFluenceMax(40);
                         break;
                     case 5:
                         type.setHz(5);
-                        type.setFluenceMax(24);
+                        type.setFluenceMax(32);
                         break;
                     case 6:
                         type.setHz(6);
-                        type.setFluenceMax(20);
+                        type.setFluenceMax(26);
                         break;
                     case 7:
                         type.setHz(7);
-                        type.setFluenceMax(17);
+                        type.setFluenceMax(23);
                         break;
                     case 8:
                         type.setHz(8);
-                        type.setFluenceMax(15);
+                        type.setFluenceMax(20);
                         break;
                     case 9:
                         type.setHz(9);
-                        type.setFluenceMax(13);
+                        type.setFluenceMax(17);
                         break;
                     case 10:
                         type.setHz(10);
-                        type.setFluenceMax(12);
+                        type.setFluenceMax(16);
                         break;
                 }
 

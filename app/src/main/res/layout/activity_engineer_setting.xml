@@ -540,7 +540,7 @@
                         android:layout_alignParentRight="true"
                         android:button="@null"
                         android:drawableRight="@drawable/radio_button_selector"
-                        android:text="@string/qb_2_24"
+                        android:text="@string/qb_6_24"
                         android:textColor="@color/white"></RadioButton>
 
                     <RadioButton
@@ -724,7 +724,7 @@
                         android:layout_alignParentRight="true"
                         android:button="@null"
                         android:drawableRight="@drawable/radio_button_selector"
-                        android:text="@string/qb_2_24"
+                        android:text="@string/qb_6_24"
                         android:textColor="@color/white"></RadioButton>
 
                     <RadioButton
