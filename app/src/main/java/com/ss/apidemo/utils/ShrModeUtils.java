@@ -28,8 +28,8 @@ public final class ShrModeUtils {
                 case 1:
                     type.setHandgearType(1);
                     type.setFluenceMin(4);
-                    type.setFluence5HzMax(24);
-                    type.setFluence10HzMax(12);
+                    type.setFluence5HzMax(32);
+                    type.setFluence10HzMax(16);
                     break;
                 case 2:
                     type.setHandgearType(2);
@@ -46,8 +46,8 @@ public final class ShrModeUtils {
                 case 4:
                     type.setHandgearType(4);
                     type.setFluenceMin(4);
-                    type.setFluence5HzMax(24);
-                    type.setFluence10HzMax(12);
+                    type.setFluence5HzMax(32);
+                    type.setFluence10HzMax(16);
                     break;
                 case 5:
                     type.setHandgearType(5);
@@ -102,8 +102,8 @@ public final class ShrModeUtils {
                 case 1:
                     type.setHandgearType(1);
                     type.setFluenceMin(4);
-                    type.setFluence5HzMax(24);
-                    type.setFluence10HzMax(12);
+                    type.setFluence5HzMax(32);
+                    type.setFluence10HzMax(16);
                     break;
                 case 2:
                     type.setHandgearType(2);
@@ -120,8 +120,8 @@ public final class ShrModeUtils {
                 case 4:
                     type.setHandgearType(4);
                     type.setFluenceMin(4);
-                    type.setFluence5HzMax(24);
-                    type.setFluence10HzMax(12);
+                    type.setFluence5HzMax(32);
+                    type.setFluence10HzMax(16);
                     break;
                 case 5:
                     type.setHandgearType(5);
