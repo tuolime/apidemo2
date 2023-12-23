@@ -397,6 +397,7 @@ public class ShrFragment extends BaseFragment implements View.OnClickListener {
             boolean b1 = setFluenceSettingMax(shrModeHzOrFluenceBean.getFluenceMax());
             if (!b1){
                 sb_fluence.setMax(shrModeHzOrFluenceBean.getFluenceMax());
+                current_fluence_max = shrModeHzOrFluenceBean.getFluenceMax();
             }
 //            if (shrSkinBean.getFluenceProposal()>=shrModeHzOrFluenceBean.getFluenceMax()){
 //                sb_fluence.setProgress(shrSkinBean.getFluenceProposal());
