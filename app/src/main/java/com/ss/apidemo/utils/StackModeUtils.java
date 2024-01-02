@@ -92,7 +92,7 @@ public final class StackModeUtils {
                 case 1:
                     type.setHandgearType(1);
                     type.setFluenceMin(4);
-                    type.setFluenceMax(24);
+                    type.setFluenceMax(32);
                     break;
                 case 2:
                     type.setHandgearType(2);
@@ -107,7 +107,7 @@ public final class StackModeUtils {
                 case 4:
                     type.setHandgearType(4);
                     type.setFluenceMin(4);
-                    type.setFluenceMax(24);
+                    type.setFluenceMax(32);
                     break;
                 case 5:
                     type.setHandgearType(5);
