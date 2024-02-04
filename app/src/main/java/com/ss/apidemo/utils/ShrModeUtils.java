@@ -70,20 +70,20 @@ public final class ShrModeUtils {
                 case 8://8 9 10 的手具值  和  3 7 的一样
                     type.setHandgearType(8);
                     type.setFluenceMin(4);
-                    type.setFluence5HzMax(45);
-                    type.setFluence10HzMax(23);
+                    type.setFluence5HzMax(60);
+                    type.setFluence10HzMax(30);
                     break;
                 case 9:
                     type.setHandgearType(9);
                     type.setFluenceMin(4);
-                    type.setFluence5HzMax(45);
-                    type.setFluence10HzMax(23);
+                    type.setFluence5HzMax(50);
+                    type.setFluence10HzMax(25);
                     break;
                 case 10:
                     type.setHandgearType(10);
                     type.setFluenceMin(4);
-                    type.setFluence5HzMax(45);
-                    type.setFluence10HzMax(23);
+                    type.setFluence5HzMax(32);
+                    type.setFluence10HzMax(18);
                     break;
             }
 
@@ -144,20 +144,20 @@ public final class ShrModeUtils {
                 case 8://8 9 10 的手具值  和  3 7 的一样
                     type.setHandgearType(8);
                     type.setFluenceMin(4);
-                    type.setFluence5HzMax(45);
-                    type.setFluence10HzMax(23);
+                    type.setFluence5HzMax(60);
+                    type.setFluence10HzMax(30);
                     break;
                 case 9:
                     type.setHandgearType(9);
                     type.setFluenceMin(4);
-                    type.setFluence5HzMax(45);
-                    type.setFluence10HzMax(23);
+                    type.setFluence5HzMax(50);
+                    type.setFluence10HzMax(25);
                     break;
                 case 10:
                     type.setHandgearType(10);
                     type.setFluenceMin(4);
-                    type.setFluence5HzMax(45);
-                    type.setFluence10HzMax(23);
+                    type.setFluence5HzMax(32);
+                    type.setFluence10HzMax(18);
                     break;
             }
         }
