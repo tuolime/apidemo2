@@ -171,6 +171,7 @@ public class ShrFragment extends BaseFragment implements View.OnClickListener {
             sb_hz.setProgress(shrSkinBean.getBodyType_HZ());
 
         }
+        current_fluence_progress = shrSkinBean.getFluenceProposal();
         if (shrSkinBean.getBodyType_HZ() == 5) {
             current_fluence_max = shrModeBean.getFluence5HzMax();
             boolean b1 = setFluenceSettingMax(shrModeBean.getFluence5HzMax());
@@ -185,7 +186,8 @@ public class ShrFragment extends BaseFragment implements View.OnClickListener {
                 sb_fluence.setMax(shrModeBean.getFluence10HzMax());
             }
         }
-        sb_fluence.setProgress(shrSkinBean.getFluenceProposal());
+
+        sb_fluence.setProgress(current_fluence_progress);
 //        ToastUtil.showToast(ShrFragment.this.getActivity(),"默认单脉冲"+shrSkinBean.getFluenceProposal());
 
 
@@ -414,6 +416,9 @@ public class ShrFragment extends BaseFragment implements View.OnClickListener {
             if (currentMax > energyUpper){//当前选择手具的最大值大于设置的最大值
                 current_fluence_max = energyUpper;
                 sb_fluence.setMax(current_fluence_max);
+                if (energyUpper > current_fluence_progress){
+                    current_fluence_progress = energyUpper;
+                }
                 return true;
             }
         }

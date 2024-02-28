@@ -140,8 +140,9 @@ public class HrFragment extends BaseFragment implements View.OnClickListener {
             current_fluence_min = hrModeBean.getFluenceMin();
             sb_fluence.setMin(hrModeBean.getFluenceMin());
         }
-        setfluenctMax();
+
         current_fluence_progress = hrSkinBean.getFluenceProposal();
+        setfluenctMax();
         setFluenctText();
         sb_fluence.setProgress(current_fluence_progress);
 
@@ -391,6 +392,9 @@ public class HrFragment extends BaseFragment implements View.OnClickListener {
             if (currentMax > energyUpper){//当前选择手具的最大值大于设置的最大值
                 current_fluence_max = energyUpper;
                 sb_fluence.setMax(current_fluence_max);
+                if (energyUpper > current_fluence_progress){
+                    current_fluence_progress = energyUpper;
+                }
                 return true;
             }
         }
